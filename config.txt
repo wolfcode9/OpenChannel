@@ -1,0 +1,17 @@
+{"channelList": [
+{"name":"中天新聞","url":"https://www.youtube.com/watch?v=_QbRXRnHMVY"},
+{"name":"寰宇新聞","url":"https://www.youtube.com/watch?v=B7Zp3d6xXWw"},
+{"name":"公共電視","url":"https://www.youtube.com/watch?v=4Uc00FPs27M"},
+{"name":"台視新聞","url":"https://www.youtube.com/watch?v=xL0ch83RAK8"},
+{"name":"中視新聞","url":"https://www.youtube.com/watch?v=TCnaIE_SAtM"},
+{"name":"華視新聞","url":"https://www.youtube.com/watch?v=wM0g8EoUZ_E"},
+{"name":"民視新聞","url":"https://www.youtube.com/watch?v=yguQ1SzPM5U"},
+{"name":"三立新聞","url":"https://www.youtube.com/watch?v=EB4g7wecgTI"},
+{"name":"非凡新聞","url":"https://aka03p.akamaized.net/litv/fet001.smil/playlist.m3u8","header":"referer:https://video.friday.tw"},
+{"name":"壹新聞","url":"http://stream.nexttv.com.tw/n001/playlist.m3u8"},
+{"name":"鏡新聞","url":"https://www.youtube.com/watch?v=5n0y6b0Q25o"},
+{"name":"日本ANN News","url":"https://www.youtube.com/watch?v=coYw-eVU0Ks"},
+{"name":"韓國YTN News","url":"https://www.youtube.com/watch?v=1vnLR-Upo8A"},
+{"name":"德國DW News","url":"https://www.youtube.com/watch?v=tz6eDufZgVk"},
+{"name":"新加坡CNA News","url":"https://www.youtube.com/watch?v=XWq5kBlakcQ"}
+]}
