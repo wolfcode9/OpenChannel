@@ -1,14 +1,13 @@
 {
   "channelList": [
-    {"url": "https://today.line.me/tw/v2/article/jggMBa","name": "TVBS新聞"},
-    {"url": "https://www.youtube.com/watch?v=xL0ch83RAK8","name": "台視新聞"},
-    {"url": "https://www.youtube.com/c/twctvnews/live","name": "中視新聞"},
-    {"url": "https://www.youtube.com/watch?v=_QbRXRnHMVY","name": "中天新聞"},
+    {"url": "https://www.youtube.com/watch?v=khuZW5GdBXo","name": "東森新聞"},
+    {"url": "https://www.youtube.com/watch?v=m_dhMSvUCIc","name": "TVBS新聞"},
+    {"url": "https://www.youtube.com/watch?v=oIgbl7t0S_w","name": "中天新聞"},
     {"url": "https://www.youtube.com/watch?v=4Uc00FPs27M","name": "公共電視"},
-    {"url": "https://today.line.me/tw/v2/article/grrvVZ","name": "東森新聞"},
+    {"url": "https://www.youtube.com/channel/UCp2f7tGJGN6R9Muxipem8Nw/live","name": "寰宇新聞"},
+    {"url": "https://www.youtube.com/c/twlivenews","name": "台視新聞"},
+    {"url": "https://www.youtube.com/c/twctvnews/live","name": "中視新聞"},
     {"url": "https://www.youtube.com/watch?v=wM0g8EoUZ_E","name": "華視新聞"},
-    {"url": "https://www.youtube.com/user/57ETFN/live","name": "東森財經"},
-    {"url": "https://www.youtube.com/watch?v=L4a9mAc8634","name": "中天亞洲"},
-    {"url": "https://www.youtube.com/channel/UCp2f7tGJGN6R9Muxipem8Nw/live","name": "寰宇新聞"}
+    {"url": "https://www.youtube.com/user/57ETFN/live","name": "東森財經"} 
   ]
 }
