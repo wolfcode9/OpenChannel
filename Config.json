@@ -1,0 +1,29 @@
+{
+	"urls": [           
+		{
+			"url": "https://ghproxy.com/https://raw.githubusercontent.com/FongMi/CatVodSpider/main/json/config.json",
+			"name": "FongMI(Video)"
+		},
+		{
+			"url": "http://饭太硬.top/tv",
+			"name": "飯太硬"
+		}
+	],
+	"lives": [   
+        	{
+			"name":"live",
+			"type":3,
+			"url":"https://ghproxy.com/https://raw.githubusercontent.com/wolfcode9/OpenChannel/main/YT_Channel.txt",
+			"playerType":1,
+			"ua":"okhttp/3.12.13",
+			"epg":"http://epg.112114.xyz/?ch={name}&date={date}",
+			"logo":"https://epg.112114.xyz/logo/{name}.png"
+		}
+	],
+    "vip": [
+        {
+            "url": "https://ghproxy.com/https://raw.githubusercontent.com/FongMi/CatVodSpider/main/json/adult.json",
+            "name": "FongMI(Adult)"
+        }
+    ]
+}
