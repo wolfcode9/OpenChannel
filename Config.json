@@ -1,8 +1,13 @@
 {
-	"lives": [
-		{
-			"name":"live",
-			"url":"https://ghproxy.com/https://raw.githubusercontent.com/wolfcode9/OpenChannel/main/YT_Channel.txt"
-		}
-  	]
+   "urls": [           
+   {
+      "name": "FongMI(Video)",
+      "url": "https://ghproxy.com/https://raw.githubusercontent.com/FongMi/CatVodSpider/main/json/config.json"
+
+   },
+   {
+      "name": "FongMI(Adult)",
+      "url": "https://ghproxy.com/https://raw.githubusercontent.com/FongMi/CatVodSpider/main/json/adult.json"
+      
+   }
 }
