@@ -11,6 +11,14 @@
       "changeable": 1
     },
     {
+      "key": "廠長",
+      "name": "廠長",
+      "type": 3,
+      "api": "https://fongmi.cachefly.net/FongMi/CatVodOpen/main/open/czzy_open.js",
+      "searchable": 1,
+      "changeable": 1
+    },
+    {
       "key": "星星",
       "name": "星星",
       "type": 3,
