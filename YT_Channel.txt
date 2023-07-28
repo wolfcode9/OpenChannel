@@ -1,4 +1,4 @@
-新聞直播台,#genre#
+新聞直播,#genre#
 東森新聞,https://www.youtube.com/watch?v=S5WOGu2HSes
 TVBS新聞,https://www.youtube.com/watch?v=m_dhMSvUCIc
 中天新聞,https://www.youtube.com/watch?v=oIgbl7t0S_w
