@@ -1,6 +1,10 @@
 {
   "spider": "https://fongmi.cachefly.net/FongMi/CatVodSpider/main/jar/custom_spider.jar;md5;88787c99a94e6a4e674060d71e59c46f",
-  "lives":[{"name":"初秋语","type":0,"url":"./listx.txt"}],
+  "lives":[{"name":"初秋语","type":0,"url":"./listx.txt"},
+{"name":"YanG","type":0,"url":"https://gh-proxy.com/https://raw.githubusercontent.com/YanG-1989/m3u/main/Adult.m3u"},
+{"name":"atsushi","type":0,"url":"https://gh-proxy.com/https://raw.githubusercontent.com/atsushi444/iptv-epg/main/Adult.m3u"},
+{"name":"AV","type":0,"url":"./livex.m3u"}
+],
   "wallpaper": "http://饭太硬.top/深色壁纸/api.php",
   "sites": [
     {
