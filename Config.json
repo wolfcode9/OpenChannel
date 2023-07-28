@@ -1,20 +1,12 @@
 {
   "spider": "https://fongmi.cachefly.net/FongMi/CatVodSpider/main/jar/custom_spider.jar;md5;88787c99a94e6a4e674060d71e59c46f",
   "wallpaper": "http://饭太硬.top/深色壁纸/api.php",
-  "sites": [  
+  "sites": [   
     {
       "key": "泥巴",
       "name": "泥巴",
       "type": 3,
       "api": "csp_NiNi",
-      "searchable": 1,
-      "changeable": 1
-    },
-    {
-      "key": "廠長",
-      "name": "廠長",
-      "type": 3,
-      "api": "https://fongmi.cachefly.net/FongMi/CatVodOpen/main/open/czzy_open.js",
       "searchable": 1,
       "changeable": 1
     },
@@ -34,7 +26,31 @@
       "searchable": 1,
       "changeable": 1,
       "ext": "https://fongmi.cachefly.net/FongMi/CatVodSpider/main/json/duboku.json"
-    },   
+    },
+    {
+      "key": "廠長",
+      "name": "廠長",
+      "type": 3,
+      "api": "https://fongmi.cachefly.net/FongMi/CatVodOpen/main/open/czzy_open.js",
+      "searchable": 1,
+      "changeable": 1
+    },
+    {
+      "key": "愛看",
+      "name": "愛看",
+      "type": 3,
+      "api": "https://fongmi.cachefly.net/FongMi/CatVodOpen/main/open/ikanbot_open.js",
+      "searchable": 1,
+      "changeable": 1
+    },
+    {
+      "key": "快看",
+      "name": "快看",
+      "type": 3,
+      "api": "https://fongmi.cachefly.net/FongMi/CatVodOpen/main/open/kkys_open.js",
+      "searchable": 1,
+      "changeable": 1
+    },
     {
       "key": "量子",
       "name": "量子",
@@ -133,7 +149,23 @@
       "api": "csp_Dm84",
       "searchable": 1,
       "changeable": 1
-    }
+    },   
+    {
+      "key": "玩偶",
+      "name": "玩偶",
+      "type": 3,
+      "api": "csp_Wogg",
+      "searchable": 1,
+      "changeable": 0
+    },
+    {
+      "key": "七夜",
+      "name": "七夜",
+      "type": 3,
+      "api": "csp_Dovx",
+      "searchable": 1,
+      "changeable": 0
+    } 
   ],
   "doh": [
     {
