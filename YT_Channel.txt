@@ -30,9 +30,8 @@ KOMPASTV,https://www.youtube.com/watch?v=4rmf-lk3ito
 即時影像：台東池上天堂路,https://www.youtube.com/watch?v=WA7GEXVGAP0
 即時影像：石門水庫,https://www.youtube.com/watch?v=1OTZ9rjFv78
 即時影像：大稻埕碼頭,https://www.youtube.com/watch?v=Ndo_8RuefH4
-即時影像：日月潭,https://www.youtube.com/watch?v=LUuiEv7WCTM&ab_channel=%E9%9B%B2%E5%93%81%E6%BA%AB%E6%B3%89%E9%85%92%E5%BA%97
-即時影像：東北角鼻頭服務區,https://www.youtube.com/watch?v=bTazJ_uqF_E&ab_channel=necoastnsa
-即時影像：東北角福隆海水浴場,https://www.youtube.com/watch?v=4rEivVylbgI&ab_channel=necoastnsa
+即時影像：日月潭,https://www.youtube.com/watch?v=LUuiEv7WCTM
+即時影像：東北角鼻頭服務區,https://www.youtube.com/watch?v=bTazJ_uqF_E
+即時影像：東北角福隆海水浴場,https://www.youtube.com/watch?v=4rEivVylbgI
 即時影像：東京新宿,https://www.youtube.com/watch?v=DjdUEyjx8GM
-
 即時影像：紐約市,https://www.youtube.com/watch?v=1-iS7LArMPA
