@@ -1,7 +1,6 @@
 {
   "spider": "https://fongmi.cachefly.net/FongMi/CatVodSpider/main/jar/custom_spider.jar;md5;88787c99a94e6a4e674060d71e59c46f",
-  "lives":[{"name":"YT Channel","type":0,"url":"https://ghproxy.com/https://raw.githubusercontent.com/wolfcode9/OpenChannel/main/YT_Channel.txt"}
-],
+  "lives":[{"name":"YT Channel","type":3,"url":"https://ghproxy.com/https://raw.githubusercontent.com/wolfcode9/OpenChannel/main/YT_Channel.txt"}],
   "wallpaper": "http://饭太硬.top/深色壁纸/api.php",
   "sites": [
     {
