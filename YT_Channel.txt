@@ -33,5 +33,4 @@ TVBS新聞,https://www.youtube.com/watch?v=m_dhMSvUCIc
 即時影像：東京新宿,https://www.youtube.com/watch?v=DjdUEyjx8GM
 即時影像：紐約市,https://www.youtube.com/watch?v=1-iS7LArMPA
 即時影像：NASA,https://www.youtube.com/watch?v=_HGQZlK08gQ
-即時影像：Florida ,https://www.youtube.com/watch?v=-hGxbIZxZxk
 即時影像：梵蒂岡,https://www.youtube.com/watch?v=C3a7h8MWK2w
