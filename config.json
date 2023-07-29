@@ -1,9 +1,9 @@
 {
   "urls": [
     {
-			"url":" https://ghproxy.com/https://raw.githubusercontent.com/wolfcode9/OpenChannel/main/wow.json",
-			"name": "WolfCode"
-		},
+      "url":" https://ghproxy.com/https://raw.githubusercontent.com/wolfcode9/OpenChannel/main/wow.json",
+      "name": "WolfCode"
+    },
     {
       "url": "https://ghproxy.com/https://raw.githubusercontent.com/FongMi/CatVodSpider/main/json/config.json",
       "name": "FongMI"
@@ -15,6 +15,6 @@
     {
       "url": "https://ghproxy.com/https://raw.githubusercontent.com/FongMi/CatVodSpider/main/json/adult.json",
       "name": "VIP"
-    }		
-  ]	
+    }
+  ]
 }
