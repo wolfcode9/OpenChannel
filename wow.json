@@ -3,9 +3,9 @@
   "wallpaper": "http://饭太硬.top/深色壁纸/api.php",
   "lives": [   
     {
-			"name":"Youtebe直播",
-			"url":"https://ghproxy.com/https://raw.githubusercontent.com/wolfcode9/OpenChannel/main/YT_Channel.txt"
-		}
+      "name":"Youtebe直播",
+      "url":"https://ghproxy.com/https://raw.githubusercontent.com/wolfcode9/OpenChannel/main/YT_Channel.txt"
+    }
   ],
   "sites": [
     {
