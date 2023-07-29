@@ -5,6 +5,10 @@
       "name": "哇嗚"
     },
     {
+      "url": "https://ghproxy.com/https://raw.githubusercontent.com/FongMi/CatVodSpider/main/json/adult.json",
+      "name": "VIP"
+    },
+    {
       "url": "https://ghproxy.com/https://raw.githubusercontent.com/FongMi/CatVodSpider/main/json/config.json",
       "name": "FongMI"
     },
@@ -13,8 +17,32 @@
       "name": "飯太硬"
     },
     {
-      "url": "https://ghproxy.com/https://raw.githubusercontent.com/FongMi/CatVodSpider/main/json/adult.json",
-      "name": "VIP"
-    }
+      "url": "https://ghproxy.com/raw.githubusercontent.com/gaotianliuyun/gao/master/0828.json",
+      "name": "唐三"
+    },
+    {
+      "url": "https://100km.top/0",
+      "name": "純一騷零"
+    },
+    {
+      "url": "http://我不是.肥猫.love:63/接口禁止贩卖",
+      "name": "肥猫"
+    },
+    {
+      "url": "https://yydsys.top/duo",
+      "name": "多多"
+    },
+    {
+      "url": "http://pandown.pro/tvbox/tvbox.json",
+      "name": "技巧"
+    },
+    {
+      "url": "https://agit.ai/Yoursmile7/TVBox/raw/branch/master/XC.json",
+      "name": "南風"
+    },
+    {
+      "url": " https://weixine.net/ysc.json",
+      "name": "運輪車"
+    }   
   ]	
 }
