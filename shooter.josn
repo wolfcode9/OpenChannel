@@ -243,13 +243,6 @@
       "searchable": 1
     },
     {
-      "key": "mgav1.cc",
-      "name": "芒果AV",
-      "type": 0,
-      "api": "https://www.mgav1.cc/api.php/provide/vod/at/xml",
-      "searchable": 1
-    },
-    {
       "key": "mgzyz1.com",
       "name": "芒果",
       "type": 1,
