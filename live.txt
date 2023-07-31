@@ -35,3 +35,4 @@ TVBS新聞,https://www.youtube.com/watch?v=m_dhMSvUCIc
 紐約市,https://www.youtube.com/watch?v=1-iS7LArMPA
 NASA,https://www.youtube.com/watch?v=_HGQZlK08gQ
 梵蒂岡,https://www.youtube.com/watch?v=C3a7h8MWK2w
+威尼斯,https://www.youtube.com/watch?v=HpZAez2oYsA
