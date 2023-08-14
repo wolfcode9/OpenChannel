@@ -19,6 +19,8 @@ TVBS新聞,https://www.youtube.com/watch?v=m_dhMSvUCIc
 美國新聞,https://www.youtube.com/watch?v=w_Ma8oQLmSM
 歐洲新聞,https://www.youtube.com/watch?v=pykpO5kQJ98
 德國新聞,https://www.youtube.com/watch?v=pqabxBKzZ6M
+音樂串流,#genre#
+親親音樂：https://www.youtube.com/watch?v=IfNMuFqKBWs
 即時影像,#genre#
 台灣地震監視,https://www.youtube.com/watch?v=Owke6Quk7T0
 台中望高寮,https://www.youtube.com/watch?v=lhXXhDyjFtI
