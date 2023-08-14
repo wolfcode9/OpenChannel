@@ -15,6 +15,7 @@ TVBS新聞,https://www.youtube.com/watch?v=m_dhMSvUCIc
 中文國際,https://www.youtube.com/watch?v=9sE12tg3CmA
 東森財經,https://www.youtube.com/watch?v=LbS-xQ67fos
 日本新聞,https://www.youtube.com/watch?v=coYw-eVU0Ks
+韓國新聞,https://www.youtube.com/watch?v=7suinc6590Y
 英國新聞,https://www.youtube.com/watch?v=9Auq9mYxFEE
 法國新聞,https://www.youtube.com/watch?v=h3MuIUNCCzI
 美國新聞,https://www.youtube.com/watch?v=w_Ma8oQLmSM
