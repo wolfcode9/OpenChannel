@@ -99,7 +99,7 @@
   
     {
       "key": "櫻花",
-      "name": "櫻花|動漫",
+      "name": "櫻花 | 動漫",
       "type": 3,
       "api": "csp_Ying",
       "searchable": 1,
@@ -107,7 +107,7 @@
     },
     {
       "key": "巴士",
-      "name": "巴士|動漫",
+      "name": "巴士 | 動漫",
       "type": 3,
       "api": "csp_Dm84",
       "searchable": 1,
