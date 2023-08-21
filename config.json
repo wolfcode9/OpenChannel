@@ -1,15 +1,15 @@
 {
   "urls": [
     {
-      "url": "https://ghproxy.com/https://raw.githubusercontent.com/wolfcode9/OpenChannel/main/wow.json",
+      "url": "https://raw.githubusercontent.com/wolfcode9/OpenChannel/main/wow.json",
       "name": "哇嗚"
     },
     {
-      "url": "https://ghproxy.com/https://raw.githubusercontent.com/wolfcode9/OpenChannel/main/shooter.josn",
+      "url": "https://raw.githubusercontent.com/wolfcode9/OpenChannel/main/shooter.josn",
       "name": "VIP"
     },
     {
-      "url": "https://ghproxy.com/https://raw.githubusercontent.com/FongMi/CatVodSpider/main/json/config.json",
+      "url": "https://raw.githubusercontent.com/FongMi/CatVodSpider/main/json/config.json",
       "name": "FongMI"
     },
     {
@@ -17,7 +17,7 @@
       "name": "飯太硬"
     },
     {
-      "url": "https://ghproxy.com/raw.githubusercontent.com/gaotianliuyun/gao/master/0828.json",
+      "url": "raw.githubusercontent.com/gaotianliuyun/gao/master/0828.json",
       "name": "唐三"
     },
     {
