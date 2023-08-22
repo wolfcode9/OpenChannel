@@ -145,7 +145,7 @@
     },
     {
       "key": "99zy.pw",
-      "name": "99",
+      "name": "久久",
       "type": 1,
       "api": "http://99zy.pw/api.php/provide/vod/",
       "searchable": 1
@@ -166,7 +166,7 @@
     },
     {
       "key": "feifei67.com",
-      "name": "飛飛67",
+      "name": "飛飛",
       "type": 1,
       "api": "http://www.feifei67.com/api.php/provide/vod/",
       "searchable": 1
@@ -236,16 +236,9 @@
     },
     {
       "key": "api.maozyapi.com",
-      "name": "貓",
+      "name": "色貓",
       "type": 1,
       "api": "https://api.maozyapi.com/inc/apijson_vod.php",
-      "searchable": 1
-    },
-    {
-      "key": "888dav.com",
-      "name": "抖陰",
-      "type": 1,
-      "api": "https://www.888dav.com/api.php/provide/vod/",
       "searchable": 1
     },
     {
@@ -306,7 +299,7 @@
     },
     {
       "key": "xx55zyapi.com",
-      "name": "點點娛樂",
+      "name": "點點",
       "type": 0,
       "api": "https://xx55zyapi.com/home/cjapi/ascf/mc10/vod/xml",
       "searchable": 1
