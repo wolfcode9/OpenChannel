@@ -43,10 +43,6 @@
     {
       "url": "https://weixine.net/ysc.json",
       "name": "運輸"
-    },     
-    {
-      "url": "https://raw.githubusercontent.com/gaotianliuyun/gao/master/js.json",
-      "name": "流雲"
     }
-  ]	
+  ]
 }
