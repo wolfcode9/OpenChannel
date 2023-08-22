@@ -80,7 +80,7 @@
     },
     {
       "key": "llzxcj.com",
-      "name": "利來",
+      "name": "草莓",
       "type": 0,
       "api": "http://llzxcj.com/inc/sck.php?ac=videolist",
       "searchable": 1
@@ -150,14 +150,14 @@
     },
     {
       "key": "caiji25.com",
-      "name": "叫聲",
+      "name": "愛思",
       "type": 0,
       "api": "http://www.caiji25.com/home/cjapi/p0as/mc10/vod/xml",
       "searchable": 1
     },
     {
       "key": "caiji26.com",
-      "name": "吾愛",
+      "name": "情狂",
       "type": 0,
       "api": "http://caiji26.com/home/cjapi/p0g8/mc10/vod/xml",
       "searchable": 1
