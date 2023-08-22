@@ -16,36 +16,6 @@
       "searchable": 1
     },
     {
-      "key": "泥巴",
-      "name": "泥巴",
-      "type": 3,
-      "api": "csp_NiNi",
-      "searchable": 1,
-      "ext": "1"
-    },
-    {
-      "key": "量子",
-      "name": "量子",
-      "type": 0,
-      "api": "https://cj.lziapi.com/api.php/provide/vod/at/xml/",
-      "searchable": 1,
-      "changeable": 1,
-      "categories": [
-        "伦理片"
-      ]
-    },
-    {
-      "key": "非凡",
-      "name": "非凡",
-      "type": 0,
-      "api": "http://cj.ffzyapi.com/api.php/provide/vod/at/xml/",
-      "searchable": 1,
-      "changeable": 1,
-      "categories": [
-        "伦理片"
-      ]
-    },  
-    {
       "key": "18AV",
       "name": "18AV",
       "type": 3,
@@ -64,13 +34,6 @@
       "name": "MissAV",
       "type": 3,
       "api": "csp_Miss",
-      "searchable": 1
-    },
-    {
-      "key": "Supjav",
-      "name": "Supjav",
-      "type": 3,
-      "api": "csp_Supjav",
       "searchable": 1
     },
     {
@@ -96,7 +59,7 @@
     },
     {
       "key": "91md.me",
-      "name": "91MD",
+      "name": "M麻豆",
       "type": 1,
       "api": "http://91md.me/api.php/provide/vod/",
       "searchable": 1
@@ -106,13 +69,6 @@
       "name": "大地",
       "type": 0,
       "api": "http://dadiapi.com/api.php",
-      "searchable": 1
-    },
-    {
-      "key": "secj8.com",
-      "name": "色色",
-      "type": 0,
-      "api": "http://secj8.com/inc/sapi.php?ac=videolist",
       "searchable": 1
     },
     {
@@ -138,21 +94,14 @@
     },
     {
       "key": "f2dcj6.com",
-      "name": "富二代",
+      "name": "二代",
       "type": 0,
       "api": "http://f2dcj6.com/sapi?ac=videolist",
       "searchable": 1
     },
     {
-      "key": "99zy.pw",
-      "name": "久久",
-      "type": 1,
-      "api": "http://99zy.pw/api.php/provide/vod/",
-      "searchable": 1
-    },
-    {
       "key": "ggmmzy.com",
-      "name": "GGMM",
+      "name": "GM",
       "type": 0,
       "api": "http://www.ggmmzy.com:9999/inc/xml",
       "searchable": 1
@@ -173,14 +122,14 @@
     },
     {
       "key": "sdszyapi.com",
-      "name": "色屌絲",
+      "name": "屌絲",
       "type": 0,
       "api": "http://sdszyapi.com/home/cjapi/asbb/mc10/vod/xml",
       "searchable": 1
     },
     {
       "key": "madouse.la",
-      "name": "麻豆視頻",
+      "name": "麻豆",
       "type": 1,
       "api": "http://madouse.la/api.php/provide/vod/",
       "searchable": 1
@@ -193,36 +142,29 @@
       "searchable": 1
     },
     {
-      "key": "shabizy.com",
-      "name": "SB資源",
-      "type": 0,
-      "api": "http://www.shabizy.com:777/inc/sea",
-      "searchable": 1
-    },
-    {
       "key": "caiji21.com",
-      "name": "菜雞21",
+      "name": "夜淫",
       "type": 0,
       "api": "http://www.caiji21.com/home/cjapi/klkl/mc10/vod/xml",
       "searchable": 1
     },
     {
       "key": "caiji25.com",
-      "name": "菜雞25",
+      "name": "叫聲",
       "type": 0,
       "api": "http://www.caiji25.com/home/cjapi/p0as/mc10/vod/xml",
       "searchable": 1
     },
     {
       "key": "caiji26.com",
-      "name": "菜雞26",
+      "name": "吾愛",
       "type": 0,
       "api": "http://caiji26.com/home/cjapi/p0g8/mc10/vod/xml",
       "searchable": 1
     },
     {
       "key": "caiji24.com",
-      "name": "菜雞24",
+      "name": "想爽",
       "type": 0,
       "api": "http://www.caiji24.com/home/cjapi/p0d2/mc10/vod/xml",
       "searchable": 1
@@ -257,7 +199,7 @@
     },
     {
       "key": "kkzy.me",
-      "name": "KK",
+      "name": "摸茶",
       "type": 1,
       "api": "https://kkzy.me/api.php/provide/vod/",
       "searchable": 1
@@ -313,21 +255,21 @@
     },
     {
       "key": "caiji02.com",
-      "name": "菜雞02",
+      "name": "心動",
       "type": 0,
       "api": "https://www.caiji02.com/home/cjapi/cfas/mc10/vod/xml",
       "searchable": 1
     },
     {
       "key": "xrbsp.com",
-      "name": "淫水機",
+      "name": "淫水",
       "type": 0,
       "api": "https://www.xrbsp.com/api/xml.php",
       "searchable": 1
     },
     {
       "key": "caiji07.com",
-      "name": "菜雞07",
+      "name": "初戀",
       "type": 0,
       "api": "https://www.caiji07.com/home/cjapi/cfcf/mc10/vod/xml",
       "searchable": 1
@@ -341,28 +283,28 @@
     },
     {
       "key": "caiji03.com",
-      "name": "菜雞03",
+      "name": "春天",
       "type": 0,
       "api": "https://www.caiji03.com/home/cjapi/cfg8/mc10/vod/xml",
       "searchable": 1
     },
     {
       "key": "caiji08.com",
-      "name": "菜雞08",
+      "name": "脫光",
       "type": 0,
       "api": "https://www.caiji08.com/home/cjapi/cfkl/mc10/vod/xml",
       "searchable": 1
     },
     {
       "key": "caiji10.com",
-      "name": "菜雞10",
+      "name": "香液",
       "type": 0,
       "api": "https://www.caiji10.com/home/cjapi/cfs6/mc10/vod/xml",
       "searchable": 1
     },
     {
       "key": "52zyapi.com",
-      "name": "愛你",
+      "name": "愛愛",
       "type": 0,
       "api": "https://52zyapi.com/home/cjapi/asda/mc10/vod/xml",
       "searchable": 1
@@ -370,21 +312,21 @@
 
     {
       "key": "caiji01.com",
-      "name": "菜雞01",
+      "name": "味道",
       "type": 0,
       "api": "https://www.caiji01.com/home/cjapi/cfd2/mc10/vod/xml",
       "searchable": 1
     },
     {
       "key": "caiji22.com",
-      "name": "菜雞22",
+      "name": "噴泉",
       "type": 0,
       "api": "https://www.caiji22.com/home/cjapi/klp0/mc10/vod/xml",
       "searchable": 1
     },
     {
       "key": "caiji23.com",
-      "name": "菜雞23",
+      "name": "流水",
       "type": 0,
       "api": "https://www.caiji23.com/home/cjapi/kls6/mc10/vod/xml",
       "searchable": 1
@@ -412,28 +354,28 @@
     },
     {
       "key": "gdlsp.com",
-      "name": "香奶兒",
+      "name": "奶香",
       "type": 0,
       "api": "https://www.gdlsp.com/api/xml.php",
       "searchable": 1
     },
     {
       "key": "caiji04.com",
-      "name": "菜雞04",
+      "name": "快活",
       "type": 0,
       "api": "https://www.caiji04.com/home/cjapi/cfc7/mc10/vod/xml",
       "searchable": 1
     },
     {
       "key": "caiji09.com",
-      "name": "菜雞09",
+      "name": "緊緊",
       "type": 0,
       "api": "https://www.caiji09.com/home/cjapi/cfp0/mc10/vod/xml",
       "searchable": 1
     },
     {
       "key": "caiji05.com",
-      "name": "菜雞05",
+      "name": "色慾",
       "type": 0,
       "api": "https://www.caiji05.com/home/cjapi/cfda/mc10/vod/xml",
       "searchable": 1
