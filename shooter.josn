@@ -9,6 +9,13 @@
       "searchable": 1
     },
     {
+      "key": "apittzy.com",
+      "name": "探探",
+      "type": 1,
+      "api": "https://apittzy.com/api.php/provide/vod/",
+      "searchable": 1
+    },
+    {
       "key": "泥巴",
       "name": "泥巴",
       "type": 3,
@@ -362,25 +369,12 @@
     },
     {
       "key": "52zyapi.com",
-      "name": "52",
+      "name": "愛你",
       "type": 0,
       "api": "https://52zyapi.com/home/cjapi/asda/mc10/vod/xml",
       "searchable": 1
     },
-    {
-      "key": "apittzy.com",
-      "name": "探探",
-      "type": 1,
-      "api": "https://apittzy.com/api.php/provide/vod/",
-      "searchable": 1
-    },
-    {
-      "key": "api.xiuseapi.com",
-      "name": "秀色資源",
-      "type": 1,
-      "api": "https://api.xiuseapi.com/api.php/provide/vod/",
-      "searchable": 1
-    },
+
     {
       "key": "caiji01.com",
       "name": "菜雞01",
@@ -459,41 +453,12 @@
       "searchable": 1
     },
     {
-      "key": "caiji.caomeiapi.com",
-      "name": "草莓",
-      "type": 1,
-      "api": "https://caiji.caomeiapi.com/inc/apijson_vod.php",
-      "searchable": 1
-    },
-    {
-      "key": "caiji.523zyw.com",
-      "name": "523",
-      "type": 1,
-      "api": "https://caiji.523zyw.com/inc/apijson_vod.php",
-      "searchable": 1
-    },
-    {
-      "key": "caiji.naichaapi.com",
-      "name": "奶茶",
-      "type": 1,
-      "api": "https://caiji.naichaapi.com/inc/apijson_vod.php",
-      "searchable": 1
-    },
-    {
       "key": "api.apilyzy.com",
       "name": "老鴨",
       "type": 1,
       "api": "https://api.apilyzy.com/api.php/provide/vod/",
       "searchable": 1
-    },
-    {
-      "key": "push_agent",
-      "name": "推送",
-      "type": 3,
-      "api": "csp_Push",
-      "searchable": 1,
-      "changeable": 0
-    }
+    }   
   ],
   "rules": [
     {
