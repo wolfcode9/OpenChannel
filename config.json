@@ -4,10 +4,7 @@
       "url": "https://raw.githubusercontent.com/wolfcode9/OpenChannel/main/wow.json",
       "name": "哇嗚"
     },
-    {
-      "url": "https://raw.githubusercontent.com/wolfcode9/OpenChannel/main/shooter.josn",
-      "name": "帝王"
-    },
+  
     {
       "url": "https://raw.githubusercontent.com/FongMi/CatVodSpider/main/json/config.json",
       "name": "蜜蜂"
@@ -43,6 +40,10 @@
     {
       "url": "https://weixine.net/ysc.json",
       "name": "運輸"
+    },     
+    {
+      "url": "https://raw.githubusercontent.com/gaotianliuyun/gao/master/js.json",
+      "name": "流雲"
     }
   ]
 }
