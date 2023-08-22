@@ -37,6 +37,26 @@
       "changeable": 1
     },
     {
+      "key":"豆瓣",
+      "name":"豆瓣",
+      "type":3,
+      "api":"https://weixine.net/js/lib/drpy2.min.js",
+      "searchable":0,
+      "quickSearch":0,
+      "filterable":0,
+      "ext":"https://weixine.net/js/douban.js"
+    },
+    {
+      "key":"低端",
+      "name":"低端",
+      "type":3,
+      "api": "csp_XBPQ",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "ext":"https://weixine.net/sub/diduan.json"
+    },
+    {
       "key": "愛看",
       "name": "愛看",
       "type": 3,
