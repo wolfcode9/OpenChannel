@@ -49,12 +49,13 @@
     {
       "key":"低端",
       "name":"低端",
-      "type":3,
-      "api": "csp_XBPQ",
-      "searchable": 1,
-      "quickSearch": 1,
-      "filterable": 1,
-      "ext":"https://weixine.net/sub/diduan.json"
+       "type":"3",
+      "api":"csp_Dora",
+      "changeable":"0",
+      "searchable":"1",
+      "quickSearch":"1",
+      "filterable":"1",
+      "ext":"1cc92323700909e7d46623bc85b958d6"
     },
     {
       "key": "愛看",
