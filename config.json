@@ -1,48 +1,16 @@
 {
-  "urls": [
-    {
-      "url": "https://raw.githubusercontent.com/wolfcode9/OpenChannel/main/wow.json",
-      "name": "哇嗚"
-    },
-    {
-      "url": "https://raw.githubusercontent.com/FongMi/CatVodSpider/main/json/config.json",
-      "name": "蜜蜂"
-    },
-    {
-      "url": "http://饭太硬.top/tv",
-      "name": "飯硬"
-    },
-    {
-      "url": "raw.githubusercontent.com/gaotianliuyun/gao/master/0828.json",
-      "name": "唐三"
-    },
-    {
-      "url": "https://100km.top/0",
-      "name": "騷零"
-    },
-    {
-      "url": "http://我不是.肥猫.love:63/接口禁止贩卖",
-      "name": "肥猫"
-    },
-    {
-      "url": "https://yydsys.top/duo",
-      "name": "多多"
-    },
-    {
-      "url": "http://pandown.pro/tvbox/tvbox.json",
-      "name": "技巧"
-    },
-    {
-      "url": "https://agit.ai/Yoursmile7/TVBox/raw/branch/master/XC.json",
-      "name": "南風"
-    },
-    {
-      "url": "https://weixine.net/ysc.json",
-      "name": "運輸"
-    },     
-    {
-      "url": "https://raw.githubusercontent.com/gaotianliuyun/gao/master/js.json",
-      "name": "流雲"
-    }
+  "urls": 
+  [
+    {"name":"哇嗚","url":"https://raw.githubusercontent.com/wolfcode9/OpenChannel/main/wow.json"},
+    {"name":"蜜蜂","url":"https://raw.githubusercontent.com/FongMi/CatVodSpider/main/json/config.json"},
+    {"name":"飯硬","url":"http://饭太硬.top/tv"},
+    {"name":"唐三","url":"raw.githubusercontent.com/gaotianliuyun/gao/master/0828.json"},
+    {"name":"騷零","url":"https://100km.top/0"},
+    {"name":"肥猫","url":"http://我不是.肥猫.love:63/接口禁止贩卖"},
+    {"name":"多多","url":"https://yydsys.top/duo"},
+    {"name":"技巧","url":"http://pandown.pro/tvbox/tvbox.json"},
+    {"name":"南風","url":"https://agit.ai/Yoursmile7/TVBox/raw/branch/master/XC.json"},
+    {"name":"運輸","url":"https://weixine.net/ysc.json"},     
+    {"name":"流雲","url":"https://raw.githubusercontent.com/gaotianliuyun/gao/master/js.json"}
   ]
 }
