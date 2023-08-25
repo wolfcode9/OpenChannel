@@ -162,9 +162,7 @@
       "api": "csp_NiNi",
       "searchable": 1,
       "changeable": 1,
-      "categories": [
-      "午夜場"
-      ]
+      "categories": ["午夜場"],
       "ext": "1"
     },
     {
@@ -174,9 +172,7 @@
       "api": "https://cj.lziapi.com/api.php/provide/vod/at/xml/",
       "searchable": 1,
       "changeable": 1,
-      "categories": [
-        "伦理片"
-      ]
+      "categories": ["伦理片"]
     }    
   ],
   "rules": [
