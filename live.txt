@@ -134,7 +134,7 @@ DiscoveryAsia,mitv://generationnexxxt.com:19806/0720c66375a1460faf32dbc28fece276
 Discovery科學頻道,mitv://generationnexxxt.com:19806/78cb7ca3151647e0bbe3ededcd97f65d
 DMAX,mitv://generationnexxxt.com:19806/55495992173d4f9ab89bdcb7b6d6bed6
 EVE,mitv://generationnexxxt.com:19806/049dc32a539c4864b6bd770816127a85
-歷史頻道,mitv://generationnexxxt.com:19806/aa67a6171da44b1a9587ccd7b8779d03
+History,mitv://generationnexxxt.com:19806/aa67a6171da44b1a9587ccd7b8779d03
 罪案偵緝頻道,mitv://generationnexxxt.com:19806/27b07a4a79ee4d73ae4d84d2c5d93cc2
 BBCLifestyle,mitv://generationnexxxt.com:19806/bb44e00664ff4201b9e9d67cd66281a7
 Lifetime,mitv://generationnexxxt.com:19806/790d217f20f14c099d234a1dffe20c19
