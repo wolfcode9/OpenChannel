@@ -35,4 +35,4 @@ TVBS新聞,https://www.youtube.com/watch?v=m_dhMSvUCIc
 台北大稻埕,https://www.youtube.com/watch?v=Ndo_8RuefH4
 NASA,https://www.youtube.com/watch?v=_HGQZlK08gQ
 測試頻道,#genre#
-緯來體育,https://m.iptv345.com/?act=play&token=72f98d33f3bc6c60821ab5c0a5d590e8&tid=ty&id=23
+緯來體育,http://kb1.ottclub.info:443/fmts/n681.stream/playlist.m3u8?a=58f0bed9&b=Pu51-RhPi8nT4tEu1fDndw
