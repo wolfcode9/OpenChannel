@@ -155,7 +155,16 @@
       "api": "https://api.apilyzy.com/api.php/provide/vod/",
       "searchable": 1
     }, 
-   
+    {
+      "key": "泥巴",
+      "name": "泥巴",
+      "type": 3,
+      "api": "csp_NiNi",
+      "searchable": 1,
+      "changeable": 1,
+      "categories": ["午夜場"],
+      "ext": "1"
+    },
     {
       "key": "量子",
       "name": "量子",
