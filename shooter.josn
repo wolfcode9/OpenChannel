@@ -9,10 +9,10 @@
       "searchable": 1
     },
     {
-      "key": "apittzy.com",
-      "name": "探探",
-      "type": 1,
-      "api": "https://apittzy.com/api.php/provide/vod/",
+      "key": "gdlsp.com",
+      "name": "香奶",
+      "type": 0,
+      "api": "https://www.gdlsp.com/api/xml.php",
       "searchable": 1
     },
     {
@@ -44,50 +44,22 @@
       "searchable": 1
     },
     {
-      "key": "bttcj.com",
-      "name": "博天堂",
-      "type": 0,
-      "api": "http://bttcj.com/inc/sapi.php",
-      "searchable": 1
-    },
-    {
-      "key": "cjmygzy.com",
-      "name": "狼少年",
-      "type": 0,
-      "api": "http://cjmygzy.com/inc/sapi.php?ac=videolist",
-      "searchable": 1
-    },
-    {
       "key": "91md.me",
-      "name": "M麻豆",
+      "name": "91麻豆",
       "type": 1,
       "api": "http://91md.me/api.php/provide/vod/",
       "searchable": 1
     },
     {
       "key": "dadiapi.com",
-      "name": "大地",
+      "name": "噴泉",
       "type": 0,
       "api": "http://dadiapi.com/api.php",
       "searchable": 1
     },
     {
-      "key": "api.putaozy.net",
-      "name": "葡萄",
-      "type": 1,
-      "api": "http://api.putaozy.net/inc/apijson_vod.php",
-      "searchable": 1
-    },
-    {
-      "key": "llzxcj.com",
-      "name": "草莓",
-      "type": 0,
-      "api": "http://llzxcj.com/inc/sck.php?ac=videolist",
-      "searchable": 1
-    },
-    {
       "key": "apilj.com",
-      "name": "辣椒",
+      "name": "火辣",
       "type": 1,
       "api": "http://apilj.com/api.php/provide/vod/at/json/",
       "searchable": 1
@@ -114,69 +86,6 @@
       "searchable": 1
     },
     {
-      "key": "feifei67.com",
-      "name": "飛飛",
-      "type": 1,
-      "api": "http://www.feifei67.com/api.php/provide/vod/",
-      "searchable": 1
-    },
-    {
-      "key": "sdszyapi.com",
-      "name": "屌絲",
-      "type": 0,
-      "api": "http://sdszyapi.com/home/cjapi/asbb/mc10/vod/xml",
-      "searchable": 1
-    },
-    {
-      "key": "madouse.la",
-      "name": "麻豆",
-      "type": 1,
-      "api": "http://madouse.la/api.php/provide/vod/",
-      "searchable": 1
-    },
-    {
-      "key": "xjjzyapi.com",
-      "name": "小姐姐",
-      "type": 0,
-      "api": "http://xjjzyapi.com/home/cjapi/askl/mc10/vod/xml",
-      "searchable": 1
-    },
-    {
-      "key": "caiji21.com",
-      "name": "夜淫",
-      "type": 0,
-      "api": "http://www.caiji21.com/home/cjapi/klkl/mc10/vod/xml",
-      "searchable": 1
-    },
-    {
-      "key": "caiji25.com",
-      "name": "愛思",
-      "type": 0,
-      "api": "http://www.caiji25.com/home/cjapi/p0as/mc10/vod/xml",
-      "searchable": 1
-    },
-    {
-      "key": "caiji26.com",
-      "name": "情狂",
-      "type": 0,
-      "api": "http://caiji26.com/home/cjapi/p0g8/mc10/vod/xml",
-      "searchable": 1
-    },
-    {
-      "key": "caiji24.com",
-      "name": "想爽",
-      "type": 0,
-      "api": "http://www.caiji24.com/home/cjapi/p0d2/mc10/vod/xml",
-      "searchable": 1
-    },
-    {
-      "key": "lbapiby.com",
-      "name": "樂播",
-      "type": 0,
-      "api": "http://lbapiby.com/api.php/provide/vod/at/xml",
-      "searchable": 1
-    },
-    {
       "key": "api.maozyapi.com",
       "name": "色貓",
       "type": 1,
@@ -184,80 +93,24 @@
       "searchable": 1
     },
     {
-      "key": "mgzyz1.com",
-      "name": "芒果",
-      "type": 1,
-      "api": "https://mgzyz1.com/api.php/provide/vod/",
-      "searchable": 1
-    },
-    {
       "key": "msnii.com",
-      "name": "美少女",
+      "name": "少女",
       "type": 0,
       "api": "https://www.msnii.com/api/xml.php",
       "searchable": 1
     },
     {
-      "key": "kkzy.me",
-      "name": "摸茶",
-      "type": 1,
-      "api": "https://kkzy.me/api.php/provide/vod/",
-      "searchable": 1
-    },
-    {
-      "key": "caiji.huakuiapi.com",
-      "name": "花魁",
-      "type": 1,
-      "api": "https://caiji.huakuiapi.com/inc/apijson_vod.php",
-      "searchable": 1
-    },
-    {
-      "key": "siwazyw.cc",
-      "name": "絲襪",
-      "type": 1,
-      "api": "https://siwazyw.cc/api.php/provide/vod/",
-      "searchable": 1
-    },
-    {
       "key": "pgxdy.com",
-      "name": "黃AV",
+      "name": "絲襪",
       "type": 0,
       "api": "https://www.pgxdy.com/api/xml.php",
       "searchable": 1
     },
     {
-      "key": "api.sexnguon.com",
-      "name": "SexnGuon",
-      "type": 1,
-      "api": "https://api.sexnguon.com/api.php/provide/vod/",
-      "searchable": 1
-    },
-    {
-      "key": "dmmapi.com",
-      "name": "DMM",
-      "type": 0,
-      "api": "https://www.dmmapi.com/home/cjapi/asd2c7/mc10/vod/xml",
-      "searchable": 1
-    },
-    {
-      "key": "xx55zyapi.com",
-      "name": "點點",
-      "type": 0,
-      "api": "https://xx55zyapi.com/home/cjapi/ascf/mc10/vod/xml",
-      "searchable": 1
-    },
-    {
       "key": "kxgav.com",
-      "name": "白嫖",
+      "name": "色慾",
       "type": 0,
       "api": "https://www.kxgav.com/api/xml.php",
-      "searchable": 1
-    },
-    {
-      "key": "caiji02.com",
-      "name": "心動",
-      "type": 0,
-      "api": "https://www.caiji02.com/home/cjapi/cfas/mc10/vod/xml",
       "searchable": 1
     },
     {
@@ -268,79 +121,22 @@
       "searchable": 1
     },
     {
-      "key": "caiji07.com",
-      "name": "初戀",
-      "type": 0,
-      "api": "https://www.caiji07.com/home/cjapi/cfcf/mc10/vod/xml",
-      "searchable": 1
-    },
-    {
       "key": "lbapi9.com",
       "name": "樂播",
       "type": 1,
       "api": "https://lbapi9.com/api.php/provide/vod/",
       "searchable": 1
-    },
-    {
-      "key": "caiji03.com",
-      "name": "春天",
-      "type": 0,
-      "api": "https://www.caiji03.com/home/cjapi/cfg8/mc10/vod/xml",
-      "searchable": 1
-    },
-    {
-      "key": "caiji08.com",
-      "name": "脫光",
-      "type": 0,
-      "api": "https://www.caiji08.com/home/cjapi/cfkl/mc10/vod/xml",
-      "searchable": 1
-    },
-    {
-      "key": "caiji10.com",
-      "name": "香液",
-      "type": 0,
-      "api": "https://www.caiji10.com/home/cjapi/cfs6/mc10/vod/xml",
-      "searchable": 1
-    },
-    {
-      "key": "52zyapi.com",
-      "name": "愛愛",
-      "type": 0,
-      "api": "https://52zyapi.com/home/cjapi/asda/mc10/vod/xml",
-      "searchable": 1
-    },
-
-    {
-      "key": "caiji01.com",
-      "name": "味道",
-      "type": 0,
-      "api": "https://www.caiji01.com/home/cjapi/cfd2/mc10/vod/xml",
-      "searchable": 1
-    },
-    {
-      "key": "caiji22.com",
-      "name": "噴泉",
-      "type": 0,
-      "api": "https://www.caiji22.com/home/cjapi/klp0/mc10/vod/xml",
-      "searchable": 1
-    },
-    {
-      "key": "caiji23.com",
-      "name": "流水",
-      "type": 0,
-      "api": "https://www.caiji23.com/home/cjapi/kls6/mc10/vod/xml",
-      "searchable": 1
-    },
+    },  
     {
       "key": "afasu.com",
-      "name": "小濕妹",
+      "name": "濕妹",
       "type": 0,
       "api": "https://www.afasu.com/api/xml.php",
       "searchable": 1
     },
     {
       "key": "hghhh.com",
-      "name": "皇冠",
+      "name": "高潮",
       "type": 1,
       "api": "https://hghhh.com/api.php/provide/vod/",
       "searchable": 1
@@ -350,41 +146,6 @@
       "name": "色窩",
       "type": 1,
       "api": "https://sewozyapi.com/api.php/provide/vod/",
-      "searchable": 1
-    },
-    {
-      "key": "gdlsp.com",
-      "name": "奶香",
-      "type": 0,
-      "api": "https://www.gdlsp.com/api/xml.php",
-      "searchable": 1
-    },
-    {
-      "key": "caiji04.com",
-      "name": "快活",
-      "type": 0,
-      "api": "https://www.caiji04.com/home/cjapi/cfc7/mc10/vod/xml",
-      "searchable": 1
-    },
-    {
-      "key": "caiji09.com",
-      "name": "緊緊",
-      "type": 0,
-      "api": "https://www.caiji09.com/home/cjapi/cfp0/mc10/vod/xml",
-      "searchable": 1
-    },
-    {
-      "key": "caiji05.com",
-      "name": "色慾",
-      "type": 0,
-      "api": "https://www.caiji05.com/home/cjapi/cfda/mc10/vod/xml",
-      "searchable": 1
-    },
-    {
-      "key": "jgczyapi.com",
-      "name": "精工廠",
-      "type": 0,
-      "api": "https://jgczyapi.com/home/cjapi/kld2/mc10/vod/xml",
       "searchable": 1
     },
     {
