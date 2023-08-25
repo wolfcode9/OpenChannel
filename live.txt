@@ -35,4 +35,4 @@ TVBS新聞,https://www.youtube.com/watch?v=m_dhMSvUCIc
 台北大稻埕,https://www.youtube.com/watch?v=Ndo_8RuefH4
 NASA,https://www.youtube.com/watch?v=_HGQZlK08gQ
 測試頻道,#genre#
-緯來體育,http://qqq.okokip.com:8040/nimble_live/91/chunks.m3u8
+測試1,http://qqq.okokip.com:8040/nimble_live/91/chunks.m3u8
