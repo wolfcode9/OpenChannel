@@ -34,7 +34,7 @@ TVBS新聞,https://www.youtube.com/watch?v=m_dhMSvUCIc
 台東池上天堂路,https://www.youtube.com/watch?v=WA7GEXVGAP0
 台北大稻埕,https://www.youtube.com/watch?v=Ndo_8RuefH4
 NASA,https://www.youtube.com/watch?v=_HGQZlK08gQ
-第四台頻道,#genre#
+台灣頻道,#genre#
 民視,mitv://generationnexxxt.com:19806/412a0c47c1014e7d85da7d2d38631eb7
 臺視,mitv://generationnexxxt.com:19806/d12a80dfeb36488db100bbca6c6378e1
 大愛,mitv://generationnexxxt.com:19806/371fa10b16a84b5ca01f5bcd18ac7726
