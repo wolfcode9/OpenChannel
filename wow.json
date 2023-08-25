@@ -47,15 +47,13 @@
       "ext":"https://weixine.net/js/douban.js"
     },
     {
-       "key": "奈飞狗",
-       "name": "奈飞狗┃APP",
-       "type": 3,
-       "api": "csp_AppYs",
-       "searchable": 1,
-       "quickSearch": 1,
-       "filterable": 1,
-       "playerType": "2",
-       "ext": "https://netflixdog.club/api.php/app/"
+      "key": "csp_gaze",
+      "name": "注視",
+      "type": 3,
+      "api": "https://www.clarity.ms/s/0.7.10/clarity.js",
+      "searchable": 1,
+      "style":{ "type":"rect", "ratio":0.8 },
+      "changeable": 1
     },
     {
       "key": "愛看",
