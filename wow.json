@@ -115,24 +115,7 @@
       "api": "csp_Dm84",
       "searchable": 1,
       "changeable": 1   
-    },
-      {
-      "key": "找資源",
-      "name": "找資源",
-      "type": 3,
-      "api": "csp_Zhaozy",
-      "searchable": 1,
-      "changeable": 0,
-      "ext": "影視天下第一$$$test2$$$test2"
-    },
-    {
-      "key": "push_agent",
-      "name": "推送",
-      "type": 3,
-      "api": "csp_Push",
-      "searchable": 1,
-      "changeable": 0
-    }
+    } 
   ],
   "doh": [
     {
