@@ -1,7 +1,7 @@
 {
   "spider": "https://fongmi.cachefly.net/FongMi/CatVodSpider/main/jar/custom_spider.jar;md5;c180867252ce20f2d59e5a7e6d4fd92a",
   "wallpaper": "https://tuapi.eees.cc/api.php?category=fengjing&type=302",
-  "lives": [{"name":"YouTube","url":"https://raw.githubusercontent.com/wolfcode9/OpenChannel/main/live.txt"}],
+  "lives": [{"name":"YouTube","url":"https://ghproxy.com/https://raw.githubusercontent.com/wolfcode9/OpenChannel/main/live.txt"}],
   "sites": [  
     {
       "key": "泥巴",
@@ -10,7 +10,7 @@
       "api": "csp_NiNi",
       "searchable": 1,
       "changeable": 1
-    },
+    },    
     {
       "key": "星星",
       "name": "星星",
@@ -18,6 +18,13 @@
       "api": "csp_Star",
       "searchable": 1,
       "changeable": 1
+    },
+    {
+      "key":"drpy_trj",
+      "name":"唐人街",
+      "type":3,
+      "api":"https://qu.ax/Fozq.js",
+      "ext":"https://qu.ax/gNAX.js"
     },
     {
       "key": "獨播",
@@ -52,6 +59,9 @@
       "searchable": 1,
       "changeable": 1
     },
+    {"key":"drpy_js_低端","name":"低端","type":3,"style":{ "type":"rect", "ratio":1.33 },"api":"https://ghproxy.com/https://raw.githubusercontent.com/hjdhnx/dr_py/main/libs/drpy2.min.js","ext":"https://ghproxy.com/https://raw.githubusercontent.com/hjdhnx/dr_py/main/js/ddys.js"},
+    {"key":"drpy_js_農民","name":"農民","type":3,"style":{ "type":"rect", "ratio":1.33 },"api":"https://ghproxy.com/https://raw.githubusercontent.com/hjdhnx/dr_py/main/libs/drpy2.min.js","ext":"https://ghproxy.com/https://raw.githubusercontent.com/hjdhnx/dr_py/main/js/农民影视.js"},
+    {"key":"drpy_js_大豆","name":"大豆","type":3,"style":{ "type":"rect", "ratio":1.33 },"api":"https://ghproxy.com/https://raw.githubusercontent.com/hjdhnx/dr_py/main/libs/drpy2.min.js","ext":"https://ghproxy.com/https://raw.githubusercontent.com/hjdhnx/dr_py/main/js/大豆.js"},
     {
       "key": "量子",
       "name": "量子",
@@ -112,8 +122,7 @@
       "api": "csp_Dm84",
       "searchable": 1,
       "changeable": 1   
-    }
-  ],
+    },   
   "doh": [
     {
       "name": "Google",
