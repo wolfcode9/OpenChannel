@@ -1,6 +1,5 @@
 {
   "spider": "https://fongmi.cachefly.net/FongMi/CatVodSpider/main/jar/custom_spider.jar;md5;c180867252ce20f2d59e5a7e6d4fd92a",
-  "lives": [{"name":"成人直播","url":"https://raw.githubusercontent.com/FongMi/CatVodSpider/main/txt/adult.txt"}],
   "sites": 
   [
     {"key": "玩偶","name": "玩偶","type": 3,"api": "csp_Doll","searchable": 1},
