@@ -20,13 +20,6 @@
       "changeable": 1
     },
     {
-      "key":"drpy_trj",
-      "name":"唐人街",
-      "type":3,
-      "api":"https://qu.ax/Fozq.js",
-      "ext":"https://qu.ax/gNAX.js"
-    },
-    {
       "key": "獨播",
       "name": "獨播",
       "type": 3,
