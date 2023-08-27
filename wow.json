@@ -12,18 +12,6 @@
       "changeable": 1
     },
     {
-      "key": "bili",
-      "name": "嗶哩",
-      "type": 3,
-      "api": "https://raw.githubusercontent.com/wolfcode9/OpenChannel/main/bili.js",
-      "searchable": 1,
-      "changeable": 0,
-      "ext": {
-        "categories": "APK#Python爬蟲#破解#TVBOX源",
-        "cookie": ""
-      }
-    },
-    {
       "key": "星星",
       "name": "星星",
       "type": 3,
