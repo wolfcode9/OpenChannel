@@ -110,8 +110,8 @@ async function init(cfg) {
     const newarr = [];
     const d = {};
     const sc = {
-        type_name: "推荐",
-        type_id: "推荐",
+        type_name: "首页",
+        type_id: "首页",
         land: 1,
         ratio: 1.33,
     }
