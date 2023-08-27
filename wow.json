@@ -13,13 +13,30 @@
     },
     {
       "key": "bili_open",
-      "name": "嗶哩",
+      "name": "嗶哩(open)",
       "type": 3,
       "api": "https://raw.githubusercontent.com/FongMi/CatVodOpen/main/open/bili_open.js",
       "searchable": 1,
       "changeable": 0,
       "ext": {
         "categories": "科技#知識#MT管理器#Python#TVBOX",
+        "cookie": ""
+      }
+    },
+    {
+      "key": "哔哩",
+      "name": "哔哩",
+      "type": 3,
+      "api": "csp_Bili",
+      "searchable": 1,
+      "changeable": 0,
+      "style": {
+        "type": "rect",
+        "ratio": 1.433
+      },
+      "ext": {
+        "json": "https://fongmi.cachefly.net/FongMi/CatVodSpider/main/json/bili.json",
+        "type": "帕梅拉#太极拳#广场舞#演唱会",
         "cookie": ""
       }
     },
