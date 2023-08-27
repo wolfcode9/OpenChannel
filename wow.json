@@ -5,13 +5,13 @@
   "sites": [
      {
       "key":"豆瓣",
-      "name":"豆瓣",
+      "name":"豆瓣 | 推薦",
       "type":3,
-      "api":"https://weixine.net/js/lib/drpy2.min.js",
+      "api":"https://raw.githubusercontent.com/wolfcode9/OpenChannel/main/drpy2.min.js",
       "searchable":0,
       "quickSearch":0,
       "filterable":0,
-      "ext":"https://weixine.net/js/douban.js"
+      "ext":"https://raw.githubusercontent.com/wolfcode9/OpenChannel/main/douban.js"
     },
     {
       "key": "泥巴",
