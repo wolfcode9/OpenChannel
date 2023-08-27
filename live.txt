@@ -30,10 +30,12 @@ TVBS新聞,https://www.youtube.com/watch?v=m_dhMSvUCIc
 台中望高寮,https://www.youtube.com/watch?v=lhXXhDyjFtI
 台中高美濕地,https://www.youtube.com/watch?v=fjhg3gAnMFg
 桃園石門水庫,https://www.youtube.com/watch?v=v_ckTTtgzlA
-南投日月潭,https://www.youtube.com/watch?v=mOfLAHC5fWQ
+南投日月潭,https://www.youtube.com/watch?v=yVZvMuu0vXw
 台東池上天堂路,https://www.youtube.com/watch?v=WA7GEXVGAP0
 台北大稻埕碼頭,https://www.youtube.com/watch?v=Ndo_8RuefH4
+金門建功嶼,https://www.youtube.com/watch?v=uh_yNAE01w8
 NASA,https://www.youtube.com/watch?v=_HGQZlK08gQ
+
 頻道測試1,#genre#
 民視,mitv://generationnexxxt.com:19806/412a0c47c1014e7d85da7d2d38631eb7
 臺視,mitv://generationnexxxt.com:19806/d12a80dfeb36488db100bbca6c6378e1
