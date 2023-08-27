@@ -10,7 +10,19 @@
       "api": "csp_NiNi",
       "searchable": 1,
       "changeable": 1
-    },    
+    },
+    {
+      "key": "bili_open",
+      "name": "哔哩(open)",
+      "type": 3,
+      "api": "https://raw.githubusercontent.com/FongMi/CatVodOpen/main/open/bili_open.js",
+      "searchable": 1,
+      "changeable": 0,
+      "ext": {
+        "categories": "MT管理器#Python#TVBOX",
+        "cookie": ""
+      }
+    },
     {
       "key": "星星",
       "name": "星星",
