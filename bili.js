@@ -88,9 +88,9 @@ async function init(cfg) {
             key: 'order',
             name: '排序',
             value: [
+                { n: '最新发布', v: 'pubdate' },
                 { n: '综合排序', v: '0' },
                 { n: '最多点击', v: 'click' },
-                { n: '最新发布', v: 'pubdate' },
                 { n: '最多弹幕', v: 'dm' },
                 { n: '最多收藏', v: 'stow' },
             ],
