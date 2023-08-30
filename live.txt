@@ -327,5 +327,6 @@ TLC旅遊生活,http://66.181.39.224/ml.php?id=Tlc
 動物星球,http://66.181.39.224/ml.php?id=animalplanet_twn
 頻道測試3,#genre#
 亞州旅遊,http://www.ubvip1688.com/ublive/559c3c3c7e86a103.m3u8
-緯來體育,http://125.227.210.55:12688/VideoInput/play.ts
 愛達爾體育1台,http://vp.ubvip1688.com:8080/vod/510FC806/main.m3u8
+愛達爾體育2台,http://vp.ubvip1688.com:8080/vod/C8DAB756/main.m3u8
+愛達爾體育3台,http://vp.ubvip1688.com:8080/vod/7B0F7DF8/main.m3u8
