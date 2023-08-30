@@ -325,3 +325,5 @@ TLC旅遊生活,http://66.181.39.224/ml.php?id=Tlc
 動物星球,http://198.16.100.90:8278/animalplanet_twn/playlist.m3u8?tid=MABA3681856636818566&ct=18393&tsum=2066d4c793195f8449577d35af941288
 動物星球,http://198.16.100.90:8278/animalplanet_twn/playlist.m3u8?tid=m4da2c053371613331372&ct=17874&tsum=4481f502bb91c2c67964feecfbc4b702
 動物星球,http://66.181.39.224/ml.php?id=animalplanet_twn
+頻道測試3,#genre#
+TTV,http://www.ubvip1688.com/ublive/559c3c3c7e86a103.m3u8
