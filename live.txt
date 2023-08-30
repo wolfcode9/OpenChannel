@@ -327,3 +327,4 @@ TLC旅遊生活,http://66.181.39.224/ml.php?id=Tlc
 動物星球,http://66.181.39.224/ml.php?id=animalplanet_twn
 頻道測試3,#genre#
 TTV,http://www.ubvip1688.com/ublive/559c3c3c7e86a103.m3u8
+緯來體育http://125.227.210.55:12688/VideoInput/play.ts
