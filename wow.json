@@ -45,8 +45,16 @@
       "api": "https://fongmi.cachefly.net/FongMi/CatVodOpen/main/open/czzy_open.js",
       "searchable": 1,
       "changeable": 1
-    },   
-    {
+    },
+
+{
+      "key": "暴風",
+      "name": "暴風",
+      "type": 1,
+      "api": "https://bfzyapi.com/api.php/provide/vod/?ac=list",
+      "searchable": 1,
+      "changeable": 1
+    },    {
       "key": "愛看",
       "name": "愛看",
       "type": 3,
