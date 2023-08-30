@@ -35,7 +35,7 @@ TVBS新聞,https://www.youtube.com/watch?v=m_dhMSvUCIc
 台北大稻埕碼頭,https://www.youtube.com/watch?v=Ndo_8RuefH4
 金門建功嶼,https://www.youtube.com/watch?v=uh_yNAE01w8
 NASA,https://www.youtube.com/watch?v=_HGQZlK08gQ
-UB頻道測試,#genre#
+UBLive頻道,#genre#
 亞州旅遊台,http://www.ubvip1688.com/ublive/559c3c3c7e86a103.m3u8
 靖天歡樂台,http://www.ubvip1688.com/ublive/ff4b064a6c4929e3.m3u8
 愛達爾娛樂台,http://www.ubvip1688.com/ublive/a98fb4c6802ccf8d.m3u8
