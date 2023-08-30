@@ -325,8 +325,10 @@ TLC旅遊生活,http://66.181.39.224/ml.php?id=Tlc
 動物星球,http://198.16.100.90:8278/animalplanet_twn/playlist.m3u8?tid=MABA3681856636818566&ct=18393&tsum=2066d4c793195f8449577d35af941288
 動物星球,http://198.16.100.90:8278/animalplanet_twn/playlist.m3u8?tid=m4da2c053371613331372&ct=17874&tsum=4481f502bb91c2c67964feecfbc4b702
 動物星球,http://66.181.39.224/ml.php?id=animalplanet_twn
-頻道測試3,#genre#
-亞州旅遊,http://www.ubvip1688.com/ublive/559c3c3c7e86a103.m3u8
+UB1688測試,#genre#
+亞州旅遊台,http://www.ubvip1688.com/ublive/559c3c3c7e86a103.m3u8
+靖天歡樂台,http://www.ubvip1688.com/ublive/ff4b064a6c4929e3.m3u8
+愛達爾娛樂台,http://www.ubvip1688.com/ublive/a98fb4c6802ccf8d.m3u8
 愛達爾體育1台,http://vp.ubvip1688.com:8080/vod/510FC806/main.m3u8
 愛達爾體育2台,http://vp.ubvip1688.com:8080/vod/C8DAB756/main.m3u8
 愛達爾體育3台,http://vp.ubvip1688.com:8080/vod/7B0F7DF8/main.m3u8
