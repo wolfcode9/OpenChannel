@@ -181,6 +181,15 @@
   ],
   "rules": [
     {
+      "name": "暴風",
+      "hosts": [
+        "bfzy"
+      ],
+      "regex": [
+        "#EXT-X-DISCONTINUITY\\r*\\n*#EXTINF:3,[\\s\\S]*?#EXT-X-DISCONTINUITY"
+      ]
+    },
+    {
       "name": "星星",
       "hosts": [
         "aws.ulivetv.net"
@@ -190,7 +199,7 @@
       ]
     },
     {
-      "name": "量子廣告",
+      "name": "量子",
       "hosts": [
         "vip.lz",
         "hd.lz"
@@ -201,7 +210,7 @@
       ]
     },
     {
-      "name": "非凡廣告",
+      "name": "非凡",
       "hosts": [
         "vip.ffzy",
         "hd.ffzy"
