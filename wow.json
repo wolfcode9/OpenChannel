@@ -14,6 +14,17 @@
       "ext":"https://weixine.net/js/douban.js"
     },
     {
+      "key": "YingShi",
+      "name": "YingShi",
+      "type": 3,
+      "api": "csp_YingShi",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "changeable": 0,
+       "url": "https://www.yingshi.tv/"
+    },
+    {
       "key": "泥巴",
       "name": "泥巴",
       "type": 3,
