@@ -3,13 +3,13 @@
   "sites": 
   [
     {"key": "玩偶","name": "玩偶","type": 3,"api": "csp_Doll","searchable": 1},
-    {"key": "泥巴","name": "泥巴","type": 3,"api": "csp_NiNi","searchable": 1,"changeable": 1,"categories": ["午夜場"],"ext": "1"},
-    {"key": "gdlsp.com","name": "香奶兒","type": 0,"api": "https://www.gdlsp.com/api/xml.php","searchable": 1},
     {"key": "18AV","name": "18AV","type": 3,"api": "csp_Eighteen","searchable": 1},
+    {"key": "泥巴","name": "泥巴","type": 3,"api": "csp_NiNi","searchable": 1,"changeable": 1,"categories": ["午夜場"],"ext": "1"},     
     {"key": "Jable","name": "Jable","type": 3,"api": "csp_Jable","searchable": 1},
     {"key": "MissAV","name": "MissAV","type": 3,"api": "csp_Miss","searchable": 1},
-    {"key": "jcspcj8.com","name": "久草","type": 0,"api": "http://jcspcj8.com/api?ac=videolist","searchable": 1},
     {"key": "91md.me","name": "91麻豆","type": 1,"api": "http://91md.me/api.php/provide/vod/","searchable": 1},
+    {"key": "gdlsp.com","name": "香奶兒","type": 0,"api": "https://www.gdlsp.com/api/xml.php","searchable": 1},
+    {"key": "jcspcj8.com","name": "久草","type": 0,"api": "http://jcspcj8.com/api?ac=videolist","searchable": 1},
     {"key": "dadiapi.com","name": "大地","type": 0,"api": "http://dadiapi.com/api.php","searchable": 1},
     {"key": "apilj.com","name": "火辣","type": 1,"api": "http://apilj.com/api.php/provide/vod/at/json/","searchable": 1},
     {"key": "f2dcj6.com","name": "二代","type": 0,"api": "http://f2dcj6.com/sapi?ac=videolist","searchable": 1},
