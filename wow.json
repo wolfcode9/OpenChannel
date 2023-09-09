@@ -14,8 +14,8 @@
       "ext":"https://weixine.net/js/douban.js"
     },
     {
-      "key": "YingShi",
-      "name": "YingShi",
+      "key": "影視",
+      "name": "影視",
       "type": 3,
       "api": "csp_YingShi",
       "searchable": 1,
