@@ -212,6 +212,18 @@
       "filterable": 0
     },
     {
+      "key": "非凡",
+      "name": "非凡",
+      "type": 0,
+      "api": "http://cj.ffzyapi.com/api.php/provide/vod/at/xml/",
+      "searchable": 1,
+      "changeable": 1,
+      "ext": "1",
+      "categories": [
+        "伦理片"
+      ]   
+    },
+    {
       "key": "量子",
       "name": "量子",
       "type": 0,
@@ -219,6 +231,7 @@
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 0,
+      "ext": "1",
       "categories": [
         "伦理片"
       ]
