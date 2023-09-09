@@ -214,7 +214,7 @@
     {
       "key": "非凡",
       "name": "非凡",
-      "type": 0,
+      "type": 3,
       "api": "http://cj.ffzyapi.com/api.php/provide/vod/at/xml/",
       "searchable": 1,
       "changeable": 1,
@@ -225,7 +225,7 @@
     {
       "key": "量子",
       "name": "量子",
-      "type": 0,
+      "type": 3,
       "api": "https://cj.lziapi.com/api.php/provide/vod/at/xml/",
       "searchable": 1,
       "quickSearch": 1,
