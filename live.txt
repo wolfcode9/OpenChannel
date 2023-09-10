@@ -31,5 +31,3 @@ TVBS新聞,https://www.youtube.com/watch?v=m_dhMSvUCIc
 桃園石門水庫,https://www.youtube.com/watch?v=v_ckTTtgzlA
 南投日月潭,https://www.youtube.com/watch?v=RmwQ2JminLg
 NASA,https://www.youtube.com/watch?v=_HGQZlK08gQ
-測試專用,#genre#
-TEST,https://f05.ccplay05venus.com/live/rx1/302/f6c3608d666115b29df67a3b33624817/index.m3u8
