@@ -120,6 +120,17 @@
       "ext": "https://raw.githubusercontent.com/hjdhnx/dr_py/main/js/大豆.js"
     },
     {
+      "key": "dadou",
+      "name": "大豆高清",
+       "type": 3,
+      "api": "csp_AppYsV2",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "changeable": 0,
+      "ext": "https://www.dadou.cm/api.php/provide/vod/"
+    },
+    {
       "key": "量子",
       "name": "量子",
       "type": 0,
