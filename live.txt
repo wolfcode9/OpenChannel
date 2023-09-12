@@ -1,4 +1,4 @@
-新聞直播,#genre#
+1新聞直播,#genre#
 東森新聞,https://www.youtube.com/watch?v=S5WOGu2HSes
 東森財經,https://www.youtube.com/watch?v=WHEPzbFA3hw
 寰宇新聞,https://www.youtube.com/watch?v=6IquAgfvYmc
@@ -30,5 +30,6 @@ TVBS新聞,https://www.youtube.com/watch?v=m_dhMSvUCIc
 台中高美濕地,https://www.youtube.com/watch?v=fjhg3gAnMFg
 桃園石門水庫,https://www.youtube.com/watch?v=v_ckTTtgzlA
 南投日月潭,https://www.youtube.com/watch?v=RmwQ2JminLg
+象山看台北的https://youtu.be/z_fY1pj1VBw
 NASA,https://www.youtube.com/watch?v=_HGQZlK08gQ
 測試專用,http://vp.ubvip1688.com:8080/vod/7B0F7DF8/main.m3u8
