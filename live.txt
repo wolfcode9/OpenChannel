@@ -33,4 +33,9 @@ TVBS新聞,https://www.youtube.com/watch?v=m_dhMSvUCIc
 台北大稻埕,https://www.youtube.com/watch?v=Ndo_8RuefH4
 象山看台北,https://youtu.be/z_fY1pj1VBw
 NASA,https://www.youtube.com/watch?v=_HGQZlK08gQ
-測試專用,http://vp.ubvip1688.com:8080/vod/7B0F7DF8/main.m3u8
+測試頻道,#genre#
+ELTA體育3,台http://vp.ubvip1688.com:8080/vod/7B0F7DF8/main.m3u8
+國家地理頻道,mitv://generationnexxxt.com:19806/18fb37a66e9c4c07ade544dbfa1e40fb
+探索频頻道,mitv://generationnexxxt.com:19806/bc37cbb919b541d5a4cdbd3e2b1e843d
+TLC旅游生活,mitv://generationnexxxt.com:19806/82066e65d95a475f873749d4d4ac72e6
+動物星球,mitv://generationnexxxt.com:19806/b7b74f4e11ae45be8ff921996d9a2efd
