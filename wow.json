@@ -5,7 +5,7 @@
     {
       "name": "YouTube",
       "url": "https://raw.githubusercontent.com/wolfcode9/OpenChannel/main/live.txt",
-      "logo": "https://epg.112114.xyz/logo/{name}.png"
+      "logo": "https://raw.githubusercontent.com/wolfcode9/OpenChannel/main//logo/{name}.jpg"
     }
   ],
   "sites": [
