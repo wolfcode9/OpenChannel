@@ -26,10 +26,11 @@ TVBS新聞,https://www.youtube.com/watch?v=m_dhMSvUCIc
 流行音樂,https://www.youtube.com/watch?v=IfNMuFqKBWs
 放鬆音樂,https://www.youtube.com/watch?v=BbeYP8cFIlc
 即時影像,#genre#
-台中望高寮,https://www.youtube.com/watch?v=lhXXhDyjFtI
-台中高美濕地,https://www.youtube.com/watch?v=fjhg3gAnMFg
-桃園石門水庫,https://www.youtube.com/watch?v=v_ckTTtgzlA
-南投日月潭,https://www.youtube.com/watch?v=RmwQ2JminLg
-台北大稻埕,https://www.youtube.com/watch?v=Ndo_8RuefH4
+台中望高寮,https://youtu.be/lhXXhDyjFtI
+台中高美濕地,https://youtu.be/fjhg3gAnMFg
+桃園石門水庫,https://youtu.be/v_ckTTtgzlA
+南投日月潭,https://youtu.be/RmwQ2JminLg
+台北大稻埕,https://youtu.be/Ndo_8RuefH4
 象山看台北,https://youtu.be/z_fY1pj1VBw
-NASA,https://www.youtube.com/watch?v=_HGQZlK08gQ
+台東多良車站,https://youtu.be/UCG1aXVO8H8
+NASA,https://youtu.be/_HGQZlK08gQ
