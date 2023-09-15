@@ -25,7 +25,7 @@ TVBS新聞,https://youtu.be/m_dhMSvUCIc
 🎵 音樂串流,#genre#
 流行音樂,https://youtu.be/IfNMuFqKBWs
 放鬆音樂,https://youtu.be/BbeYP8cFIlc
-📹 即時影像,#genre#
+📷 即時影像,#genre#
 台中望高寮,https://youtu.be/lhXXhDyjFtI
 台中高美濕地,https://youtu.be/fjhg3gAnMFg
 桃園石門水庫,https://youtu.be/v_ckTTtgzlA
