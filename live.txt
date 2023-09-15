@@ -34,7 +34,3 @@ TVBS新聞,https://youtu.be/m_dhMSvUCIc
 象山看台北,https://youtu.be/z_fY1pj1VBw
 台東多良車站,https://youtu.be/UCG1aXVO8H8
 NASA,https://youtu.be/_HGQZlK08gQ
-<<<<<<< HEAD
-測試,#genre#
-=======
->>>>>>> adc9cc3b8a646544fd79c68d484c6eb184241055
