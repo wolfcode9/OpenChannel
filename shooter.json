@@ -49,6 +49,7 @@
       "api": "https://bfzyapi.com/api.php/provide/vod/?ac=list",
       "searchable": 1,
       "changeable": 1,
+      "ext": "1",
       "categories": [
         "理論片"
       ]
