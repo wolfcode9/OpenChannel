@@ -45,12 +45,12 @@
     {
       "key": "暴風",
       "name": "暴風",
-      "type": 1,
+      "type": 0,
       "api": "https://bfzyapi.com/api.php/provide/vod/?ac=list",
       "searchable": 1,
       "changeable": 1,
 	  "categories": [
-        "理伦片"
+        "伦理片"
       ]
 	},
     {
