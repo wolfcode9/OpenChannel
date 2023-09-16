@@ -45,14 +45,14 @@
     {
       "key": "暴風",
       "name": "暴風",
-      "type": 0,
+      "type": 1,
       "api": "https://bfzyapi.com/api.php/provide/vod/?ac=list",
       "searchable": 1,
       "changeable": 1,
-	  "categories": [
-        "伦理片"
+      "categories": [
+        "理論片"
       ]
-	},
+	  },
     {
       "key": "Jable",
       "name": "Jable",
