@@ -10,7 +10,7 @@ TVBS新聞,https://youtu.be/m_dhMSvUCIc
 中視新聞,https://youtu.be/TCnaIE_SAtM
 華視新聞,https://youtu.be/wM0g8EoUZ_E
 民視新聞,https://youtu.be/ylYJSBUgaMA
-大愛電視,https://youtu.be/MIqUplvSRWA
+大愛電視,https://youtu.be/oV_i3Hsl_zg
 鳳凰衛視,https://youtu.be/if6yQq_JJyY
 中文國際,https://youtu.be/9sE12tg3CmA
 美國新聞,https://youtu.be/OOtxXPaQvoM
@@ -35,3 +35,12 @@ TVBS新聞,https://youtu.be/m_dhMSvUCIc
 台東多良車站,https://youtu.be/UCG1aXVO8H8
 NASA Live,https://youtu.be/_HGQZlK08gQ
 Starbase Live,https://youtu.be/mhJRzQsLZGg
+兒童乖乖,#genre#
+寶寶巴士,https://youtu.be/SGYI9MFOr2c
+MOMO親子台,https://youtu.be/_ql4bA6yuk4
+YOYO TV,https://youtu.be/_xGoUceOyCs
+碰碰狐,https://youtu.be/QFrLDBwkFFI
+BabyTiger,https://youtu.be/R99X9q3x6NM
+Robocar Poli,https://youtu.be/YkRKcCv7agA
+PAW Patrol,https://youtu.be/dVhh7S9hVyg
+CoComelon,https://youtu.be/3P0uceoD3j8
