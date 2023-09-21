@@ -19,7 +19,7 @@ TVBS新聞,https://youtu.be/m_dhMSvUCIc
 新加坡新聞,https://youtu.be/XWq5kBlakcQ
 德國新聞,https://youtu.be/wjgYFNfSuKU
 英國新聞,https://youtu.be/9Auq9mYxFEE
-法國新聞,https://youtu.be/h3MuIUNCCzI
+法國新聞,https://youtu.be/tkDUSYHoKxE
 德國新聞,https://youtu.be/pqabxBKzZ6M
 歐洲新聞,https://youtu.be/pykpO5kQJ98
 音樂串流,#genre#
@@ -37,11 +37,11 @@ NASA Live,https://youtu.be/_HGQZlK08gQ
 Starbase Live,https://youtu.be/mhJRzQsLZGg
 兒童頻道,#genre#
 BabyBus,https://youtu.be/SGYI9MFOr2c
-YOYO TV,https://youtu.be/80NbEca76D0
+YOYO TV,https://youtu.be/mXrc1m7RIVY
 Momo Kids,https://youtu.be/_ql4bA6yuk4
 PinkFong,https://youtu.be/QFrLDBwkFFI
 BabyTiger,https://youtu.be/R99X9q3x6NM
-Robocar Poli,https://youtu.be/YkRKcCv7agA
-PAW Patrol,https://youtu.be/yI3H8Dnrn9M
+Robocar Poli,https://youtu.be/rCGu7hKbAWE
+PAW Patrol,https://youtu.be/uBuwSnekoRU
 CoComelon,https://youtu.be/30HwvLpJAO4
 LittleBabyBum,https://youtu.be/5z12i0LezEA
