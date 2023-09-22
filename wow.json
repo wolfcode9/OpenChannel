@@ -106,14 +106,6 @@
       ]
     },
     {
-      "key": "愛看",
-      "name": "愛看",
-      "type": 3,
-      "api": "https://fongmi.cachefly.net/FongMi/CatVodOpen/main/open/ikanbot_open.js",
-      "searchable": 1,
-      "changeable": 1
-    },
-    {
       "key": "快看",
       "name": "快看",
       "type": 3,
@@ -142,17 +134,6 @@
       },
       "api": "https://raw.githubusercontent.com/hjdhnx/dr_py/main/libs/drpy2.min.js",
       "ext": "https://raw.githubusercontent.com/hjdhnx/dr_py/main/js/农民影视.js"
-    },
-    {
-      "key": "drpy_js_大豆",
-      "name": "大豆",
-      "type": 3,
-      "style": {
-        "type": "rect",
-        "ratio": 1.33
-      },
-      "api": "https://raw.githubusercontent.com/hjdhnx/dr_py/main/libs/drpy2.min.js",
-      "ext": "https://raw.githubusercontent.com/hjdhnx/dr_py/main/js/大豆.js"
     },
     {
       "key": "索尼",
