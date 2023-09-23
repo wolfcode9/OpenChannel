@@ -45,4 +45,4 @@ PAW Patrol,https://youtu.be/yI3H8Dnrn9M
 CoComelon,https://youtu.be/30HwvLpJAO4
 LittleBabyBum,https://youtu.be/5z12i0LezEA
 測試頻道,#genre#
-風雨同簷,https://p-hebe.svc.litv.tv/hi/vod/Qm0DYam25P4/master.m3u8
+風雨同簷,https://p-hebe.svc.litv.tv/hi/vod/fuJW75cwEkw/litv-vod60953-000000M001-video_eng=762000-audio_eng=127402.m3u8
