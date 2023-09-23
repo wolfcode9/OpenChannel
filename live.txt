@@ -44,3 +44,5 @@ Robocar Poli,https://youtu.be/rCGu7hKbAWE
 PAW Patrol,https://youtu.be/yI3H8Dnrn9M
 CoComelon,https://youtu.be/30HwvLpJAO4
 LittleBabyBum,https://youtu.be/5z12i0LezEA
+測試頻道,#genre#
+風雨同簷,https://p-hebe.svc.litv.tv/hi/vod/Qm0DYam25P4/litv-others-vod43850-000000M001-video=352000-audio_eng=87572.m3u8
