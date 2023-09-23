@@ -24,92 +24,122 @@
         "key": "shijie",
         "name": "🐱 视界",
         "type": 1,
-        "api": "http://www.1080dyw.cc/api.php/v1.vod"
+        "api": "http://www.1080dyw.cc/api.php/v1.vod",
+        "searchable": 1,
+        "changeable": 1
     },
     {
         "key": "69mj",
         "name": "🐱 美剧",
         "type": 1,
-        "api": "https://www.69mj.com/xgapp.php/v2/"
+        "api": "https://www.69mj.com/xgapp.php/v2/",
+        "searchable": 1,
+        "changeable": 1
     },
     {
         "key": "aidi",
         "name": "🐱 爱迪",
         "type": 1,
-        "api": "https://api123.adys.app/xgapp.php/v3/"
+        "api": "https://api123.adys.app/xgapp.php/v3/",
+        "searchable": 1,
+        "changeable": 1
     },
     {
         "key": "hello",
         "name": "🐱 哈喽",
         "type": 1,
-        "api": "http://www.miniku.cc/xgapp.php/v1/"
+        "api": "http://www.miniku.cc/xgapp.php/v1/",
+        "searchable": 1,
+        "changeable": 1
     },
     {
         "key": "beijihu",
         "name": "🐱 极狐",
         "type": 1,
-        "api": "https://www.kuin.one/api.php/app/"
+        "api": "https://www.kuin.one/api.php/app/",
+        "searchable": 1,
+        "changeable": 1
 
     },
     {
         "key": "kuku",
         "name": "🐱 酷酷",
         "type": 1,
-        "api": "http://cms.realdou.cn:35264/api.php/app/"
+        "api": "http://cms.realdou.cn:35264/api.php/app/",
+        "searchable": 1,
+        "changeable": 1
     },
     {
         "key": "kuk",
         "name": "🐱 天堂",
         "type": 1,
-        "api": "http://dytt996.com/api.php/app/"
+        "api": "http://dytt996.com/api.php/app/",
+        "searchable": 1,
+        "changeable": 1
     },
     {
         "key": "kku",
         "name": "🐱 酷影",
         "type": 1,
-        "api": "https://www.gsjtlxy.top/xgapp.php/v3/"
+        "api": "https://www.gsjtlxy.top/xgapp.php/v3/",
+        "searchable": 1,
+        "changeable": 1
     },
     {
         "key": "kkku",
         "name": "🐱 琦琦",
         "type": 1,
-        "api": "http://mp4.ghlyys.com/api.php/app/"
+        "api": "http://mp4.ghlyys.com/api.php/app/",
+        "searchable": 1,
+        "changeable": 1
     },
     {
         "key": "sukan",
         "name": "🐱 速看",
         "type": 1,
-        "api": "https://sk100.tv/api.php/app/"
+        "api": "https://sk100.tv/api.php/app/",
+        "searchable": 1,
+        "changeable": 1
     },
     {
         "key": "dadou",
         "name": "🐱 大豆",
         "type": 1,
-        "api": "http://www.dadou.cm/api.php/app/"
+        "api": "http://www.dadou.cm/api.php/app/",
+        "searchable": 1,
+        "changeable": 1
     },
     {
         "key": "qtw",
         "name": "🐱 彩虹",
         "type": 1,
-        "api": "http://ys.qtw.asia/lvdou_api.php/v1.vod"
+        "api": "http://ys.qtw.asia/lvdou_api.php/v1.vod",
+        "searchable": 1,
+        "changeable": 1
     },
     {
         "key": "yaya",
         "name": "🐱 鸭奈",
         "type": 1,
-        "api": "https://yayayaaapp.ynf.icu/api.php/app/"
+        "api": "https://yayayaaapp.ynf.icu/api.php/app/",
+        "searchable": 1,
+        "changeable": 1
     },
     {
         "key": "aliys",
         "name": "🐱 阿里",
         "type": 1,
-        "api": "http://aliys.cn:90/api.php/v1.vod"
+        "api": "http://aliys.cn:90/api.php/v1.vod",
+        "searchable": 1,
+        "changeable": 1
     },
     {
         "key": "1080dyw",
         "name": "🐱 1080",
         "type": 1,
-        "api": "https://www.1080dyw.cc/api.php/v1.vod"
+        "api": "https://www.1080dyw.cc/api.php/v1.vod",
+        "searchable": 1,
+        "changeable": 1
     },
     {
       "key": "影視",
