@@ -10,11 +10,7 @@ TVBS新聞,https://youtu.be/m_dhMSvUCIc
 中視新聞,https://youtu.be/TCnaIE_SAtM
 華視新聞,https://youtu.be/wM0g8EoUZ_E
 民視新聞,https://youtu.be/ylYJSBUgaMA
-<<<<<<< HEAD
 大愛電視,https://youtu.be/oV_i3Hsl_zg
-=======
-大愛電視,https://youtu.be/MIqUplvSRWA
->>>>>>> 55eabee45d38560576727cacf44e2139b46b0397
 鳳凰衛視,https://youtu.be/uQhULaZ4ZcE
 中文國際,https://youtu.be/9sE12tg3CmA
 美國新聞,https://youtu.be/OOtxXPaQvoM
@@ -32,7 +28,7 @@ TVBS新聞,https://youtu.be/m_dhMSvUCIc
 台中望高寮,https://youtu.be/lhXXhDyjFtI
 台中高美濕地,https://youtu.be/fjhg3gAnMFg
 桃園石門水庫,https://youtu.be/v_ckTTtgzlA
-南投日月潭,https://youtu.be/s3MwQWZMv-U
+南投日月潭,https://youtu.be/RmwQ2JminLg
 台北大稻埕,https://youtu.be/Ndo_8RuefH4
 象山看台北,https://youtu.be/z_fY1pj1VBw
 台東多良車站,https://youtu.be/UCG1aXVO8H8
