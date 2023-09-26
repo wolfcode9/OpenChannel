@@ -2,6 +2,7 @@
 東森新聞,https://youtu.be/S5WOGu2HSes
 東森財經,https://youtu.be/WHEPzbFA3hw
 寰宇新聞,https://youtu.be/6IquAgfvYmc
+公共電視,https://youtu.be/C6gYqSHLRw4
 TVBS新聞,https://youtu.be/m_dhMSvUCIc
 中天新聞,https://youtu.be/oIgbl7t0S_w
 中天亞洲,https://youtu.be/PYtGQvNmadg
@@ -27,7 +28,7 @@ TVBS新聞,https://youtu.be/m_dhMSvUCIc
 台中望高寮,https://youtu.be/lhXXhDyjFtI
 台中高美濕地,https://youtu.be/fjhg3gAnMFg
 桃園石門水庫,https://youtu.be/v_ckTTtgzlA
-南投日月潭,https://youtu.be/RmwQ2JminLg
+南投日月潭,https://youtu.be/s3MwQWZMv-U
 台北大稻埕,https://youtu.be/Ndo_8RuefH4
 象山看台北,https://youtu.be/z_fY1pj1VBw
 台東多良車站,https://youtu.be/UCG1aXVO8H8
@@ -36,6 +37,7 @@ Starbase Live,https://youtu.be/mhJRzQsLZGg
 兒童頻道,#genre#
 BabyBus,https://youtu.be/SGYI9MFOr2c
 YOYO TV,https://youtu.be/mXrc1m7RIVY
+Momo Kids,https://youtu.be/_ql4bA6yuk4
 PinkFong,https://youtu.be/0OTwlDDCoQw
 BabyTiger,https://youtu.be/R99X9q3x6NM
 Robocar Poli,https://youtu.be/rCGu7hKbAWE
