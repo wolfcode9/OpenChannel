@@ -26,6 +26,7 @@ TVBS新聞,https://youtu.be/m_dhMSvUCIc
 音樂串流,#genre#
 流行音樂,https://youtu.be/IfNMuFqKBWs
 放鬆音樂,https://youtu.be/BbeYP8cFIlc
+Lofi Girl,https://youtu.be/jfKfPfyJRdk
 即時影像,#genre#
 台中望高寮,https://youtu.be/lhXXhDyjFtI
 台中高美濕地,https://youtu.be/fjhg3gAnMFg
@@ -42,7 +43,7 @@ YOYO TV,https://youtu.be/mXrc1m7RIVY
 Momo Kids,https://youtu.be/_ql4bA6yuk4
 PinkFong,https://youtu.be/0OTwlDDCoQw
 BabyTiger,https://youtu.be/UeVEIe_NIfQ
-Robocar Poli,https://youtu.be/rCGu7hKbAWE
+Robocar Poli,https://youtu.be/YkRKcCv7agA
 PAW Patrol,https://youtu.be/cX1Qy4aYEPg
 CoComelon,https://youtu.be/30HwvLpJAO4
 LittleBabyBum,https://youtu.be/5z12i0LezEA
