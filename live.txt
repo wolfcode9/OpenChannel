@@ -43,12 +43,13 @@ Lofi Girl,https://youtu.be/jfKfPfyJRdk
 NASA Live,https://youtu.be/_HGQZlK08gQ
 Starbase Live,https://youtu.be/mhJRzQsLZGg
 兒童頻道,#genre#
-BabyBus,https://youtu.be/SGYI9MFOr2c
+Baby Bus,https://youtu.be/SGYI9MFOr2c
+Peppa Pig,https://youtu.be/dz0Xqvp6W10
 YOYO TV,https://youtu.be/mXrc1m7RIVY
 Momo Kids,https://youtu.be/_ql4bA6yuk4
-PinkFong,https://youtu.be/0OTwlDDCoQw
-BabyTiger,https://youtu.be/UeVEIe_NIfQ
-Robocar Poli,https://youtu.be/YkRKcCv7agA
+Pink Fong,https://youtu.be/0OTwlDDCoQw
+Baby Tiger,https://youtu.be/UeVEIe_NIfQ
+Robocar POLI,https://youtu.be/YkRKcCv7agA
 PAW Patrol,https://youtu.be/cX1Qy4aYEPg
 CoComelon,https://youtu.be/30HwvLpJAO4
-LittleBabyBum,https://youtu.be/5z12i0LezEA
+Little Baby Bum,https://youtu.be/5z12i0LezEA
