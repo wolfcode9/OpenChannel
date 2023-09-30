@@ -5,7 +5,7 @@
 公共電視,https://youtu.be/C6gYqSHLRw4
 TVBS新聞,https://youtu.be/m_dhMSvUCIc
 中天新聞,https://youtu.be/oIgbl7t0S_w
-ABC Learning English,https://youtu.be/vuTY4FDAbpA
+ABC Learning English,https://youtu.be/0_A9J3q3SrE
 中天亞洲,https://youtu.be/PYtGQvNmadg
 大陸尋奇,https://youtu.be/n2aila3gxuY
 台灣啟示錄,https://youtu.be/YKor8d0UK7c
@@ -26,16 +26,16 @@ ABC Learning English,https://youtu.be/vuTY4FDAbpA
 歐洲新聞,https://youtu.be/pykpO5kQJ98
 音樂串流,#genre#
 流行音樂,https://youtu.be/IfNMuFqKBWs
-Lofi Girl,https://youtu.be/jfKfPfyJRdk
 Wonder Deep,https://youtu.be/VKcBtNZ5MpU
 The Good Life,https://youtu.be/36YnV9STBqc
+Lofi Girl,https://youtu.be/jfKfPfyJRdk
 放鬆音樂,https://youtu.be/BbeYP8cFIlc
 輕柔旋律,https://youtu.be/trbQx6CwCzw
 即時影像,#genre#
 台中望高寮,https://youtu.be/lhXXhDyjFtI
 台中高美濕地,https://youtu.be/fjhg3gAnMFg
 桃園石門水庫,https://youtu.be/v_ckTTtgzlA
-南投日月潭,https://youtu.be/s3MwQWZMv-U
+南投日月潭,https://youtu.be/RmwQ2JminLg
 台北大稻埕,https://youtu.be/Ndo_8RuefH4
 象山看台北,https://youtu.be/z_fY1pj1VBw
 台東多良車站,https://youtu.be/UCG1aXVO8H8
