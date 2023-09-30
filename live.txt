@@ -5,6 +5,7 @@
 公共電視,https://youtu.be/C6gYqSHLRw4
 TVBS新聞,https://youtu.be/m_dhMSvUCIc
 中天新聞,https://youtu.be/oIgbl7t0S_w
+ABC Learning English,https://youtu.be/vuTY4FDAbpA
 中天亞洲,https://youtu.be/PYtGQvNmadg
 大陸尋奇,https://youtu.be/n2aila3gxuY
 台灣啟示錄,https://youtu.be/YKor8d0UK7c
@@ -26,6 +27,8 @@ TVBS新聞,https://youtu.be/m_dhMSvUCIc
 音樂串流,#genre#
 流行音樂,https://youtu.be/IfNMuFqKBWs
 Lofi Girl,https://youtu.be/jfKfPfyJRdk
+Wonder Deep,https://youtu.be/VKcBtNZ5MpU
+The Good Life,https://youtu.be/36YnV9STBqc
 放鬆音樂,https://youtu.be/BbeYP8cFIlc
 輕柔旋律,https://youtu.be/trbQx6CwCzw
 即時影像,#genre#
