@@ -13,7 +13,8 @@ ABC Learning English,https://youtu.be/0_A9J3q3SrE
 中視新聞,https://youtu.be/TCnaIE_SAtM
 華視新聞,https://youtu.be/wM0g8EoUZ_E
 民視新聞,https://youtu.be/ylYJSBUgaMA
-大愛電視,https://youtu.be/MIqUplvSRWA
+大愛一臺,https://youtu.be/MIqUplvSRWA
+大愛二臺,https://youtu.be/DTNkEm6jaqQ
 鳳凰衛視,https://youtu.be/Q4J1ONrB3Do
 中文國際,https://youtu.be/9sE12tg3CmA
 美國新聞,https://youtu.be/OOtxXPaQvoM
