@@ -27,7 +27,8 @@
       "style": {
       "type": "rect",
       "ratio": 1.485
-    },
+		}
+	},
     {
       "key": "泥巴",
       "name": "泥巴",
