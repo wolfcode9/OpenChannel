@@ -18,7 +18,7 @@ ABC Learning English,https://youtu.be/0_A9J3q3SrE
 中文國際,https://youtu.be/9sE12tg3CmA
 美國新聞,https://youtu.be/OOtxXPaQvoM
 日本新聞,https://youtu.be/coYw-eVU0Ks
-韓國新聞,https://youtu.be/mkKMKU7q5Fo
+韓國新聞,https://youtu.be/FJfwehhzIhw
 新加坡新聞,https://youtu.be/XWq5kBlakcQ
 英國新聞,https://youtu.be/9Auq9mYxFEE
 法國新聞,https://youtu.be/tkDUSYHoKxE
@@ -43,12 +43,12 @@ NASA Live,https://youtu.be/_HGQZlK08gQ
 Starbase Live,https://youtu.be/mhJRzQsLZGg
 兒童頻道,#genre#
 Baby Bus,https://youtu.be/SGYI9MFOr2c
-Peppa Pig,https://youtu.be/BozGFMEVeG8
+Peppa Pig,https://youtu.be/Nfv7gIz-sBY
 YOYO TV,https://youtu.be/O71v6giCths
 Momo Kids,https://youtu.be/_ql4bA6yuk4
 Pink Fong,https://youtu.be/WW4w5FQ0pWA
 Baby Tiger,https://youtu.be/Hwk7cbODU18
 Robocar POLI,https://youtu.be/QUs1vBaZlxc
-PAW Patrol,https://youtu.be/JHDOqc-3Jzs
+PAW Patrol,https://youtu.be/4H20KwyxgQc
 CoComelon,https://youtu.be/nx7SX__-Esc
 Little Baby Bum,https://youtu.be/5z12i0LezEA
