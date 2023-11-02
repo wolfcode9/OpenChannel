@@ -5,12 +5,11 @@
 公共電視,https://youtu.be/C6gYqSHLRw4
 TVBS新聞,https://youtu.be/m_dhMSvUCIc
 中天新聞,https://youtu.be/oIgbl7t0S_w
-中天亞洲,https://youtu.be/PYtGQvNmadg
-大陸尋奇,https://youtu.be/n2aila3gxuY
+中天亞洲,https://youtu.be/s2waUruqze4
 台視新聞,https://youtu.be/xL0ch83RAK8
 中視新聞,https://youtu.be/TCnaIE_SAtM
 華視新聞,https://youtu.be/wM0g8EoUZ_E
-大愛一臺,https://youtu.be/oV_i3Hsl_zg
+大愛一臺,https://youtu.be/MIqUplvSRWA
 大愛二臺,https://youtu.be/DTNkEm6jaqQ
 鳳凰衛視,https://youtu.be/ArJrX_bE9KE
 中文國際,https://youtu.be/9sE12tg3CmA
@@ -33,20 +32,20 @@ Lofi Girl,https://youtu.be/jfKfPfyJRdk
 台中望高寮,https://youtu.be/lhXXhDyjFtI
 台中高美濕地,https://youtu.be/fjhg3gAnMFg
 桃園石門水庫,https://youtu.be/GUCaVR88ZFU
-南投日月潭,https://youtu.be/gqLeLBzuGQQ
+南投日月潭,https://youtu.be/CMH4SZp1wQs
 台北大稻埕,https://youtu.be/Ndo_8RuefH4
 象山看台北,https://youtu.be/z_fY1pj1VBw
 台東多良車站,https://youtu.be/UCG1aXVO8H8
 NASA Live,https://youtu.be/_HGQZlK08gQ
 Starbase Live,https://youtu.be/mhJRzQsLZGg
 兒童頻道,#genre#
-Baby Bus,https://youtu.be/iu8q-QGq7IE
-Peppa Pig,https://youtu.be/32mWWYZEuUU
-YOYO TV,https://youtu.be/n1DrkRlQD_A
+Baby Bus,https://youtu.be/LK2YV0v5pq0
+Peppa Pig,https://youtu.be/1GUXW_EK30Q
+YOYO TV,https://youtu.be/7b_D2O8bSj4
 Momo Kids,https://youtu.be/4hPRMFFAXPE
-Pink Fong,https://youtu.be/R3cc62eoCfI
+Pink Fong,https://youtu.be/q4vDQwa8kF8
 Baby Tiger,https://youtu.be/wmwMRNdHD04
-Robocar POLI,https://youtu.be/iclFobFUnrg
-PAW Patrol,https://youtu.be/p1Y8TJYJecE
+Robocar POLI,https://youtu.be/EodnsR-DaoY
+PAW Patrol,https://youtu.be/Z-hJUo3UO10
 CoComelon,https://youtu.be/wV8eDp3u-aY
 Little Baby Bum,https://youtu.be/atTQ0WOJCq0
