@@ -160,6 +160,14 @@
       ]
     },
     {
+      "key": "新6V",
+      "name": "新6V",
+      "type": 3,
+      "api": "csp_Xb6v",
+      "searchable": 1,
+      "changeable": 0
+    },
+    {
       "key": "快看",
       "name": "快看",
       "type": 3,
