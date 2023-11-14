@@ -10,7 +10,7 @@ TVBS新聞,https://youtu.be/m_dhMSvUCIc
 台視新聞,https://youtu.be/xL0ch83RAK8
 中視新聞,https://youtu.be/TCnaIE_SAtM
 華視新聞,https://youtu.be/wM0g8EoUZ_E
-大愛一臺,https://youtu.be/oV_i3Hsl_zg
+大愛一臺,https://youtu.be/MIqUplvSRWA
 大愛二臺,https://youtu.be/DTNkEm6jaqQ
 鳳凰衛視,https://youtu.be/9W8M9NYk0e4
 中文國際,https://youtu.be/9sE12tg3CmA
@@ -40,11 +40,12 @@ Lofi Girl,https://youtu.be/jfKfPfyJRdk
 NASA Live,https://youtu.be/_HGQZlK08gQ
 Starbase Live,https://youtu.be/mhJRzQsLZGg
 兒童頻道,#genre#
-Baby Bus,https://youtu.be/WGgpvtu6vRg
-Peppa Pig,https://youtu.be/IzJKeZNKAIE
+Baby Bus,https://youtu.be/ZGXLjvZzt5A
+Peppa Pig,https://youtu.be/D_qL0hXMLJg
+YOYO TV,https://youtu.be/frnOaadNetI
 Momo Kids,https://youtu.be/4hPRMFFAXPE
 Pink Fong,https://youtu.be/aRpTOsHnubs
 Baby Tiger,https://youtu.be/4HQfT4-LzuQ
 Robocar POLI,https://youtu.be/iXFKVfwaUIs
-PAW Patrol,https://youtu.be/uHWBC-m9azs
+PAW Patrol,https://youtu.be/swQm32zZthI
 Little Baby Bum,https://youtu.be/RxcvoTXdF8A
