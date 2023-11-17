@@ -1,21 +1,50 @@
 新聞直播,#genre#
-公共電視,https://youtu.be/iqwNITdpWe4
-中天新聞,https://youtu.be/0oUWRYEdiIc
+東森新聞,https://youtu.be/S5WOGu2HSes
+東森財經,https://youtu.be/WHEPzbFA3hw
+寰宇新聞,https://youtu.be/6IquAgfvYmc
+公共電視,https://youtu.be/C6gYqSHLRw4
+TVBS新聞,https://youtu.be/m_dhMSvUCIc
+中天新聞,https://youtu.be/oIgbl7t0S_w
+中天亞洲,https://youtu.be/s2waUruqze4
+大陸尋奇,https://youtu.be/fl1iFkAWcVU
+台視新聞,https://youtu.be/xL0ch83RAK8
 中視新聞,https://youtu.be/TCnaIE_SAtM
-華視新聞,https://youtu.be/0qLYCaY0xnk
-中文國際,https://youtu.be/9sE12tg3CmA
-日本新聞,https://youtu.be/6MK0L6sGaTk
-韓國新聞,https://youtu.be/Kcr8UP9DVpw
+華視新聞,https://youtu.be/wM0g8EoUZ_E
+大愛一臺,https://youtu.be/MIqUplvSRWA
+大愛二臺,https://youtu.be/OKvWtVoDR8I
+鳳凰衛視,https://youtu.be/ArJrX_bE9KE
+中文國際,https://youtu.be/ihBi_m1RtJU
+美國新聞,https://youtu.be/OOtxXPaQvoM
+日本新聞,https://youtu.be/coYw-eVU0Ks
+韓國新聞,https://youtu.be/CYBRmouqbvY
+新加坡新聞,https://youtu.be/XWq5kBlakcQ
+英國新聞,https://youtu.be/9Auq9mYxFEE
+法國新聞,https://youtu.be/tkDUSYHoKxE
 德國新聞,https://youtu.be/pqabxBKzZ6M
+歐洲新聞,https://youtu.be/pykpO5kQJ98
 音樂串流,#genre#
 流行音樂,https://youtu.be/IfNMuFqKBWs
+Wonder Deep,https://youtu.be/VKcBtNZ5MpU
+The Good Life,https://youtu.be/IkmLXvBfVv0
+Lofi Girl,https://youtu.be/rUxyKA_-grg
+放鬆音樂,https://youtu.be/RG6HmfEnXyM
 輕柔旋律,https://youtu.be/DjaqoYrqX8o
 即時影像,#genre#
-台中望高寮,https://youtu.be/gUsEoMA8dPw
-台中高美濕地,https://youtu.be/gUsEoMA8dPw
-NASA Live,https://youtu.be/rPGNlyMXASQ
-Starbase Live,https://youtu.be/uOI35G7cP7o
+台中望高寮,https://youtu.be/lhXXhDyjFtI
+台中高美濕地,https://youtu.be/fjhg3gAnMFg
+南投日月潭,https://youtu.be/RJowQlhOtCY
+台北大稻埕,https://youtu.be/Ndo_8RuefH4
+象山看台北,https://youtu.be/z_fY1pj1VBw
+台東多良車站,https://youtu.be/UCG1aXVO8H8
+NASA Live,https://youtu.be/_HGQZlK08gQ
+Starbase Live,https://youtu.be/mhJRzQsLZGg
 兒童頻道,#genre#
 Baby Bus,https://youtu.be/-oVn5wzl2Ek
 Peppa Pig,https://youtu.be/IgFuN_0QnzE
+YOYO TV,https://youtu.be/frnOaadNetI
+Momo Kids,https://youtu.be/4hPRMFFAXPE
+Pink Fong,https://youtu.be/aRpTOsHnubs
+Baby Tiger,https://youtu.be/4HQfT4-LzuQ
+Robocar POLI,https://youtu.be/pgni2jaBRNo
 PAW Patrol,https://youtu.be/XejhgfDYgyE
+Little Baby Bum,https://youtu.be/RxcvoTXdF8A
