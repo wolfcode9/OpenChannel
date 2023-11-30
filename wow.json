@@ -27,6 +27,18 @@
       "searchable": 1,
       "changeable": 1
     },
+	{
+      "key": "影視",
+      "name": "影視",
+      "type": 3,
+      "api": "csp_YingShi",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "changeable": 0,
+      "url": "https://www.yingshi.tv/",
+	  "jar": "https://raw.githubusercontent.com/wolfcode9/OpenChannel/main/custom_spider_230918.jar"
+    },
     {
       "key": "星星",
       "name": "星星",
