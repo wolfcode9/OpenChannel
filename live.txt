@@ -6,12 +6,13 @@
 TVBS新聞,https://youtu.be/m_dhMSvUCIc
 中天新聞,https://youtu.be/oIgbl7t0S_w
 中天亞洲,https://youtu.be/s2waUruqze4
+大陸尋奇,https://youtu.be/fl1iFkAWcVU
 台視新聞,https://youtu.be/xL0ch83RAK8
 中視新聞,https://youtu.be/TCnaIE_SAtM
 華視新聞,https://youtu.be/wM0g8EoUZ_E
-民視新聞,https://youtu.be/ylYJSBUgaMA
-大愛電視,https://youtu.be/MIqUplvSRWA
-鳳凰衛視,https://youtu.be/Zm4i_rvAcxc
+大愛一臺,https://youtu.be/MIqUplvSRWA
+大愛二臺,https://youtu.be/OKvWtVoDR8I
+鳳凰衛視,https://youtu.be/uWnpD7qse30
 美國新聞,https://youtu.be/OOtxXPaQvoM
 日本新聞,https://youtu.be/coYw-eVU0Ks
 韓國新聞,https://youtu.be/IrJgLnWE-Xg
@@ -22,7 +23,10 @@ TVBS新聞,https://youtu.be/m_dhMSvUCIc
 歐洲新聞,https://youtu.be/OfN3NFrT2n0
 音樂串流,#genre#
 流行音樂,https://youtu.be/IfNMuFqKBWs
+The Good Life,https://youtu.be/IkmLXvBfVv0
+Lofi Girl,https://youtu.be/rUxyKA_-grg
 放鬆音樂,https://youtu.be/RG6HmfEnXyM
+輕柔旋律,https://youtu.be/-xYthJJ0HRQ
 即時影像,#genre#
 台中望高寮,https://youtu.be/lhXXhDyjFtI
 台中高美濕地,https://youtu.be/fjhg3gAnMFg
@@ -34,11 +38,12 @@ TVBS新聞,https://youtu.be/m_dhMSvUCIc
 NASA Live,https://youtu.be/_HGQZlK08gQ
 Starbase Live,https://youtu.be/mhJRzQsLZGg
 兒童頻道,#genre#
-BabyBus,https://youtu.be/YCpPaBsOzjQ
+Baby Bus,https://youtu.be/YCpPaBsOzjQ
+Peppa Pig,https://youtu.be/VsaweQQPeZU
 YOYO TV,https://youtu.be/Sf40C37eSGA
 Momo Kids,https://youtu.be/4hPRMFFAXPE
-PinkFong,https://youtu.be/aRpTOsHnubs
-BabyTiger,https://youtu.be/4HQfT4-LzuQ
-Robocar Poli,https://youtu.be/pgni2jaBRNo
+Pink Fong,https://youtu.be/aRpTOsHnubs
+Baby Tiger,https://youtu.be/4HQfT4-LzuQ
+Robocar POLI,https://youtu.be/pgni2jaBRNo
 PAW Patrol,https://youtu.be/A0AlpJNUrMQ
-LittleBabyBum,https://youtu.be/RxcvoTXdF8A
+Little Baby Bum,https://youtu.be/RxcvoTXdF8A
