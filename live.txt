@@ -5,6 +5,7 @@
 公共電視,https://www.youtube.com/watch?v=C6gYqSHLRw4
 TVBS新聞,https://www.youtube.com/watch?v=m_dhMSvUCIc
 中天新聞,https://www.youtube.com/watch?v=oIgbl7t0S_w
+中天亞洲,https://www.youtube.com/watch?v=s2waUruqze4
 大陸尋奇,https://www.youtube.com/watch?v=fl1iFkAWcVU
 台視新聞,https://www.youtube.com/watch?v=xL0ch83RAK8
 中視新聞,https://www.youtube.com/watch?v=TCnaIE_SAtM
