@@ -2,7 +2,7 @@
 東森新聞,https://youtu.be/S5WOGu2HSes
 東森財經,https://youtu.be/WHEPzbFA3hw
 寰宇新聞,https://youtu.be/6IquAgfvYmc
-公共電視,https://youtu.be/2ZaooN4m5r4
+公共電視,https://youtu.be/C6gYqSHLRw4
 TVBS新聞,https://youtu.be/m_dhMSvUCIc
 中天新聞,https://youtu.be/oIgbl7t0S_w
 中天亞洲,https://youtu.be/s2waUruqze4
@@ -10,29 +10,26 @@ TVBS新聞,https://youtu.be/m_dhMSvUCIc
 台視新聞,https://youtu.be/xL0ch83RAK8
 中視新聞,https://youtu.be/TCnaIE_SAtM
 華視新聞,https://youtu.be/wM0g8EoUZ_E
-大愛一臺,https://youtu.be/MIqUplvSRWA
-大愛二臺,https://youtu.be/OKvWtVoDR8I
+大愛一臺,https://youtu.be/oV_i3Hsl_zg
+大愛二臺,https://youtu.be/DTNkEm6jaqQ
 鳳凰衛視,https://youtu.be/uWnpD7qse30
 美國新聞,https://youtu.be/OOtxXPaQvoM
 日本新聞,https://youtu.be/coYw-eVU0Ks
-韓國新聞,https://youtu.be/IrJgLnWE-Xg
+韓國新聞,https://youtu.be/FJfwehhzIhw
 新加坡新聞,https://youtu.be/XWq5kBlakcQ
 英國新聞,https://youtu.be/9Auq9mYxFEE
 法國新聞,https://youtu.be/tkDUSYHoKxE
 德國新聞,https://youtu.be/pqabxBKzZ6M
-歐洲新聞,https://youtu.be/OfN3NFrT2n0
+歐洲新聞,https://youtu.be/pykpO5kQJ98
 音樂串流,#genre#
 流行音樂,https://youtu.be/IfNMuFqKBWs
-The Good Life,https://youtu.be/IkmLXvBfVv0
-Lofi Girl,https://youtu.be/rUxyKA_-grg
-放鬆音樂,https://youtu.be/RG6HmfEnXyM
-輕柔旋律,https://youtu.be/-xYthJJ0HRQ
+The Good Life,https://youtu.be/36YnV9STBqc
+Lofi Girl,https://youtu.be/jfKfPfyJRdk
+放鬆音樂,https://youtu.be/BbeYP8cFIlc
+輕柔旋律,https://youtu.be/oLT8xaknXjo
 即時影像,#genre#
 台中望高寮,https://youtu.be/lhXXhDyjFtI
-台中高美濕地,https://youtu.be/fjhg3gAnMFg
 桃園石門水庫,https://youtu.be/GUCaVR88ZFU
-南投日月潭,https://youtu.be/8QE5YjSMAmM
-台北大稻埕,https://youtu.be/Ndo_8RuefH4
 象山看台北,https://youtu.be/z_fY1pj1VBw
 台東多良車站,https://youtu.be/UCG1aXVO8H8
 NASA Live,https://youtu.be/_HGQZlK08gQ
@@ -45,5 +42,5 @@ Momo Kids,https://youtu.be/4hPRMFFAXPE
 Pink Fong,https://youtu.be/aRpTOsHnubs
 Baby Tiger,https://youtu.be/4HQfT4-LzuQ
 Robocar POLI,https://youtu.be/pgni2jaBRNo
-PAW Patrol,https://youtu.be/A0AlpJNUrMQ
+PAW Patrol,https://youtu.be/yI3H8Dnrn9M
 Little Baby Bum,https://youtu.be/RxcvoTXdF8A
