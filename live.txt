@@ -27,6 +27,8 @@ TVBS新聞,https://www.youtube.com/watch?v=m_dhMSvUCIc
 The Good Life,https://www.youtube.com/watch?v=IkmLXvBfVv0
 Lofi Girl,https://www.youtube.com/watch?v=rUxyKA_-grg
 Coffee Relaxing Jazz,https://www.youtube.com/watch?v=XF21yohWr6o
+Coffee Workspace,https://www.youtube.com/watch?v=EjexQg_g0BI
+4K Scenic Relaxation,https://www.youtube.com/watch?v=s5HaC2hk_b8
 放鬆音樂,https://www.youtube.com/watch?v=RG6HmfEnXyM
 輕柔旋律,https://www.youtube.com/watch?v=gvXurDHxZtE
 即時影像,#genre#
@@ -48,4 +50,5 @@ Pink Fong,https://www.youtube.com/watch?v=aRpTOsHnubs
 Baby Tiger,https://www.youtube.com/watch?v=4HQfT4-LzuQ
 Robocar POLI,https://www.youtube.com/watch?v=pgni2jaBRNo
 PAW Patrol,https://www.youtube.com/watch?v=A0AlpJNUrMQ
+Disney Junior,https://www.youtube.com/watch?v=LyMZd7Kqc_M
 Little Baby Bum,https://www.youtube.com/watch?v=RxcvoTXdF8A
