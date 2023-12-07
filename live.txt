@@ -1,54 +1,54 @@
 新聞直播,#genre#
-東森新聞,https://www.youtube.com/watch?v=S5WOGu2HSes
-東森財經,https://www.youtube.com/watch?v=WHEPzbFA3hw
-寰宇新聞,https://www.youtube.com/watch?v=6IquAgfvYmc
-公共電視,https://www.youtube.com/watch?v=C6gYqSHLRw4
-TVBS新聞,https://www.youtube.com/watch?v=m_dhMSvUCIc
-中天新聞,https://www.youtube.com/watch?v=oIgbl7t0S_w
-中天亞洲,https://www.youtube.com/watch?v=s2waUruqze4
-大陸尋奇,https://www.youtube.com/watch?v=fl1iFkAWcVU
-台視新聞,https://www.youtube.com/watch?v=xL0ch83RAK8
-中視新聞,https://www.youtube.com/watch?v=TCnaIE_SAtM
-華視新聞,https://www.youtube.com/watch?v=wM0g8EoUZ_E
-大愛一臺,https://www.youtube.com/watch?v=oV_i3Hsl_zg
-大愛二臺,https://www.youtube.com/watch?v=DTNkEm6jaqQ
-鳳凰衛視,https://www.youtube.com/watch?v=uWnpD7qse30
-中文國際,https://www.youtube.com/watch?v=9sE12tg3CmA
-美國新聞,https://www.youtube.com/watch?v=OOtxXPaQvoM
-日本新聞,https://www.youtube.com/watch?v=coYw-eVU0Ks
-韓國新聞,https://www.youtube.com/watch?v=FJfwehhzIhw
-新加坡新聞,https://www.youtube.com/watch?v=XWq5kBlakcQ
-英國新聞,https://www.youtube.com/watch?v=9Auq9mYxFEE
-法國新聞,https://www.youtube.com/watch?v=tkDUSYHoKxE
-德國新聞,https://www.youtube.com/watch?v=pqabxBKzZ6M
-歐洲新聞,https://www.youtube.com/watch?v=pykpO5kQJ98
+東森新聞
+東森財經
+寰宇新聞
+公共電視
+TVBS新聞
+中天新聞
+中天亞洲
+大陸尋奇
+台視新聞
+中視新聞
+華視新聞
+大愛一臺
+大愛二臺
+鳳凰衛視
+中文國際
+美國新聞
+日本新聞
+韓國新聞
+新加坡新聞
+英國新聞
+法國新聞
+德國新聞
+歐洲新聞
 音樂串流,#genre#
-流行音樂,https://www.youtube.com/watch?v=IfNMuFqKBWs
-The Good Life,https://www.youtube.com/watch?v=36YnV9STBqc
-Lofi Girl,https://www.youtube.com/watch?v=jfKfPfyJRdk
-Coffee Relaxing Jazz,https://www.youtube.com/watch?v=4HWiuZ08To4
-Coffee Workspace,https://www.youtube.com/watch?v=35kwlY_RR08
-4K Scenic Relaxation,https://www.youtube.com/watch?v=VJLaSy0hlVI
-放鬆音樂,https://www.youtube.com/watch?v=BbeYP8cFIlc
-輕柔旋律,https://www.youtube.com/watch?v=trbQx6CwCzw
+流行音樂
+The Good Life
+Lofi Girl
+Coffee Relaxing Jazz
+Coffee Workspace
+4K Scenic Relaxation
+放鬆音樂
+輕柔旋律
 即時影像,#genre#
-台中望高寮,https://www.youtube.com/watch?v=lhXXhDyjFtI
-台中高美濕地,https://www.youtube.com/watch?v=fjhg3gAnMFg
-桃園石門水庫,https://www.youtube.com/watch?v=GUCaVR88ZFU
-南投日月潭,https://www.youtube.com/watch?v=8QE5YjSMAmM
-台北大稻埕,https://www.youtube.com/watch?v=Ndo_8RuefH4
-象山看台北,https://www.youtube.com/watch?v=z_fY1pj1VBw
-台東多良車站,https://www.youtube.com/watch?v=UCG1aXVO8H8
-NASA Live,https://www.youtube.com/watch?v=_HGQZlK08gQ
-Starbase Live,https://www.youtube.com/watch?v=mhJRzQsLZGg
+台中望高寮
+台中高美濕地
+桃園石門水庫
+南投日月潭
+台北大稻埕
+象山看台北
+台東多良車站
+NASA Live
+Starbase Live
 兒童頻道,#genre#
-Baby Bus,https://www.youtube.com/watch?v=LjYfn9B8KKM
-Peppa Pig,https://www.youtube.com/watch?v=xNUDtvXK65E
-YOYO TV,https://www.youtube.com/watch?v=_gksNoedJ7o
-Momo Kids,https://www.youtube.com/watch?v=4hPRMFFAXPE
-Pink Fong,https://www.youtube.com/watch?v=MPm_a-yCfkU\u0026list
-Baby Tiger,https://www.youtube.com/watch?v=4HQfT4-LzuQ
-Robocar POLI,https://www.youtube.com/watch?v=pgni2jaBRNo
-PAW Patrol,https://www.youtube.com/watch?v=lgPoI-3Wy6g
-Disney Junior,https://www.youtube.com/watch?v=OjlaUkllTss
-Little Baby Bum,https://www.youtube.com/watch?v=RxcvoTXdF8A
+Baby Bus
+Peppa Pig
+YOYO TV
+Momo Kids
+Pink Fong
+Baby Tiger
+Robocar POLI
+PAW Patrol
+Disney Junior
+Little Baby Bum
