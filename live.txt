@@ -1,54 +1,54 @@
 新聞直播,#genre#
-東森新聞
-東森財經
-寰宇新聞
-公共電視
-TVBS新聞
-中天新聞
-中天亞洲
-大陸尋奇
-台視新聞
-中視新聞
-華視新聞
-大愛一臺
-大愛二臺
-鳳凰衛視
-中文國際
-美國新聞
-日本新聞
-韓國新聞
-新加坡新聞
-英國新聞
-法國新聞
-德國新聞
-歐洲新聞
+東森新聞,
+東森財經,
+寰宇新聞,
+公共電視,
+TVBS新聞,
+中天新聞,
+中天亞洲,
+大陸尋奇,
+台視新聞,
+中視新聞,
+華視新聞,
+大愛一臺,
+大愛二臺,
+鳳凰衛視,
+中文國際,
+美國新聞,
+日本新聞,
+韓國新聞,
+新加坡新聞,
+英國新聞,
+法國新聞,
+德國新聞,
+歐洲新聞,
 音樂串流,#genre#
-流行音樂
-The Good Life
-Lofi Girl
-Coffee Relaxing Jazz
-Coffee Workspace
-4K Scenic Relaxation
-放鬆音樂
-輕柔旋律
+流行音樂,
+The Good Life,
+Lofi Girl,
+Coffee Relaxing Jazz,
+Coffee Workspace,
+4K Scenic Relaxation,
+放鬆音樂,
+輕柔旋律,
 即時影像,#genre#
-台中望高寮
-台中高美濕地
-桃園石門水庫
-南投日月潭
-台北大稻埕
-象山看台北
-台東多良車站
-NASA Live
-Starbase Live
+台中望高寮,
+台中高美濕地,
+桃園石門水庫,
+南投日月潭,
+台北大稻埕,
+象山看台北,
+台東多良車站,
+NASA Live,
+Starbase Live,
 兒童頻道,#genre#
-Baby Bus
-Peppa Pig
-YOYO TV
-Momo Kids
-Pink Fong
-Baby Tiger
-Robocar POLI
-PAW Patrol
-Disney Junior
-Little Baby Bum
+Baby Bus,
+Peppa Pig,
+YOYO TV,
+Momo Kids,
+Pink Fong,
+Baby Tiger,
+Robocar POLI,
+PAW Patrol,
+Disney Junior,
+Little Baby Bum,
