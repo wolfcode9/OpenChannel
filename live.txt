@@ -23,16 +23,16 @@ TVBS新聞,https://www.youtube.com/watch?v=m_dhMSvUCIc
 歐洲新聞,https://www.youtube.com/watch?v=pykpO5kQJ98
 音樂串流,#genre#
 流行音樂,https://www.youtube.com/watch?v=IfNMuFqKBWs
-放鬆音樂,https://www.youtube.com/watch?v=pQmbpwMfVZM
 輕柔旋律,https://www.youtube.com/watch?v=trbQx6CwCzw
-The Good Life,https://www.youtube.com/watch?v=36YnV9STBqc
+放鬆音樂,https://www.youtube.com/watch?v=pQmbpwMfVZM
 Lofi Girl,https://www.youtube.com/watch?v=jfKfPfyJRdk
+The Good Life,https://www.youtube.com/watch?v=36YnV9STBqc
 Coffee Relaxing Jazz,https://www.youtube.com/watch?v=gO-PRwVlLqM
 Coffee Workspace,https://www.youtube.com/watch?v=35kwlY_RR08
 4K Scenic Relaxation,https://www.youtube.com/watch?v=VJLaSy0hlVI
 即時影像,#genre#
 NASA Live,https://www.youtube.com/watch?v=_HGQZlK08gQ
-Starbase Live,https://www.youtube.com/watch?v=_HGQZlK08gQ
+Starbase Live,https://www.youtube.com/watch?v=mhJRzQsLZGg
 兒童頻道,#genre#
 Baby Bus,https://www.youtube.com/watch?v=W94EuoO-BgA
 Peppa Pig,https://www.youtube.com/watch?v=UA06WDRZhZ4
