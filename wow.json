@@ -131,6 +131,14 @@
       "changeable": 1
     },
     {
+      "key": "九六",
+      "name": "九六",
+      "type": 3,
+      "api": "csp_Cs1369",
+      "searchable": 1,
+      "changeable": 1
+    },
+    {
       "key": "暴風",
       "name": "暴風",
       "type": 1,
