@@ -36,7 +36,7 @@
       "filterable": 1,
       "changeable": 0,
       "url": "https://www.yingshi.tv/",
-      "jar": "https://raw.githubusercontent.com/wolfcode9/OpenChannel/main/custom_spider_230918.jar"
+      "jar": "https://raw.githubusercontent.com/wolfcode9/OpenChannel/main/jar/custom_spider_230918.jar"
     },
     {
       "key": "星星",
