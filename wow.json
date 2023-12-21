@@ -57,7 +57,7 @@
     },    
     {
       "key": "廠長",
-      "name": "廠長02",
+      "name": "廠長",
       "type": 3,
       "api": "csp_Czsapp",
       "searchable": 1,
@@ -65,7 +65,37 @@
       "quickSearch": 1,
       "filterable": 0,
       "ext": "https://czz9.com/",
-	    "jar": "https://agit.ai/Yoursmile7/TVBox/raw/branch/master/Yoursmile.jar"
+	    "jar": "https://raw.githubusercontent.com/wolfcode9/OpenChannel/main/jar/Yoursmile.jar"
+    },
+    {
+      "key": "csp_Kunyu77",
+      "name": "七七",
+      "type": 3,
+      "api": "csp_Kunyu77",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "jar": "https://raw.githubusercontent.com/wolfcode9/OpenChannel/main/jar/Yoursmile.jar"
+    },
+    {"key":"csp_NanGua",
+      "name":"南瓜",
+      "type":3,"api":"csp_NanGua",
+      "playerType":2,
+      "searchable":1,
+      "quickSearch":1,
+      "filterable":1,
+      "changeable":1,
+      "jar": "https://raw.githubusercontent.com/wolfcode9/OpenChannel/main/jar/Yoursmile.jar"
+    },
+    {
+      "key": "csp_YQKan",
+      "name": "一起看",
+      "type": 3,
+      "api": "csp_YQKan",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "jar": "https://raw.githubusercontent.com/wolfcode9/OpenChannel/main/jar/Yoursmile.jar"
     },
     {
       "key": "haiwaikan",
