@@ -1,5 +1,6 @@
 {
-  "sites": [
+  "sites": 
+  [
     {
       "key": "玩偶",
       "name": "玩偶",
@@ -8,7 +9,7 @@
       "searchable": 1,
       "style": {"type": "rect","ratio": 1.309}
     },
-	{
+    {
       "key": "91md.me",
       "name": "91麻豆",
       "type": 1,
@@ -240,7 +241,8 @@
       "categories": ["伦理片"]
     }
   ],
-  "ads": [
+  "ads": 
+  [
     "mimg.0c1q0l.cn",
     "www.googletagmanager.com",
     "www.google-analytics.com",
@@ -298,5 +300,5 @@
     "cdnjs.hnfenxun.com",
     "cms.qdwght.com"
   ],
-  "spider": "https://fm.t4tv.hz.cz/jar/custom_spider.jar;md5;55c157414346e3ff571baad0a223bf15",
+  "spider": "https://fm.t4tv.hz.cz/jar/custom_spider.jar;md5;55c157414346e3ff571baad0a223bf15"
 }
