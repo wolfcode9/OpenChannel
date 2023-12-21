@@ -37,7 +37,7 @@
       "key": "非凡",
       "name": "非凡",
       "type": 0,
-      "api": "http://cj.ffzyapi.com/api.php/provide/vod/at/xml/",
+      "api": "http://cj.ffzyapi.com/api.php/provide/vod",	  
       "searchable": 1,
       "changeable": 1,
       "categories": ["伦理片"]
@@ -298,5 +298,5 @@
     "cdnjs.hnfenxun.com",
     "cms.qdwght.com"
   ],
-  "spider": "https://fongmi.cachefly.net/FongMi/CatVodSpider/main/jar/custom_spider.jar;md5;c180867252ce20f2d59e5a7e6d4fd92a"
+  "spider": "https://fm.t4tv.hz.cz/jar/custom_spider.jar;md5;55c157414346e3ff571baad0a223bf15",
 }
