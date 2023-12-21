@@ -54,15 +54,19 @@
       "searchable": 1,
       "changeable": 1,
       "ext": "https://fongmi.cachefly.net/FongMi/CatVodSpider/main/json/duboku.json"
-    },
+    },    
     {
       "key": "廠長",
-      "name": "廠長",
+      "name": "廠長01",
       "type": 3,
-      "api": "https://raw.githubusercontent.com/wolfcode9/OpenChannel/main/js/czzy_open.js",
+      "api": "csp_Czsapp",
       "searchable": 1,
-      "changeable": 1
-    },    
+      "playerType": 1,
+      "quickSearch": 1,
+      "filterable": 0,
+      "ext": "https://czz9.com/",
+	    "jar": "https://github.com/catvod/CatVodTVSpider/blob/master/jar/custom_spider.jar?raw=true"
+    },
     {
       "key": "haiwaikan",
       "name": "海外看",
