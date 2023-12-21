@@ -172,6 +172,14 @@
       "changeable": 1
     },
     {
+      "key": "kuaikan",
+      "name": "kuaikan",
+      "type": 1,
+      "api": "https://kuaikan-api.com/api.php/provide/vod/from/kuaikan",
+      "searchable": 1,
+      "changeable": 1
+    },
+    {
       "key": "暴風",
       "name": "暴風",
       "type": 1,
