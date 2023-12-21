@@ -12,7 +12,7 @@
     {"name":"技巧","url":"http://pandown.pro/tvbox/tvbox.json"},
     {"name":"南風","url":"https://agit.ai/Yoursmile7/TVBox/raw/branch/master/XC.json"},
     {"name":"運輸","url":"https://weixine.net/ysc.json"},     
-    {"name":"流雲","url":"https://raw.githubusercontent.com/gaotianliuyun/gao/master/js.json"}
+    {"name":"流雲","url":"https://raw.githubusercontent.com/gaotianliuyun/gao/master/js.json"},
     {"name":"微笑","url":"https://agit.ai/Yoursmile7/TVBox/src/branch/master/XC.json"}
   ]
 }
