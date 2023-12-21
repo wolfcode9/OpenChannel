@@ -19,14 +19,6 @@
       "ext": "https://fm.t4tv.hz.cz/json/douban.json"
     },
     {
-      "key": "泥巴",
-      "name": "泥巴",
-      "type": 3,
-      "api": "csp_NiNi",
-      "searchable": 1,
-      "changeable": 1
-    },
-    {
       "key": "影視",
       "name": "影視",
       "type": 3,
@@ -38,6 +30,14 @@
       "url": "https://www.yingshi.tv/",
       "jar": "https://raw.githubusercontent.com/wolfcode9/OpenChannel/main/jar/custom_spider_230918.jar"
     },
+    {
+      "key": "泥巴",
+      "name": "泥巴",
+      "type": 3,
+      "api": "csp_NiNi",
+      "searchable": 1,
+      "changeable": 1
+    },    
     {
       "key": "星星",
       "name": "星星",
