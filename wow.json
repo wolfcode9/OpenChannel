@@ -161,7 +161,8 @@
       "type": 3,
       "api": "https://fongmi.cachefly.net/FongMi/CatVodOpen/main/open/555dy_open.js",
       "searchable": 1,
-      "changeable": 1
+      "changeable": 1,
+      "categories": ["電影","劇集","綜藝","動漫"]
     },
     {
       "key": "九六",
