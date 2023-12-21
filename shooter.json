@@ -239,6 +239,15 @@
       "searchable": 1,
       "changeable": 1,	  
       "categories": ["伦理片"]
+    },
+    {
+      "key": "五五",
+      "name": "五五",
+      "type": 3,
+      "api": "https://fongmi.cachefly.net/FongMi/CatVodOpen/main/open/555dy_open.js",
+      "searchable": 1,
+      "changeable": 1,
+      "categories": ["福利"]
     }
   ],
   "ads": 
