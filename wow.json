@@ -54,25 +54,18 @@
       "searchable": 1,
       "changeable": 1,
       "ext": "https://fongmi.cachefly.net/FongMi/CatVodSpider/main/json/duboku.json"
-    },
+    },    
     {
       "key": "廠長",
       "name": "廠長",
-      "type": 3,
-      "api": "https://fongmi.cachefly.net/FongMi/CatVodOpen/main/open/czzy_open.js",
-      "searchable": 1,
-      "changeable": 1
-    },
-    {
-      "key": "csp_CZSPP",
-      "name": "廠長┃直连",
       "type": 3,
       "api": "csp_Czsapp",
       "searchable": 1,
       "playerType": 1,
       "quickSearch": 1,
       "filterable": 0,
-      "ext": "https://czz9.com/"
+      "ext": "https://czz9.com/",
+	  "jar": "http://cdn.qiaoji8.com/fix12210.jar;md5;a5c29d1840207b137a855e23526d6e32"
     },
     {
       "key": "haiwaikan",
