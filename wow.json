@@ -174,6 +174,16 @@
       "categories": ["電影","電視劇","動漫"]
     },
     {
+      "key": "csp_Kuaikan",
+      "name": "👀快看",
+      "type": 3,
+      "api": "csp_Kuaikan",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "jar": "https://raw.githubusercontent.com/wolfcode9/OpenChannel/main/jar/Yoursmile.jar"
+    },
+    {
       "key": "快看",
       "name": "快看",
       "type": 1,
