@@ -221,7 +221,16 @@
       "quickSearch": 1,
       "filterable": 0
     },
-	{
+    {
+      "key": "快看",
+      "name": "快看",
+      "type": 1,
+      "api": "https://kuaikan-api.com/api.php/provide/vod/from/kuaikan",
+      "searchable": 1,
+      "changeable": 1,
+      "categories": ["伦理片"]
+    },
+    {
       "key": "非凡",
       "name": "非凡",
       "type": 1,
