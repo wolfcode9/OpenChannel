@@ -7,6 +7,11 @@ import base64
 from Crypto.Cipher import AES
 
 class Spider(Spider): 
+    header = {	
+	    "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+        "cookie": "cf_clearance=8X8HLfjHfIAt68XoLW1ngF8KUKtg5en195Zo_BccAXY-1703257212-0-2-9d800f49.1493b630.49fd95ce-150.0.0;"
+    }
+    
     def getName(self):
         return "廠長"
 
@@ -103,7 +108,7 @@ class Spider(Spider):
             "vod_actor": "",
             "vod_director": "",
             "vod_content": detail
-        }
+        }        
         infoArray = node.xpath(".//ul[@class='moviedteail_list']/li")
         for info in infoArray:
             content = info.xpath('string(.)')
@@ -161,11 +166,7 @@ class Spider(Spider):
         }
         return result
 
-    def searchContent(self, key, quick):
-        header = {	
-	        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
-            "cookie": "cf_clearance=8X8HLfjHfIAt68XoLW1ngF8KUKtg5en195Zo_BccAXY-1703257212-0-2-9d800f49.1493b630.49fd95ce-150.0.0;"
-	    }      
+    def searchContent(self, key, quick):     
         url = 'https://www.czzy88.com/xssearch?q={0}'.format(key)
         rsp = self.fetch(url,headers=header)
         root = self.html(self.cleanText(rsp.text))
@@ -191,6 +192,8 @@ class Spider(Spider):
             'list': videos
         }
         return result
+    
+    '''
     config = {
         "player": {},
         "filter": {}
@@ -198,6 +201,8 @@ class Spider(Spider):
     header = {
         "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.75 Safari/537.36"
     }
+    '''
+
     def parseCBC(self, enc, key, iv):
         keyBytes = key.encode("utf-8")
         ivBytes = iv.encode("utf-8")
