@@ -1,4 +1,4 @@
-新聞直播1,#genre#
+新聞直播,#genre#
 東森新聞,https://www.youtube.com/watch?v=S5WOGu2HSes
 東森財經,https://www.youtube.com/watch?v=WHEPzbFA3hw
 寰宇新聞,https://www.youtube.com/watch?v=6IquAgfvYmc
