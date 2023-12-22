@@ -91,13 +91,13 @@ class Spider(Spider):
         root = self.html(self.cleanText(rsp.text))
         node = root.xpath("//div[@class='dyxingq']")[0]
         pic = node.xpath(".//div[@class='dyimg fl']/img/@src")[0]
-        title = node.xpath('.//h1/text()')[0]
-        remarks = node.xpath('.//li[contains(text(), "上映")]/span')[0].text 
-        year = node.xpath('.//li[contains(text(), "年份")]/a')[0].text
-        area = node.xpath('.//li[contains(text(), "地区")]/a')[0].text
-        typen = node.xpath('.//li[contains(text(), "类型")]/a')[0].text
-        actor = node.xpath('.//li[contains(text(), "主演")]/span')[0].text 
-        director = node.xpath('.//li[contains(text(), "导演")]/span')[0].text 
+        title = node.xpath('.//h1/text()')[0]        
+        year = node.xpath('.//li[contains(text(), "年份")]/a')[0]
+        area = node.xpath('.//li[contains(text(), "地区")]/a')[0]
+        typen = node.xpath('.//li[contains(text(), "类型")]/a')[0]
+        actor = node.xpath('.//li[contains(text(), "主演")]/span')[0]
+        director = node.xpath('.//li[contains(text(), "导演")]/span')[0]
+        remarks = node.xpath('.//li[contains(text(), "上映")]/span')[0]
         detail = root.xpath(".//div[@class='yp_context']//p/text()")[0]
         vod = {
             "vod_id": tid,
