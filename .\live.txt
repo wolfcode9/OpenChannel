@@ -1,0 +1,46 @@
+新聞直播,#genre#
+東森新聞,https://www.youtube.com/watch?v=S5WOGu2HSes
+東森財經,https://www.youtube.com/watch?v=WHEPzbFA3hw
+寰宇新聞,https://www.youtube.com/watch?v=6IquAgfvYmc
+公共電視,https://www.youtube.com/watch?v=C6gYqSHLRw4
+TVBS新聞,https://www.youtube.com/watch?v=m_dhMSvUCIc
+中天新聞,https://www.youtube.com/watch?v=oIgbl7t0S_w
+台視新聞,https://www.youtube.com/watch?v=xL0ch83RAK8
+中視新聞,https://www.youtube.com/watch?v=TCnaIE_SAtM
+華視新聞,https://www.youtube.com/watch?v=wM0g8EoUZ_E
+大愛電視,https://www.youtube.com/watch?v=oV_i3Hsl_zg
+亞洲新聞,https://www.youtube.com/watch?v=XWq5kBlakcQ
+鳳凰衛視,https://www.youtube.com/watch?v=Zm4i_rvAcxc
+中文國際,https://www.youtube.com/watch?v=9sE12tg3CmA
+美國新聞,https://www.youtube.com/watch?v=OOtxXPaQvoM
+日本新聞,https://www.youtube.com/watch?v=coYw-eVU0Ks
+韓國新聞,https://www.youtube.com/watch?v=FJfwehhzIhw
+德國之聲,https://www.youtube.com/watch?v=pqabxBKzZ6M
+英國新聞,https://www.youtube.com/watch?v=9Auq9mYxFEE
+法國新聞,https://www.youtube.com/watch?v=tkDUSYHoKxE
+歐洲新聞,https://www.youtube.com/watch?v=pykpO5kQJ98
+音樂串流,#genre#
+流行音樂,https://www.youtube.com/watch?v=IfNMuFqKBWs
+輕柔旋律,https://www.youtube.com/watch?v=trbQx6CwCzw
+放鬆音樂,https://www.youtube.com/watch?v=pQmbpwMfVZM
+Lofi Girl,https://www.youtube.com/watch?v=jfKfPfyJRdk
+The Good Life,https://www.youtube.com/watch?v=36YnV9STBqc
+Coffee Relaxing Jazz,https://www.youtube.com/watch?v=Dd33KWeTUkQ
+Coffee Workspace,https://www.youtube.com/watch?v=sz3zmVZUQIA
+4K Scenic Relaxation,https://www.youtube.com/watch?v=VJLaSy0hlVI
+即時影像,#genre#
+NASA Live,https://www.youtube.com/watch?v=_HGQZlK08gQ
+Starbase Live,https://www.youtube.com/watch?v=mhJRzQsLZGg
+兒童頻道,#genre#
+寶寶巴士,https://www.youtube.com/watch?v=2A-XkrENG6A
+粉紅豬小妹,https://www.youtube.com/watch?v=FN63KfMT5eA
+YOYO TV,https://www.youtube.com/watch?v=_gksNoedJ7o
+MOMO親子台,https://www.youtube.com/watch?v=R3PZkCUJSbQ
+碰碰狐,https://www.youtube.com/watch?v=aRpTOsHnubs
+貝樂虎,https://www.youtube.com/watch?v=VKOKiK97dBs
+救援小英雄波力,https://www.youtube.com/watch?v=kTfvjuqISfs
+汪汪隊立大功,https://www.youtube.com/watch?v=hyqNZD_yiFk
+兒童迪士尼,https://www.youtube.com/watch?v=OjlaUkllTss
+小寶貝布姆,https://www.youtube.com/watch?v=RxcvoTXdF8A
+Beep Beep,https://www.youtube.com/watch?v=_cCpMZpaIJk
+鯊魚學院,https://www.youtube.com/watch?v=K3PdTNA_7f4
