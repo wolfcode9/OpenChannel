@@ -13,7 +13,7 @@ class Spider(Spider):  # 元类 默认的元类 type
         print("============{0}============".format(extend))
         pass
 
-    def homeContent(self):
+    def homeContent(self,filter):
         result = {}
         cateManual = {
             "豆瓣电影Top250": "dbtop250",
