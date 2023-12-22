@@ -95,7 +95,7 @@ class Spider(Spider):
         year = node.xpath('.//li[contains(text(), "年份")]/a')[0].text
         area = node.xpath('.//li[contains(text(), "地区")]/a')[0].text
         typen = node.xpath('.//li[contains(text(), "类型")]/a')[0].text
-        #director = node.xpath('.//li[contains(text(), "导演")]/a')[0].text 
+        director = node.xpath('.//li[contains(text(), "导演")]/span')[0].text 
         detail = root.xpath(".//div[@class='yp_context']//p/text()")[0]
         vod = {
             "vod_id": tid,
@@ -106,7 +106,7 @@ class Spider(Spider):
             "vod_area": area,
             "vod_remarks": "",
             "vod_actor": "",
-            "vod_director": "",
+            "vod_director": director,
             "vod_content": detail
         }        
         infoArray = node.xpath(".//ul[@class='moviedteail_list']/li")
@@ -137,7 +137,7 @@ class Spider(Spider):
                     tpyeare = tpyeare +'/'+'{0}'.format(tn)
                     vod['vod_year'] = tpyeare.strip('/') 
 
-            '''    
+            
             if content.startswith('导演'):
                 tpyedire = ''
                 for inf in info:
@@ -145,7 +145,7 @@ class Spider(Spider):
                     tpyedire  = tpyedire  +'/'+'{0}'.format(tn)
                     vod['vod_director'] = tpyedire .strip('/')                     
             
-
+            '''   
             if content.startswith('主演'):
                 tpyeact = ''
                 for inf in info:
