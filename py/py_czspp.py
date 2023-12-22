@@ -82,7 +82,7 @@ class Spider(Spider):
         result['pagecount'] = 9999
         result['limit'] = 90
         result['total'] = 999999
-        return result
+        return result    
 
     def detailContent(self, array):
         tid = array[0]
@@ -160,7 +160,7 @@ class Spider(Spider):
                 vod
             ]
         }
-        return result
+        return result    
 
     def searchContent(self, key, quick):
         header = {	
@@ -191,17 +191,7 @@ class Spider(Spider):
         result = {
             'list': videos
         }
-        return result       
-    
-    config = {
-        "player": {},
-        "filter": {}
-    }
-        
-    header = {
-        "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.75 Safari/537.36"
-    }
-    
+        return result    
 
     def parseCBC(self, enc, key, iv):
         keyBytes = key.encode("utf-8")
