@@ -93,7 +93,7 @@ class Spider(Spider):
         pic = node.xpath(".//div[@class='dyimg fl']/img/@src")[0]
         title = node.xpath('.//h1/text()')[0]
         year = node.xpath('.//li[contains(text(), "年份")]/a')[0].text 
-        area = node.xpath('.//li[contains(text(), "地区")]/a')[0].text 
+        #area = node.xpath('.//li[contains(text(), "地区")]/a')[0].text 
         detail = root.xpath(".//div[@class='yp_context']//p/text()")[0]
         vod = {
             "vod_id": tid,
@@ -101,7 +101,7 @@ class Spider(Spider):
             "vod_pic": pic,
             "type_name": "",
             "vod_year": year,
-            "vod_area": area,
+            "vod_area": "",
             "vod_remarks": "",
             "vod_actor": "",
             "vod_director": "",
@@ -116,14 +116,14 @@ class Spider(Spider):
                     tn = inf.text
                     tpyen = tpyen +'/'+'{0}'.format(tn)
                     vod['type_name'] = tpyen.strip('/')
-            '''
+            
             if content.startswith('地区'):
                 tpyeare = ''
                 for inf in info:
                     tn = inf.text
                     tpyeare = tpyeare +'/'+'{0}'.format(tn)
                     vod['vod_area'] = tpyeare.strip('/')
-            
+            '''
             if content.startswith('年份'):
                 tpyeare = ''
                 for inf in info:
