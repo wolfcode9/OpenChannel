@@ -17,16 +17,13 @@ class Spider(Spider):
     def homeContent(self,filter):
         result = {}
         cateManual = {
-            "豆瓣電影Top250": "dbtop250",
-            "最新電影": "zuixindianying",
-            "热映中": "benyueremen",            
+            "熱映中": "benyueremen",
+            "電影": "zuixindianying",            
             "電視劇": "dsj",
-            "國產劇": "gcj",
-            "海外劇": "haiwaijuqita",
-            "美劇": "meijutt",
-            "日劇": "riju",
+            "陸劇": "gcj",
             "韓劇": "hanjutv",
-            "番劇": "fanju",            
+            "日劇": "riju",
+            "美劇": "meijutt",
             "動漫": "dm"
         }
         classes = []
