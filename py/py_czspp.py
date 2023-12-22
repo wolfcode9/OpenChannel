@@ -18,12 +18,14 @@ class Spider(Spider):
         result = {}
         cateManual = {
             "豆瓣電影Top250": "dbtop250",
-            "最新電影": "zuixindianying",
+            "最新電影": "zuixindianying",            
             "電視劇": "dsj",
             "國產劇": "gcj",
+            "海外劇": "haiwaijuqita",
             "美劇": "meijutt",
+            "日劇": "riju",            
             "韓劇": "hanjutv",
-            "番劇": "fanju",
+            "番劇": "fanju",            
             "動漫": "dm"
         }
         classes = []
@@ -163,8 +165,8 @@ class Spider(Spider):
 
     def searchContent(self, key, quick):
         header = {	
-	        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",  	
-            "cookie": "myannoun=1; cf_clearance=8X8HLfjHfIAt68XoLW1ngF8KUKtg5en195Zo_BccAXY-1703257212-0-2-9d800f49.1493b630.49fd95ce-150.0.0; Hm_lvt_69e6fc4e315ecad03923d5483d213857=1703258359,1703261697,1703261712,1703262088; Hm_lpvt_69e6fc4e315ecad03923d5483d213857=1703262088; Hm_lvt_869bab0ee2ff72889d0045aa7b4f3ee8=1703258359,1703261697,1703261712,1703262088; Hm_lpvt_869bab0ee2ff72889d0045aa7b4f3ee8=1703262088; Hm_lvt_42c5653f32b0693192746ff4569273a9=1703258359,1703261697,1703261712,1703262088; Hm_lpvt_42c5653f32b0693192746ff4569273a9=1703262088; Hm_lvt_a3850b4650b886fb75385d4422e3b3b5=1703258359,1703261697,1703261712,1703262088; Hm_lpvt_a3850b4650b886fb75385d4422e3b3b5=1703262088"    	
+	        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+            "cookie": "cf_clearance=8X8HLfjHfIAt68XoLW1ngF8KUKtg5en195Zo_BccAXY-1703257212-0-2-9d800f49.1493b630.49fd95ce-150.0.0;"
 	    }      
         url = 'https://www.czzy88.com/xssearch?q={0}'.format(key)
         rsp = self.fetch(url,headers=header)
