@@ -4,6 +4,7 @@ import sys
 sys.path.append('..')
 from base.spider import Spider
 import base64
+from Crypto.Cipher import AES
 
 class Spider(Spider):  # 元类 默认的元类 type
     def getName(self):
