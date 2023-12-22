@@ -106,7 +106,7 @@ class Spider(Spider):
             "type_name": typen,
             "vod_year": year,
             "vod_area": area,
-            "vod_remarks": remarks,
+            "vod_remarks": ('豆瓣：' + remarks),
             "vod_actor": actor,
             "vod_director": director,
             "vod_content": detail
