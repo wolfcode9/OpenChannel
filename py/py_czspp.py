@@ -18,7 +18,8 @@ class Spider(Spider):
         result = {}
         cateManual = {
             "豆瓣電影Top250": "dbtop250",
-            "最新電影": "zuixindianying",            
+            "最新電影": "zuixindianying",
+            "電影": "movie_bt/movie_bt_series/dyy",                    
             "電視劇": "dsj",
             "國產劇": "gcj",
             "海外劇": "haiwaijuqita",
