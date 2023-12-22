@@ -92,14 +92,14 @@ class Spider(Spider):
         node = root.xpath("//div[@class='dyxingq']")[0]
         pic = node.xpath(".//div[@class='dyimg fl']/img/@src")[0]
         title = node.xpath('.//h1/text()')[0]
-        year = node.xpath('.//li[contains(text(), "年份")]/a')[0].text 
+        #year = node.xpath('.//li[contains(text(), "年份")]/a')[0].text 
         detail = root.xpath(".//div[@class='yp_context']//p/text()")[0]
         vod = {
             "vod_id": tid,
             "vod_name": title,
             "vod_pic": pic,
             "type_name": "",
-            "vod_year": year,
+            "vod_year": "",
             "vod_area": "",
             "vod_remarks": "",
             "vod_actor": "",
