@@ -99,7 +99,7 @@ class Spider(Spider):
             "vod_name": title,
             "vod_pic": pic,
             "type_name": "",
-            "vod_year": year,
+            "vod_year": "",
             "vod_area": "",
             "vod_remarks": "",
             "vod_actor": "",
@@ -121,6 +121,12 @@ class Spider(Spider):
                     tn = inf.text
                     tpyeare = tpyeare +'/'+'{0}'.format(tn)
                     vod['vod_area'] = tpyeare.strip('/')
+            if content.startswith('年份'):
+                tpyeare = ''
+                for inf in info:
+                    tn = inf.text
+                    tpyeare = tpyeare +'/'+'{0}'.format(tn)
+                    vod['vod_year'] = tpyeare.strip('/')                    
             if content.startswith('豆瓣'):
                 vod['vod_remarks'] = content
             if content.startswith('主演'):
