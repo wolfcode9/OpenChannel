@@ -97,7 +97,7 @@ class Spider(Spider):
         typen = node.xpath('.//li[contains(text(), "类型")]/a')[0].text
         actor = node.xpath('.//li[contains(text(), "主演")]/span')[0].text 
         director = node.xpath('.//li[contains(text(), "导演")]/span')[0].text
-        remarks = node.xpath('.//li[contains(text(), "上映")]/span')[0].text
+        #remarks = node.xpath('.//li[contains(text(), "上映")]/span')[0].text
         detail = root.xpath(".//div[@class='yp_context']//p/text()")[0]
         vod = {
             "vod_id": tid,
@@ -106,7 +106,7 @@ class Spider(Spider):
             "type_name": typen,
             "vod_year": year,
             "vod_area": area,
-            "vod_remarks": remarks,
+            "vod_remarks": '',
             "vod_actor": actor,
             "vod_director": director,
             "vod_content": detail
