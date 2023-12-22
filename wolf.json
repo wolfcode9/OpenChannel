@@ -52,11 +52,7 @@
     },
     {
       "key": "py_czspp",
-<<<<<<< HEAD
-      "name": "厂长2",
-=======
-      "name": "厂长1",
->>>>>>> 0af574151a8f74abdcc86efda6b1d27bc6b4c68b
+      "name": "厂长3",
       "type": 3,
       "api": "py_czspp",
       "searchable": 1,
