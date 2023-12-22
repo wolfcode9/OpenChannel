@@ -92,6 +92,7 @@ class Spider(Spider):
         node = root.xpath("//div[@class='dyxingq']")[0]
         pic = node.xpath(".//div[@class='dyimg fl']/img/@src")[0]
         title = node.xpath('.//h1/text()')[0]
+        remarks = node.xpath('.//li[contains(text(), "豆瓣")]/a')[0].text 
         year = node.xpath('.//li[contains(text(), "年份")]/a')[0].text
         area = node.xpath('.//li[contains(text(), "地区")]/a')[0].text
         typen = node.xpath('.//li[contains(text(), "类型")]/a')[0].text
@@ -105,56 +106,11 @@ class Spider(Spider):
             "type_name": typen,
             "vod_year": year,
             "vod_area": area,
-            "vod_remarks": "",
+            "vod_remarks": remarks,
             "vod_actor": actor,
             "vod_director": director,
             "vod_content": detail
-        }        
-        infoArray = node.xpath(".//ul[@class='moviedteail_list']/li")
-        for info in infoArray:
-            content = info.xpath('string(.)')
-
-            if content.startswith('豆瓣'):
-                vod['vod_remarks'] = content
-            '''
-            if content.startswith('类型'):
-                tpyen = ''
-                for inf in info:
-                    tn = inf.text
-                    tpyen = tpyen +'/'+'{0}'.format(tn)
-                    vod['type_name'] = tpyen.strip('/')
-            
-            if content.startswith('地区'):
-                tpyeare = ''
-                for inf in info:
-                    tn = inf.text
-                    tpyeare = tpyeare +'/'+'{0}'.format(tn)
-                    vod['vod_area'] = tpyeare.strip('/')
-            
-            if content.startswith('年份'):
-                tpyeare = ''
-                for inf in info:
-                    tn = inf.text
-                    tpyeare = tpyeare +'/'+'{0}'.format(tn)
-                    vod['vod_year'] = tpyeare.strip('/') 
-
-            
-            if content.startswith('导演'):
-                tpyedire = ''
-                for inf in info:
-                    tn = inf.text
-                    tpyedire  = tpyedire  +'/'+'{0}'.format(tn)
-                    vod['vod_director'] = tpyedire .strip('/')                     
-            
-          
-            if content.startswith('主演'):
-                tpyeact = ''
-                for inf in info:
-                    tn = inf.text
-                    tpyeact = tpyeact +'/'+'{0}'.format(tn)
-                    vod['vod_actor'] = tpyeact.strip('/')
-            '''   
-            
+        }   
         vod_play_from = '$$$'
         playFrom = ['廠長']
         vod_play_from = vod_play_from.join(playFrom)
