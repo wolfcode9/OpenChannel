@@ -16,7 +16,7 @@ TVBS新聞,https://www.youtube.com/watch?v=m_dhMSvUCIc
 日本新聞,https://www.youtube.com/watch?v=coYw-eVU0Ks
 韓國新聞,https://www.youtube.com/watch?v=FJfwehhzIhw
 德國之聲,https://www.youtube.com/watch?v=pqabxBKzZ6M
-英國新聞,https://www.youtube.com/watch?v=9Auq9mYxFEE
+英國新聞,https://www.youtube.com/watch?v=w9uJg68CV4g
 法國新聞,https://www.youtube.com/watch?v=tkDUSYHoKxE
 歐洲新聞,https://www.youtube.com/watch?v=pykpO5kQJ98
 音樂串流,#genre#
@@ -39,7 +39,7 @@ MOMO親子台,https://www.youtube.com/watch?v=R3PZkCUJSbQ
 碰碰狐,https://www.youtube.com/watch?v=aRpTOsHnubs
 貝樂虎,https://www.youtube.com/watch?v=VKOKiK97dBs
 救援小英雄波力,https://www.youtube.com/watch?v=kTfvjuqISfs
-汪汪隊立大功,https://www.youtube.com/watch?v=yI3H8Dnrn9M
+汪汪隊立大功,https://www.youtube.com/watch?v=hyqNZD_yiFk
 兒童迪士尼,https://www.youtube.com/watch?v=OjlaUkllTss
 小寶貝布姆,https://www.youtube.com/watch?v=RxcvoTXdF8A
 Beep Beep,https://www.youtube.com/watch?v=_cCpMZpaIJk
