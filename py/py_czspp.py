@@ -134,7 +134,7 @@ class Spider(Spider):
                     tpyedire  = tpyedire  +'/'+'{0}'.format(tn)
                     vod['vod_director'] = tpyedire .strip('/')
         vod_play_from = '$$$'
-        playFrom = ['你娘']
+        playFrom = ['廠長']
         vod_play_from = vod_play_from.join(playFrom)
         vod_play_url = '$$$'
         playList = []
