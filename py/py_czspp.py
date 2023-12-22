@@ -94,7 +94,7 @@ class Spider(Spider):
         title = node.xpath('.//h1/text()')[0]
         year = node.xpath('.//li[contains(text(), "年份")]/a')[0].text
         area = node.xpath('.//li[contains(text(), "地区")]/a')[0].text
-        type = node.xpath('.//li[contains(text(), "类型")]/a')[0].text
+        atype = node.xpath('.//li[contains(text(), "类型")]/a')[0].text
         remarks = node.xpath('.//li[contains(text(), "豆瓣")]/a')[0].text
         actor = node.xpath('.//li[contains(text(), "主演")]/a')[0].text
         director = node.xpath('.//li[contains(text(), "导演")]/a')[0].text
@@ -103,7 +103,7 @@ class Spider(Spider):
             "vod_id": tid,
             "vod_name": title,
             "vod_pic": pic,
-            "type_name": type,
+            "type_name": atype,
             "vod_year": year,
             "vod_area": area,
             "vod_remarks": remarks,
