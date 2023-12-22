@@ -6,11 +6,7 @@ from base.spider import Spider
 import base64
 from Crypto.Cipher import AES
 
-class Spider(Spider): 
-    header = {	
-	    "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
-        "cookie": "cf_clearance=8X8HLfjHfIAt68XoLW1ngF8KUKtg5en195Zo_BccAXY-1703257212-0-2-9d800f49.1493b630.49fd95ce-150.0.0;"
-    }
+class Spider(Spider):    
     
     def getName(self):
         return "廠長"
@@ -166,7 +162,11 @@ class Spider(Spider):
         }
         return result
 
-    def searchContent(self, key, quick):     
+    def searchContent(self, key, quick):
+        header = {	
+            "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+            "cookie": "cf_clearance=8X8HLfjHfIAt68XoLW1ngF8KUKtg5en195Zo_BccAXY-1703257212-0-2-9d800f49.1493b630.49fd95ce-150.0.0;"
+        }
         url = 'https://www.czzy88.com/xssearch?q={0}'.format(key)
         rsp = self.fetch(url,headers=header)
         root = self.html(self.cleanText(rsp.text))
