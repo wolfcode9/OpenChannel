@@ -6,9 +6,9 @@ from base.spider import Spider
 import base64
 from Crypto.Cipher import AES
 
-class Spider(Spider):  # 元类 默认的元类 type
+class Spider(Spider): 
     def getName(self):
-        return "厂长"
+        return "廠長"
 
     def init(self, extend=""):
         print("============{0}============".format(extend))
@@ -17,14 +17,14 @@ class Spider(Spider):  # 元类 默认的元类 type
     def homeContent(self,filter):
         result = {}
         cateManual = {
-            "豆瓣电影Top250": "dbtop250",
-            "最新电影": "zuixindianying",
-            "电视剧": "dsj",
-            "国产剧": "gcj",
-            "美剧": "meijutt",
-            "韩剧": "hanjutv",
-            "番剧": "fanju",
-            "动漫": "dm"
+            "豆瓣電影Top250": "dbtop250",
+            "最新電影": "zuixindianying",
+            "電視劇": "dsj",
+            "國產劇": "gcj",
+            "美劇": "meijutt",
+            "韓劇": "hanjutv",
+            "番劇": "fanju",
+            "動漫": "dm"
         }
         classes = []
         for k in cateManual:
@@ -67,7 +67,7 @@ class Spider(Spider):  # 元类 默认的元类 type
         for a in aList:
             name = a.xpath('./a/img/@alt')[0]
             pic = a.xpath('./a/img/@data-original')[0]
-            mark = a.xpath("./div[@class='hdinfo']/span/text()")[0]
+            mark = next(iter(a.xpath("./div[@class='hdinfo']/span/text()")), None)
             sid = a.xpath("./a/@href")[0]
             sid = self.regStr(sid, "/movie/(\\S+).html")
             videos.append({
@@ -134,7 +134,7 @@ class Spider(Spider):  # 元类 默认的元类 type
                     tpyedire  = tpyedire  +'/'+'{0}'.format(tn)
                     vod['vod_director'] = tpyedire .strip('/')
         vod_play_from = '$$$'
-        playFrom = ['厂长']
+        playFrom = ['你娘']
         vod_play_from = vod_play_from.join(playFrom)
         vod_play_url = '$$$'
         playList = []
