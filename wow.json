@@ -234,8 +234,8 @@
     {
       "key": "暴風",
       "name": "暴風",
-      "type": 1,
-      "api": "https://bfzyapi.com/api.php/provide/vod",
+      "type": 3,
+      "api": "csp_AppYsV2",
       "searchable": 1,
       "changeable": 1,
       "categories": 
@@ -271,7 +271,8 @@
         "欧美综艺",
         "动画片",
         "电影解说"
-      ]
+      ],
+      "ext": "https://bfzyapi.com/api.php/provide/vod"
     },
     {
       "key": "新6V",
