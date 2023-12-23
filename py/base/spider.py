@@ -6,6 +6,7 @@ import requests
 from lxml import etree
 from abc import abstractmethod,ABCMeta
 from importlib.machinery import SourceFileLoader
+
 class Spider(metaclass=ABCMeta):
     _instance = None
     def __new__(cls, *args, **kwargs):

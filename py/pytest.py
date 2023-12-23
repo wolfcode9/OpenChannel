@@ -1,37 +1,22 @@
-from bs4 import BeautifulSoup
-import requests
+from base.spider import Spider
+from lxml import html
 
-class Vod:
-    def __init__(self, id, name, pic, remark):
-        self.id = id
-        self.name = name
-        self.pic = pic
-        self.remark = remark
+url = "https://www.yingshi.tv/vod/show/by/time/id/1.html"
 
-def home_video_content():
-    site_url = "https://www.yingshi.tv"
-    response = requests.get(site_url)
-    html_content = response.text
-
-    soup = BeautifulSoup(html_content, 'html.parser')
-
-    list_of_vod = []
-
-    for e in soup.select('div#desktop-container li.ys_show_item'):
-        link = e.select_one('a')['href']
-        id = link.split('/')[4]
-        pic = e.select_one('img')['src']
-        name = e.select_one('h2.ys_show_title')
-        remark = e.select_one('span.ys_show_episode_text')
-
-        # 检查name是否为空，然后将结果添加到列表中
+rsp = Spider.fetch(None, url)
+root = Spider.html(None, Spider.cleanText(None, rsp.text))
+aList = root.xpath('/html/body/div/div/section/div/div/li/a')                                                                                                             
+videos = []
+for a in aList:
+    link = a.xpath("./@href")[0]
+    if 'vod/play' in link:
+        vid = link.split('/')[4]        
+        name = (a.xpath('./h2[@class="ys_show_title"]/text()') or [None])[0]
+        pic = (a.xpath('./div/img/@src') or [None])[0]
+        mark = (a.xpath('.//span[@class="ys_show_episode_text"]/text()') or [None])[0]        
         if name:
-            vod = Vod(id, name, pic, remark)
-            list_of_vod.append(vod)
+            videos.append({"vod_id": vid, "vod_name": name,"vod_pic": pic,"vod_remarks": mark})            
+    result = {'list': videos}
 
-    return list_of_vod
 
-# 示例用法
-result = home_video_content()
-for vod in result:
-    print(f"ID: {vod.id}, Name: {vod.name}, Pic: {vod.pic}, Remark: {vod.remark}")
+print(videos)
