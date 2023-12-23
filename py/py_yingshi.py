@@ -48,9 +48,9 @@ class Spider(Spider):
 		videos = []
 		rsp = self.fetch(self.siteUrl)
 		root = self.html(self.cleanText(rsp.text))							
-		aList = root.xpath('/html/body/div/div/section/div/div/li/a')        
+		aList = root.xpath('//*[@id="desktop-container"]/section/div/div/li/a')       
 		for a in aList:
-			link = a.xpath("./@href")[0]            
+			link = a.xpath("./@href")[0]
 			vid = link.split('/')[4]        
 			name = (a.xpath('./h2[@class="ys_show_title"]/text()') or [None])[0]
 			pic = (a.xpath('./div/img/@src') or [None])[0]

@@ -121,10 +121,17 @@ from lxml import html
 import json
 
 result = {}		
-url = 'https://www.yingshi.tv/ajax/data?mid=3&page=2&limit=99&by=id'		
+url = 'https://www.yingshi.tv'		
 rsp = requests.get(url)
-jsonData = json.loads(rsp.text)["list"]["481"]["vod_list"]
-for j in jsonData:
-    print(j["vod_name"])
+videos = []
+root = html.document_fromstring((rsp.text))							
+aList = root.xpath('//*[@id="desktop-container"]/section/div/div/li/a') 
+for a in aList:
+    link = a.xpath("./@href")[0]
+    vid = link.split('/')[4]        
+    name = (a.xpath('./h2[@class="ys_show_title"]/text()') or [None])[0]
+    pic = (a.xpath('./div/img/@src') or [None])[0]
+    mark = (a.xpath('.//span[@class="ys_show_episode_text"]/text()') or [None])[0]     
+    videos.append({"vod_id": vid, "vod_name": name,"vod_pic": pic,"vod_remarks": mark})            
 
-	
+print(videos)
