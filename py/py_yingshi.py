@@ -7,8 +7,6 @@ import base64
 from Crypto.Cipher import AES
 import json
 import requests
-from bs4 import BeautifulSoup
-from typing import List
 
 class Spider(Spider):    
     siteUrl = "https://www.yingshi.tv"
