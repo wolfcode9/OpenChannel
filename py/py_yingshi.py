@@ -4,6 +4,7 @@ import sys
 sys.path.append('..') 
 from base.spider import Spider
 import json
+import requests
 
 class Spider(Spider):
 	
@@ -39,8 +40,7 @@ class Spider(Spider):
 		
 		result['class'] = classes
 		if(filter):
-			result['filters'] = self.config['filter']
-					
+			result['filters'] = self.config['filter']					
 		return result
 	
 	#推薦
@@ -63,8 +63,24 @@ class Spider(Spider):
 	
 	#分類
 	def categoryContent(self,tid,pg,filter,extend):
-		result = {}		
-		return result
+		result = {}
+		#url = f'{self.siteUrl}/vod/type/id/{tid}/by/time'
+		by = extend.get("by") if "by" in extend else "time"
+		cls = extend.get("by") if "class" in extend else ""
+		area = extend.get("area") if "area" in extend else ""
+		lang = extend.get("lang") if "lang" in extend else ""
+		year = extend.get("year") if "year" in extend else ""
+		result['mid'] = 1
+		result['by'] = by
+		result['tid'] = tid
+		result['page'] = pg
+		result['class'] = cls
+		result['year'] = year
+		result['lang'] = lang
+		result['area'] = area
+		result['limit'] = 35
+		url = self.siteUrl + "/ajax/data"
+		return requests.get(url=url,params=result,headers=self.header)
 	
 	#詳情
 	def detailContent(self,array):
