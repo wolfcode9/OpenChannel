@@ -40,8 +40,8 @@ class Spider(Spider):
                 'type_id': cateManual[k]
             })
         result['class'] = classes        
-        #if(filter):
-        #    result['filters'] = self.config
+        if(filter):
+            result['filters'] = self.config['filter']
         return result
 
     def homeVideoContent(self):
@@ -169,26 +169,9 @@ class Spider(Spider):
         action = {}
         return [200, "video/MP2T", action, ""]
 
-    config = {[  
-    {
-        "key": "by",
-        "name": "排序",
-        "values": [
-        {
-            "name": "新上线",
-            "value": "time"
-        },
-        {
-            "name": "热播榜",
-            "value": "hits_day"
-        },
-        {
-            "name": "好评榜",
-            "value": "score"
-        }
-        ]
-    },
-    {
+    config = {
+		"player": {},
+		"filter": {[{"key": "by","name": "排序","values": [{"name": "新上线","value": "time"},{"name": "热播榜","value": "hits_day"},{"name": "好评榜","value": "score"}]},{
         "key": "class",
         "name": "類型",
         "values": [
@@ -480,7 +463,7 @@ class Spider(Spider):
         }
         ]
     }
-    ]}
+    ]}}
 
 class Job(List[dict]):
 
