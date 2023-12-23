@@ -121,14 +121,9 @@ from lxml import html
 import json
 
 result = {}		
-url = 'https://www.yingshi.tv/ajax/data?mid=1&page=1&limit=35&tid=1'		
+url = 'https://www.yingshi.tv/ajax/data?mid=3&page=1&limit=35&by=id'		
 rsp = requests.get(url)
 jsonData = json.loads(rsp.text)
 result['list'] = jsonData['list']
-result['page'] = 1
-result['pagecount'] = jsonData['pagecount']
-result['limit'] = 35
-result['total'] = jsonData['total']
-
-print(jsonData['pagecount'])
+print(result)
 	
