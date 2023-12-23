@@ -44,8 +44,13 @@ class Spider(Spider):
 	
 	#推薦
 	def homeVideoContent(self):
-		result = {}
-		videos = []
+		result = {}		
+		url = f'{self.siteUrl}/ajax/data?mid=3&page=1&limit=35&by=id'
+		rsp = self.fetch(url)
+		jsonData = json.loads(rsp.text)
+		result['list'] = jsonData['list']
+		return result
+		'''
 		rsp = self.fetch('https://www.yingshi.tv/vod/show/by/time/id/1.html')
 		root = self.html(self.cleanText(rsp.text))
 		aList = root.xpath('/html/body/div/div/section/div/div/li/a')        
@@ -57,8 +62,9 @@ class Spider(Spider):
 			mark = (a.xpath('.//span[@class="ys_show_episode_text"]/text()') or [None])[0] 
 			if name:
 				videos.append({"vod_id": vid, "vod_name": name,"vod_pic": pic,"vod_remarks": mark})            
-		result = {'list': videos}
-		return result
+		'''
+		#result = {'list': videos}
+		
 	
 	#分類
 	def categoryContent(self,tid,pg,filter,extend):
