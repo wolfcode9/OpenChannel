@@ -63,25 +63,15 @@ class Spider(Spider):
 	#分類
 	def categoryContent(self,tid,pg,filter,extend):
 		result = {}		
-		url = f'{self.siteUrl}/ajax/data?mid=1&page={pg}&limit=35&tid={tid}'
-		'''
-		by = extend.get("by") if "by" in extend else "time"
-		cls = extend.get("by") if "class" in extend else ""
-		area = extend.get("area") if "area" in extend else ""
-		lang = extend.get("lang") if "lang" in extend else ""
-		year = extend.get("year") if "year" in extend else ""
-		result['mid'] = 1
-		result['by'] = by
-		result['tid'] = tid
+		url = f'{self.siteUrl}/ajax/data?mid=1&page={pg}&limit=35&tid={tid}'		
+		rsp = self.fetch(url)
+		jsonData = json.loads(rsp.text)
+		result['list'] = jsonData['list']
 		result['page'] = pg
-		result['class'] = cls
-		result['year'] = year
-		result['lang'] = lang
-		result['area'] = area
+		result['pagecount'] = jsonData['pagecount']
 		result['limit'] = 35
-		url = self.siteUrl + "/ajax/data"
-		'''
-		return self.fetch(url,headers=self.header)
+		result['total'] = jsonData['total']
+		return result 
 	
 	#詳情
 	def detailContent(self,array):
