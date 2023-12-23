@@ -41,12 +41,12 @@ vod = json.loads(json_data)
 result_string = str(vod)
 
 print(result_string)
-
+'''
 import requests
 from bs4 import BeautifulSoup
-from typing import Callable, List
+from typing import List
 
-class Job(Callable[[None], List[dict]]):
+class Job(List[dict]):
 
     def __init__(self, typeId):
         self.typeId = typeId
@@ -115,3 +115,4 @@ class Job:
 # Example usage:
 job = Job("1").call()
 print(job)
+'''

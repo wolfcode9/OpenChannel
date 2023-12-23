@@ -7,6 +7,8 @@ import base64
 from Crypto.Cipher import AES
 import json
 import requests
+from bs4 import BeautifulSoup
+from typing import List
 
 class Spider(Spider):    
     siteUrl = "https://www.yingshi.tv"
@@ -39,7 +41,7 @@ class Spider(Spider):
             })
         result['class'] = classes
         if(filter):
-            result['filters'] = Job('filters').call()
+            result['filters'] = Job(['filters']).call()
         return result
 
     def homeVideoContent(self):
@@ -167,30 +169,33 @@ class Spider(Spider):
         action = {}
         return [200, "video/MP2T", action, ""]
 
-class Job:    
+
+class Job(List[dict]):
+
     def __init__(self, typeId):
         self.typeId = typeId
 
-    def call(self):
+    def __call__(self) -> List[dict]:
         items = []
         url = f"https://www.yingshi.tv/vod/show/by/hits_day/id/{self.typeId}/order/desc.html"
         response = requests.get(url)
-        tree = html.fromstring(response.content)
-        items.append(self.filter(tree.xpath('/html/body/div[5]/div/div[2]/div[1]/div[2]/div'), "by", "排序", 4))
-        items.append(self.filter(tree.xpath('/html/body/div[5]/div/div[2]/div[2]/div[1]/div'), "class", "類型", 6))                                             
-        items.append(self.filter(tree.xpath('/html/body/div[5]/div/div[2]/div[2]/div[2]/div'), "area", "地區", 4))
-        items.append(self.filter(tree.xpath('/html/body/div[5]/div/div[2]/div[2]/div[3]/div'), "lang", "語言", 8))
-        items.append(self.filter(tree.xpath('/html/body/div[5]/div/div[2]/div[2]/div[4]/div'), "year", "時間", 10))
+        doc = BeautifulSoup(response.text, 'html.parser')
+        items.append(self.filter(doc.select("div.ys_filter_list_show_types")[0].select("div.ys_filter.flex")[1].select("div > div"), "by", "排序", 4))
+        items.append(self.filter(doc.select("div#ys_filter_by_class")[0].select("div > div"), "class", "類型", 6))
+        items.append(self.filter(doc.select("div#ys_filter_by_country")[0].select("div > div"), "area", "地區", 4))
+        items.append(self.filter(doc.select("div#ys_filter_by_lang")[0].select("div > div"), "lang", "語言", 8))
+        items.append(self.filter(doc.select("div#ys_filter_by_year")[0].select("div > div"), "year", "時間", 10))
         return items
 
     def filter(self, elements, key, name, index):
         values = []
         for e in elements:
-            paragraph = e.xpath('.//p/text()')
-            n = paragraph[0] if paragraph else ""
-            all_values = "全部" in n
-            href = e.xpath('.//a/@href')[0] if not all_values else ""
-            v = href.split("/")[-1].replace(".html", "") if href else ""
-            values.append({"name": n, "value": v})
+            paragraph = e.select_one("p")
+            if paragraph:
+                n = paragraph.text
+                all_values = "全部" in n
+                href = e.select_one("a").get("href") if not all_values else ""
+                v = href.split("/")[index].replace(".html", "") if href else ""
+                values.append({"name": n, "value": v})
         return {"key": key, "name": name, "values": values}
 
