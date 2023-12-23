@@ -63,7 +63,7 @@ class Spider(Spider):
 	#分類
 	def categoryContent(self,tid,pg,filter,extend):
 		result = {}		
-		url = f'{self.siteUrl}/ajax/data?mid=1&page={pg}&limit=35&tid={tid}'		
+		url = f'{self.siteUrl}/ajax/data?mid=1&page={pg}&limit=35&tid={tid}&by=time'		
 		rsp = self.fetch(url)
 		jsonData = json.loads(rsp.text)
 		result['list'] = jsonData['list']
