@@ -45,10 +45,12 @@ class Spider(Spider):
 	#推薦
 	def homeVideoContent(self):
 		result = {}
-		url = f'{self.siteUrl}/ajax/data?mid=3&page=1&limit=35&by=id'
+		url = f'{self.siteUrl}/ajax/data?mid=3&page=1&limit=6&by=id'
 		rsp = self.fetch(url)
 		jsonData = json.loads(rsp.text)
-		result['list'] = jsonData['list']["481"]['vod_list']
+		result['list']  = [item 
+			for key in ["476", "477", "478", "479", "480", "481"] 
+			for item in jsonData["list"][key]["vod_list"]]
 		return result	
 	
 	#分類

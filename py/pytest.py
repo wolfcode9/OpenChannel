@@ -121,9 +121,10 @@ from lxml import html
 import json
 
 result = {}		
-url = 'https://www.yingshi.tv/ajax/data?mid=3&page=1&limit=35&by=id'		
+url = 'https://www.yingshi.tv/ajax/data?mid=3&page=2&limit=99&by=id'		
 rsp = requests.get(url)
-jsonData = json.loads(rsp.text)
+jsonData = json.loads(rsp.text)["list"]["481"]["vod_list"]
+for j in jsonData:
+    print(j["vod_name"])
 
-print(jsonData["list"][]["vod_list"])
 	
