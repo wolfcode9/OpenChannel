@@ -41,7 +41,7 @@ class Spider(Spider):
             })
         result['class'] = classes
         if(filter):
-            result['filters'] = Job(['filters']).call()
+            result['filters'] = filter
         return result
 
     def homeVideoContent(self):
@@ -199,3 +199,315 @@ class Job(List[dict]):
                 values.append({"name": n, "value": v})
         return {"key": key, "name": name, "values": values}
 
+    filter = [
+    {
+        "key": "by",
+        "name": "排序",
+        "values": [
+        {
+            "name": "新上线",
+            "value": "time"
+        },
+        {
+            "name": "热播榜",
+            "value": "hits_day"
+        },
+        {
+            "name": "好评榜",
+            "value": "score"
+        }
+        ]
+    },
+    {
+        "key": "class",
+        "name": "類型",
+        "values": [
+        {
+            "name": "全部类型",
+            "value": ""
+        },
+        {
+            "name": "偶像",
+            "value": "偶像"
+        },
+        {
+            "name": "爱情",
+            "value": "爱情"
+        },
+        {
+            "name": "古装",
+            "value": "古装"
+        },
+        {
+            "name": "谍战",
+            "value": "谍战"
+        },
+        {
+            "name": "战争",
+            "value": "战争"
+        },
+        {
+            "name": "江湖",
+            "value": "江湖"
+        },
+        {
+            "name": "武侠",
+            "value": "武侠"
+        },
+        {
+            "name": "言情",
+            "value": "言情"
+        },
+        {
+            "name": "历史",
+            "value": "历史"
+        },
+        {
+            "name": "玄幻",
+            "value": "玄幻"
+        },
+        {
+            "name": "历险",
+            "value": "历险"
+        },
+        {
+            "name": "都市",
+            "value": "都市"
+        },
+        {
+            "name": "科幻",
+            "value": "科幻"
+        },
+        {
+            "name": "军旅",
+            "value": "军旅"
+        },
+        {
+            "name": "喜剧",
+            "value": "喜剧"
+        },
+        {
+            "name": "罪案",
+            "value": "罪案"
+        },
+        {
+            "name": "青春",
+            "value": "青春"
+        },
+        {
+            "name": "家庭",
+            "value": "家庭"
+        },
+        {
+            "name": "悬疑",
+            "value": "悬疑"
+        },
+        {
+            "name": "穿越",
+            "value": "穿越"
+        },
+        {
+            "name": "宫廷",
+            "value": "宫廷"
+        },
+        {
+            "name": "神话",
+            "value": "神话"
+        },
+        {
+            "name": "商战",
+            "value": "商战"
+        },
+        {
+            "name": "警匪",
+            "value": "警匪"
+        },
+        {
+            "name": "动作",
+            "value": "动作"
+        },
+        {
+            "name": "惊悚",
+            "value": "惊悚"
+        },
+        {
+            "name": "剧情",
+            "value": "剧情"
+        },
+        {
+            "name": "同性",
+            "value": "同性"
+        },
+        {
+            "name": "奇幻",
+            "value": "奇幻"
+        },
+        {
+            "name": "其它",
+            "value": "其它"
+        }
+        ]
+    },
+    {
+        "key": "area",
+        "name": "地區",
+        "values": [
+        {
+            "name": "全部地区",
+            "value": "全部地区"
+        },
+        {
+            "name": "大陆",
+            "value": "大陆"
+        },
+        {
+            "name": "香港",
+            "value": "香港"
+        },
+        {
+            "name": "台湾",
+            "value": "台湾"
+        },
+        {
+            "name": "日本",
+            "value": "日本"
+        },
+        {
+            "name": "韩国",
+            "value": "韩国"
+        },
+        {
+            "name": "欧美",
+            "value": "欧美"
+        },
+        {
+            "name": "泰国",
+            "value": "泰国"
+        },
+        {
+            "name": "新马",
+            "value": "新马"
+        },
+        {
+            "name": "其它",
+            "value": "其它"
+        }
+        ]
+    },
+    {
+        "key": "lang",
+        "name": "語言",
+        "values": [
+        {
+            "name": "全部语言",
+            "value": "全部语言"
+        },
+        {
+            "name": "国语",
+            "value": "国语"
+        },
+        {
+            "name": "粤语",
+            "value": "粤语"
+        },
+        {
+            "name": "英语",
+            "value": "英语"
+        },
+        {
+            "name": "韩语",
+            "value": "韩语"
+        },
+        {
+            "name": "日语",
+            "value": "日语"
+        },
+        {
+            "name": "西班牙",
+            "value": "西班牙"
+        },
+        {
+            "name": "法语",
+            "value": "法语"
+        },
+        {
+            "name": "德语",
+            "value": "德语"
+        },
+        {
+            "name": "泰语",
+            "value": "泰语"
+        },
+        {
+            "name": "其它",
+            "value": "其它"
+        }
+        ]
+    },
+    {
+        "key": "year",
+        "name": "時間",
+        "values": [
+        {
+            "name": "全部时间",
+            "value": "全部时间"
+        },
+        {
+            "name": "2023",
+            "value": "2023"
+        },
+        {
+            "name": "2022",
+            "value": "2022"
+        },
+        {
+            "name": "2021",
+            "value": "2021"
+        },
+        {
+            "name": "2020",
+            "value": "2020"
+        },
+        {
+            "name": "2019",
+            "value": "2019"
+        },
+        {
+            "name": "2018",
+            "value": "2018"
+        },
+        {
+            "name": "2017",
+            "value": "2017"
+        },
+        {
+            "name": "2016",
+            "value": "2016"
+        },
+        {
+            "name": "2015",
+            "value": "2015"
+        },
+        {
+            "name": "2014-2011",
+            "value": "2014-2011"
+        },
+        {
+            "name": "2010-2000",
+            "value": "2010-2000"
+        },
+        {
+            "name": "90年代",
+            "value": "90年代"
+        },
+        {
+            "name": "80年代",
+            "value": "80年代"
+        },
+        {
+            "name": "更早",
+            "value": "更早"
+        }
+        ]
+    }
+    ]
