@@ -72,7 +72,7 @@ class Job(List[dict]):
                 all_values = "全部" in n
                 href = e.select_one("a").get("href") if not all_values else ""
                 v = href.split("/")[index].replace(".html", "") if href else ""
-                values.append({"name": n, "value": n})
+                values.append({"n": n, "v": v})
         return {"key": key, "name": name, "values": values}
 
 
