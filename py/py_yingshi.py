@@ -7,160 +7,216 @@ import base64
 from Crypto.Cipher import AES
 import json
 import requests
+import concurrent.futures
+import re
+from urllib.parse import urlencode
+from bs4 import BeautifulSoup
 
-class Spider(Spider):    
-    siteUrl = "https://www.yingshi.tv"
-    headers = {	
-        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
-        "Referer": "https://www.yingshi.tv"
-    }
+class Spider(Spider):
+    def __init__(self):
+        self.site_url = "https://www.yingshi.tv"
+        self.service = concurrent.futures.ThreadPoolExecutor()
 
-    def getName(self):
-        return "影視"
+    def get_cache(self):
+        return FileUtil.get_cache_file("ying_shi_home")
 
-    def init(self, extend=""):        
-        pass
-    
-    #https://www.yingshi.tv/vod/show/by/time/id/5.html
-    def homeContent(self,filter):
-        result = {}
-        cateManual = {
-            "電視劇": "1",
-            "電影": "2",
-            "綜藝": "3",
-            "動漫": "4",
-            "記錄片": "5"
+    def get_headers(self):
+        headers = {
+            "User-Agent": Utils.CHROME,
+            "Referer": self.site_url
         }
-        classes = []
-        for k in cateManual:
-            classes.append({
-                'type_name': k,
-                'type_id': cateManual[k]
-            })
-        result['class'] = classes
+        return headers
+
+    def init(self, context, extend):
+        self.service = concurrent.futures.ThreadPoolExecutor()
+
+    def home_content(self, filter):
+        if self.get_cache().exists():
+            return FileUtil.read(self.get_cache())
+
+        classes = [
+            Class("1", "電視劇"),
+            Class("2", "電影"),
+            Class("4", "動漫"),
+            Class("3", "綜藝"),
+            Class("5", "紀錄片")
+        ]
+
+        filters = {}
+        for class_type in classes:
+            filters[class_type.get_type_id()] = self.service.submit(self.job, class_type.get_type_id()).result()
+
+        result = Result.string(classes, filters)
+        FileUtil.write(self.get_cache(), result)
         return result
 
-    def homeVideoContent(self):
-        rsp = self.fetch('https://www.yingshi.tv/vod/show/by/time/id/1.html')
-        root = self.html(self.cleanText(rsp.text))
-        aList = root.xpath('/html/body/div/div/section/div/div/li/a')        
-        videos = []
-        for a in aList:
-            link = a.xpath("./@href")[0]            
-            vid = link.split('/')[4]        
-            name = (a.xpath('./h2[@class="ys_show_title"]/text()') or [None])[0]
-            pic = (a.xpath('./div/img/@src') or [None])[0]
-            mark = (a.xpath('.//span[@class="ys_show_episode_text"]/text()') or [None])[0] 
+    def home_video_content(self):
+        response = requests.get(self.site_url)
+        doc = BeautifulSoup(response.text, "html.parser")
+        video_list = []
+        for e in doc.select("div#desktop-container").select("li.ys_show_item"):
+            id = e.select("a").attr("href").split("/")[4]
+            pic = e.select("img").attr("src")
+            name = e.select("h2.ys_show_title").text()
+            remark = e.select("span.ys_show_episode_text").text()
             if name:
-                videos.append({"vod_id": vid, "vod_name": name,"vod_pic": pic,"vod_remarks": mark})            
-        result = {'list': videos}
-        return result
+                video_list.append(Vod(id, name, pic, remark))
+        return Result.string(video_list)
 
-    def categoryContent(self, tid, pg, filter, extend):
-        extend = {
-            "by": "time" if "by" not in extend else extend["by"],
-            "class": "" if "class" not in extend else extend["class"],
-            "area": "" if "area" not in extend else extend["area"],
-            "lang": "" if "lang" not in extend else extend["lang"],
-            "year": "" if "year" not in extend else extend["year"]
-        }
+    def category_content(self, tid, pg, filter, extend):
+        by = extend.get("by", "time")
+        cls = extend.get("class", "")
+        area = extend.get("area", "")
+        lang = extend.get("lang", "")
+        year = extend.get("year", "")
+
         params = {
             "mid": "1",
-            "by": extend["by"],
+            "by": by,
             "tid": tid,
             "page": pg,
-            "class": extend["class"],
-            "year": extend["year"],
-            "lang": extend["lang"],
-            "area": extend["area"],
+            "class": cls,
+            "year": year,
+            "lang": lang,
+            "area": area,
             "limit": "35"
         }
-        url = f'{self.siteUrl}/ajax/data'
-        return requests.get(url,params=params, headers=self.headers)    
 
-    def detailContent(self, array):
-        tid = array[0]
-        url = f"{self.siteUrl}/vod/play/id/{tid}/sid/1/nid/1.html"
-        rsp = self.fetch(url)
-        root = self.html(self.cleanText(rsp.text))
-        json_data = root.xpath('//script[contains(text(), "let data = ") and contains(text(), "let obj = ")]/text()')[0]
-        json_data = json_data.split('let data = ')[1].split('let obj = ')[0].strip()[:-1].replace("&amp;", " ")
-        vod = json.loads(json_data)
-        return str(vod)
+        url = f"{self.site_url}/ajax/data"
+        return requests.get(url, params=params, headers=self.get_headers()).text
 
-    def searchContent(self, key, quick):        
-        url = 'https://www.czzy88.com/xssearch?q={0}'.format(key)
-        rsp = self.fetch(url,headers=header)
-        root = self.html(self.cleanText(rsp.text))
-        vodList = root.xpath("//div[contains(@class,'mi_ne_kd')]/ul/li/a")
-        videos = []
-        for vod in vodList:
-            name = vod.xpath('./img/@alt')[0]
-            pic = vod.xpath('./img/@data-original')[0]
-            href = vod.xpath('./@href')[0]
-            tid = self.regStr(href, 'movie/(\\S+).html')
-            res = vod.xpath('./div[@class="jidi"]/span/text()')
-            if len(res) == 0:
-                remark = '全1集'
-            else:
-                remark = vod.xpath('./div[@class="jidi"]/span/text()')[0]
-            videos.append({
-                "vod_id": tid,
-                "vod_name": name,
-                "vod_pic": pic,
-                "vod_remarks": remark
-            })
-        result = {
-            'list': videos
+    def detail_content(self, ids):
+        url = f"{self.site_url}/vod/play/id/{ids[0]}/sid/1/nid/1.html"
+        response = requests.get(url)
+        doc = BeautifulSoup(response.text, "html.parser")
+        json_data = re.search('let data = (.*);', doc.text).group(1)
+        json_data = json_data.replace("&amp;", " ")
+        vod = Vod.object_from(json_data)
+        return Result.string(vod)
+
+    def player_content(self, flag, id, vip_flags):
+        proxy_url = f"{Proxy.get_url()}?do=yingshi&url={id}"
+        return Result.get().url(id).m3u8().string()
+
+    def search_content(self, key, quick, pg="1"):
+        params = {
+            "mid": "1",
+            "page": pg,
+            "limit": "18",
+            "wd": key
         }
-        return result    
+        url = f"{self.site_url}/ajax/search.html"
+        return requests.get(url, params=params, headers=self.get_headers()).text
 
-    def parseCBC(self, enc, key, iv):
-        keyBytes = key.encode("utf-8")
-        ivBytes = iv.encode("utf-8")
-        cipher = AES.new(keyBytes, AES.MODE_CBC, ivBytes)
-        msg = cipher.decrypt(enc)
-        paddingLen = msg[len(msg) - 1]
-        return msg[0:-paddingLen]
+    def job(self, type_id):
+        url = f"https://www.yingshi.tv/vod/show/by/hits_day/id/{type_id}/order/desc.html"
+        response = requests.get(url)
+        doc = BeautifulSoup(response.text, "html.parser")
+        filters = [
+            self.filter(doc.select("div.ys_filter_list_show_types").select("div.ys_filter.flex")[1].select("div > div"), "by", "排序", 4),
+            self.filter(doc.select("div#ys_filter_by_class").select("div > div"), "class", "類型", 6),
+            self.filter(doc.select("div#ys_filter_by_country").select("div > div"), "area", "地區", 4),
+            self.filter(doc.select("div#ys_filter_by_lang").select("div > div"), "lang", "語言", 8),
+            self.filter(doc.select("div#ys_filter_by_year").select("div > div"), "year", "時間", 10)
+        ]
+        return filters
+
+    def filter(self, elements, key, name, index):
+        values = []
+        for e in elements:
+            n = e.select("p").text
+            all_value = "全部" in n
+            v = "" if all_value else e.select("a").attr("href").split("/")[index].replace(".html", "")
+            values.append(Filter.Value(n, v))
+        return Filter(key, name, values)
+
+    @staticmethod
+    def vod(params):
+        url = params.get("url")
+        ad_block = ["10.0099", "8.1748"]  # Advertisement ts
+        content = requests.get(url).text
+        m = re.finditer("#EXT-X-DISCONTINUITY[\\s\\S]*?(?=#EXT-X-DISCONTINUITY|$)", content)
+        for match in m:
+            k = 0
+            digit = re.finditer("#EXTINF:(\\d+\\.\\d+)", match.group(0))
+            for d in digit:
+                g = float(d.group(1))
+                k += g
+            for ads in ad_block:
+                if ads in str(k):
+                    content = content.replace(match.group(0), "")
+                    print("Found ads:", ads)
+        return 200, "application/octet-stream", content
     
-    #https://www.yingshi.tv/vod/play/id/198804/sid/1/nid/1.html
-    def playerContent(self, flag, id, vipFlags):
-        url = self.siteUrl + '/vod/play/id/{0}/sid/1/nid/1.html'.format(id)
-        pat = '\\"([^\\"]+)\\";var [\\d\\w]+=function dncry.*md5.enc.Utf8.parse\\(\\"([\\d\\w]+)\\".*md5.enc.Utf8.parse\\(([\\d]+)\\)'
-        rsp = self.fetch(url)
-        html = rsp.text
-        content = self.regStr(html, pat)
-        if content == '':
-            return {}
-        key = self.regStr(html, pat, 2)
-        iv = self.regStr(html, pat, 3)
-        decontent = self.parseCBC(base64.b64decode(content), key, iv).decode()
-        urlPat = 'video: \\{url: \\\"([^\\\"]+)\\\"'
-        vttPat = 'subtitle: \\{url:\\\"([^\\\"]+\\.vtt)\\\"'
-        str3 = self.regStr(decontent, urlPat)
-        str4 = self.regStr(decontent, vttPat)
-        self.loadVtt(str3)
-        result = {
-            'parse': '0',
-            'playUrl': '',
-            'url': str3,
-            'header': ''
-        }
-        if len(str4) > 0:
-            result['subf'] = '/vtt/utf-8'
-            # result['subt'] = Proxy.localProxyUrl() + "?do=czspp&url=" + URLEncoder.encode(str4)
-            result['subt'] = ''
-        return result
-
-    def loadVtt(self, url):
+class FileUtil:
+    @staticmethod
+    def get_cache_file(file_name):
+        # 實現 get_cache_file 方法的邏輯
         pass
 
-    def isVideoFormat(self, url):
+    @staticmethod
+    def read(file):
+        # 實現 read 方法的邏輯
         pass
 
-    def manualVideoCheck(self):
+    @staticmethod
+    def write(file, content):
+        # 實現 write 方法的邏輯
         pass
 
-    def localProxy(self, param):
-        action = {}
-        return [200, "video/MP2T", action, ""]
+
+class Utils:
+    CHROME = "Chrome"  # 請確保在 Utils 類中定義 CHROME
+
+
+class Class:
+    def __init__(self, type_id, name):
+        self.type_id = type_id
+        self.name = name
+
+    def get_type_id(self):
+        return self.type_id
+
+
+class Filter:
+    class Value:
+        def __init__(self, name, value):
+            self.name = name
+            self.value = value
+
+    def __init__(self, key, name, values):
+        self.key = key
+        self.name = name
+        self.values = values
+
+
+class Result:
+    @staticmethod
+    def string(data):
+        # 實現 string 方法的邏輯
+        pass
+
+    @staticmethod
+    def get():
+        # 實現 get 方法的邏輯
+        pass
+
+
+class Proxy:
+    @staticmethod
+    def get_url():
+        # 實現 get_url 方法的邏輯
+        pass
+
+
+class Vod:
+    def __init__(self, id, name, pic, remark):
+        self.id = id
+        self.name = name
+        self.pic = pic
+        self.remark = remark
+
+    @staticmethod
+    def object_from(json_data):
+        # 實現 object_from 方法的邏輯
+        pass
