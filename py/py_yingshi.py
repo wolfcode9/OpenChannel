@@ -40,7 +40,8 @@ class Spider(Spider):
                 'type_id': cateManual[k]
             })
         result['class'] = classes        
-        result['filters'] = self.F
+        if(filter):
+            result['filters'] = self.config
         return result
 
     def homeVideoContent(self):
@@ -168,7 +169,7 @@ class Spider(Spider):
         action = {}
         return [200, "video/MP2T", action, ""]
 
-     F = [
+    config = {[  
     {
         "key": "by",
         "name": "排序",
@@ -479,7 +480,7 @@ class Spider(Spider):
         }
         ]
     }
-    ]
+    ]}
 
 class Job(List[dict]):
 
