@@ -33,12 +33,13 @@
       "jar": "https://raw.githubusercontent.com/wolfcode9/OpenChannel/main/jar/custom_spider_230918.jar"
     },
     {
-      "key": "星星",
-      "name": "星星",
+      "key": "星視界",
+      "name": "星視界",
       "type": 3,
       "api": "csp_Star",
       "searchable": 1,
-      "changeable": 1
+      "changeable": 1,
+      "url": "https://www.histar.tv/"
     },
     {
       "key":"csp_trj",
@@ -48,6 +49,7 @@
       "searchable":1,
       "quickSearch":1,
       "filterable":1,
+      "url": "https://www.tangrenjie.tv/",
       "jar": "https://raw.githubusercontent.com/wolfcode9/OpenChannel/main/jar/Yoursmile.jar"
     },
     {
@@ -60,7 +62,7 @@
       "quickSearch": 1,
       "filterable": 0,
       "ext": "https://www.czzy33.com/",
-	  "jar": "https://raw.githubusercontent.com/wolfcode9/OpenChannel/main/jar/Yoursmile.jar"
+	    "jar": "https://raw.githubusercontent.com/wolfcode9/OpenChannel/main/jar/Yoursmile.jar"
     },
     {
       "key": "九六",
