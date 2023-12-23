@@ -4,7 +4,6 @@ import sys
 sys.path.append('..') 
 from base.spider import Spider
 import json
-import requests
 
 class Spider(Spider):
 	
@@ -63,8 +62,9 @@ class Spider(Spider):
 	
 	#分類
 	def categoryContent(self,tid,pg,filter,extend):
-		result = {}
-		#url = f'{self.siteUrl}/vod/type/id/{tid}/by/time'
+		result = {}		
+		url = f'{self.siteUrl}/ajax/data?mid=1&page={pg}&limit=35&tid={tid}'
+		'''
 		by = extend.get("by") if "by" in extend else "time"
 		cls = extend.get("by") if "class" in extend else ""
 		area = extend.get("area") if "area" in extend else ""
@@ -80,7 +80,8 @@ class Spider(Spider):
 		result['area'] = area
 		result['limit'] = 35
 		url = self.siteUrl + "/ajax/data"
-		return requests.get(url=url,params=result,headers=self.header)
+		'''
+		return self.fetch(url,headers=self.header)
 	
 	#詳情
 	def detailContent(self,array):
