@@ -169,9 +169,10 @@ class Spider(Spider):
         msg = cipher.decrypt(enc)
         paddingLen = msg[len(msg) - 1]
         return msg[0:-paddingLen]
-
+    
+    #https://www.yingshi.tv/vod/play/id/198804/sid/1/nid/1.html
     def playerContent(self, flag, id, vipFlags):
-        url = 'https://www.czzy88.com/v_play/{0}.html'.format(id)
+        url = self.siteUrl + '/vod/play/id/{0}/sid/1/nid/1.html'.format(id)
         pat = '\\"([^\\"]+)\\";var [\\d\\w]+=function dncry.*md5.enc.Utf8.parse\\(\\"([\\d\\w]+)\\".*md5.enc.Utf8.parse\\(([\\d]+)\\)'
         rsp = self.fetch(url)
         html = rsp.text
