@@ -1,7 +1,7 @@
 # coding=utf-8
 # !/usr/bin/python
 import sys
-#sys.path.append('..')
+sys.path.append('..')
 from base.spider import Spider
 import base64
 from Crypto.Cipher import AES
