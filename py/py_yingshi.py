@@ -39,9 +39,8 @@ class Spider(Spider):
                 'type_name': k,
                 'type_id': cateManual[k]
             })
-        result['class'] = classes
-        if(filter):
-            result['filters'] = filter
+        result['class'] = classes        
+        result['filters'] = self.F
         return result
 
     def homeVideoContent(self):
@@ -169,37 +168,7 @@ class Spider(Spider):
         action = {}
         return [200, "video/MP2T", action, ""]
 
-
-class Job(List[dict]):
-
-    def __init__(self, typeId):
-        self.typeId = typeId
-
-    def __call__(self) -> List[dict]:
-        items = []
-        url = f"https://www.yingshi.tv/vod/show/by/hits_day/id/{self.typeId}/order/desc.html"
-        response = requests.get(url)
-        doc = BeautifulSoup(response.text, 'html.parser')
-        items.append(self.filter(doc.select("div.ys_filter_list_show_types")[0].select("div.ys_filter.flex")[1].select("div > div"), "by", "排序", 4))
-        items.append(self.filter(doc.select("div#ys_filter_by_class")[0].select("div > div"), "class", "類型", 6))
-        items.append(self.filter(doc.select("div#ys_filter_by_country")[0].select("div > div"), "area", "地區", 4))
-        items.append(self.filter(doc.select("div#ys_filter_by_lang")[0].select("div > div"), "lang", "語言", 8))
-        items.append(self.filter(doc.select("div#ys_filter_by_year")[0].select("div > div"), "year", "時間", 10))
-        return items
-
-    def filter(self, elements, key, name, index):
-        values = []
-        for e in elements:
-            paragraph = e.select_one("p")
-            if paragraph:
-                n = paragraph.text
-                all_values = "全部" in n
-                href = e.select_one("a").get("href") if not all_values else ""
-                v = href.split("/")[index].replace(".html", "") if href else ""
-                values.append({"name": n, "value": v})
-        return {"key": key, "name": name, "values": values}
-
-    filter = [
+     F = [
     {
         "key": "by",
         "name": "排序",
@@ -511,3 +480,34 @@ class Job(List[dict]):
         ]
     }
     ]
+
+class Job(List[dict]):
+
+    def __init__(self, typeId):
+        self.typeId = typeId
+
+    def __call__(self) -> List[dict]:
+        items = []
+        url = f"https://www.yingshi.tv/vod/show/by/hits_day/id/{self.typeId}/order/desc.html"
+        response = requests.get(url)
+        doc = BeautifulSoup(response.text, 'html.parser')
+        items.append(self.filter(doc.select("div.ys_filter_list_show_types")[0].select("div.ys_filter.flex")[1].select("div > div"), "by", "排序", 4))
+        items.append(self.filter(doc.select("div#ys_filter_by_class")[0].select("div > div"), "class", "類型", 6))
+        items.append(self.filter(doc.select("div#ys_filter_by_country")[0].select("div > div"), "area", "地區", 4))
+        items.append(self.filter(doc.select("div#ys_filter_by_lang")[0].select("div > div"), "lang", "語言", 8))
+        items.append(self.filter(doc.select("div#ys_filter_by_year")[0].select("div > div"), "year", "時間", 10))
+        return items
+
+    def filter(self, elements, key, name, index):
+        values = []
+        for e in elements:
+            paragraph = e.select_one("p")
+            if paragraph:
+                n = paragraph.text
+                all_values = "全部" in n
+                href = e.select_one("a").get("href") if not all_values else ""
+                v = href.split("/")[index].replace(".html", "") if href else ""
+                values.append({"name": n, "value": v})
+        return {"key": key, "name": name, "values": values}
+
+   
