@@ -40,8 +40,8 @@ class Spider(Spider):
                 'type_id': cateManual[k]
             })
         result['class'] = classes        
-        if(filter):
-            result['filters'] = self.config
+        #if(filter):
+        #    result['filters'] = self.config
         return result
 
     def homeVideoContent(self):
