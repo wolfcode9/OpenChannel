@@ -48,7 +48,7 @@ class Spider(Spider):
 		url = f'{self.siteUrl}/ajax/data?mid=3&page=1&limit=35&by=id'
 		rsp = self.fetch(url)
 		jsonData = json.loads(rsp.text)
-		result['list'] = jsonData['list']
+		result['list'] = jsonData['list']["481"]['vod_list']
 		return result	
 	
 	#分類
