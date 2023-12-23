@@ -44,15 +44,32 @@ class Spider(Spider):
 	
 	#推薦
 	def homeVideoContent(self):
-		result = {}
+		result = {}				
+		videos = []
+		rsp = self.fetch(self.siteUrl)
+		root = self.html(self.cleanText(rsp.text))							
+		aList = root.xpath('/html/body/div/div/section/div/div/li/a')        
+		for a in aList:
+			link = a.xpath("./@href")[0]            
+			vid = link.split('/')[4]        
+			name = (a.xpath('./h2[@class="ys_show_title"]/text()') or [None])[0]
+			pic = (a.xpath('./div/img/@src') or [None])[0]
+			mark = (a.xpath('.//span[@class="ys_show_episode_text"]/text()') or [None])[0] 
+			if name:
+				videos.append({"vod_id": vid, "vod_name": name,"vod_pic": pic,"vod_remarks": mark})            
+		
+		result = {'list': videos}
+		return result
+		'''
 		url = f'{self.siteUrl}/ajax/data?mid=3&page=1&limit=6&by=id'
 		rsp = self.fetch(url)
 		jsonData = json.loads(rsp.text)
 		result['list']  = [item 
 			for key in ["476", "477", "478", "479", "480", "481"] 
 			for item in jsonData["list"][key]["vod_list"]]
-		return result	
-	
+		return result
+		'''
+
 	#分類
 	def categoryContent(self,tid,pg,filter,extend):
 		result = {}		
