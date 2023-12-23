@@ -66,6 +66,7 @@ class Spider(Spider):
 				videos.append({"vod_id": vid, "vod_name": name,"vod_pic": pic,"vod_remarks": mark})            
 		
 		result = {'list': videos}
+		return result
 		
 	
 	#分類
