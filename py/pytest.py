@@ -143,10 +143,16 @@ result = {}
 url = 'https://www.yingshi.tv/vod/play/id/199765/sid/1/nid/1.html'
 rsp = requests.get(url)
 root = html.document_fromstring((rsp.text))
-jsonData = root.xpath('//script[contains(text(), "let data = ") and contains(text(), "let obj = ")]/text()')[0]
-jsonData = json.loads(jsonData.split('let data = ')[1].split('let obj = ')[0].strip()[:-1].replace("&amp;", " "))		
-url = jsonData['player_info']['url']
-print(url)
+vodData = root.xpath('//script[contains(text(), "let data = ") and contains(text(), "let obj = ")]/text()')[0]
+vodData = json.loads(vodData.split('let data = ')[1].split('let obj = ')[0].strip()[:-1].replace("&amp;", " "))
+print(vodData)
+result = {
+    'parse': '0',
+    'playUrl': '',
+    'url': vodData['player_info']['url'],
+    'header': ''
+}
+#print(result)
 '''
 for r in re.findall('https:(.*?).m3u8"',rsp.text):
     print(r)

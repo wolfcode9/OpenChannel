@@ -79,6 +79,7 @@ class Spider(Spider):
 	#詳情
 	def detailContent(self,array):
 		result = {}
+		'''
 		tid = array[0]
 		url = f"{self.siteUrl}/vod/play/id/{tid}/sid/1/nid/1.html"
 		rsp = self.fetch(url)
@@ -87,6 +88,7 @@ class Spider(Spider):
 		json_data = json_data.split('let data = ')[1].split('let obj = ')[0].strip()[:-1].replace("&amp;", " ")
 		result = json.loads(json_data)
 		result = result['player_info']
+		'''
 		return result
 	
 	#搜索
@@ -103,12 +105,11 @@ class Spider(Spider):
 		root = self.html(self.cleanText(rsp.text))
 		vodData = root.xpath('//script[contains(text(), "let data = ") and contains(text(), "let obj = ")]/text()')[0]
 		vodData = json.loads(vodData.split('let data = ')[1].split('let obj = ')[0].strip()[:-1].replace("&amp;", " "))		
-		url = vodData['player_info']['url']
 		result = {
         	'parse': '0',
             'playUrl': '',
-            'url': url,
-            'header': ''
+            'url': vodData['player_info']['url'],
+            'header': self.header
         }
 		return result
 	
