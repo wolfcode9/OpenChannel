@@ -1,6 +1,9 @@
 from base.spider import Spider
 from lxml import html
-
+import requests
+import json
+import re
+from pprint import pprint 
 #url = "https://www.yingshi.tv/vod/show/by/time/id/1.html"
 
 '''
@@ -115,7 +118,7 @@ class Job:
 # Example usage:
 job = Job("1").call()
 print(job)
-'''
+
 import requests
 from lxml import html
 import json
@@ -135,3 +138,22 @@ for a in aList:
     videos.append({"vod_id": vid, "vod_name": name,"vod_pic": pic,"vod_remarks": mark})            
 
 print(videos)
+'''
+
+url = 'https://www.yingshi.tv/vod/play/id/199765/sid/1/nid/1.html'
+rsp = requests.get(url)
+root = html.document_fromstring((rsp.text))
+json_data = root.xpath('//script[contains(text(), "let data = ") and contains(text(), "let obj = ")]/text()')[0]
+json_data = json_data.split('let data = ')[1].split('let obj = ')[0].strip()[:-1].replace("&amp;", " ")
+result = json.loads(json_data)
+pprint(result['player_info']['url'])
+
+'''
+for r in re.findall('https:(.*?).m3u8"',rsp.text):
+    print(r)
+    print()
+#root = html.document_fromstring((rsp.text))	
+
+#
+#https://m3u.haiwaikan.com/xm3u8/2ee9347b5dc8aeea8360ceb2186faef34ad95c83d20346e0e15b0a9b212319339921f11e97d0da21.m3u8
+'''

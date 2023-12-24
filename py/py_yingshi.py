@@ -38,8 +38,10 @@ class Spider(Spider):
 			classes.append({'type_name': k,'type_id': cateManual[k]})
 		
 		result['class'] = classes
+		'''
 		if(filter):
 			result['filters'] = self.config['filter']					
+		'''
 		return result
 	
 	#推薦
@@ -59,16 +61,7 @@ class Spider(Spider):
 				videos.append({"vod_id": vid, "vod_name": name,"vod_pic": pic,"vod_remarks": mark})            
 		
 		result = {'list': videos}
-		return result
-		'''
-		url = f'{self.siteUrl}/ajax/data?mid=3&page=1&limit=6&by=id'
-		rsp = self.fetch(url)
-		jsonData = json.loads(rsp.text)
-		result['list']  = [item 
-			for key in ["476", "477", "478", "479", "480", "481"] 
-			for item in jsonData["list"][key]["vod_list"]]
-		return result
-		'''
+		return result		
 
 	#分類
 	def categoryContent(self,tid,pg,filter,extend):
@@ -93,6 +86,7 @@ class Spider(Spider):
 		json_data = root.xpath('//script[contains(text(), "let data = ") and contains(text(), "let obj = ")]/text()')[0]
 		json_data = json_data.split('let data = ')[1].split('let obj = ')[0].strip()[:-1].replace("&amp;", " ")
 		result = json.loads(json_data)
+		result = result['player_info']
 		return result
 	
 	#搜索
@@ -101,8 +95,21 @@ class Spider(Spider):
 		return result
 	
 	#播放
-	def playerContent(self,flag,id,vipFlags):
-		result = {}
+	def playerContent(self,flag,id,vipFlags):		
+		#https://www.yingshi.tv/vod/play/id/199765/sid/1/nid/1.html
+		#https://m3u.haiwaikan.com/xm3u8/2ee9347b5dc8aeea8360ceb2186faef34ad95c83d20346e0e15b0a9b212319339921f11e97d0da21.m3u8
+		url = f'{self.siteUrl}/vod/play/id/{id}/sid/1/nid/1.html'
+		rsp = self.fetch(url)
+		root = self.html(self.cleanText(rsp.text))
+		jsonData = root.xpath('//script[contains(text(), "let data = ") and contains(text(), "let obj = ")]/text()')[0]
+		jsonData = json.loads(jsonData.split('let data = ')[1].split('let obj = ')[0].strip()[:-1].replace("&amp;", " "))		
+		url = result['player_info']['url']
+		result = {
+        	'parse': '0',
+            'playUrl': '',
+            'url': url,
+            'header': ''
+        }
 		return result
 	
 	#視頻格式
@@ -122,4 +129,9 @@ class Spider(Spider):
 			'type':'string',
 			'after':''
 		}
-		return [200, "video/MP2T", action, ""]
+		typ = param['type']
+		if typ == "m3u8":
+			return self.proxyM3U8(param)
+		else:
+			return None
+		#return [200, "video/MP2T", action, ""]
