@@ -113,7 +113,7 @@
       "jar": "https://raw.githubusercontent.com/wolfcode9/OpenChannel/main/jar/Yoursmile.jar"
     },
 	{
-	  "key": "繁星",
+	  "key": "csp_AppMao",
 	  "name": "繁星",
 	  "type": 3,
 	  "api": "csp_AppMao",	  
