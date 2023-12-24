@@ -94,23 +94,18 @@ class Spider(Spider):
 		return result
 	
 	#播放
-	def playerContent(self,flag,id,vipFlags):		
-		#https://www.yingshi.tv/vod/play/id/199765/sid/1/nid/1.html
-		#https://m3u.haiwaikan.com/xm3u8/2ee9347b5dc8aeea8360ceb2186faef34ad95c83d20346e0e15b0a9b212319339921f11e97d0da21.m3u8
-		url = 'https://www.yingshi.tv/vod/play/id/199765/sid/1/nid/1.html' #f'{self.siteUrl}/vod/play/id/{id}/sid/1/nid/1.html'
-		'''
+	def playerContent(self,flag,id,vipFlags):
+		url = f'{self.siteUrl}/vod/play/id/{id}/sid/1/nid/1.html'		
 		rsp = self.fetch(url)
 		root = self.html(self.cleanText(rsp.text))
 		vodData = root.xpath('//script[contains(text(), "let data = ") and contains(text(), "let obj = ")]/text()')[0]
 		vodData = json.loads(vodData.split('let data = ')[1].split('let obj = ')[0].strip()[:-1].replace("&amp;", " "))		
-		'''
 		result = {
         	'parse': '0',
             'playUrl': '',
-            'url': 'https://m3u.haiwaikan.com/xm3u8/2ee9347b5dc8aeea8360ceb2186faef34ad95c83d20346e0e15b0a9b212319339921f11e97d0da21.m3u8', #vodData['player_info']['url'],
+            'url': vodData['player_info']['url'],
             'header': ''
         }
-
 		return result
 	
 	#視頻格式
