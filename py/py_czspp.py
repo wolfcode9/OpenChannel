@@ -85,6 +85,7 @@ class Spider(Spider):
         return result    
 
     def detailContent(self, array):
+        '''
         tid = array[0]
         url = 'https://www.czzy88.com/movie/{0}.html'.format(tid)
         rsp = self.fetch(url)
@@ -138,7 +139,9 @@ class Spider(Spider):
                 vod
             ]
         }
-        return result    
+        '''
+        result = {}
+        return result
 
     def searchContent(self, key, quick):
         header = {	
