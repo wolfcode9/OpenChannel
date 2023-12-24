@@ -12,15 +12,6 @@
   "sites": 
   [
     {
-      "key": "豆瓣",
-      "name": "豆瓣 | 薦片",
-      "type": 3,
-      "api": "csp_Douban",
-      "searchable": 0,
-      "changeable": 1,
-      "ext": "https://fm.t4tv.hz.cz/json/douban.json"
-    },
-    {
       "key": "影視",
       "name": "影視",
       "type": 3,
