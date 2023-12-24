@@ -25,10 +25,9 @@
       "name": "影視",
       "type": 3,
       "api": "csp_YingShi",
-      "searchable": 1,
+      "searchable": 1,            
+      "changeable": 1,
       "quickSearch": 1,
-      "filterable": 1,
-      "changeable": 0,
       "url": "https://www.yingshi.tv/",
       "jar": "https://raw.githubusercontent.com/wolfcode9/OpenChannel/main/jar/custom_spider_230918.jar"
     },
@@ -47,8 +46,7 @@
       "type":3,
       "api":"csp_Tangrenjie",
       "searchable":1,
-      "quickSearch":1,
-      "filterable":1,
+      "quickSearch":1,      
       "url": "https://www.tangrenjie.tv/",
       "jar": "https://raw.githubusercontent.com/wolfcode9/OpenChannel/main/jar/Yoursmile.jar"
     },
@@ -59,8 +57,7 @@
       "api": "csp_Czsapp",
       "searchable": 1,
       "playerType": 1,
-      "quickSearch": 1,
-      "filterable": 0,
+      "quickSearch": 1,      
       "ext": "https://www.czzy33.com/",
 	    "jar": "https://raw.githubusercontent.com/wolfcode9/OpenChannel/main/jar/Yoursmile.jar"
     },
@@ -77,10 +74,7 @@
       "key": "drpy_js_農民",
       "name": "農民",
       "type": 3,
-      "style": {
-        "type": "rect",
-        "ratio": 1.33
-      },
+      "style": {"type": "rect","ratio": 1.33},
       "api": "https://raw.githubusercontent.com/hjdhnx/dr_py/main/libs/drpy2.min.js",
       "ext": "https://raw.githubusercontent.com/hjdhnx/dr_py/main/js/农民影视.js"
     },
@@ -89,7 +83,7 @@
       "name": "泥巴",
       "type": 3,
       "api": "csp_NiNi",
-      "searchable": 1,
+      "searchable": 0,
       "changeable": 1
     },    
     {
@@ -103,11 +97,9 @@
     },    
     {"key":"csp_NanGua",
       "name":"南瓜",
-      "type":3,"api":"csp_NanGua",
-      "playerType":2,
-      "searchable":1,
-      "quickSearch":1,
-      "filterable":1,
+      "type":3,
+      "api":"csp_NanGua",      
+      "searchable":1,            
       "changeable":1,
       "jar": "https://raw.githubusercontent.com/wolfcode9/OpenChannel/main/jar/Yoursmile.jar"
     },
@@ -116,9 +108,8 @@
       "name": "一起看",
       "type": 3,
       "api": "csp_YQKan",
-      "searchable": 1,
-      "quickSearch": 1,
-      "filterable": 1,
+      "searchable": 1,      
+      "changeable": 1,      
       "jar": "https://raw.githubusercontent.com/wolfcode9/OpenChannel/main/jar/Yoursmile.jar"
     },
     {
@@ -126,6 +117,8 @@
       "name": "海外看",
       "type": 1,
       "api": "https://haiwaikan.com/api.php/provide/vod/from/haiwaikan",
+      "searchable": 1,      
+      "changeable": 1,    
       "categories": 
       [
         "紀錄片",
@@ -280,7 +273,7 @@
       "type": 3,
       "api": "csp_Xb6v",
       "searchable": 1,
-      "changeable": 0
+      "changeable": 1
     },
     {
       "key": "快看",

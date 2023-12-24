@@ -140,19 +140,9 @@ for a in aList:
 print(videos)
 '''
 result = {}
-url = 'https://www.yingshi.tv/vod/play/id/199765/sid/1/nid/1.html'
+url = 'https://www.yingshi.tv/vod/play/id/200057/sid/1/nid/1.html'
 rsp = requests.get(url)
 root = html.document_fromstring((rsp.text))
 vodData = root.xpath('//script[contains(text(), "let data = ") and contains(text(), "let obj = ")]/text()')[0]
 vodData = json.loads(vodData.split('let data = ')[1].split('let obj = ')[0].strip()[:-1].replace("&amp;", " "))
-print(vodData)
-
-'''
-for r in re.findall('https:(.*?).m3u8"',rsp.text):
-    print(r)
-    print()
-#root = html.document_fromstring((rsp.text))	
-
-#
-#https://m3u.haiwaikan.com/xm3u8/2ee9347b5dc8aeea8360ceb2186faef34ad95c83d20346e0e15b0a9b212319339921f11e97d0da21.m3u8
-'''
+print(vodData['vod_id'])
