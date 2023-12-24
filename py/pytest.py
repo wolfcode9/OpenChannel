@@ -146,13 +146,7 @@ root = html.document_fromstring((rsp.text))
 vodData = root.xpath('//script[contains(text(), "let data = ") and contains(text(), "let obj = ")]/text()')[0]
 vodData = json.loads(vodData.split('let data = ')[1].split('let obj = ')[0].strip()[:-1].replace("&amp;", " "))
 print(vodData)
-result = {
-    'parse': '0',
-    'playUrl': '',
-    'url': vodData['player_info']['url'],
-    'header': ''
-}
-#print(result)
+
 '''
 for r in re.findall('https:(.*?).m3u8"',rsp.text):
     print(r)
