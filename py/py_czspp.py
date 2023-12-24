@@ -179,8 +179,7 @@ class Spider(Spider):
         paddingLen = msg[len(msg) - 1]
         return msg[0:-paddingLen]
 
-    def playerContent(self, flag, id, vipFlags):
-        '''
+    def playerContent(self, flag, id, vipFlags):    
         url = 'https://www.czzy88.com/v_play/{0}.html'.format(id)
         pat = '\\"([^\\"]+)\\";var [\\d\\w]+=function dncry.*md5.enc.Utf8.parse\\(\\"([\\d\\w]+)\\".*md5.enc.Utf8.parse\\(([\\d]+)\\)'
         rsp = self.fetch(url)
@@ -206,13 +205,7 @@ class Spider(Spider):
             result['subf'] = '/vtt/utf-8'
             # result['subt'] = Proxy.localProxyUrl() + "?do=czspp&url=" + URLEncoder.encode(str4)
             result['subt'] = ''
-        '''
-        result = {
-        	'parse': '0',
-            'playUrl': '',
-            'url': 'https://m3u.haiwaikan.com/xm3u8/2ee9347b5dc8aeea8360ceb2186faef34ad95c83d20346e0e15b0a9b212319339921f11e97d0da21.m3u8', #vodData['player_info']['url'],
-            'header': ''
-        }
+            
         return result
 
     def loadVtt(self, url):
