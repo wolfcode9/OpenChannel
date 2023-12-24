@@ -11,8 +11,17 @@
   ],
   "sites": 
   [
+	{
+      "key": "csp_Douban",
+      "name": "豆瓣 | 薦片",
+      "type": 3,
+      "api": "csp_Douban",
+      "searchable": 0,
+      "changeable": 1,
+      "ext": "https://fm.t4tv.hz.cz/json/douban.json"
+    },
     {
-      "key": "影視",
+      "key": "csp_YingShi",
       "name": "影視",
       "type": 3,
       "api": "csp_YingShi",
@@ -23,7 +32,7 @@
       "jar": "https://raw.githubusercontent.com/wolfcode9/OpenChannel/main/jar/custom_spider_230918.jar"
     },
     {
-      "key": "星視界",
+      "key": "csp_Star",
       "name": "星視界",
       "type": 3,
       "api": "csp_Star",
@@ -53,7 +62,7 @@
 	    "jar": "https://raw.githubusercontent.com/wolfcode9/OpenChannel/main/jar/Yoursmile.jar"
     },
     {
-      "key": "九六",
+      "key": "csp_Cs1369",
       "name": "九六",
       "type": 3,
       "api": "csp_Cs1369",
@@ -70,7 +79,7 @@
       "ext": "https://raw.githubusercontent.com/hjdhnx/dr_py/main/js/农民影视.js"
     },
     {
-      "key": "泥巴",
+      "key": "csp_NiNi",
       "name": "泥巴",
       "type": 3,
       "api": "csp_NiNi",
@@ -78,8 +87,8 @@
       "changeable": 1
     },    
     {
-      "key": "獨播",
-      "name": "獨播",
+      "key": "duboku",
+      "name": "獨播庫",
       "type": 3,
       "api": "csp_XPathMacFilter",
       "searchable": 1,
@@ -103,6 +112,17 @@
       "changeable": 1,      
       "jar": "https://raw.githubusercontent.com/wolfcode9/OpenChannel/main/jar/Yoursmile.jar"
     },
+	{
+	  "key": "csp_AppMao",
+	  "name": "繁星",
+	  "type": 3,
+	  "api": "csp_AppMao",	  
+	  "searchable": 1,
+	  "quickSearch": 1,	  
+	  "changeable": 1,
+	  "jar": "https://raw.githubusercontent.com/wolfcode9/OpenChannel/main/jar/Yoursmile.jar",
+	  "ext": "FbjDcUxPqpfNr0QF4QvE6sExbd4UXJxJXzdL462ywU1XScGa5G6Hj0/c+Ou1GW6rdX6N2XIhnD46QzIsRoZ8bk4fG4OYi0iCaWwRj2ddkacwFqHtLjQhalHqIy0+kpiTv2eOfJYxTshgrxcJ+g3lEHx7ZLC9kB1TCfZUSHwqHB3tt6V/1OhRENIOZNRFfXVBEFd7jQg+J06kjCAF7z1Bt8hRvMjC2VcbQXsEz8MCZDgu06C9/wirWcTa/wWJsfT+Z7fXaDs+dIWMYiwf6td5CWTx6LfL6eTuiMhs2KU5Byw9F+4Y/AHBg4r+LEe+Hm4EM2d8X3ca5zHSj+kjmpXOiGDo4TalFqgTq67eggmthCbV2d131SKc03V+5gruudQQk/Tb9e4lg6SQhA9/5kWOOM/LRmkqIxSt6d0wpu7yKKh65enwKbgasc93/HnGr6W4LuZjf6eYnS2GgRzWRE0fT5lYNmxnWeRnYuLhoZbDqslAfJzg"
+	},
     {
       "key": "haiwaikan",
       "name": "海外看",
