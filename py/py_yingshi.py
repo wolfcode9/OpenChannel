@@ -102,8 +102,8 @@ class Spider(Spider):
 		vodData = json.loads(vodData.split('let data = ')[1].split('let obj = ')[0].strip()[:-1].replace("&amp;", " "))		
 		result = {
         	'parse': '0',
-            'playUrl': '',
-            'url': vodData['vod_play_url'],
+            'playUrl': vodData['vod_play_url'],
+            'url': vodData['player_info']['url'],
             'header': ''
         }
 		return result
