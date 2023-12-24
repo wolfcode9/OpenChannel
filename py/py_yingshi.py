@@ -101,9 +101,9 @@ class Spider(Spider):
 		url = f'{self.siteUrl}/vod/play/id/{id}/sid/1/nid/1.html'
 		rsp = self.fetch(url)
 		root = self.html(self.cleanText(rsp.text))
-		jsonData = root.xpath('//script[contains(text(), "let data = ") and contains(text(), "let obj = ")]/text()')[0]
-		jsonData = json.loads(jsonData.split('let data = ')[1].split('let obj = ')[0].strip()[:-1].replace("&amp;", " "))		
-		url = result['player_info']['url']
+		vodData = root.xpath('//script[contains(text(), "let data = ") and contains(text(), "let obj = ")]/text()')[0]
+		vodData = json.loads(vodData.split('let data = ')[1].split('let obj = ')[0].strip()[:-1].replace("&amp;", " "))		
+		url = vodData['player_info']['url']
 		result = {
         	'parse': '0',
             'playUrl': '',

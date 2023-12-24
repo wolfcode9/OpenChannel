@@ -139,15 +139,14 @@ for a in aList:
 
 print(videos)
 '''
-
+result = {}
 url = 'https://www.yingshi.tv/vod/play/id/199765/sid/1/nid/1.html'
 rsp = requests.get(url)
 root = html.document_fromstring((rsp.text))
-json_data = root.xpath('//script[contains(text(), "let data = ") and contains(text(), "let obj = ")]/text()')[0]
-json_data = json_data.split('let data = ')[1].split('let obj = ')[0].strip()[:-1].replace("&amp;", " ")
-result = json.loads(json_data)
-pprint(result['player_info']['url'])
-
+jsonData = root.xpath('//script[contains(text(), "let data = ") and contains(text(), "let obj = ")]/text()')[0]
+jsonData = json.loads(jsonData.split('let data = ')[1].split('let obj = ')[0].strip()[:-1].replace("&amp;", " "))		
+url = jsonData['player_info']['url']
+print(url)
 '''
 for r in re.findall('https:(.*?).m3u8"',rsp.text):
     print(r)
