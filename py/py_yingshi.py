@@ -104,7 +104,7 @@ class Spider(Spider):
         	'parse': '0',
             'playUrl': '',
             'url': vodData['player_info']['url'],
-            'header': ''
+            'header': self.header
         }
 		return result
 	
