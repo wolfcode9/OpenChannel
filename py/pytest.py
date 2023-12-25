@@ -157,8 +157,8 @@ cateManual = {
 for k in cateManual:
     data.append({cateManual[k]: job(cateManual[k])})
 
-#g = json.dumps(data, ensure_ascii=False, indent=2)
-g = ', '.join(json.dumps(item, ensure_ascii=False) for item in data)
+g = json.dumps(data, ensure_ascii=False) #, indent=2)
+#g = ', '.join(json.dumps(item, ensure_ascii=False) for item in data)
 with open('a.txt','w',encoding='utf8') as f:
     f.write(g)
 
