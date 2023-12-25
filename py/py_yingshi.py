@@ -77,7 +77,7 @@ class Spider(Spider):
 		return result 
 	
 	#詳情
-	def detailContent(self,array):
+	def detailContent(self,array):	
 		result = {}		
 		tid = array[0]
 		url = f"{self.siteUrl}/vod/play/id/{tid}/sid/1/nid/1.html"
@@ -97,6 +97,9 @@ class Spider(Spider):
 	def playerContent(self,flag,id,vipFlags):
 		url = f'{self.siteUrl}/vod/play/id/{id}/sid/1/nid/1.html'
 		rsp = self.fetch(url)
+		if rsp.text == '':
+			return {}
+		
 		root = self.html(rsp.text)
 		vodData = root.xpath('//script[contains(text(), "let data = ") and contains(text(), "let obj = ")]/text()')[0]
 		vodData = json.loads(vodData.split('let data = ')[1].split('let obj = ')[0].strip()[:-1].replace("&amp;", " "))		
