@@ -107,7 +107,7 @@ class Spider(Spider):
 		result = {
         	'parse': '0',
             'playUrl': '',
-            'url': id,
+            'url': id, #vodData['player_info']['url'],
             'header': ''
         }
 		return result
