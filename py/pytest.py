@@ -136,7 +136,7 @@ class Job:
         items.append(self.filter(tree.xpath('/html/body/div[5]/div/div[2]/div[2]/div[4]/div'), "year", "時間", 10))
         return items
 
-    def filter(self, elements, key, name, index):
+    def filter(self, elements, key, name):
         values = []
         for e in elements:
             paragraph = e.xpath('.//p/text()')
@@ -153,4 +153,4 @@ for id in range(1, 5):
     gg = Job(id).call()
     data.append( {id: gg})
 
-pprint(json.loads(data))
+
