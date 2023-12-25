@@ -42,7 +42,7 @@ class Spider(Spider):
 			filter.append({cateManual[k]: fi})
 		
 		result['class'] = classes
-		result['filters'] = filter
+		result['filters'] = json.dumps(filter, ensure_ascii=False, indent=2)
 		return result
 	
 	#推薦頁

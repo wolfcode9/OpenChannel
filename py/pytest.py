@@ -120,37 +120,36 @@ print(vodData['player_info']['url'])
 '''
 
 
-class Job:    
-    def __init__(self, typeId):
-        self.typeId = typeId
+def job(typeId):
+    items = []
+    url = f"https://www.yingshi.tv/vod/show/by/hits_day/id/{typeId}/order/desc.html"
+    response = requests.get(url)
+    tree = html.fromstring(response.content)
+    items.append(filter(tree.xpath('/html/body/div[5]/div/div[2]/div[1]/div[2]/div'), "by", "排序", 4))
+    items.append(filter(tree.xpath('/html/body/div[5]/div/div[2]/div[2]/div[1]/div'), "class", "類型", 6))                                             
+    items.append(filter(tree.xpath('/html/body/div[5]/div/div[2]/div[2]/div[2]/div'), "area", "地區", 4))
+    items.append(filter(tree.xpath('/html/body/div[5]/div/div[2]/div[2]/div[3]/div'), "lang", "語言", 8))
+    items.append(filter(tree.xpath('/html/body/div[5]/div/div[2]/div[2]/div[4]/div'), "year", "時間", 10))
+    return items
 
-    def call(self):
-        items = []
-        url = f"https://www.yingshi.tv/vod/show/by/hits_day/id/{self.typeId}/order/desc.html"
-        response = requests.get(url)
-        tree = html.fromstring(response.content)
-        items.append(self.filter(tree.xpath('/html/body/div[5]/div/div[2]/div[1]/div[2]/div'), "by", "排序", 4))
-        items.append(self.filter(tree.xpath('/html/body/div[5]/div/div[2]/div[2]/div[1]/div'), "class", "類型", 6))                                             
-        items.append(self.filter(tree.xpath('/html/body/div[5]/div/div[2]/div[2]/div[2]/div'), "area", "地區", 4))
-        items.append(self.filter(tree.xpath('/html/body/div[5]/div/div[2]/div[2]/div[3]/div'), "lang", "語言", 8))
-        items.append(self.filter(tree.xpath('/html/body/div[5]/div/div[2]/div[2]/div[4]/div'), "year", "時間", 10))
-        return items
-
-    def filter(self, elements, key, name):
-        values = []
-        for e in elements:
-            paragraph = e.xpath('.//p/text()')
-            n = paragraph[0] if paragraph else ""
-            all_values = "全部" in n
-            href = e.xpath('.//a/@href')[0] if not all_values else ""
-            v = href.split("/")[-1].replace(".html", "") if href else ""
-            values.append({"n": n, "v": v})
-        return {"key": key, "name": name, "values": values}
+def filter(elements, key, name, index):
+    values = []
+    for e in elements:
+        paragraph = e.xpath('.//p/text()')
+        n = paragraph[0] if paragraph else ""
+        all_values = "全部" in n
+        href = e.xpath('.//a/@href')[0] if not all_values else ""
+        v = href.split("/")[-1].replace(".html", "") if href else ""
+        values.append({"n": n, "v": v})
+    return {"key": key, "name": name, "values": values}
 
 
 data = []
 for id in range(1, 5):
-    gg = Job(id).call()
+    gg = job(id)
     data.append( {id: gg})
+
+
+pprint(json.dumps(data, ensure_ascii=False, indent=2))
 
 
