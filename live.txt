@@ -44,3 +44,5 @@ MOMO親子台,https://www.youtube.com/watch?v=R3PZkCUJSbQ
 小寶貝布姆,https://www.youtube.com/watch?v=RxcvoTXdF8A
 Beep Beep,https://www.youtube.com/watch?v=_cCpMZpaIJk
 鯊魚學院,https://www.youtube.com/watch?v=K3PdTNA_7f4
+測試頻道,#genre#
+TEST,https://m3u.haiwaikan.com/xm3u8/fe61d320f92256c9f8398b2af822bc950dafb6e52f61ef69b0581cb6cb1c609d9921f11e97d0da21.m3u8
