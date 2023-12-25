@@ -70,7 +70,7 @@ def filter(elements, key, name, index):
         all = "全部" in n
         v = "" if all else unquote(e.select_one("a").get("href").split("/")[index].replace(".html", ""))
         values.append({"n": n, "v": v})
-    return {"key": key, "name": name, "values": values}
+    return {"key": key, "name": name, "value": values}
 
 
 gg =''
