@@ -84,8 +84,9 @@ cateManual = {
     }
 
 #for k in cateManual:
-d = call('1')    
-print(json.dumps(d, ensure_ascii=False))
+id = '3'
+d = call(id)    
+print('{' + id + ':'+ str(d) + '}')
     
     
 
