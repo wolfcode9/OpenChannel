@@ -85,5 +85,7 @@ cateManual = {
 g = ''
 for k in cateManual:
     d = call(cateManual[k])
-    g += f"'{cateManual[k]}':{d},"
+    print(f"'{cateManual[k]}':{d},")
+    print()
+    
 print(g)
