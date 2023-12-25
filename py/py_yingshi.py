@@ -48,7 +48,7 @@ class Spider(Spider):
 	def homeVideoContent(self):
 		result = {}				
 		videos = []
-		limit = 20
+		limit = 35
 		url = f'{self.siteUrl}/ajax/data.html?mid=1&limit={limit}&by=score&order=desc'	
 		rsp = self.fetch(url) #rsp = self.fetch(self.siteUrl)
 		#root = self.html(rsp.text)
