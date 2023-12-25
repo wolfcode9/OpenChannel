@@ -83,10 +83,10 @@ cateManual = {
         "記錄片": "5"
     }
 
-for k in cateManual:
-    d = call(cateManual[k])    
-    with open('a.json','w',encoding='utf8') as f:
-        f.write(str(d))
-        
+#for k in cateManual:
+d = call('1')    
+with open('a.json','w',encoding='utf8') as f:
+    f.write(json.dumps(d, ensure_ascii=False))
+    
     
 
