@@ -33,8 +33,9 @@ class Spider(Spider):
 		for k in cateManual:
 			classes.append({'type_name': k,'type_id': cateManual[k]})			
 
-		result['class'] = classes	
-		result['filters'] = self.extend
+		result['class'] = classes
+		rsp = self.fetch(self.extend)		
+		result['filters'] = json.loads(rsp.text)
 		return result
 	
 	#推薦頁
