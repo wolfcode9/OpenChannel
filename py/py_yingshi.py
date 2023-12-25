@@ -93,8 +93,9 @@ class Spider(Spider):
 		result = {}
 		return result
 	
-	#播放
-	def playerContent(self,flag,id,vipFlags):	
+	#播放	
+	def playerContent(self,flag,id,vipFlags):
+		'''
 		url = 'https://www.yingshi.tv/vod/play/id/{0}/sid/1/nid/1.html'.format(id)		
 		rsp = self.fetch(url)
 		if rsp.text == '':
@@ -102,10 +103,11 @@ class Spider(Spider):
 		root = self.html(rsp.text)
 		vodData = root.xpath('//script[contains(text(), "let data = ") and contains(text(), "let obj = ")]/text()')[0]
 		vodData = json.loads(vodData.split('let data = ')[1].split('let obj = ')[0].strip()[:-1].replace("&amp;", " "))		
+		'''
 		result = {
         	'parse': '0',
             'playUrl': '',
-            'url': vodData['player_info']['url'],
+            'url': id,
             'header': ''
         }
 		return result
