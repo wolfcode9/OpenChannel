@@ -72,7 +72,8 @@ def filter(elements, key, name, index):
         values.append({"n": n, "v": v})
     return {"key": key, "name": name, "values": values}
 
-data = []
+
+gg =''
 
 cateManual = {
         "電視劇": "1",
@@ -82,10 +83,9 @@ cateManual = {
         "記錄片": "5"
     }
 
-g = ''
 for k in cateManual:
     d = call(cateManual[k])
-    print(f"'{cateManual[k]}':{d},")
-    print()
-    
-print(g)
+    gg  = gg  + f"'{cateManual[k]}':{json.dumps(d, ensure_ascii=False, indent=2)},\n'"
+gg = "{" + gg + "}"
+with open('dd.json','w',encoding='utf8') as f:
+    f.write(gg)
