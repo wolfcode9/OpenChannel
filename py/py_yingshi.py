@@ -16,8 +16,8 @@ class Spider(Spider):
 	def getName(self):
 		return "影視"
 	
-	def init(self,extend=""):
-		pass	
+	def init(self,extend=""):		
+		self.extend = extend
 	
 	#主頁
 	def homeContent(self,filter):
@@ -33,9 +33,8 @@ class Spider(Spider):
 		for k in cateManual:
 			classes.append({'type_name': k,'type_id': cateManual[k]})			
 
-		result['class'] = classes
-		if(filter):
-			result['filters'] = filter
+		result['class'] = classes	
+		result['filters'] = json.loads(self.extend)
 		return result
 	
 	#推薦頁
