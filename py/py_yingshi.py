@@ -103,7 +103,7 @@ class Spider(Spider):
 		result = {
         	'parse': '0',
             'playUrl': '',
-            'url': vodData['player_info']['url'],
+            'url': 'https://m3u.haiwaikan.com/xm3u8/11dea839505c32c18ffe7d2511b1894c04cd036ed324cfc101e7a7010fb752189921f11e97d0da21.m3u8', #vodData['player_info']['url'],
             'header': '',
 			'contentType': 'application/x-mpegURL'
         }
