@@ -140,7 +140,8 @@ for a in aList:
 print(videos)
 '''
 result = {}
-url = 'https://www.yingshi.tv/vod/play/id/200057/sid/1/nid/1.html'
+id = '200057'
+url = 'https://www.yingshi.tv/vod/play/id/{0}/sid/1/nid/1.html'.format(id)
 rsp = requests.get(url)
 root = html.document_fromstring((rsp.text))
 vodData = root.xpath('//script[contains(text(), "let data = ") and contains(text(), "let obj = ")]/text()')[0]
