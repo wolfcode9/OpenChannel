@@ -1,3 +1,5 @@
+#coding=utf-8
+#!/usr/bin/python
 from base.spider import Spider
 from lxml import html,etree
 import requests
@@ -44,107 +46,44 @@ vod = json.loads(json_data)
 result_string = str(vod)
 
 print(result_string)
-
-import requests
-from bs4 import BeautifulSoup
-from typing import List
-
-class Job(List[dict]):
-
-    def __init__(self, typeId):
-        self.typeId = typeId
-
-    def __call__(self) -> List[dict]:
-        items = []
-        url = f"https://www.yingshi.tv/vod/show/by/hits_day/id/{self.typeId}/order/desc.html"
-        response = requests.get(url)
-        doc = BeautifulSoup(response.text, 'html.parser')
-        items.append(self.filter(doc.select("div.ys_filter_list_show_types")[0].select("div.ys_filter.flex")[1].select("div > div"), "by", "排序", 4))
-        items.append(self.filter(doc.select("div#ys_filter_by_class")[0].select("div > div"), "class", "類型", 6))
-        items.append(self.filter(doc.select("div#ys_filter_by_country")[0].select("div > div"), "area", "地區", 4))
-        items.append(self.filter(doc.select("div#ys_filter_by_lang")[0].select("div > div"), "lang", "語言", 8))
-        items.append(self.filter(doc.select("div#ys_filter_by_year")[0].select("div > div"), "year", "時間", 10))
-        return items
-
-    def filter(self, elements, key, name, index):
-        values = []
-        for e in elements:
-            paragraph = e.select_one("p")
-            if paragraph:
-                n = paragraph.text
-                all_values = "全部" in n
-                href = e.select_one("a").get("href") if not all_values else ""
-                v = href.split("/")[index].replace(".html", "") if href else ""
-                values.append({"n": n, "v": v})
-        return {"key": key, "name": name, "values": values}
-
-
-# Example usage:
-job = Job("1")
-result = job()
-print(result)
-
-import requests
-from lxml import html
-
-
-import requests
-from lxml import html
-import json
-
-result = {}		
-url = 'https://www.yingshi.tv'		
-rsp = requests.get(url)
-videos = []
-root = html.document_fromstring((rsp.text))							
-aList = root.xpath('//*[@id="desktop-container"]/section/div/div/li/a') 
-for a in aList:
-    link = a.xpath("./@href")[0]
-    vid = link.split('/')[4]        
-    name = (a.xpath('./h2[@class="ys_show_title"]/text()') or [None])[0]
-    pic = (a.xpath('./div/img/@src') or [None])[0]
-    mark = (a.xpath('.//span[@class="ys_show_episode_text"]/text()') or [None])[0]     
-    videos.append({"vod_id": vid, "vod_name": name,"vod_pic": pic,"vod_remarks": mark})            
-
-print(videos)
-
-result = {}
-id = '200057'
-url = 'https://www.yingshi.tv/vod/play/id/{0}/sid/1/nid/1.html'.format(id)
-rsp = requests.get(url)
-root =  etree.HTML(rsp.text)
-vodData = root.xpath('//script[contains(text(), "let data = ") and contains(text(), "let obj = ")]/text()')[0]
-vodData = json.loads(vodData.split('let data = ')[1].split('let obj = ')[0].strip()[:-1].replace("&amp;", " "))
-print(vodData['vod_id'])
-print(vodData['player_info']['url'])
 '''
 
 
-def job(typeId):
+import requests
+from bs4 import BeautifulSoup
+from urllib.parse import unquote
+def call(typeId):
     items = []
-    url = f"https://www.yingshi.tv/vod/show/by/hits_day/id/{typeId}/order/desc.html"
-    response = requests.get(url)
-    tree = html.fromstring(response.content)
-    items.append(filter(tree.xpath('/html/body/div[5]/div/div[2]/div[1]/div[2]/div'), "by", "排序", 4))
-    items.append(filter(tree.xpath('/html/body/div[5]/div/div[2]/div[2]/div[1]/div'), "class", "類型", 6))                                             
-    items.append(filter(tree.xpath('/html/body/div[5]/div/div[2]/div[2]/div[2]/div'), "area", "地區", 4))
-    items.append(filter(tree.xpath('/html/body/div[5]/div/div[2]/div[2]/div[3]/div'), "lang", "語言", 8))
-    items.append(filter(tree.xpath('/html/body/div[5]/div/div[2]/div[2]/div[4]/div'), "year", "時間", 10))
+    url = f"https://www.yingshi.tv/vod/show/by/hits_day/id/{typeId}/order/desc.html"  
+    doc = BeautifulSoup(requests.get(url).text, 'html.parser')
+    items.append(filter(doc.select("div.ys_filter_list_show_types")[0].select("div.ys_filter.flex")[1].select("div > div"), "by", "排序", 4))
+    items.append(filter(doc.select("div#ys_filter_by_class")[0].select("div > div"), "class", "類型", 6))
+    items.append(filter(doc.select("div#ys_filter_by_country")[0].select("div > div"), "area", "地區", 4))
+    items.append(filter(doc.select("div#ys_filter_by_lang")[0].select("div > div"), "lang", "語言", 8))
+    items.append(filter(doc.select("div#ys_filter_by_year")[0].select("div > div"), "year", "時間", 10))
     return items
 
 def filter(elements, key, name, index):
     values = []
     for e in elements:
-        paragraph = e.xpath('.//p/text()')
-        n = paragraph[0] if paragraph else ""
-        all_values = "全部" in n
-        href = e.xpath('.//a/@href')[0] if not all_values else ""
-        v = href.split("/")[-1].replace(".html", "") if href else ""
+        n = e.select_one("p").text
+        all = "全部" in n
+        v = "" if all else unquote(e.select_one("a").get("href").split("/")[index].replace(".html", ""))
         values.append({"n": n, "v": v})
     return {"key": key, "name": name, "values": values}
 
+data = []
 
-print(job(3))
+cateManual = {
+        "電視劇": "1",
+        "電影": "2",
+        "綜藝": "3",
+        "動漫": "4",
+        "記錄片": "5"
+    }
 
-
-
+g = ''
+for k in cateManual:
+    d = call(cateManual[k])
+    g += f"'{cateManual[k]}':{d},"
+print(g)
