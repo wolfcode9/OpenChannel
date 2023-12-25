@@ -85,8 +85,7 @@ cateManual = {
 
 #for k in cateManual:
 d = call('1')    
-with open('a.json','w',encoding='utf8') as f:
-    f.write(json.dumps(d, ensure_ascii=False))
+print(json.dumps(d, ensure_ascii=False))
     
     
 
