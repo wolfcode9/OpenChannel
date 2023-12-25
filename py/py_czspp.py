@@ -44,7 +44,7 @@ class Spider(Spider):
         for a in aList:
             name = a.xpath('./a/img/@alt')[0]
             pic = a.xpath('./a/img/@data-original')[0]             
-            mark = next(iter(a.xpath("./div[@class='hdinfo']/span/text()")), None)
+            mark = (a.xpath("./div[@class='hdinfo']/span/text()") or [None])[0]
             sid = a.xpath("./a/@href")[0]
             sid = self.regStr(sid, "/movie/(\\S+).html")
             videos.append({
@@ -68,7 +68,7 @@ class Spider(Spider):
         for a in aList:
             name = a.xpath('./a/img/@alt')[0]
             pic = a.xpath('./a/img/@data-original')[0]
-            mark = next(iter(a.xpath("./div[@class='hdinfo']/span/text()")), None)
+            mark = (a.xpath("./div[@class='hdinfo']/span/text()") or [None])[0]
             sid = a.xpath("./a/@href")[0]
             sid = self.regStr(sid, "/movie/(\\S+).html")
             videos.append({
@@ -97,8 +97,7 @@ class Spider(Spider):
         area = node.xpath('.//li[contains(text(), "地区")]/a')[0].text
         typen = node.xpath('.//li[contains(text(), "类型")]/a')[0].text
         actor = node.xpath('.//li[contains(text(), "主演")]/span')[0].text 
-        director = node.xpath('.//li[contains(text(), "导演")]/span')[0].text
-        
+        director = node.xpath('.//li[contains(text(), "导演")]/span')[0].text        
         detail = root.xpath(".//div[@class='yp_context']//p/text()")[0]
         vod = {
             "vod_id": tid,
