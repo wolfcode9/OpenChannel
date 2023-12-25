@@ -1,4 +1,4 @@
-#coding=utf-8
+##coding=utf-8
 #!/usr/bin/python
 from base.spider import Spider
 from lxml import html,etree
