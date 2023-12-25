@@ -85,6 +85,8 @@ cateManual = {
 
 for k in cateManual:
     d = call(cateManual[k])    
-    print(f'"{cateManual[k]}":{d}')
-    print()
+    with open('a.json','w',encoding='utf8') as f:
+        f.write(str(d))
+        
+    
 
