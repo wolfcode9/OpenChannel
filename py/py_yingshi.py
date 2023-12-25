@@ -14,7 +14,7 @@ class Spider(Spider):
 	}
 	config = {
 		"player": {},
-		"filter": {"2":[{'key': 'class', 'name': '類型', 'values': [{'n': '全部类型', 'v': ''}, {'n': '偶像', 'v': '%E5%81%B6%E5%83%8F'}, {'n': '爱情', 'v': '%E7%88%B1%E6%83%85'}, {'n': '古装', 'v': '%E5%8F%A4%E8%A3%85'}, {'n': '谍战', 'v': '%E8%B0%8D%E6%88%98'}, {'n': '战争', 'v': '%E6%88%98%E4%BA%89'}, {'n': '江湖', 'v': '%E6%B1%9F%E6%B9%96'}, {'n': '武侠', 'v': '%E6%AD%A6%E4%BE%A0'}, {'n': '言情', 'v': '%E8%A8%80%E6%83%85'}, {'n': '历史', 'v': '%E5%8E%86%E5%8F%B2'}, {'n': '玄幻', 'v': '%E7%8E%84%E5%B9%BB'}, {'n': '历险', 'v': '%E5%8E%86%E9%99%A9'}, {'n': '都市', 'v': '%E9%83%BD%E5%B8%82'}, {'n': '科幻', 'v': '%E7%A7%91%E5%B9%BB'}, {'n': '军旅', 'v': '%E5%86%9B%E6%97%85'}, {'n': '喜剧', 'v': '%E5%96%9C%E5%89%A7'}, {'n': '罪案', 'v': '%E7%BD%AA%E6%A1%88'}, {'n': '青春', 'v': '%E9%9D%92%E6%98%A5'}, {'n': '家庭', 'v': '%E5%AE%B6%E5%BA%AD'}, {'n': '悬疑', 'v': '%E6%82%AC%E7%96%91'}, {'n': '穿越', 'v': '%E7%A9%BF%E8%B6%8A'}, {'n': '宫廷', 'v': '%E5%AE%AB%E5%BB%B7'}, {'n': '神话', 'v': '%E7%A5%9E%E8%AF%9D'}, {'n': '商战', 'v': '%E5%95%86%E6%88%98'}, {'n': '警匪', 'v': '%E8%AD%A6%E5%8C%AA'}, {'n': '动作', 'v': '%E5%8A%A8%E4%BD%9C'}, {'n': '惊悚', 'v': '%E6%83%8A%E6%82%9A'}, {'n': '剧情', 'v': '%E5%89%A7%E6%83%85'}, {'n': '同性', 'v': '%E5%90%8C%E6%80%A7'}, {'n': '奇幻', 'v': '%E5%A5%87%E5%B9%BB'}, {'n': '其它', 'v': '%E5%85%B6%E5%AE%83'}]}, {'key': 'area', 'name': '地區', 'values': [{'n': '全部地区', 'v': ''}, {'n': '大陆', 'v': '%E5%A4%A7%E9%99%86'}, {'n': '香港', 'v': '%E9%A6%99%E6%B8%AF'}, {'n': '台 湾', 'v': '%E5%8F%B0%E6%B9%BE'}, {'n': '日本', 'v': '%E6%97%A5%E6%9C%AC'}, {'n': '韩国', 'v': '%E9%9F%A9%E5%9B%BD'}, {'n': '欧美', 'v': '%E6%AC%A7%E7%BE%8E'}, {'n': '泰国', 'v': '%E6%B3%B0%E5%9B%BD'}, {'n': '新马', 'v': '%E6%96%B0%E9%A9%AC'}, {'n': '其它', 'v': '%E5%85%B6%E5%AE%83'}]}, {'key': 'lang', 'name': '語言', 'values': [{'n': '全部语言', 'v': ''}, {'n': '国语', 'v': '%E5%9B%BD%E8%AF%AD'}, {'n': '粤语', 'v': '%E7%B2%A4%E8%AF%AD'}, {'n': '英语', 'v': '%E8%8B%B1%E8%AF%AD'}, {'n': '韩语', 'v': '%E9%9F%A9%E8%AF%AD'}, {'n': '日语', 'v': '%E6%97%A5%E8%AF%AD'}, {'n': '西班牙', 'v': '%E8%A5%BF%E7%8F%AD%E7%89%99'}, {'n': '法语', 'v': '%E6%B3%95%E8%AF%AD'}, {'n': '德语', 'v': '%E5%BE%B7%E8%AF%AD'}, {'n': '泰语', 'v': '%E6%B3%B0%E8%AF%AD'}, {'n': '其它', 'v': '%E5%85%B6%E5%AE%83'}]}, {'key': 'year', 'name': '時 間', 'values': [{'n': '全部时间', 'v': ''}, {'n': '2023', 'v': '2023'}, {'n': '2022', 'v': '2022'}, {'n': '2021', 'v': '2021'}, {'n': '2020', 'v': '2020'}, {'n': '2019', 'v': '2019'}, {'n': '2018', 'v': '2018'}, {'n': '2017', 'v': '2017'}, {'n': '2016', 'v': '2016'}, {'n': '2015', 'v': '2015'}, {'n': '2014-2011', 'v': '2014-2011'}, {'n': '2010-2000', 'v': '2010-2000'}, {'n': '90年代', 'v': '90%E5%B9%B4%E4%BB%A3'}, {'n': '80年代', 'v': '80%E5%B9%B4%E4%BB%A3'}, {'n': '更早', 'v': '%E6%9B%B4%E6%97%A9'}]}]}
+		"filter": {}
 	}
 
 	def getName(self):
@@ -26,6 +26,7 @@ class Spider(Spider):
 	#主頁
 	def homeContent(self,filter):
 		result = {}
+		filter = []
 		classes = []
 		cateManual = {
 			"電視劇": "1",
@@ -33,13 +34,15 @@ class Spider(Spider):
 			"綜藝": "3",
 			"動漫": "4",
 			"記錄片": "5"
-		}		
+		}	
+		
 		for k in cateManual:
 			classes.append({'type_name': k,'type_id': cateManual[k]})
+			fi = Job(cateManual[k]).call()
+			filter.append({cateManual[k]: fi})
 		
-		result['class'] = classes		
-		if(filter):
-			result['filters'] = self.config['filter']					
+		result['class'] = classes
+		result['filters'] = json.loads(filter)
 		
 		return result
 	
@@ -135,3 +138,30 @@ class Spider(Spider):
 			'after':''
 		}
 		return [200, "video/MP2T", action, ""]
+
+class Job:    
+    def __init__(self, typeId):
+        self.typeId = typeId
+
+    def call(self):
+        items = []
+        url = f"https://www.yingshi.tv/vod/show/by/hits_day/id/{self.typeId}/order/desc.html"
+        response = requests.get(url)
+        tree = html.fromstring(response.content)
+        items.append(self.filter(tree.xpath('/html/body/div[5]/div/div[2]/div[1]/div[2]/div'), "by", "排序", 4))
+        items.append(self.filter(tree.xpath('/html/body/div[5]/div/div[2]/div[2]/div[1]/div'), "class", "類型", 6))                                             
+        items.append(self.filter(tree.xpath('/html/body/div[5]/div/div[2]/div[2]/div[2]/div'), "area", "地區", 4))
+        items.append(self.filter(tree.xpath('/html/body/div[5]/div/div[2]/div[2]/div[3]/div'), "lang", "語言", 8))
+        items.append(self.filter(tree.xpath('/html/body/div[5]/div/div[2]/div[2]/div[4]/div'), "year", "時間", 10))
+        return items
+
+    def filter(self, elements, key, name, index):
+        values = []
+        for e in elements:
+            paragraph = e.xpath('.//p/text()')
+            n = paragraph[0] if paragraph else ""
+            all_values = "全部" in n
+            href = e.xpath('.//a/@href')[0] if not all_values else ""
+            v = href.split("/")[-1].replace(".html", "") if href else ""
+            values.append({"n": n, "v": v})
+        return {"key": key, "name": name, "values": values}

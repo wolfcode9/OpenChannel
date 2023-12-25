@@ -87,6 +87,39 @@ print(result)
 import requests
 from lxml import html
 
+
+import requests
+from lxml import html
+import json
+
+result = {}		
+url = 'https://www.yingshi.tv'		
+rsp = requests.get(url)
+videos = []
+root = html.document_fromstring((rsp.text))							
+aList = root.xpath('//*[@id="desktop-container"]/section/div/div/li/a') 
+for a in aList:
+    link = a.xpath("./@href")[0]
+    vid = link.split('/')[4]        
+    name = (a.xpath('./h2[@class="ys_show_title"]/text()') or [None])[0]
+    pic = (a.xpath('./div/img/@src') or [None])[0]
+    mark = (a.xpath('.//span[@class="ys_show_episode_text"]/text()') or [None])[0]     
+    videos.append({"vod_id": vid, "vod_name": name,"vod_pic": pic,"vod_remarks": mark})            
+
+print(videos)
+
+result = {}
+id = '200057'
+url = 'https://www.yingshi.tv/vod/play/id/{0}/sid/1/nid/1.html'.format(id)
+rsp = requests.get(url)
+root =  etree.HTML(rsp.text)
+vodData = root.xpath('//script[contains(text(), "let data = ") and contains(text(), "let obj = ")]/text()')[0]
+vodData = json.loads(vodData.split('let data = ')[1].split('let obj = ')[0].strip()[:-1].replace("&amp;", " "))
+print(vodData['vod_id'])
+print(vodData['player_info']['url'])
+'''
+
+
 class Job:
     
     def __init__(self, typeId):
@@ -112,39 +145,11 @@ class Job:
             all_values = "全部" in n
             href = e.xpath('.//a/@href')[0] if not all_values else ""
             v = href.split("/")[-1].replace(".html", "") if href else ""
-            values.append({"name": n, "value": v})
+            values.append({"n": n, "v": v})
         return {"key": key, "name": name, "values": values}
 
-# Example usage:
-job = Job("1").call()
-print(job)
 
-import requests
-from lxml import html
-import json
-
-result = {}		
-url = 'https://www.yingshi.tv'		
-rsp = requests.get(url)
-videos = []
-root = html.document_fromstring((rsp.text))							
-aList = root.xpath('//*[@id="desktop-container"]/section/div/div/li/a') 
-for a in aList:
-    link = a.xpath("./@href")[0]
-    vid = link.split('/')[4]        
-    name = (a.xpath('./h2[@class="ys_show_title"]/text()') or [None])[0]
-    pic = (a.xpath('./div/img/@src') or [None])[0]
-    mark = (a.xpath('.//span[@class="ys_show_episode_text"]/text()') or [None])[0]     
-    videos.append({"vod_id": vid, "vod_name": name,"vod_pic": pic,"vod_remarks": mark})            
-
-print(videos)
-'''
-result = {}
-id = '200057'
-url = 'https://www.yingshi.tv/vod/play/id/{0}/sid/1/nid/1.html'.format(id)
-rsp = requests.get(url)
-root =  etree.HTML(rsp.text)
-vodData = root.xpath('//script[contains(text(), "let data = ") and contains(text(), "let obj = ")]/text()')[0]
-vodData = json.loads(vodData.split('let data = ')[1].split('let obj = ')[0].strip()[:-1].replace("&amp;", " "))
-print(vodData['vod_id'])
-print(vodData['player_info']['url'])
+data = {}
+gg = Job("3").call()
+data = {'1': gg}
+pprint(data)
