@@ -49,18 +49,19 @@ class Spider(Spider):
 		result = {}				
 		videos = []
 		rsp = self.fetch(self.siteUrl)
-		root = self.html(self.cleanText(rsp.text))							
-		aList = root.xpath('//*[@id="desktop-container"]/section/div/div/li/a')       
-		for a in aList:
-			link = a.xpath("./@href")[0]
-			vid = link.split('/')[4]        
-			name = (a.xpath('./h2[@class="ys_show_title"]/text()') or [None])[0]
-			pic = (a.xpath('./div/img/@src') or [None])[0]
-			mark = (a.xpath('.//span[@class="ys_show_episode_text"]/text()') or [None])[0] 
-			if name:
-				videos.append({"vod_id": vid, "vod_name": name,"vod_pic": pic,"vod_remarks": mark})            
-		
-		result = {'list': videos}
+		root = self.html(rsp.text)
+		if rsp.text:
+			aList = root.xpath('//*[@id="desktop-container"]/section/div/div/li/a')       
+			for a in aList:
+				link = a.xpath("./@href")[0]
+				vid = link.split('/')[4]
+				name = (a.xpath('./h2[@class="ys_show_title"]/text()') or [None])[0]
+				pic = (a.xpath('./div/img/@src') or [None])[0]
+				mark = (a.xpath('.//span[@class="ys_show_episode_text"]/text()') or [None])[0] 
+				if name:
+					videos.append({"vod_id": vid, "vod_name": name,"vod_pic": pic,"vod_remarks": mark})            
+			
+			result = {'list': videos}
 		return result		
 
 	#分類
@@ -68,46 +69,44 @@ class Spider(Spider):
 		result = {}		
 		url = f'{self.siteUrl}/ajax/data?mid=1&page={pg}&limit=35&tid={tid}&by=time'		
 		rsp = self.fetch(url)
-		jsonData = json.loads(rsp.text)
-		result['list'] = jsonData['list']
-		result['page'] = pg
-		result['pagecount'] = jsonData['pagecount']
-		result['limit'] = 35
-		result['total'] = jsonData['total']
+		if rsp.text:
+			vodData = json.loads(rsp.text)
+			result['list'] = vodData['list']
+			result['page'] = pg
+			result['pagecount'] = vodData['pagecount']
+			result['limit'] = 35
+			result['total'] = vodData['total']
 		return result 
 	
 	#詳情
-	def detailContent(self,array):	
-		result = {}		
+	def detailContent(self,array):
+		result = {}
 		tid = array[0]
 		url = f"{self.siteUrl}/vod/play/id/{tid}/sid/1/nid/1.html"
 		rsp = self.fetch(url)
-		root = self.html(rsp.text)
-		vodData = root.xpath('//script[contains(text(), "let data = ") and contains(text(), "let obj = ")]/text()')[0]
-		vodData = json.loads(vodData.split('let data = ')[1].split('let obj = ')[0].strip()[:-1].replace("&amp;", " "))
-		result = {'list': [vodData]}
+		if rsp.text:			
+			root = self.html(rsp.text)
+			vodData = root.xpath('//script[contains(text(), "let data = ") and contains(text(), "let obj = ")]/text()')[0]
+			vodData = json.loads(vodData.split('let data = ')[1].split('let obj = ')[0].strip()[:-1].replace("&amp;", " "))
+			result = {'list': [vodData]}
 		return result
 	
 	#搜索
-	def searchContent(self,key,quick):
+	def searchContent(self,key,quick):		
 		result = {}
+		url = f'{self.siteUrl}/ajax/search.html?wd={key}&mid=1&limit=18&page=1'
+		rsp = self.fetch(url)
+		if rsp.text:
+			vodData = json.loads(rsp.text)
+			result['list'] = vodData['list']
 		return result
 	
 	#播放	
 	def playerContent(self,flag,id,vipFlags):
-		'''
-		url = 'https://www.yingshi.tv/vod/play/id/{0}/sid/1/nid/1.html'.format(id)		
-		rsp = self.fetch(url)
-		if rsp.text == '':
-			return {}		
-		root = self.html(rsp.text)
-		vodData = root.xpath('//script[contains(text(), "let data = ") and contains(text(), "let obj = ")]/text()')[0]
-		vodData = json.loads(vodData.split('let data = ')[1].split('let obj = ')[0].strip()[:-1].replace("&amp;", " "))		
-		'''
 		result = {
         	'parse': '0',
             'playUrl': '',
-            'url': id, #vodData['player_info']['url'],
+            'url': id,
             'header': ''
         }
 		return result
@@ -129,9 +128,4 @@ class Spider(Spider):
 			'type':'string',
 			'after':''
 		}
-		typ = param['type']
-		if typ == "m3u8":
-			return self.proxyM3U8(param)
-		else:
-			return None
-		#return [200, "video/MP2T", action, ""]
+		return [200, "video/MP2T", action, ""]
