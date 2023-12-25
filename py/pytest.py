@@ -1,5 +1,5 @@
 from base.spider import Spider
-from lxml import html
+from lxml import html,etree
 import requests
 import json
 import re
@@ -143,7 +143,7 @@ result = {}
 id = '200057'
 url = 'https://www.yingshi.tv/vod/play/id/{0}/sid/1/nid/1.html'.format(id)
 rsp = requests.get(url)
-root = html.document_fromstring((rsp.text))
+root =  etree.HTML(rsp.text)
 vodData = root.xpath('//script[contains(text(), "let data = ") and contains(text(), "let obj = ")]/text()')[0]
 vodData = json.loads(vodData.split('let data = ')[1].split('let obj = ')[0].strip()[:-1].replace("&amp;", " "))
 print(vodData['vod_id'])
