@@ -42,7 +42,7 @@ class Spider(Spider):
 			filter.append({cateManual[k]: fi})
 		
 		result['class'] = classes
-		result['filters'] = json.loads(filter)
+		result['filters'] = filter
 		
 		return result
 	

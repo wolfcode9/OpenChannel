@@ -120,8 +120,7 @@ print(vodData['player_info']['url'])
 '''
 
 
-class Job:
-    
+class Job:    
     def __init__(self, typeId):
         self.typeId = typeId
 
@@ -149,7 +148,9 @@ class Job:
         return {"key": key, "name": name, "values": values}
 
 
-data = {}
-gg = Job("3").call()
-data = {'1': gg}
-pprint(data)
+data = []
+for id in range(1, 5):
+    gg = Job(id).call()
+    data.append( {id: gg})
+
+pprint(json.loads(data))
