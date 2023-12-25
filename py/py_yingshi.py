@@ -95,17 +95,19 @@ class Spider(Spider):
 	
 	#播放
 	def playerContent(self,flag,id,vipFlags):
+		'''
 		url = f'{self.siteUrl}/vod/play/id/{id}/sid/1/nid/1.html'		
 		rsp = self.fetch(url,headers=self.header)
 		root = self.html(self.cleanText(rsp.text))
 		vodData = root.xpath('//script[contains(text(), "let data = ") and contains(text(), "let obj = ")]/text()')[0]
 		vodData = json.loads(vodData.split('let data = ')[1].split('let obj = ')[0].strip()[:-1].replace("&amp;", " "))		
+		'''	
 		result = {
         	'parse': '0',
             'playUrl': '',
             'url': 'https://m3u.haiwaikan.com/xm3u8/11dea839505c32c18ffe7d2511b1894c04cd036ed324cfc101e7a7010fb752189921f11e97d0da21.m3u8', #vodData['player_info']['url'],
             'header': ''
-			#'contentType': 'application/x-mpegURL'
+			#',contentType': 'application/x-mpegURL'
         }
 		return result
 	
