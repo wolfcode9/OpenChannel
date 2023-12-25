@@ -84,8 +84,7 @@ cateManual = {
     }
 
 for k in cateManual:
-    d = call(cateManual[k])
-    gg  = gg  + f"'{cateManual[k]}':{json.dumps(d, ensure_ascii=False, indent=2)},\n'"
-gg = "{" + gg + "}"
-with open('dd.json','w',encoding='utf8') as f:
-    f.write(gg)
+    d = call(cateManual[k])    
+    print(f'"{cateManual[k]}":{d}')
+    print()
+
