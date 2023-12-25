@@ -33,9 +33,7 @@ class Spider(Spider):
 		for k in cateManual:
 			classes.append({'type_name': k,'type_id': cateManual[k]})			
 
-		result['class'] = classes
-		if filter:
-			result['filters'] = filter
+		result['class'] = classes		
 		return result
 	
 	#推薦頁
