@@ -46,15 +46,11 @@ class Spider(Spider):
 	
 	#推薦
 	def homeVideoContent(self):
-		result = {}				
-		#videos = []	
-		url = f'{self.siteUrl}/ajax/data.html?mid=1&limit=35&by=score&order=desc'	
-		rsp = self.fetch(url) #rsp = self.fetch(self.siteUrl)
-		#root = self.html(rsp.text)
-		if rsp.text:
-			vodData = json.loads(rsp.text)
-			result['list'] = vodData['list']
-			'''
+		result = {}
+		videos = []		
+		rsp = self.fetch(self.siteUrl)
+		root = self.html(rsp.text)
+		if rsp.text:						
 			aList = root.xpath('//*[@id="desktop-container"]/section/div/div/li/a')       
 			for a in aList:
 				link = a.xpath("./@href")[0]
@@ -65,7 +61,14 @@ class Spider(Spider):
 				if name:
 					videos.append({"vod_id": vid, "vod_name": name,"vod_pic": pic,"vod_remarks": mark})					
 			result = {'list': videos}
-			'''	
+			#另一種推薦頁,直接取json
+			'''		
+			url = f'{self.siteUrl}/ajax/data.html?mid=1&limit=35&by=score&order=desc'
+			rsp = self.fetch(url)
+			vodData = json.loads(rsp.text)
+			result['list'] = vodData['list']
+			result = {'list': videos}
+			'''
 		return result		
 
 	#分類
