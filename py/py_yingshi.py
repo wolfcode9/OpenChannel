@@ -93,9 +93,10 @@ class Spider(Spider):
 		result = {}
 		return result
 	
-	#播放
 	def playerContent(self,flag,id,vipFlags):
-		url = f'{self.siteUrl}/vod/play/id/{id}/sid/1/nid/1.html'
+	#播放
+		url = 'https://www.yingshi.tv/vod/play/id/{0}/sid/1/nid/1.html'.format(id)
+		#url = f'{self.siteUrl}/vod/play/id/{id}/sid/1/nid/1.html'
 		rsp = self.fetch(url)
 		if rsp.text == '':
 			return {}
