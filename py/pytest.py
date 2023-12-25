@@ -73,20 +73,15 @@ def filter(elements, key, name, index):
     return {"key": key, "name": name, "value": values}
 
 
-gg =''
+cate = {"電視劇": "1","電影": "2","綜藝": "3","動漫": "4","記錄片": "5" }
+gg = {}
+for id in cate:   
+    n = cate[id]
+    gg[n] = call(n)
 
-cateManual = {
-        "電視劇": "1",
-        "電影": "2",
-        "綜藝": "3",
-        "動漫": "4",
-        "記錄片": "5"
-    }
+print(str(gg))
+              
 
-#for k in cateManual:
-id = '3'
-d = call(id)    
-print('{' + id + ':'+ str(d) + '}')
     
     
 
