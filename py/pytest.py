@@ -144,12 +144,23 @@ def filter(elements, key, name, index):
     return {"key": key, "name": name, "values": values}
 
 
+
 data = []
-for id in range(1, 5):
-    gg = job(id)
-    data.append( {id: gg})
+cateManual = {
+        "電視劇": "1",
+        "電影": "2",
+        "綜藝": "3",
+        "動漫": "4",
+        "記錄片": "5"
+}	
+    
+for k in cateManual:
+    data.append({cateManual[k]: job(cateManual[k])})
 
+#g = json.dumps(data, ensure_ascii=False, indent=2)
+g = ', '.join(json.dumps(item, ensure_ascii=False) for item in data)
+with open('a.txt','w',encoding='utf8') as f:
+    f.write(g)
 
-pprint(json.dumps(data, ensure_ascii=False, indent=2))
 
 
