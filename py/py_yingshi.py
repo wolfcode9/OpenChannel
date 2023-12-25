@@ -48,9 +48,14 @@ class Spider(Spider):
 	def homeVideoContent(self):
 		result = {}				
 		videos = []
-		rsp = self.fetch(self.siteUrl)
-		root = self.html(rsp.text)
+		limit = 20
+		url = f'{self.siteUrl}/ajax/data.html?mid=1&limit={limit}&by=score&order=desc'	
+		rsp = self.fetch(url) #rsp = self.fetch(self.siteUrl)
+		#root = self.html(rsp.text)
 		if rsp.text:
+			vodData = json.loads(rsp.text)
+			result['list'] = vodData['list']
+			'''
 			aList = root.xpath('//*[@id="desktop-container"]/section/div/div/li/a')       
 			for a in aList:
 				link = a.xpath("./@href")[0]
@@ -59,9 +64,9 @@ class Spider(Spider):
 				pic = (a.xpath('./div/img/@src') or [None])[0]
 				mark = (a.xpath('.//span[@class="ys_show_episode_text"]/text()') or [None])[0] 
 				if name:
-					videos.append({"vod_id": vid, "vod_name": name,"vod_pic": pic,"vod_remarks": mark})            
-			
+					videos.append({"vod_id": vid, "vod_name": name,"vod_pic": pic,"vod_remarks": mark})					
 			result = {'list': videos}
+			'''	
 		return result		
 
 	#分類
