@@ -95,14 +95,15 @@ class Spider(Spider):
 	#詳情
 	def detailContent(self,array):
 		#https://m.mubai.link/api/filmDetail?id=77886
-		result = {}		
+		result = {}
+		vodeo = []
 		id = array[0]
 		url = f"{self.siteUrl}/api/filmDetail?id={id}"
 		rsp = self.fetch(url)
 		if rsp.text:			 
 			vodData = json.loads(rsp.text)
 			vodData = vodData['data']['detail']
-			vodeo = {
+			vodeo.append ({
 				"vod_id": id,
 				"vod_name": vodData['name'],
 				"vod_pic":  vodData['picture'],
@@ -112,11 +113,12 @@ class Spider(Spider):
 				"vod_area": vodData['descriptor']['area'],				
 				"vod_actor": vodData['descriptor']['actor'],
 				"vod_director": vodData['descriptor']['director'],
-				"vod_content": vodData['descriptor']['content']
-			}	
-			vod_play_from = '$$$'.join(vodData['playFrom'])
-			vodeo['vod_play_from'] = vod_play_from
-			vodeo['vod_play_url'] = ''
+				"vod_content": vodData['descriptor']['content'],
+				"vod_play_from" : "",
+				"vod_play_from" : "",
+				"vod_play_url" : ""
+			})
+			
 			'''
 			playList = []
 			vodList = vodData['playList']
@@ -172,7 +174,7 @@ class Spider(Spider):
 		}
 		return [200, "video/MP2T", action, ""]
 
-debug = 1
+debug = 0
 
 if debug:
 	from pprint import pprint
