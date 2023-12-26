@@ -86,7 +86,7 @@ class Spider(Spider):
 			"Language": extend.get("Language", ""),
 			"Area": extend.get("Area", "")
 		}
-		url = f'{self.siteUrl}/api/filmClassifySearch?'
+		url = f'{self.siteUrl}/api/filmClassifySearch'
 		rsp = self.fetch(url=url,params=params)
 
 		rsp = self.fetch(url)
