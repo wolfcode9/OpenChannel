@@ -168,10 +168,11 @@ class Spider(Spider):
 		}
 		return [200, "video/MP2T", action, ""]
 
+'''
 if __name__ == "__main__":
 	from pprint import pprint
 	g = Spider()
 	d = g.detailContent(['79234'])
 	pprint(d)
-
+'''
 
