@@ -52,13 +52,14 @@ class Spider(Spider):
 		if rsp.text:
 			videos = []
 			vodData = json.loads(rsp.text)
-			for vod in vodData['data']['content']['movies']:
-				videos.append({
-					"vod_id": vod['id'],
-					"vod_name": vod['name'],
-					"vod_pic": vod['picture'],
-					"vod_remarks": vod['remarks']
-            	})
+			for content in vodData['data']['content']:
+				for vod in content['movies']:
+					videos.append({
+						"vod_id": vod['id'],
+						"vod_name": vod['name'],
+						"vod_pic": vod['picture'],
+						"vod_remarks": vod['remarks']
+					})
 			vodData = json.loads(rsp.text)		
 			result['list'] = videos
 		return result	
@@ -179,7 +180,7 @@ class Spider(Spider):
 		return [200, "video/MP2T", action, ""]
 
 '''
-debug = 1
+debug = 3
 if debug:
 	from pprint import pprint
 	sp = Spider()
@@ -187,7 +188,9 @@ if debug:
 		case 1:
 			pprint(sp.detailContent(['78594']))
 		case 2:			
-			pprint(sp.searchContent('三大',''))		
+			pprint(sp.searchContent('三大',''))
+		case 3:			
+			pprint(sp.homeVideoContent())
 		case _:
 			pass	
 '''
