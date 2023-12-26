@@ -77,7 +77,7 @@ class Spider(Spider):
 			"page": pg,
 			"limit": "35",
 			"mid": "1",			
-			"by": extend.get("by", "time"),			
+			"by": "time",
 			"class": extend.get("class", ""),
 			"year": extend.get("year", ""),
 			"lang": extend.get("lang", ""),
