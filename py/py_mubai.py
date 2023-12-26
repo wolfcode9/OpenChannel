@@ -104,10 +104,8 @@ class Spider(Spider):
 			playUrls = []			
 			vodeos = []
 			vodData = json.loads(rsp.text)
-			vodData = vodData['data']['detail']
-			vod_play_from = '$$$'
-			playFrom = vodData['playFrom']
-			vod_play_from = vod_play_from.join(playFrom)
+			vodData = vodData['data']['detail']			
+			vod_play_from = '$$$'.join(vodData['playFrom'])
 			for v in vodData['playList'][0]:				
 				playUrls.append('#'.join([v['episode'] + '$' + v['link']]))
 
