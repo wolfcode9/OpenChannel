@@ -176,7 +176,7 @@ class Spider(Spider):
 		}
 		return [200, "video/MP2T", action, ""]
 
-
+'''
 debug = 1
 if debug:
 	from pprint import pprint
@@ -190,3 +190,4 @@ if debug:
 		case _:
 			pass	
 
+'''
