@@ -37,8 +37,7 @@
       "type": 3,
       "api": "csp_Cs1369",
       "searchable": 1,
-      "changeable": 1,
-      "categories": ["電影","電視劇","動漫"]
+      "changeable": 1   
     },
     {
       "key": "py_mubai",
