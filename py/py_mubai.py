@@ -88,9 +88,7 @@ class Spider(Spider):
 			"Area": extend.get("Area", "")
 		}
 		url = f'{self.siteUrl}/api/filmClassifySearch'
-		rsp = self.fetch(url=url,params=params)		
-		#rsp = requests.get(url=url,params=params)
-		#rsp.encoding='utf-8'
+		rsp = self.fetch(url,params=params)		
 		if rsp.text:
 			vodData = json.loads(rsp.text)
 			for vod in vodData['data']['list']:
