@@ -104,7 +104,10 @@ class Spider(Spider):
 			playUrls = []			
 			vodeos = []
 			vodData = json.loads(rsp.text)
-			vodData = vodData['data']['detail']			
+			vodData = vodData['data']['detail']
+			vod_play_from = '$$$'
+			playFrom = ['liangzi']
+			vod_play_from = vod_play_from.join(playFrom)
 			for v in vodData['playList'][0]:				
 				playUrls.append('#'.join([v['episode'] + '$' + v['link']]))
 
@@ -119,7 +122,7 @@ class Spider(Spider):
 				"vod_actor": vodData['descriptor']['actor'],
 				"vod_director": vodData['descriptor']['director'],
 				"vod_content": vodData['descriptor']['content'],
-				"vod_play_from" : '$$$'.join(['liangzi']), #'$$$'.join(vodData['playFrom']),			
+				"vod_play_from" : vod_play_from,
 				"vod_play_url" : '$$$'.join(playUrls)
 				})
 			result['list'] = vodeos
@@ -174,7 +177,7 @@ class Spider(Spider):
 		}
 		return [200, "video/MP2T", action, ""]
 
-'''
+
 debug = 1
 if debug:
 	from pprint import pprint
@@ -188,4 +191,3 @@ if debug:
 		case _:
 			pass	
 
-'''
