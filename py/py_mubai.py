@@ -109,35 +109,44 @@ class Spider(Spider):
 			for v in vodList[0]:				
 				vodItems.append(v['episode'] + '$' + v['link'])					
 				joinStr = '#'.join(vodItems)
-			urlList.append(joinStr)
-			vod_play_from = '$$$'.join(vodData['playFrom'])
-			vod_play_url = '$$$'.join(urlList)
-			vodeo.append ({
-				"vod_id": id,
-				"vod_name": vodData['name'],
-				"vod_pic":  vodData['picture'],
-				"type_name": vodData['descriptor']['classTag'],
-				"vod_remarks": vodData['descriptor']['remarks'],
-				"vod_year": vodData['descriptor']['year'],
-				"vod_area": vodData['descriptor']['area'],				
-				"vod_actor": vodData['descriptor']['actor'],
-				"vod_director": vodData['descriptor']['director'],
-				"vod_content": vodData['descriptor']['content'],
-				"vod_play_from" : vod_play_from,			
-				"vod_play_url" : vod_play_url
-			})
-
+				urlList.append(joinStr)
+				vod_play_from = '$$$'.join(vodData['playFrom'])
+				vod_play_url = '$$$'.join(urlList)
+				vodeo.append ({
+					"vod_id": id,
+					"vod_name": vodData['name'],
+					"vod_pic":  vodData['picture'],
+					"type_name": vodData['descriptor']['classTag'],
+					"vod_remarks": vodData['descriptor']['remarks'],
+					"vod_year": vodData['descriptor']['year'],
+					"vod_area": vodData['descriptor']['area'],				
+					"vod_actor": vodData['descriptor']['actor'],
+					"vod_director": vodData['descriptor']['director'],
+					"vod_content": vodData['descriptor']['content'],
+					"vod_play_from" : vod_play_from,			
+					"vod_play_url" : vod_play_url
+				})
 			result['list'] = vodeo
 		return result	
 	 
 	#搜索
-	def searchContent(self,key,quick):		
+	def searchContent(self,key,quick):
+		#https://m.mubai.link/search?search=我知道我爱你
 		result = {}
 		url = f'{self.siteUrl}/api/searchFilm?keyword={key}'
 		rsp = self.fetch(url)
 		if rsp.text:
+			videos = []
 			vodData = json.loads(rsp.text)
-			result['list'] = vodData['data']['list']
+			vodData = vodData['data']['list']
+			for v in vodData:
+				videos.append({
+					"vod_id": v['id'],
+					"vod_name": v['name'],
+					"vod_pic": v['picture'],
+					"vod_remarks": v['remarks']
+				})      
+			result['list'] = videos
 		return result
 	
 	#播放	
@@ -169,12 +178,11 @@ class Spider(Spider):
 		}
 		return [200, "video/MP2T", action, ""]
 
-'''
-debug = 1
 
+debug = 0
 if debug:
 	from pprint import pprint
 	g = Spider()
-	d = g.detailContent(['79304'])
+	d = g.searchContent('三大','')
 	pprint(d)
-'''
+
