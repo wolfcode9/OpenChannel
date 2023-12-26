@@ -71,24 +71,19 @@ class Spider(Spider):
 	#分類
 
 	def categoryContent(self,tid,pg,filter,extend):
-		result = {}
-		by = extend.get("by", "time")
-		cls = extend.get("class", "")
-		area = extend.get("area", "")
-		lang = extend.get("lang", "")
-		year = extend.get("year", "")
+		result = {}	
 		params = {
-			"mid": "1",
-			"by": by,
 			"tid": tid,
 			"page": pg,
-			"class": cls,
-			"year": year,
-			"lang": lang,
-			"area": area,
-			"limit": "35"
+			"limit": "35",
+			"mid": "1",			
+			"by": extend.get("by", "time"),			
+			"class": extend.get("class", ""),
+			"year": extend.get("year", ""),
+			"lang": extend.get("lang", ""),
+			"area": extend.get("area", "")			
 		}
-		url = f'{self.siteUrl}/ajax/data?'
+		url = f'{self.siteUrl}/ajax/data'
 		rsp = requests.get(url=url,params=params)
 		#url = f'{self.siteUrl}/ajax/data?mid=1&page={pg}&limit=35&tid={tid}&by=time'		
 		#rsp = self.fetch(url)
