@@ -78,9 +78,9 @@ class Spider(Spider):
 		rsp = self.fetch(url)
 		if rsp.text:
 			vodData = json.loads(rsp.text)
-			for vod in vodData:
+			for vod in vodData['data']['list']:
 				videos.append({
-					"vod_id": '', #vod['id'],
+					"vod_id": vod['id'],
 					"vod_name": vod['name'],
 					"vod_pic": vod['picture'],
 					"vod_remarks": vod['remarks']
