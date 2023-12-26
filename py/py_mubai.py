@@ -97,7 +97,7 @@ class Spider(Spider):
 		#https://m.mubai.link/api/filmDetail?id=77886
 		result = {}		
 		id = array[0]
-		url = f"{self.siteUrl}/api/filmDetail?id={tid}"
+		url = f"{self.siteUrl}/api/filmDetail?id={id}"
 		rsp = self.fetch(url)
 		if rsp.text:			 
 			vodData = json.loads(rsp.text)
@@ -119,9 +119,10 @@ class Spider(Spider):
 			vodList = vodData['playList']
 			for v in vodList:
 				vodItems = []				
-				vodItems.append(v['episode'] + "$" + v['link'])				
+				vodItems.append(str(v[0]) + '$' + str(v[1]))
 				joinStr = '#'.join(vodItems)
-				playList.append(joinStr)			 
+				playList.append(joinStr)
+
 			vod_play_url = '$$$'.join(playList)
 			vodeo['vod_play_from'] = vod_play_from
 			vodeo['vod_play_url'] = vod_play_url
@@ -166,12 +167,11 @@ class Spider(Spider):
 			'after':''
 		}
 		return [200, "video/MP2T", action, ""]
-'''
+
 if __name__ == "__main__":
 	from pprint import pprint
 	g = Spider()
-	d = g.categoryContent('1','1','','')
-	for a in d['list']:
-		pprint(a['vod_id'])
-'''
+	d = g.detailContent(['79234'])
+	pprint(d)
+
 
