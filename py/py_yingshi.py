@@ -83,9 +83,8 @@ class Spider(Spider):
 			"lang": extend.get("lang", ""),
 			"area": extend.get("area", "")			
 		}
-		url = f'{self.siteUrl}/ajax/data'
-		rsp = self.fetch(url,params=params)		
-		#rsp = requests.get(url=url,params=params)		
+		url = f'{self.siteUrl}/ajax/data'		
+		rsp = requests.get(url=url,params=params)		
 		if rsp.text:
 			vodData = json.loads(rsp.text)
 			result['list'] = vodData['list']
@@ -148,7 +147,7 @@ class Spider(Spider):
 		return [200, "video/MP2T", action, ""]
 
 '''
-debug = 1
+debug = 3
 if debug:
 	from pprint import pprint
 	sp = Spider()
@@ -156,7 +155,9 @@ if debug:
 		case 1:
 			pprint(sp.detailContent(['200342']))
 		case 2:			
-			pprint(sp.searchContent('三大',''))		
+			pprint(sp.searchContent('三大',''))					
+		case 3:			
+			pprint(sp.categoryContent('1','1','',{}))
 		case _:
 			pass	
 '''
