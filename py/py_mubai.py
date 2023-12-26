@@ -5,6 +5,7 @@ sys.path.append('..')
 from base.spider import Spider
 import json
 import requests
+import re
 
 class Spider(Spider):
 	
@@ -112,6 +113,7 @@ class Spider(Spider):
 			for v in vodData['playList'][0]:				
 				playUrls.append('#'.join([v['episode'] + '$' + v['link']]))
 
+			cleaned_content = re.sub(r'<p>\s*|\s*</p>', '', vodData['descriptor']['content'])			
 			vodeos.append ({
 				"vod_id": id,
 				"vod_name": vodData['name'],
@@ -122,10 +124,11 @@ class Spider(Spider):
 				"vod_area": vodData['descriptor']['area'],
 				"vod_actor": vodData['descriptor']['actor'],
 				"vod_director": vodData['descriptor']['director'],
-				"vod_content": vodData['descriptor']['content'],
+				"vod_content": cleaned_content,
 				"vod_play_from" : 'liangzi',
 				"vod_play_url" : '#'.join(playUrls)
 				})
+			
 			result['list'] = vodeos
 		return result	
 	 
@@ -179,7 +182,7 @@ class Spider(Spider):
 		return [200, "video/MP2T", action, ""]
 
 '''
-debug = 3
+debug = 1
 if debug:
 	from pprint import pprint
 	sp = Spider()
@@ -192,4 +195,5 @@ if debug:
 			pprint(sp.homeVideoContent())
 		case _:
 			pass	
+
 '''
