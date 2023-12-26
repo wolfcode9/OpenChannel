@@ -45,35 +45,26 @@ class Spider(Spider):
 	
 	#推薦頁
 	def homeVideoContent(self):
-		result = {}
-		videos = []
-		return result		
-		'''
-		rsp = self.fetch(self.siteUrl)
-		root = self.html(rsp.text)
-		if rsp.text:						
-			aList = root.xpath('//*[@id="desktop-container"]/section/div/div/li/a')       
-			for a in aList:
-				link = a.xpath("./@href")[0]
-				vid = link.split('/')[4]
-				name = (a.xpath('./h2[@class="ys_show_title"]/text()') or [None])[0]
-				pic = (a.xpath('./div/img/@src') or [None])[0]
-				mark = (a.xpath('.//span[@class="ys_show_episode_text"]/text()') or [None])[0] 
-				if name:
-					videos.append({"vod_id": vid, "vod_name": name,"vod_pic": pic,"vod_remarks": mark})					
-			result = {'list': videos}
-			#另一種很簡單的獲取json,直接取35筆(上限)
-			
-			url = f'{self.siteUrl}/ajax/data.html?mid=1&limit=35&by=score&order=desc'
-			rsp = self.fetch(url)
+		result = {}		
+		url = f'https://m.mubai.link/filmClassifySearch?Pid=1&Sort=release_stamp&current=1'
+		rsp = self.fetch(url)
+		if rsp.text:
+			videos = []
 			vodData = json.loads(rsp.text)
-			result['list'] = vodData['list']
-			result = {'list': videos}
-			'''
+			for vod in vodData['data']['list']:
+				videos.append({
+					"vod_id": vod['id'],
+					"vod_name": vod['name'],
+					"vod_pic": vod['picture'],
+					"vod_remarks": vod['remarks']
+            	})
+			vodData = json.loads(rsp.text)		
+			result['list'] = videos
+		return result	
 
 	#分類
 	def categoryContent(self,tid,pg,filter,extend):
-		#https://m.mubai.link/filmClassifySearch?Pid=1&Sort=update_stamp&current=1
+		#https://m.mubai.link/filmClassifySearch?Pid=1&Sort=release_stamp&current=1
 		result = {}	
 		videos = []			
 		params = {
