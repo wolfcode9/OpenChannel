@@ -75,8 +75,7 @@ class Spider(Spider):
 	def categoryContent(self,tid,pg,filter,extend):
 		#https://m.mubai.link/filmClassifySearch?Pid=1&Sort=update_stamp&current=1
 		result = {}	
-		videos = []	
-		#url = f'{self.siteUrl}/api/filmClassifySearch?Pid={tid}&Sort=update_stamp&current={pg}'
+		videos = []			
 		params = {
 			"Pid": tid,
 			"current": pg,
@@ -88,7 +87,6 @@ class Spider(Spider):
 			"Area": extend.get("Area", "")
 		}
 		url = f'{self.siteUrl}/api/filmClassifySearch'
-		#rsp = self.fetch(url,params=params)
 		rsp = requests.get(url=url,params=params)
 
 		if rsp.text:
