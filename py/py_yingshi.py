@@ -4,6 +4,7 @@ import sys
 sys.path.append('..') 
 from base.spider import Spider
 import json
+import requests
 
 class Spider(Spider):
 	
@@ -68,10 +69,29 @@ class Spider(Spider):
 		return result		
 
 	#分類
+
 	def categoryContent(self,tid,pg,filter,extend):
-		result = {}		
-		url = f'{self.siteUrl}/ajax/data?mid=1&page={pg}&limit=35&tid={tid}&by=time'		
-		rsp = self.fetch(url)
+		result = {}
+		by = extend.get("by", "time")
+		cls = extend.get("class", "")
+		area = extend.get("area", "")
+		lang = extend.get("lang", "")
+		year = extend.get("year", "")
+		params = {
+			"mid": "1",
+			"by": by,
+			"tid": tid,
+			"page": pg,
+			"class": cls,
+			"year": year,
+			"lang": lang,
+			"area": area,
+			"limit": "35"
+		}
+		url = f'{self.siteUrl}/ajax/data?'
+		rsp = requests.get(url=url,params=params)
+		#url = f'{self.siteUrl}/ajax/data?mid=1&page={pg}&limit=35&tid={tid}&by=time'		
+		#rsp = self.fetch(url)
 		if rsp.text:
 			vodData = json.loads(rsp.text)
 			result['list'] = vodData['list']
