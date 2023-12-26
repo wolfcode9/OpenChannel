@@ -72,12 +72,20 @@ class Spider(Spider):
 
 	#分類
 	def categoryContent(self,tid,pg,filter,extend):
-		result = {}		
+		result = {}	
+		videos = []	
 		url = f'{self.siteUrl}/api/filmClassifySearch?Pid={tid}&Sort=update_stamp&current={pg}'
 		rsp = self.fetch(url)
 		if rsp.text:
 			vodData = json.loads(rsp.text)
-			result['list'] = vodData['data']['list']
+			for vod in vodData:
+				videos.append({
+					"vod_id": vod['id'],
+					"vod_name": vod['name'],
+					"vod_pic": vod['picture'],
+					"vod_remarks": vod['remarks']
+            	})
+			result['list'] = videos
 			result['page'] = pg
 			result['pagecount'] = vodData['page']['pageCount']
 			result['limit'] = 35
