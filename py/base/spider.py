@@ -15,6 +15,7 @@ class Spider(metaclass=ABCMeta):
         else:
             cls._instance = super().__new__(cls)
             return cls._instance
+
     @abstractmethod
     def init(self,extend=""):pass
     @abstractmethod
@@ -37,22 +38,27 @@ class Spider(metaclass=ABCMeta):
     def manualVideoCheck(self):pass
     @abstractmethod   
     def getName(self):pass
+
     def getDependence(self):
         return []
+    
     def regStr(self,src,reg,group=1):
         m = re.search(reg, src)
         src = ''
         if m :
             src = m.group(group)
         return src
+    
     def str2json(self,str):
         return json.loads(str)
+    
     def cleanText(self,src):
         clean = re.sub('[\U0001F600-\U0001F64F\U0001F300-\U0001F5FF\U0001F680-\U0001F6FF\U0001F1E0-\U0001F1FF]', '', src)
         return clean
-    def fetch(self,url,headers={},cookies=""):
+    
+    def fetch(self,url,headers={},cookies="",params={}):
         try:
-            rsp = requests.get(url,headers=headers,cookies=cookies)
+            rsp = requests.get(url,headers=headers,cookies=cookies,params=params)
             rsp.raise_for_status()  
             rsp.encoding='utf-8'
             return rsp
@@ -63,19 +69,24 @@ class Spider(metaclass=ABCMeta):
         rsp = requests.post(url,data=data,headers=headers,cookies=cookies)
         rsp.encoding='utf-8'
         return rsp
+    
     def postJson(self,url,json,headers={},cookies={}):
         rsp = requests.post(url,json=json,headers=headers,cookies=cookies)
         rsp.encoding='utf-8'
         return rsp
+    
     def html(self,content):
         return etree.HTML(content)
+    
     def xpText(self,root,expr):
         ele = root.xpath(expr)
         if len(ele) == 0:
             return ''
         else:
             return ele[0]
+        
     def loadModule(self,name,fileName):
         return SourceFileLoader(name, fileName).load_module()
+    
     def test(self):
         print('please override the test function')

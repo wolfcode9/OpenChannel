@@ -84,7 +84,8 @@ class Spider(Spider):
 			"area": extend.get("area", "")			
 		}
 		url = f'{self.siteUrl}/ajax/data'
-		rsp = requests.get(url=url,params=params)		
+		rsp = self.fetch(url,params=params)		
+		#rsp = requests.get(url=url,params=params)		
 		if rsp.text:
 			vodData = json.loads(rsp.text)
 			result['list'] = vodData['list']
