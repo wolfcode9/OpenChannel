@@ -76,7 +76,7 @@ class Spider(Spider):
 			"tid": tid,
 			"page": pg,
 			"limit": "35",
-			"mid": "1",			
+			"mid": "1",
 			"by": "time",
 			"class": extend.get("class", ""),
 			"year": extend.get("year", ""),
@@ -84,7 +84,7 @@ class Spider(Spider):
 			"area": extend.get("area", "")			
 		}
 		url = f'{self.siteUrl}/ajax/data'		
-		rsp = requests.get(url=url,params=params) #self.fetch(url=url,params=params)
+		rsp = requests.get(url=url,params=params)
 		if rsp.text:
 			vodData = json.loads(rsp.text)
 			result['list'] = vodData['list']

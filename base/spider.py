@@ -45,31 +45,45 @@ class Spider(metaclass=ABCMeta):
             src = m.group(group)
         return src
     def str2json(self,str):
+
         return json.loads(str)
     def cleanText(self,src):
         clean = re.sub('[\U0001F600-\U0001F64F\U0001F300-\U0001F5FF\U0001F680-\U0001F6FF\U0001F1E0-\U0001F1FF]', '', src)
         return clean
-    def fetch(self,url,headers={},cookies="",params={}):
+    
+    def fetch(self, url, headers=None, cookies=None, params=None):
+        if headers is None:
+            headers = {}
+        if cookies is None:
+            cookies = {}
+        if params is None:
+            params = {}
         rsp = requests.get(url,headers=headers,cookies=cookies,params=params)
         rsp.encoding='utf-8'
         return rsp
+    
     def post(self,url,data,headers={},cookies={}):
         rsp = requests.post(url,data=data,headers=headers,cookies=cookies)
         rsp.encoding='utf-8'
         return rsp
+    
     def postJson(self,url,json,headers={},cookies={}):
         rsp = requests.post(url,json=json,headers=headers,cookies=cookies)
         rsp.encoding='utf-8'
         return rsp
+    
     def html(self,content):
         return etree.HTML(content)
+    
     def xpText(self,root,expr):
         ele = root.xpath(expr)
         if len(ele) == 0:
             return ''
         else:
             return ele[0]
+        
     def loadModule(self,name,fileName):
         return SourceFileLoader(name, fileName).load_module()
+    
     def test(self):
         print('please override the test function')
