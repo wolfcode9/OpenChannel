@@ -79,7 +79,7 @@ class Spider(Spider):
 		params = {
 			"Pid": tid,
 			"current": pg,
-			"Sort": extend.get("Sort", "update_stamp"),
+			"Sort": extend.get("Sort", "release_stamp"),
 			"Category": extend.get("Category", ""),
 			"Plot": extend.get("Plot", ""),			
 			"Year": extend.get("Year", ""),
