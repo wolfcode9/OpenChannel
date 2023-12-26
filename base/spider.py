@@ -55,7 +55,7 @@ class Spider(metaclass=ABCMeta):
         
     def fetch(self, url, headers={}, cookies={}, params={}):        
         rsp = requests.get(url,headers=headers,cookies=cookies,params=params)
-        rsp.encoding='utf-8'
+        #rsp.encoding='utf-8'
         return rsp
     
     def post(self,url,data,headers={},cookies={}):
