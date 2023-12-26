@@ -72,6 +72,7 @@ class Spider(Spider):
 
 	#分類
 	def categoryContent(self,tid,pg,filter,extend):
+		#https://m.mubai.link/filmClassifySearch?Pid=1&Sort=update_stamp&current=1
 		result = {}	
 		videos = []	
 		url = f'{self.siteUrl}/api/filmClassifySearch?Pid={tid}&Sort=update_stamp&current={pg}'
@@ -106,8 +107,8 @@ class Spider(Spider):
 			vodData = vodData['data']['detail']			
 			for v in vodData['playList'][0]:				
 				playUrls.append('#'.join([v['episode'] + '$' + v['link']]))
-						
-			vod_play_from = '$$$'.join(vodData['playFrom'])
+
+			vod_play_from = 'liangzi$$$lzm3u8#' #'$$$'.join(vodData['playFrom'])
 			vod_play_url = '$$$'.join(playUrls)
 			vodeos.append ({
 				"vod_id": id,
@@ -176,10 +177,16 @@ class Spider(Spider):
 		return [200, "video/MP2T", action, ""]
 
 
-debug = 0
+debug = 1
 if debug:
 	from pprint import pprint
-	g = Spider()
-	d = g.searchContent('三大','')
-	pprint(d)
+	sp = Spider()
+	match debug:
+		case 1:
+			pprint(sp.detailContent(['78594']))
+		case 2:			
+			pprint(sp.searchContent('三大',''))
+		
+		case _:
+			pass	
 

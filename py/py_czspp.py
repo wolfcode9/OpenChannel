@@ -220,10 +220,12 @@ class Spider(Spider):
         action = {}
         return [200, "video/MP2T", action, ""]
 
-debug = 1
-
+debug = 0
 if debug:
 	from pprint import pprint
-	g = Spider()
-	d = g.detailContent(['5194'])
-	pprint(d)
+	sp = Spider()
+	match debug:
+		case 1:			
+			pprint(sp.detailContent(['5194']))
+		case _:
+			pass	
