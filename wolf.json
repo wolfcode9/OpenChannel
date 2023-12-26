@@ -97,8 +97,8 @@
       "changeable": 1
     },    
     {
-      "key": "獨播",
-      "name": "獨播",
+      "key": "獨播庫",
+      "name": "獨播庫",
       "type": 3,
       "api": "csp_XPathMacFilter",
       "searchable": 1,
