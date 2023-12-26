@@ -1,6 +1,28 @@
 {
   "1": [
     {
+      "key": "Sort",
+      "name": "排序",
+      "value": [
+        {
+          "n": "时间排序",
+          "v": "update_stamp"
+        },
+        {
+          "n": "人气排序",
+          "v": "hits"
+        },
+        {
+          "n": "最新上映",
+          "v": "score"
+        },
+        {
+          "n": "评分排序",
+          "v": "release_stamp"
+        }
+      ]
+    },
+    {
       "key": "Category",
       "name": "类型",
       "value": [
@@ -49,29 +71,7 @@
           "v": "45"
         }
       ]
-    },
-    {
-      "key": "Sort",
-      "name": "排序",
-      "value": [
-        {
-          "n": "时间排序",
-          "v": "update_stamp"
-        },
-        {
-          "n": "人气排序",
-          "v": "hits"
-        },
-        {
-          "n": "最新上映",
-          "v": "score"
-        },
-        {
-          "n": "评分排序",
-          "v": "release_stamp"
-        }
-      ]
-    },
+    },   
     {
       "key": "Plot",
       "name": "剧情",
