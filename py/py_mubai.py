@@ -20,8 +20,7 @@ class Spider(Spider):
 		self.extend = extend
 	
 	#主頁
-	def homeContent(self,filter):
-		#<a data-v-b4028804="" href="/filmClassify?Pid=1">电影</a>
+	def homeContent(self,filter):		
 		result = {}		
 		classes = []		
 		cateManual = {
@@ -34,12 +33,12 @@ class Spider(Spider):
 			classes.append({'type_name': k,'type_id': cateManual[k]})			
 
 		result['class'] = classes
-		'''
+		
 		if self.extend:
 			rsp = self.fetch(self.extend)
 			if rsp.text:
 				result['filters'] = json.loads(rsp.text)
-		'''
+
 		return result
 	
 	#推薦頁
