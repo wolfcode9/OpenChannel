@@ -60,7 +60,7 @@ class Spider(Spider):
 						"vod_pic": vod['picture'],
 						"vod_remarks": vod['remarks']
 					})
-			vodData = json.loads(rsp.text)		
+							
 			result['list'] = videos
 		return result	
 
