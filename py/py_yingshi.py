@@ -69,7 +69,6 @@ class Spider(Spider):
 		return result		
 
 	#分類
-
 	def categoryContent(self,tid,pg,filter,extend):
 		#url = f'{self.siteUrl}/ajax/data?mid=1&page={pg}&limit=35&tid={tid}&by=time'		
 		result = {}	
@@ -84,8 +83,8 @@ class Spider(Spider):
 			"lang": extend.get("lang", ""),
 			"area": extend.get("area", "")			
 		}
-		url = f'{self.siteUrl}/ajax/data'
-		rsp = self.fetch(url=url,params=params)
+		url = f'{self.siteUrl}/ajax/data'		
+		rsp = requests.get(url=url,params=params) #self.fetch(url=url,params=params)
 		if rsp.text:
 			vodData = json.loads(rsp.text)
 			result['list'] = vodData['list']
