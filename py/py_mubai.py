@@ -108,7 +108,7 @@ class Spider(Spider):
 			for v in vodData['playList'][0]:				
 				playUrls.append('#'.join([v['episode'] + '$' + v['link']]))
 
-			vod_play_from = 'liangzi$$$' #'$$$'.join(vodData['playFrom'])
+			vod_play_from = '$$$'.join(['liangzi']) #'$$$'.join(vodData['playFrom'])
 			vod_play_url = '$$$'.join(playUrls)
 			vodeos.append ({
 				"vod_id": id,
@@ -117,7 +117,7 @@ class Spider(Spider):
 				"type_name": vodData['descriptor']['classTag'],
 				"vod_remarks": vodData['descriptor']['remarks'],
 				"vod_year": vodData['descriptor']['year'],
-				"vod_area": vodData['descriptor']['area'],				
+				"vod_area": vodData['descriptor']['area'],
 				"vod_actor": vodData['descriptor']['actor'],
 				"vod_director": vodData['descriptor']['director'],
 				"vod_content": vodData['descriptor']['content'],
