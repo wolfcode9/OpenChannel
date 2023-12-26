@@ -95,10 +95,10 @@ class Spider(Spider):
 		if rsp.text:
 			vodData = json.loads(rsp.text)
 			result['list'] = vodData['list']
-			result['page'] = pg
-			result['pagecount'] = vodData['pagecount']
-			result['limit'] = 35
-			result['total'] = vodData['total']
+			#result['page'] = pg
+			#result['pagecount'] = vodData['pagecount']
+			#result['limit'] = 35
+			#result['total'] = vodData['total']
 		return result 
 	
 	#詳情
