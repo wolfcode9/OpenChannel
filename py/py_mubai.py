@@ -94,16 +94,40 @@ class Spider(Spider):
 	
 	#詳情
 	def detailContent(self,array):
-		result = {}
-		tid = array[0]
+		#https://m.mubai.link/api/filmDetail?id=77886
+		result = {}		
+		id = array[0]
 		url = f"{self.siteUrl}/api/filmDetail?id={tid}"
 		rsp = self.fetch(url)
 		if rsp.text:			 
-			vodData = json.loads(rsp.text)	
-			result['list'] = vodData['data']['detail']			
-			
-		return result
-	
+			vodData = json.loads(rsp.text)
+			vodData = vodData['data']['detail']
+			vodeo = {
+				"vod_id": id,
+				"vod_name": vodData['name'],
+				"vod_pic":  vodData['picture'],
+				"type_name": vodData['descriptor']['classTag'],
+				"vod_remarks": vodData['descriptor']['remarks'],
+				"vod_year": vodData['descriptor']['year'],
+				"vod_area": vodData['descriptor']['area'],				
+				"vod_actor": vodData['descriptor']['actor'],
+				"vod_director": vodData['descriptor']['director'],
+				"vod_content": vodData['descriptor']['content']
+			}	
+			vod_play_from = '$$$'.join(vodData['playFrom'])
+			playList = []
+			vodList = vodData['playList']
+			for v in vodList:
+				vodItems = []				
+				vodItems.append(v['episode'] + "$" + v['link'])				
+				joinStr = '#'.join(vodItems)
+				playList.append(joinStr)			 
+			vod_play_url = '$$$'.join(playList)
+			vodeo['vod_play_from'] = vod_play_from
+			vodeo['vod_play_url'] = vod_play_url
+			result['list'] = vodeo
+		return result	
+	 
 	#搜索
 	def searchContent(self,key,quick):		
 		result = {}
@@ -142,11 +166,12 @@ class Spider(Spider):
 			'after':''
 		}
 		return [200, "video/MP2T", action, ""]
-
+'''
 if __name__ == "__main__":
 	from pprint import pprint
 	g = Spider()
 	d = g.categoryContent('1','1','','')
-	print(d)
-
+	for a in d['list']:
+		pprint(a['vod_id'])
+'''
 
