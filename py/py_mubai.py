@@ -27,7 +27,7 @@ class Spider(Spider):
 		classes = []		
 		cateManual = {
 			"電影": "1",
-			"劇集": "2",
+			"電視劇": "2",
 			"綜藝": "3",
 			"動漫": "4"			
 		}		
