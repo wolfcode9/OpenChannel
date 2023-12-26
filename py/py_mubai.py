@@ -106,10 +106,9 @@ class Spider(Spider):
 			urlList = []
 			vodItems = []
 			vodList = vodData['playList']
-			for list in vodList:
-				for v in list:
-					vodItems.append(v['episode'] + '$' + v['link'])					
-					joinStr = '#'.join(vodItems)
+			for v in vodList[0]:				
+				vodItems.append(v['episode'] + '$' + v['link'])					
+				joinStr = '#'.join(vodItems)
 			urlList.append(joinStr)
 			vod_play_from = '$$$'.join(vodData['playFrom'])
 			vod_play_url = '$$$'.join(urlList)
