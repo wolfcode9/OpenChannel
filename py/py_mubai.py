@@ -4,6 +4,7 @@ import sys
 sys.path.append('..') 
 from base.spider import Spider
 import json
+import requests
 
 class Spider(Spider):
 	
@@ -87,7 +88,8 @@ class Spider(Spider):
 			"Area": extend.get("Area", "")
 		}
 		url = f'{self.siteUrl}/api/filmClassifySearch'
-		rsp = self.fetch(url=url,params=params)		
+		#rsp = self.fetch(url=url,params=params)		
+		rsp = requests.get(url=url,params=params)
 		if rsp.text:
 			vodData = json.loads(rsp.text)
 			for vod in vodData['data']['list']:
