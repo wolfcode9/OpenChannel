@@ -20,7 +20,8 @@ class Spider(Spider):
 		self.extend = extend
 	
 	#主頁
-	def homeContent(self,filter):		
+	def homeContent(self,filter):
+		
 		result = {}		
 		classes = []		
 		cateManual = {
@@ -74,7 +75,20 @@ class Spider(Spider):
 		#https://m.mubai.link/filmClassifySearch?Pid=1&Sort=update_stamp&current=1
 		result = {}	
 		videos = []	
-		url = f'{self.siteUrl}/api/filmClassifySearch?Pid={tid}&Sort=update_stamp&current={pg}'
+		#url = f'{self.siteUrl}/api/filmClassifySearch?Pid={tid}&Sort=update_stamp&current={pg}'
+		params = {
+			"Pid": tid,
+			"current": pg,
+			"Sort": extend.get("Sort", "update_stamp"),
+			"Category": extend.get("Category", ""),
+			"Plot": extend.get("Plot", ""),			
+			"Year": extend.get("Year", ""),
+			"Language": extend.get("Language", ""),
+			"Area": extend.get("Area", "")
+		}
+		url = f'{self.siteUrl}/api/filmClassifySearch?'
+		rsp = self.fetch(url=url,params=params)
+
 		rsp = self.fetch(url)
 		if rsp.text:
 			vodData = json.loads(rsp.text)
