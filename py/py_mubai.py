@@ -95,38 +95,35 @@ class Spider(Spider):
 	#詳情
 	def detailContent(self,array):
 		#https://m.mubai.link/api/filmDetail?id=77886
-		result = {}
-		vodeo = []
+		result = {}		
 		id = array[0]
 		url = f"{self.siteUrl}/api/filmDetail?id={id}"
 		rsp = self.fetch(url)
-		if rsp.text:			 
+		if rsp.text:
+			playUrls = []			
+			vodeos = []
 			vodData = json.loads(rsp.text)
 			vodData = vodData['data']['detail']			
-			urlList = []
-			vodItems = []
-			vodList = vodData['playList']
-			for v in vodList[0]:				
-				vodItems.append(v['episode'] + '$' + v['link'])					
-				joinStr = '#'.join(vodItems)
-				urlList.append(joinStr)
-				vod_play_from = '$$$'.join(vodData['playFrom'])
-				vod_play_url = '$$$'.join(urlList)
-				vodeo.append ({
-					"vod_id": id,
-					"vod_name": vodData['name'],
-					"vod_pic":  vodData['picture'],
-					"type_name": vodData['descriptor']['classTag'],
-					"vod_remarks": vodData['descriptor']['remarks'],
-					"vod_year": vodData['descriptor']['year'],
-					"vod_area": vodData['descriptor']['area'],				
-					"vod_actor": vodData['descriptor']['actor'],
-					"vod_director": vodData['descriptor']['director'],
-					"vod_content": vodData['descriptor']['content'],
-					"vod_play_from" : vod_play_from,			
-					"vod_play_url" : vod_play_url
+			for v in vodData['playList'][0]:				
+				playUrls.append('#'.join([v['episode'] + '$' + v['link']]))
+						
+			vod_play_from = '$$$'.join(vodData['playFrom'])
+			vod_play_url = '$$$'.join(playUrls)
+			vodeos.append ({
+				"vod_id": id,
+				"vod_name": vodData['name'],
+				"vod_pic":  vodData['picture'],
+				"type_name": vodData['descriptor']['classTag'],
+				"vod_remarks": vodData['descriptor']['remarks'],
+				"vod_year": vodData['descriptor']['year'],
+				"vod_area": vodData['descriptor']['area'],				
+				"vod_actor": vodData['descriptor']['actor'],
+				"vod_director": vodData['descriptor']['director'],
+				"vod_content": vodData['descriptor']['content'],
+				"vod_play_from" : vod_play_from,			
+				"vod_play_url" : vod_play_url
 				})
-			result['list'] = vodeo
+			result['list'] = vodeos
 		return result	
 	 
 	#搜索
