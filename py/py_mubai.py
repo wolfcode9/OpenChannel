@@ -177,7 +177,7 @@ class Spider(Spider):
 		return [200, "video/MP2T", action, ""]
 
 
-debug = 1
+debug = 0
 if debug:
 	from pprint import pprint
 	sp = Spider()
