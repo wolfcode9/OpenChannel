@@ -53,9 +53,9 @@ class Spider(metaclass=ABCMeta):
         clean = re.sub('[\U0001F600-\U0001F64F\U0001F300-\U0001F5FF\U0001F680-\U0001F6FF\U0001F1E0-\U0001F1FF]', '', src)
         return clean
         
-    def fetch(self, url, headers={}, cookies={}, params={}):        
-        rsp = requests.get(url,headers=headers,cookies=cookies,params=params)
-        #rsp.encoding='utf-8'
+    def fetch(self, url, headers={}, cookies={}):        
+        rsp = requests.get(url,headers=headers,cookies=cookies)
+        rsp.encoding='utf-8'
         return rsp
     
     def post(self,url,data,headers={},cookies={}):

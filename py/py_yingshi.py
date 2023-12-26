@@ -4,6 +4,7 @@ import sys
 sys.path.append('..') 
 from base.spider import Spider
 import json
+import requests
 
 class Spider(Spider):
 	
@@ -83,7 +84,7 @@ class Spider(Spider):
 			"area": extend.get("area", "")			
 		}
 		url = f'{self.siteUrl}/ajax/data'
-		rsp = self.fetch(url,params=params)		
+		rsp = requests.get(url=url,params=params)		
 		if rsp.text:
 			vodData = json.loads(rsp.text)
 			result['list'] = vodData['list']
