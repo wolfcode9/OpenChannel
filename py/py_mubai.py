@@ -119,7 +119,7 @@ class Spider(Spider):
 				"vod_actor": vodData['descriptor']['actor'],
 				"vod_director": vodData['descriptor']['director'],
 				"vod_content": vodData['descriptor']['content'],
-				"vod_play_from" : 'liangzi', #'$$$'.join(vodData['playFrom']),			
+				"vod_play_from" : '$$$'.join(['liangzi']), #'$$$'.join(vodData['playFrom']),			
 				"vod_play_url" : '$$$'.join(playUrls)
 				})
 			result['list'] = vodeos
