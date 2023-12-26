@@ -31,6 +31,15 @@
 	  "filterable": 1,
 	  "ext": "https://raw.githubusercontent.com/wolfcode9/OpenChannel/main/json/yingshi.json"
     },
+	{
+      "key": "csp_Cs1369",
+      "name": "996影院",
+      "type": 3,
+      "api": "csp_Cs1369",
+      "searchable": 1,
+      "changeable": 1,
+      "categories": ["電影","電視劇","動漫"]
+    },
     {
       "key": "py_mubai",
       "name": "慕白(PY)",
@@ -68,15 +77,6 @@
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1      
-    },
-    {
-      "key": "csp_Cs1369",
-      "name": "996影院",
-      "type": 3,
-      "api": "csp_Cs1369",
-      "searchable": 1,
-      "changeable": 1,
-      "categories": ["電影","電視劇","動漫"]
     },
     {
       "key": "drpy_js_農民",
@@ -175,24 +175,6 @@
          "港台動漫",
          "其他動漫"
       ]
-    },
-    {
-      "key": "csp_Jianpian",
-      "name": "賤賤",
-      "type": 3,
-      "api": "csp_Jianpian",
-      "searchable": 1,
-      "changeable": 1,
-      "ext": "https://fm.t4tv.hz.cz/json/jianpian.json"
-    },
-    {
-      "key": "五五",
-      "name": "五五",
-      "type": 3,
-      "api": "https://fongmi.cachefly.net/FongMi/CatVodOpen/main/open/555dy_open.js",
-      "searchable": 1,
-      "changeable": 1,
-      "categories": ["電影","劇集","綜藝","動漫"]
     },
     {
       "key": "快看",

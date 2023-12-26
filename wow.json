@@ -40,17 +40,15 @@
       "changeable": 1,
       "url": "https://www.histar.tv/"
     },
-    {
-      "key":"csp_trj",
-      "name":"唐人街",
-      "type":3,
-      "api":"csp_Tangrenjie",
-      "searchable":1,
-      "quickSearch":1,      
-      "url": "https://www.tangrenjie.tv/",
-      "jar": "https://raw.githubusercontent.com/wolfcode9/OpenChannel/main/jar/Yoursmile.jar"
+	{
+      "key": "csp_Cs1369",
+      "name": "996影院",
+      "type": 3,
+      "api": "csp_Cs1369",
+      "searchable": 1,
+      "changeable": 1,
+      "categories": ["電影","電視劇","動漫"]
     },
-    {
       "key": "csp_Czsapp",
       "name": "廠長",
       "type": 3,
@@ -60,15 +58,6 @@
       "quickSearch": 1,      
       "ext": "https://www.czzy33.com/",
 	    "jar": "https://raw.githubusercontent.com/wolfcode9/OpenChannel/main/jar/Yoursmile.jar"
-    },
-    {
-      "key": "csp_Cs1369",
-      "name": "996影院",
-      "type": 3,
-      "api": "csp_Cs1369",
-      "searchable": 1,
-      "changeable": 1,
-      "categories": ["電影","電視劇","動漫"]
     },
     {
       "key": "drpy_js_農民",
@@ -163,24 +152,6 @@
          "港台動漫",
          "其他動漫"
       ]
-    },
-    {
-      "key": "賤賤",
-      "name": "賤賤",
-      "type": 3,
-      "api": "csp_Jianpian",
-      "searchable": 1,
-      "changeable": 1,
-      "ext": "https://fm.t4tv.hz.cz/json/jianpian.json"
-    },
-    {
-      "key": "五五",
-      "name": "五五",
-      "type": 3,
-      "api": "https://fongmi.cachefly.net/FongMi/CatVodOpen/main/open/555dy_open.js",
-      "searchable": 1,
-      "changeable": 1,
-      "categories": ["電影","劇集","綜藝","動漫"]
     },
     {
       "key": "快看",
