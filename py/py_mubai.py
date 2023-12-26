@@ -44,10 +44,9 @@ class Spider(Spider):
 		return result
 	
 	#推薦頁
-	def homeVideoContent(self):
-		#
+	def homeVideoContent(self):		
 		result = {}
-		url = 'https://m.mubai.link/api/index'
+		url = f'{self.siteUrl}/api/index'
 		rsp = self.fetch(url)
 		if rsp.text:
 			videos = []
@@ -60,7 +59,7 @@ class Spider(Spider):
 						"vod_pic": vod['picture'],
 						"vod_remarks": vod['remarks']
 					})
-							
+
 			result['list'] = videos
 		return result	
 
