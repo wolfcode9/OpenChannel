@@ -116,6 +116,7 @@ class Spider(Spider):
 			}	
 			vod_play_from = '$$$'.join(vodData['playFrom'])
 			vodeo['vod_play_from'] = vod_play_from
+			vodeo['vod_play_url'] = ''
 			'''
 			playList = []
 			vodList = vodData['playList']
@@ -171,7 +172,7 @@ class Spider(Spider):
 		}
 		return [200, "video/MP2T", action, ""]
 
-debug = 0
+debug = 1
 
 if debug:
 	from pprint import pprint
