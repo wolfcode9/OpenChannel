@@ -45,13 +45,14 @@ class Spider(Spider):
 	
 	#推薦頁
 	def homeVideoContent(self):
-		result = {}		
-		url = f'https://m.mubai.link/filmClassifySearch?Pid=1&Sort=release_stamp&current=1'
+		#
+		result = {}
+		url = 'https://m.mubai.link/api/index'
 		rsp = self.fetch(url)
 		if rsp.text:
 			videos = []
 			vodData = json.loads(rsp.text)
-			for vod in vodData['data']['list']:
+			for vod in vodData['data']['content']['movies']:
 				videos.append({
 					"vod_id": vod['id'],
 					"vod_name": vod['name'],
