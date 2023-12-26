@@ -102,7 +102,17 @@ class Spider(Spider):
 		rsp = self.fetch(url)
 		if rsp.text:			 
 			vodData = json.loads(rsp.text)
-			vodData = vodData['data']['detail']
+			vodData = vodData['data']['detail']			
+			urlList = []
+			vodItems = []
+			vodList = vodData['playList']
+			for list in vodList:
+				for v in list:
+					vodItems.append(v['episode'] + '$' + v['link'])					
+					joinStr = '#'.join(vodItems)
+			urlList.append(joinStr)
+			vod_play_from = '$$$'.join(vodData['playFrom'])
+			vod_play_url = '$$$'.join(urlList)
 			vodeo.append ({
 				"vod_id": id,
 				"vod_name": vodData['name'],
@@ -114,24 +124,10 @@ class Spider(Spider):
 				"vod_actor": vodData['descriptor']['actor'],
 				"vod_director": vodData['descriptor']['director'],
 				"vod_content": vodData['descriptor']['content'],
-				"vod_play_from" : "",
-				"vod_play_from" : "",
-				"vod_play_url" : ""
+				"vod_play_from" : vod_play_from,			
+				"vod_play_url" : vod_play_url
 			})
-			
-			'''
-			playList = []
-			vodList = vodData['playList']
-			for v in vodList:
-				vodItems = []				
-				vodItems.append(str(v[0]) + '$' + str(v[1]))
-				joinStr = '#'.join(vodItems)
-				playList.append(joinStr)
 
-			vod_play_url = '$$$'.join(playList)
-			
-			vodeo['vod_play_url'] = vod_play_url
-			'''
 			result['list'] = vodeo
 		return result	
 	 
@@ -174,7 +170,7 @@ class Spider(Spider):
 		}
 		return [200, "video/MP2T", action, ""]
 
-debug = 0
+debug = 1
 
 if debug:
 	from pprint import pprint
