@@ -80,7 +80,7 @@ class Spider(Spider):
 			vodData = json.loads(rsp.text)
 			for vod in vodData:
 				videos.append({
-					"vod_id": vod['id'],
+					"vod_id": '', #vod['id'],
 					"vod_name": vod['name'],
 					"vod_pic": vod['picture'],
 					"vod_remarks": vod['remarks']
@@ -142,11 +142,11 @@ class Spider(Spider):
 			'after':''
 		}
 		return [200, "video/MP2T", action, ""]
-'''
+
 if __name__ == "__main__":
 	from pprint import pprint
 	g = Spider()
 	d = g.categoryContent('1','1','','')
 	print(d)
-'''
+
 
