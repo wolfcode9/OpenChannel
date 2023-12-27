@@ -116,8 +116,7 @@ class Spider(Spider):
                 name = tA.xpath('./text()')[0]                
                 url = self.regStr(href, '/v_play/(\\S+).html')
                 playUrls.append(name + "$" + url)
-
-        vod = {
+        vod  = [{
             "vod_id": id,
             "vod_name": title,
             "vod_pic": pic,
@@ -130,7 +129,7 @@ class Spider(Spider):
             "vod_content": detail,
             'vod_play_from' : '廠長',
             "vod_play_url" : '#'.join(playUrls)
-        }
+        }]
         result = {'list': vod}
         return result
 
@@ -156,7 +155,7 @@ class Spider(Spider):
                 "vod_pic": pic,
                 "vod_remarks": remark
             })
-            
+
         result = {'list': videos}
         return result    
 
@@ -210,8 +209,6 @@ class Spider(Spider):
         action = {}
         return [200, "video/MP2T", action, ""]
 
-
-
 '''
 debug = 1
 if debug:
@@ -224,4 +221,4 @@ if debug:
 			pprint(sp.searchContent('三大',''))					
 		case 3:		
 			pprint(sp.categoryContent('1','1','',{}))           
-'''     
+'''
