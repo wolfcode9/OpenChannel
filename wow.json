@@ -351,14 +351,6 @@
       "api": "csp_Dm84",
       "searchable": 1,
       "changeable": 1
-    },
-	  {
-      "key": "異界",
-      "name": "異界 | 動漫",
-      "type": 3,
-      "api": "csp_Ysj",
-      "searchable": 1,
-      "changeable": 1
     }
   ],
   "doh": 
