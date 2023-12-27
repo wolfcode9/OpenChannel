@@ -10,10 +10,6 @@ class Spider(Spider):
 
     siteUrl = "https://www.czzy88.com"
 
-    #cookie cf_clearance 會過期
-    headers = {"user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"}
-    cookie = {"cf_clearance":"km3JnG5xXYksPTK9mj8NOcke_vdrsr7kMosxjCU5u.4-1703661075-0-2-3b2475e4.bc52cd1f.365a419b-150.0.0;"}
-
     def getName(self):
         return "廠長"
 
@@ -133,9 +129,18 @@ class Spider(Spider):
         result = {'list': vod}
         return result
 
-    def searchContent(self, key, quick):        
+    def searchContent(self, key, quick):
         url = f'{self.siteUrl}/xssearch?q={key}'
-        rsp = self.fetch(url,headers=self.headers,cookies=self.cookie)        
+        #cookie cf_clearance 會過期
+        headers = {
+            "authority": "www.czzy88.com",
+            "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+            "cookie" : "myannoun=1; cf_clearance=km3JnG5xXYksPTK9mj8NOcke_vdrsr7kMosxjCU5u.4-1703661075-0-2-3b2475e4.bc52cd1f.365a419b-150.0.0; Hm_lvt_42c5653f32b0693192746ff4569273a9=1703671211,1703672243,1703675340,1703677533; Hm_lvt_869bab0ee2ff72889d0045aa7b4f3ee8=1703671211,1703672243,1703675340,1703677533; Hm_lvt_a3850b4650b886fb75385d4422e3b3b5=1703671211,1703672243,1703675340,1703677533; Hm_lvt_69e6fc4e315ecad03923d5483d213857=1703671211,1703672243,1703675340,1703677533; Hm_lpvt_69e6fc4e315ecad03923d5483d213857=1703677560; Hm_lpvt_869bab0ee2ff72889d0045aa7b4f3ee8=1703677560; Hm_lpvt_42c5653f32b0693192746ff4569273a9=1703677560; Hm_lpvt_a3850b4650b886fb75385d4422e3b3b5=1703677560",
+            "Referer": "https://www.czzy88.com/movie/5359.html",
+            "Sec-Ch-Ua-Platform":"Windows"
+        }    
+        
+        rsp = self.fetch(url,headers=headers)        
         root = self.html(self.cleanText(rsp.text))        
         vList = root.xpath("//div[contains(@class,'mi_ne_kd')]/ul/li/a")
         vod = []
@@ -219,5 +224,4 @@ if debug:
 			pprint(sp.detailContent(['8813']))
 		case 2:			
 			pprint(sp.searchContent('毒舌律师',None)) 
-
 '''
