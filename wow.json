@@ -40,6 +40,17 @@
       "changeable": 1,
       "url": "https://www.histar.tv/"
     },
+    {
+	  "key":"愛迪",
+	  "name":"愛迪",
+	  "type":3,
+	  "api":"csp_AppYsV2",
+	  "searchable":1,
+	  "quickSearch":1,
+	  "filterable":1,
+	  "ext":"https://api123.adys.app/xgapp.php/v3/",
+	  "categories": ["電影","連續劇","綜藝","櫻花動漫","紀錄片"]
+	},
 	{
       "key": "csp_Cs1369",
       "name": "996影院",
