@@ -84,8 +84,7 @@ class Spider(Spider):
         result['total'] = 999999
         return result    
 
-    def detailContent(self, array): 
-        result = {}
+    def detailContent(self, array):        
         tid = array[0]
         url = 'https://www.czzy88.com/movie/{0}.html'.format(tid)
         rsp = self.fetch(url)
@@ -111,7 +110,11 @@ class Spider(Spider):
             "vod_actor": actor,
             "vod_director": director,
             "vod_content": detail
-        }        
+        }   
+        vod_play_from = '$$$'
+        playFrom = ['廠長']
+        vod_play_from = vod_play_from.join(playFrom)
+        vod_play_url = '$$$'
         playList = []
         vodList = root.xpath("//div[@class='paly_list_btn']")
         for vl in vodList:
@@ -122,12 +125,18 @@ class Spider(Spider):
                 name = tA.xpath('./text()')[0]
                 tId = self.regStr(href, '/v_play/(\\S+).html')
                 vodItems.append(name + "$" + tId)
-
-            joinStr = '#'.join(vodItems)
+            joinStr = '#'
+            joinStr = joinStr.join(vodItems)
             playList.append(joinStr)
-        vod['vod_play_from'] = '廠長'
-        vod['vod_play_url'] = '#'.join(playList)
-        result['list'] = vod
+        vod_play_url = vod_play_url.join(playList)
+
+        vod['vod_play_from'] = vod_play_from
+        vod['vod_play_url'] = vod_play_url
+        result = {
+            'list': [
+                vod
+            ]
+        }        
         return result
 
     def searchContent(self, key, quick):
