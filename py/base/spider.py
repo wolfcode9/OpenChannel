@@ -62,7 +62,7 @@ class Spider(metaclass=ABCMeta):
         return rsp
         
             
-    def post(self,url,data,headers={},cookies={}):
+    def post(self,url,data,headers={},cookies=''):
         rsp = requests.post(url,data=data,headers=headers,cookies=cookies)
         rsp.encoding='utf-8'
         return rsp

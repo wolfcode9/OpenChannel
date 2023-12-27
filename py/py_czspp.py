@@ -11,10 +11,8 @@ class Spider(Spider):
     siteUrl = "https://www.czzy88.com"
 
     #cookie cf_clearance 會過期
-    headers = {	
-        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
-        "cookie": "cf_clearance=km3JnG5xXYksPTK9mj8NOcke_vdrsr7kMosxjCU5u.4-1703661075-0-2-3b2475e4.bc52cd1f.365a419b-150.0.0;"
-    }
+    headers = {"user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"}
+    cookie = {"cf_clearance":"km3JnG5xXYksPTK9mj8NOcke_vdrsr7kMosxjCU5u.4-1703661075-0-2-3b2475e4.bc52cd1f.365a419b-150.0.0;"}
 
     def getName(self):
         return "廠長"
@@ -137,7 +135,7 @@ class Spider(Spider):
 
     def searchContent(self, key, quick):        
         url = f'{self.siteUrl}/xssearch?q={key}'
-        rsp = self.fetch(url,headers=self.headers)        
+        rsp = self.fetch(url,headers=self.headers,cookies=self.cookie)        
         root = self.html(self.cleanText(rsp.text))        
         vList = root.xpath("//div[contains(@class,'mi_ne_kd')]/ul/li/a")
         vod = []
@@ -180,8 +178,7 @@ class Spider(Spider):
         key = self.regStr(html, pat, 2)
         iv = self.regStr(html, pat, 3)
         print(f'key={key},iv={iv}')
-        decontent = self.parseCBC(base64.b64decode(content), key, iv).decode()
-        
+        decontent = self.parseCBC(base64.b64decode(content), key, iv).decode()        
         urlPat = 'video: \\{url: \\\"([^\\\"]+)\\\"'
         vttPat = 'subtitle: \\{url:\\\"([^\\\"]+\\.vtt)\\\"'
         str3 = self.regStr(decontent, urlPat)
@@ -221,6 +218,6 @@ if debug:
 		case 1:
 			pprint(sp.detailContent(['8813']))
 		case 2:			
-			pprint(sp.searchContent('黑暗荣耀第二季',None)) 
+			pprint(sp.searchContent('毒舌律师',None)) 
 
 '''
