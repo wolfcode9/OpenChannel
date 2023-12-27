@@ -27,9 +27,8 @@ class Spider(Spider):
 		vData = json.loads(rsp.text)
 		vod = []
 		for v in vData['subjects']:
-			vod.append({
-				"vod_id": ("msearch:" + v['title']),
-				"vod_name":v['title'],
+			vod.append({				
+				"vod_name": v['title'],
 				"vod_pic": v['cover'],
 				"vod_remarks": v['rate']
 			})
