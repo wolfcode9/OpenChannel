@@ -12,8 +12,7 @@ class Spider(Spider):
 
     headers = {	
         "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
-        "cookie": "cf_clearance=8X8HLfjHfIAt68XoLW1ngF8KUKtg5en195Zo_BccAXY-1703257212-0-2-9d800f49.1493b630.49fd95ce-150.0.0;",
-        "Referer": siteUrl
+        "cookie": "cf_clearance=8X8HLfjHfIAt68XoLW1ngF8KUKtg5en195Zo_BccAXY-1703257212-0-2-9d800f49.1493b630.49fd95ce-150.0.0;"        
     }
     def getName(self):
         return "廠長"
@@ -135,8 +134,7 @@ class Spider(Spider):
         result['list'] = vodeos
         return result
 
-    def searchContent(self, key, quick):
-       
+    def searchContent(self, key, quick):        
         url = f'{self.siteUrl}/xssearch?q={key}'
         rsp = self.fetch(url,headers=self.headers)
         root = self.html(self.cleanText(rsp.text))
