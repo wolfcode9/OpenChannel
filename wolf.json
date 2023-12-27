@@ -173,8 +173,8 @@
       ]
     },
     {
-      "key": "kkys_open",",
-      "name": "kkys_open",",
+      "key": "kkys_open",
+      "name": "kkys_open",
       "type": 3,
       "api": "https://fongmi.cachefly.net/FongMi/CatVodOpen/main/open/kkys_open.js",
       "searchable": 1,
