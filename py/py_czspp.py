@@ -6,8 +6,15 @@ from base.spider import Spider
 import base64
 from Crypto.Cipher import AES
 
-class Spider(Spider):    
-    
+class Spider(Spider):
+
+    siteUrl = "https://www.czzy88.com"
+
+    headers = {	
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+        "cookie": "cf_clearance=8X8HLfjHfIAt68XoLW1ngF8KUKtg5en195Zo_BccAXY-1703257212-0-2-9d800f49.1493b630.49fd95ce-150.0.0;",
+        "Referer": siteUrl
+    }
     def getName(self):
         return "廠長"
 
@@ -37,7 +44,7 @@ class Spider(Spider):
         return result
 
     def homeVideoContent(self):
-        rsp = self.fetch("https://www.czzy88.com")
+        rsp = self.fetch(self.siteUrl)
         root = self.html(self.cleanText(rsp.text))
         aList = root.xpath("//div[@class='mi_btcon']//ul/li")
         videos = []
@@ -59,8 +66,8 @@ class Spider(Spider):
         return result
 
     def categoryContent(self, tid, pg, filter, extend):
-        result = {}
-        url = 'https://www.czzy88.com/{0}/page/{1}'.format(tid, pg)
+        result = {}        
+        url = f'{self.siteUrl}/{tid}/page/{pg}'
         rsp = self.fetch(url)
         root = self.html(self.cleanText(rsp.text))
         aList = root.xpath("//div[contains(@class,'mi_cont')]//ul/li")
@@ -86,13 +93,13 @@ class Spider(Spider):
 
     def detailContent(self, array): 
         result = {}
-        tid = array[0]
-        url = 'https://www.czzy88.com/movie/{0}.html'.format(tid)
+        id = array[0]
+        url = f'{self.siteUrl}/movie/{id}.html'
         rsp = self.fetch(url)
         root = self.html(self.cleanText(rsp.text))
         node = root.xpath("//div[@class='dyxingq']")[0]
-        pic = node.xpath(".//div[@class='dyimg fl']/img/@src")[0]
         title = node.xpath('.//h1/text()')[0]
+        pic = node.xpath(".//div[@class='dyimg fl']/img/@src")[0]        
         remarks = node.xpath('.//li[contains(text(), "又名")]/a')[0].text
         year = node.xpath('.//li[contains(text(), "年份")]/a')[0].text
         area = node.xpath('.//li[contains(text(), "地区")]/a')[0].text
@@ -100,8 +107,19 @@ class Spider(Spider):
         actor = node.xpath('.//li[contains(text(), "主演")]/span')[0].text 
         director = node.xpath('.//li[contains(text(), "导演")]/span')[0].text        
         detail = root.xpath(".//div[@class='yp_context']//p/text()")[0]
-        vod = {
-            "vod_id": tid,
+        
+        playUrls = []
+        vodList = root.xpath("//div[@class='paly_list_btn']")
+        for v in vodList:            
+            aList = v.xpath('./a')
+            for tA in aList:
+                href = tA.xpath('./@href')[0]
+                name = tA.xpath('./text()')[0]                
+                url = self.regStr(href, '/v_play/(\\S+).html')
+                playUrls.append(name + "$" + url)
+
+        vodeos = [{
+            "vod_id": id,
             "vod_name": title,
             "vod_pic": pic,
             "type_name": typen,
@@ -110,33 +128,17 @@ class Spider(Spider):
             "vod_remarks": remarks,
             "vod_actor": actor,
             "vod_director": director,
-            "vod_content": detail
-        }        
-        playList = []
-        vodList = root.xpath("//div[@class='paly_list_btn']")
-        for vl in vodList:
-            vodItems = []
-            aList = vl.xpath('./a')
-            for tA in aList:
-                href = tA.xpath('./@href')[0]
-                name = tA.xpath('./text()')[0]
-                tId = self.regStr(href, '/v_play/(\\S+).html')
-                vodItems.append(name + "$" + tId)
-
-            joinStr = '#'.join(vodItems)
-            playList.append(joinStr)
-        vod['vod_play_from'] = '廠長'
-        vod['vod_play_url'] = '#'.join(playList)
-        result['list'] = vod
+            "vod_content": detail,
+            'vod_play_from' : '廠長',
+            "vod_play_url" : '#'.join(playUrls)
+        }]
+        result['list'] = vodeos
         return result
 
     def searchContent(self, key, quick):
-        header = {	
-            "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
-            "cookie": "cf_clearance=8X8HLfjHfIAt68XoLW1ngF8KUKtg5en195Zo_BccAXY-1703257212-0-2-9d800f49.1493b630.49fd95ce-150.0.0;"
-        }
-        url = 'https://www.czzy88.com/xssearch?q={0}'.format(key)
-        rsp = self.fetch(url,headers=header)
+       
+        url = f'{self.siteUrl}/xssearch?q={key}'
+        rsp = self.fetch(url,headers=self.headers)
         root = self.html(self.cleanText(rsp.text))
         vodList = root.xpath("//div[contains(@class,'mi_ne_kd')]/ul/li/a")
         videos = []
@@ -210,3 +212,19 @@ class Spider(Spider):
     def localProxy(self, param):
         action = {}
         return [200, "video/MP2T", action, ""]
+
+
+
+'''
+debug = 1
+if debug:
+	from pprint import pprint
+	sp = Spider()
+	match debug:
+		case 1:
+			pprint(sp.detailContent(['4581']))
+		case 2:			
+			pprint(sp.searchContent('三大',''))					
+		case 3:		
+			pprint(sp.categoryContent('1','1','',{}))           
+'''     

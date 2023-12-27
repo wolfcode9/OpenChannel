@@ -219,3 +219,16 @@ class Spider(Spider):
     def localProxy(self, param):
         action = {}
         return [200, "video/MP2T", action, ""]
+
+
+debug = 1
+if debug:
+	from pprint import pprint
+	sp = Spider()
+	match debug:
+		case 1:
+			pprint(sp.detailContent(['4581']))
+		case 2:			
+			pprint(sp.searchContent('三大',''))					
+		case 3:		
+			pprint(sp.categoryContent('1','1','',{}))        
