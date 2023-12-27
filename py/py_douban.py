@@ -32,7 +32,7 @@ class Spider(Spider):
 			vod.append({
 				"vod_name": v['title'],
 				"vod_pic": v['cover'],
-				"vod_remarks": v['episodes_info']
+				"vod_remarks": v['episodes_info'] or ''
 			})
 		result = {"list":vod}
 		return result
