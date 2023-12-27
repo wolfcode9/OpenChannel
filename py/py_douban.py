@@ -28,11 +28,11 @@ class Spider(Spider):
 		vod = []
 		
 		for v in vData['subjects']:
-			remarks = v['episodes_info'] or v['rate']
+			#remarks = v['episodes_info'] or v['rate']
 			vod.append({
 				"vod_name": v['title'],
 				"vod_pic": v['cover'],
-				"vod_remarks": remarks
+				"vod_remarks": v['episodes_info']
 			})
 		result = {"list":vod}
 		return result
