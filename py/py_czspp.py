@@ -14,6 +14,7 @@ class Spider(Spider):
         "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
         "cookie": "cf_clearance=8X8HLfjHfIAt68XoLW1ngF8KUKtg5en195Zo_BccAXY-1703257212-0-2-9d800f49.1493b630.49fd95ce-150.0.0;"        
     }
+
     def getName(self):
         return "廠長"
 
@@ -45,23 +46,22 @@ class Spider(Spider):
     def homeVideoContent(self):
         rsp = self.fetch(self.siteUrl)
         root = self.html(self.cleanText(rsp.text))
-        aList = root.xpath("//div[@class='mi_btcon']//ul/li")
-        videos = []
-        for a in aList:
+        vList = root.xpath("//div[@class='mi_btcon']//ul/li")
+        vod = []
+        for a in vList:
             name = a.xpath('./a/img/@alt')[0]
             pic = a.xpath('./a/img/@data-original')[0]             
             mark = (a.xpath("./div[@class='hdinfo']/span/text()") or [None])[0]
             sid = a.xpath("./a/@href")[0]
             sid = self.regStr(sid, "/movie/(\\S+).html")
-            videos.append({
+            vod.append({
                 "vod_id": sid,
                 "vod_name": name,
                 "vod_pic": pic,
                 "vod_remarks": mark
             })
-        result = {
-            'list': videos
-        }
+
+        result = {'list': vod}
         return result
 
     def categoryContent(self, tid, pg, filter, extend):
@@ -69,21 +69,21 @@ class Spider(Spider):
         url = f'{self.siteUrl}/{tid}/page/{pg}'
         rsp = self.fetch(url)
         root = self.html(self.cleanText(rsp.text))
-        aList = root.xpath("//div[contains(@class,'mi_cont')]//ul/li")
-        videos = []
-        for a in aList:
-            name = a.xpath('./a/img/@alt')[0]
-            pic = a.xpath('./a/img/@data-original')[0]
-            mark = (a.xpath("./div[@class='hdinfo']/span/text()") or [None])[0]
-            sid = a.xpath("./a/@href")[0]
+        vList = root.xpath("//div[contains(@class,'mi_cont')]//ul/li")
+        vod = []
+        for v in vList:
+            name = v.xpath('./a/img/@alt')[0]
+            pic = v.xpath('./a/img/@data-original')[0]
+            mark = (v.xpath("./div[@class='hdinfo']/span/text()") or [None])[0]
+            sid = v.xpath("./a/@href")[0]
             sid = self.regStr(sid, "/movie/(\\S+).html")
-            videos.append({
+            vod.append({
                 "vod_id": sid,
                 "vod_name": name,
                 "vod_pic": pic,
                 "vod_remarks": mark
             })
-        result['list'] = videos
+        result['list'] = vod
         result['page'] = pg
         result['pagecount'] = 9999
         result['limit'] = 90
@@ -108,8 +108,8 @@ class Spider(Spider):
         detail = root.xpath(".//div[@class='yp_context']//p/text()")[0]
         
         playUrls = []
-        vodList = root.xpath("//div[@class='paly_list_btn']")
-        for v in vodList:            
+        vList = root.xpath("//div[@class='paly_list_btn']")
+        for v in vList:            
             aList = v.xpath('./a')
             for tA in aList:
                 href = tA.xpath('./@href')[0]
@@ -117,7 +117,7 @@ class Spider(Spider):
                 url = self.regStr(href, '/v_play/(\\S+).html')
                 playUrls.append(name + "$" + url)
 
-        vodeos = [{
+        vod = {
             "vod_id": id,
             "vod_name": title,
             "vod_pic": pic,
@@ -130,8 +130,8 @@ class Spider(Spider):
             "vod_content": detail,
             'vod_play_from' : '廠長',
             "vod_play_url" : '#'.join(playUrls)
-        }]
-        result['list'] = vodeos
+        }
+        result = {'list': vod}
         return result
 
     def searchContent(self, key, quick):        
@@ -156,9 +156,8 @@ class Spider(Spider):
                 "vod_pic": pic,
                 "vod_remarks": remark
             })
-        result = {
-            'list': videos
-        }
+            
+        result = {'list': videos}
         return result    
 
     def parseCBC(self, enc, key, iv):
