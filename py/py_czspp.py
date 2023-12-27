@@ -51,7 +51,7 @@ class Spider(Spider):
         for a in vList:
             name = a.xpath('./a/img/@alt')[0]
             pic = a.xpath('./a/img/@data-original')[0]             
-            mark = (a.xpath("./div[@class='hdinfo']/span/text()") or [None])[0]
+            mark = (a.xpath("./div[@class='hdinfo']/span/text()") or [''])[0]
             sid = a.xpath("./a/@href")[0]
             sid = self.regStr(sid, "/movie/(\\S+).html")
             vod.append({
@@ -74,7 +74,7 @@ class Spider(Spider):
         for v in vList:
             name = v.xpath('./a/img/@alt')[0]
             pic = v.xpath('./a/img/@data-original')[0]
-            mark = (v.xpath("./div[@class='hdinfo']/span/text()") or [None])[0]
+            mark = (v.xpath("./div[@class='hdinfo']/span/text()") or [''])[0]
             sid = v.xpath("./a/@href")[0]
             sid = self.regStr(sid, "/movie/(\\S+).html")
             vod.append({
@@ -83,6 +83,7 @@ class Spider(Spider):
                 "vod_pic": pic,
                 "vod_remarks": mark
             })
+
         result['list'] = vod
         result['page'] = pg
         result['pagecount'] = 9999
@@ -98,14 +99,14 @@ class Spider(Spider):
         root = self.html(self.cleanText(rsp.text))
         node = root.xpath("//div[@class='dyxingq']")[0]
         title = node.xpath('.//h1/text()')[0]
-        pic = node.xpath(".//div[@class='dyimg fl']/img/@src")[0]        
-        remarks = node.xpath('.//li[contains(text(), "又名")]/a')[0].text
-        year = node.xpath('.//li[contains(text(), "年份")]/a')[0].text
-        area = node.xpath('.//li[contains(text(), "地区")]/a')[0].text
-        typen = node.xpath('.//li[contains(text(), "类型")]/a')[0].text
-        actor = node.xpath('.//li[contains(text(), "主演")]/span')[0].text 
-        director = node.xpath('.//li[contains(text(), "导演")]/span')[0].text        
-        detail = root.xpath(".//div[@class='yp_context']//p/text()")[0]
+        pic = node.xpath(".//div[@class='dyimg fl']/img/@src")[0]     
+        remarks = (node.xpath('.//li[contains(text(), "又名")]/a/text()') or [''])[0]
+        year = (node.xpath('.//li[contains(text(), "年份")]/a/text()') or [''])[0]
+        area = (node.xpath('.//li[contains(text(), "地区")]/a/text()') or [''])[0]
+        typen = (node.xpath('.//li[contains(text(), "类型")]/a/text()') or [''])[0]
+        actor = (node.xpath('.//li[contains(text(), "主演")]/span/text()') or [''])[0]
+        director = (node.xpath('.//li[contains(text(), "导演")]/span/text()') or [''])[0]
+        detail = (root.xpath(".//div[@class='yp_context']//p/text()") or [''])[0]
         
         playUrls = []
         vList = root.xpath("//div[@class='paly_list_btn']")
@@ -148,7 +149,7 @@ class Spider(Spider):
             if len(res) == 0:
                 remark = '全1集'
             else:
-                remark = vod.xpath('./div[@class="jidi"]/span/text()')[0]
+                remark = (vod.xpath('./div[@class="jidi"]/span/text()') or [''])[0]
             videos.append({
                 "vod_id": tid,
                 "vod_name": name,
@@ -167,8 +168,8 @@ class Spider(Spider):
         paddingLen = msg[len(msg) - 1]
         return msg[0:-paddingLen]
 
-    def playerContent(self, flag, id, vipFlags):    
-        url = 'https://www.czzy88.com/v_play/{0}.html'.format(id)
+    def playerContent(self, flag, id, vipFlags):
+        url = f'{self.siteUrl}/v_play/{id}.html'         
         pat = '\\"([^\\"]+)\\";var [\\d\\w]+=function dncry.*md5.enc.Utf8.parse\\(\\"([\\d\\w]+)\\".*md5.enc.Utf8.parse\\(([\\d]+)\\)'
         rsp = self.fetch(url)
         html = rsp.text
@@ -216,7 +217,7 @@ if debug:
 	sp = Spider()
 	match debug:
 		case 1:
-			pprint(sp.detailContent(['4581']))
+			pprint(sp.detailContent(['7985']))
 		case 2:			
 			pprint(sp.searchContent('三大',''))					
 		case 3:		
