@@ -26,11 +26,13 @@ class Spider(Spider):
 		rsp = self.fetch('https://movie.douban.com/j/search_subjects?type=tv&tag=热门&page_limit=50',headers=header)	
 		vData = json.loads(rsp.text)
 		vod = []
+		
 		for v in vData['subjects']:
-			vod.append({				
+			remarks = v['episodes_info'] or v['rate']
+			vod.append({
 				"vod_name": v['title'],
 				"vod_pic": v['cover'],
-				"vod_remarks": v['rate']
+				"vod_remarks": remarks
 			})
 		result = {"list":vod}
 		return result
