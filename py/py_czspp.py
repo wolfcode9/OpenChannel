@@ -138,9 +138,9 @@ class Spider(Spider):
         url = f'{self.siteUrl}/xssearch?q={key}'
         rsp = self.fetch(url,headers=self.headers)
         root = self.html(self.cleanText(rsp.text))
-        vodList = root.xpath("//div[contains(@class,'mi_ne_kd')]/ul/li/a")
-        videos = []
-        for vod in vodList:
+        vList = root.xpath("//div[contains(@class,'mi_ne_kd')]/ul/li/a")
+        vod = []
+        for vod in vList:
             name = vod.xpath('./img/@alt')[0]
             pic = vod.xpath('./img/@data-original')[0]
             href = vod.xpath('./@href')[0]
@@ -150,14 +150,14 @@ class Spider(Spider):
                 remark = '全1集'
             else:
                 remark = (vod.xpath('./div[@class="jidi"]/span/text()') or [''])[0]
-            videos.append({
+            vod.append({
                 "vod_id": tid,
                 "vod_name": name,
                 "vod_pic": pic,
                 "vod_remarks": remark
             })
 
-        result = {'list': videos}
+        result = {'list': vod}
         return result    
 
     def parseCBC(self, enc, key, iv):
@@ -173,16 +173,22 @@ class Spider(Spider):
         pat = '\\"([^\\"]+)\\";var [\\d\\w]+=function dncry.*md5.enc.Utf8.parse\\(\\"([\\d\\w]+)\\".*md5.enc.Utf8.parse\\(([\\d]+)\\)'
         rsp = self.fetch(url)
         html = rsp.text
+        with open('out.txt','w',encoding='utf8') as f:
+             f.write(html)
+        print(html)
         content = self.regStr(html, pat)
+        
         if content == '':
             return {}
         key = self.regStr(html, pat, 2)
         iv = self.regStr(html, pat, 3)
+        print(f'key={key},iv={iv}')
         decontent = self.parseCBC(base64.b64decode(content), key, iv).decode()
+        
         urlPat = 'video: \\{url: \\\"([^\\\"]+)\\\"'
         vttPat = 'subtitle: \\{url:\\\"([^\\\"]+\\.vtt)\\\"'
         str3 = self.regStr(decontent, urlPat)
-        str4 = self.regStr(decontent, vttPat)
+        str4 = self.regStr(decontent, vttPat)        
         self.loadVtt(str3)
         result = {
             'parse': '0',
@@ -193,9 +199,8 @@ class Spider(Spider):
         if len(str4) > 0:
             result['subf'] = '/vtt/utf-8'
             # result['subt'] = Proxy.localProxyUrl() + "?do=czspp&url=" + URLEncoder.encode(str4)
-            result['subt'] = ''
-            
-        return result
+            result['subt'] = ''        
+        return {} #result
 
     def loadVtt(self, url):
         pass
@@ -210,16 +215,17 @@ class Spider(Spider):
         action = {}
         return [200, "video/MP2T", action, ""]
 
-'''
-debug = 1
+
+debug = 2
 if debug:
 	from pprint import pprint
 	sp = Spider()
 	match debug:
 		case 1:
-			pprint(sp.detailContent(['7985']))
+			pprint(sp.detailContent(['8813']))
 		case 2:			
-			pprint(sp.searchContent('三大',''))					
-		case 3:		
-			pprint(sp.categoryContent('1','1','',{}))           
-'''
+			pprint(sp.searchContent('黑暗荣耀第二季','')) 
+        
+
+        
+        
