@@ -346,6 +346,14 @@
       "api": "csp_Dm84",
       "searchable": 1,
       "changeable": 1
+    },
+    {
+      "key": "yingshi",
+      "name": "yingshi ",
+      "type": 1,
+      "api": "https://www.yingshi.tv/ajax/data.html?mid=1&limit=35&by=score&order=desc",
+      "searchable": 1,
+      "changeable": 1
     }
   ],
   "doh": 
