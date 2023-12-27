@@ -22,7 +22,7 @@ class Spider(Spider):
 	def homeVideoContent(self):
 		result = {}
 		header = {"user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"}
-		#最新
+		#電視劇 https://movie.douban.com/j/search_subjects?type=tv&tag=%E7%83%AD%E9%97%A8&page_limit=50&page_start=0
 		rsp = self.fetch('https://movie.douban.com/j/search_subjects?tag=热门&page_limit=50&page_start=0',headers=header)	
 		vData = json.loads(rsp.text)
 		vod = []
