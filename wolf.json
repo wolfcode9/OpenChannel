@@ -52,7 +52,7 @@
     },
 	{
       "key": "csp_Cs1369",
-      "name": "996影院",
+      "name": "996影院(AP)",
       "type": 3,
       "api": "csp_Cs1369",
       "searchable": 1,
@@ -61,7 +61,7 @@
     },	
     {
       "key": "csp_Star",
-      "name": "星視界",
+      "name": "星視界(AP)",
       "type": 3,
       "api": "csp_Star",
       "searchable": 1,
@@ -69,7 +69,7 @@
     },
     {
       "key":"csp_trj",
-      "name":"唐人街",
+      "name":"唐人街(AP)",
       "type":3,
       "api":"csp_Tangrenjie",
       "searchable":1,
@@ -79,7 +79,7 @@
     },    
     {
       "key": "drpy_js_農民",
-      "name": "農民",
+      "name": "農民(JS)",
       "type": 3,
       "style": {
         "type": "rect",
@@ -90,7 +90,7 @@
     },
     {
       "key": "csp_NiNi",
-      "name": "泥巴",
+      "name": "泥巴(AP)",
       "type": 3,
       "api": "csp_NiNi",
       "searchable": 1,
@@ -98,7 +98,7 @@
     },    
     {
       "key": "獨播庫",
-      "name": "獨播庫",
+      "name": "獨播庫(AP)",
       "type": 3,
       "api": "csp_XPathMacFilter",
       "searchable": 1,
@@ -106,7 +106,7 @@
       "ext": "https://fongmi.cachefly.net/FongMi/CatVodSpider/main/json/duboku.json"
     },    
     {"key":"csp_NanGua",
-      "name":"南瓜",
+      "name":"南瓜(AP)",
       "type":3,"api":"csp_NanGua",
       "playerType":2,
       "searchable":1,
@@ -117,7 +117,7 @@
     },
     {
       "key": "csp_YQKan",
-      "name": "一起看",
+      "name": "一起看(AP)",
       "type": 3,
       "api": "csp_YQKan",
       "searchable": 1,
@@ -127,7 +127,7 @@
     },
     {
       "key": "haiwaikan",
-      "name": "海外看",
+      "name": "海外看(AP)",
       "type": 1,
       "api": "https://haiwaikan.com/api.php/provide/vod/from/haiwaikan",
       "categories": 
@@ -177,7 +177,7 @@
     },
     {
       "key": "快看",
-      "name": "快看",
+      "name": "快看(AP)",
       "type": 1,
       "api": "https://kuaikan-api.com/api.php/provide/vod/from/kuaikan",
       "searchable": 1,
@@ -221,7 +221,7 @@
     },
     {
       "key": "暴風",
-      "name": "暴風",
+      "name": "暴風((API)",
       "type": 1,
       "api": "https://bfzyapi.com/api.php/provide/vod",
       "searchable": 1,
@@ -261,16 +261,8 @@
       ]
     },
     {
-      "key": "csp_Xb6v",
-      "name": "新6V",
-      "type": 3,
-      "api": "csp_Xb6v",
-      "searchable": 1,
-      "changeable": 0
-    },
-    {
       "key": "快看",
-      "name": "快看",
+      "name": "快看(JS)",
       "type": 3,
       "api": "https://fongmi.cachefly.net/FongMi/CatVodOpen/main/open/kkys_open.js",
       "searchable": 1,
@@ -278,7 +270,7 @@
     },
     {
       "key": "drpy_js_低端",
-      "name": "低端",
+      "name": "低端(JS)",
       "type": 3,
       "style": {"type": "rect","ratio": 1.33},
       "api": "https://raw.githubusercontent.com/hjdhnx/dr_py/main/libs/drpy2.min.js",
@@ -286,7 +278,7 @@
     },    
     {
       "key": "索尼",
-      "name": "索尼 ",
+      "name": "索尼(AP)",
       "type": 1,
       "api": "https://suoniapi.com/api.php/provide/vod",
       "searchable": 1,
@@ -323,7 +315,7 @@
     },
     {
       "key": "量子",
-      "name": "量子",
+      "name": "量子(AP)",
       "type": 1,
       "api": "https://cj.lziapi.com/api.php/provide/vod",
       "searchable": 1,
@@ -363,7 +355,7 @@
     },
     {
       "key": "非凡",
-      "name": "非凡",
+      "name": "非凡(AP)",
       "type": 1,
       "api": "http://cj.ffzyapi.com/api.php/provide/vod",
       "searchable": 1,

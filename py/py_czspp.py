@@ -10,9 +10,10 @@ class Spider(Spider):
 
     siteUrl = "https://www.czzy88.com"
 
+    #cookie cf_clearance 會過期
     headers = {	
         "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
-        "cookie": "cf_clearance=8X8HLfjHfIAt68XoLW1ngF8KUKtg5en195Zo_BccAXY-1703257212-0-2-9d800f49.1493b630.49fd95ce-150.0.0;"        
+        "cookie": "cf_clearance=km3JnG5xXYksPTK9mj8NOcke_vdrsr7kMosxjCU5u.4-1703661075-0-2-3b2475e4.bc52cd1f.365a419b-150.0.0;"
     }
 
     def getName(self):
@@ -136,20 +137,20 @@ class Spider(Spider):
 
     def searchContent(self, key, quick):        
         url = f'{self.siteUrl}/xssearch?q={key}'
-        rsp = self.fetch(url,headers=self.headers)
-        root = self.html(self.cleanText(rsp.text))
+        rsp = self.fetch(url,headers=self.headers)        
+        root = self.html(self.cleanText(rsp.text))        
         vList = root.xpath("//div[contains(@class,'mi_ne_kd')]/ul/li/a")
         vod = []
-        for vod in vList:
-            name = vod.xpath('./img/@alt')[0]
-            pic = vod.xpath('./img/@data-original')[0]
-            href = vod.xpath('./@href')[0]
+        for v in vList:
+            name = v.xpath('./img/@alt')[0]
+            pic = v.xpath('./img/@data-original')[0]
+            href = v.xpath('./@href')[0]
             tid = self.regStr(href, 'movie/(\\S+).html')
-            res = vod.xpath('./div[@class="jidi"]/span/text()')
+            res = v.xpath('./div[@class="jidi"]/span/text()')
             if len(res) == 0:
                 remark = '全1集'
             else:
-                remark = (vod.xpath('./div[@class="jidi"]/span/text()') or [''])[0]
+                remark = (v.xpath('./div[@class="jidi"]/span/text()') or [''])[0]
             vod.append({
                 "vod_id": tid,
                 "vod_name": name,
@@ -215,7 +216,7 @@ class Spider(Spider):
         action = {}
         return [200, "video/MP2T", action, ""]
 
-
+'''
 debug = 2
 if debug:
 	from pprint import pprint
@@ -224,8 +225,6 @@ if debug:
 		case 1:
 			pprint(sp.detailContent(['8813']))
 		case 2:			
-			pprint(sp.searchContent('黑暗荣耀第二季','')) 
-        
+			pprint(sp.searchContent('黑暗荣耀第二季',None)) 
+'''
 
-        
-        
