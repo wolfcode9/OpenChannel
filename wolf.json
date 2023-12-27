@@ -43,6 +43,16 @@
 	  "ext": "https://raw.githubusercontent.com/wolfcode9/OpenChannel/main/json/mubai.json"
     },
 	{
+	  "key":"愛迪",
+	  "name":"愛迪",
+	  "type":3,
+	  "api":"csp_AppYsV2",
+	  "searchable":1,
+	  "quickSearch":1,
+	  "filterable":1,
+	  "ext":"https://api123.adys.app/xgapp.php/v3/"
+	},
+	{
       "key": "csp_Cs1369",
       "name": "996影院",
       "type": 3,
