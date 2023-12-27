@@ -349,8 +349,8 @@
     },
     {
       "key": "yingshi",
-      "name": "yingshi ",
-      "type": 1,
+      "name": "yingshi",
+      "type": 0,
       "api": "https://www.yingshi.tv/ajax/data.html?mid=1&limit=35&by=score&order=desc",
       "searchable": 1,
       "changeable": 1
