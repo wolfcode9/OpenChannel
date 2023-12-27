@@ -50,17 +50,6 @@
       "categories": ["電影","電視劇","動漫"]
     },
     {
-      "key": "csp_Czsapp",
-      "name": "廠長",
-      "type": 3,
-      "api": "csp_Czsapp",
-      "searchable": 1,
-      "playerType": 1,
-      "quickSearch": 1,      
-      "ext": "https://www.czzy33.com/",
-	    "jar": "https://raw.githubusercontent.com/wolfcode9/OpenChannel/main/jar/Yoursmile.jar"
-    },
-    {
       "key": "drpy_js_農民",
       "name": "農民",
       "type": 3,
