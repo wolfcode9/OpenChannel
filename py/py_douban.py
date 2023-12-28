@@ -33,14 +33,16 @@ class Spider(Spider):
 			j_tv = executor.submit(self.fetch_vodData,self.douban_url('tv',limit,0)).result()			
 		return  {'list': (j_movie + j_tv)}
 	
-	def categoryContent(self,tid,pg,filter,extend):		
+	def categoryContent(self,tid,pg,filter,extend):	
+		start = (int(pg) - 1) * 20	
 		result = {}
-		limit = 150		
-		result['list'] = self.fetch_vodData(self.douban_url(tid,limit,0))
+		limit = 5
+		total = 500	
+		result['list'] = self.fetch_vodData(self.douban_url(tid,limit,start))
 		result['limit'] = limit
-		result['page'] = 1
-		result['pagecount'] = 1
-		result['total'] = 200
+		result['page'] = pg
+		result['pagecount'] = int(total/limit)
+		result['total'] = 500
 		return result
 	
 	def detailContent(self,array):
