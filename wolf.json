@@ -176,7 +176,7 @@
       "name": "索尼",
       "type": 1,
       "api": "https://suoniapi.com/api.php/provide/vod",
-      "searchable": 1,
+      "searchable": 0,
       "changeable": 1,
       "categories": 
       [
