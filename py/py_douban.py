@@ -23,7 +23,7 @@ class Spider(Spider):
 		result = {}				
 		classes = []		
 		cateManual = {
-            "熱播電影": "movie",
+            "熱門電影": "movie",
 			"熱播劇集": "tv"
 		}		
 		for k in cateManual:
