@@ -180,20 +180,3 @@ class Spider(Spider):
 			'after':''
 		}
 		return [200, "video/MP2T", action, ""]
-
-'''
-debug = 1
-if debug:
-	from pprint import pprint
-	sp = Spider()
-	match debug:
-		case 1:
-			pprint(sp.detailContent(['78594']))
-		case 2:			
-			pprint(sp.searchContent('三大',''))
-		case 3:			
-			pprint(sp.homeVideoContent())
-		case _:
-			pass	
-
-'''

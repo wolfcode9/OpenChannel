@@ -84,10 +84,18 @@ class Spider(Spider):
 			"area": extend.get("area", "")			
 		}
 		url = f'{self.siteUrl}/ajax/data'		
-		rsp = requests.get(url=url,params=params)		
+		rsp = requests.get(url=url,params=params)
 		if rsp.text:
+			vod = []
 			vodData = json.loads(rsp.text)
-			result['list'] = vodData['list']
+			for v in vodData['list']:
+				vod.append({
+					"vod_id": v['vod_id'],
+					"vod_name": v['vod_name'],
+					"vod_pic": v['vod_pic'],
+					"vod_remarks": v['vod_remarks']
+            	})			
+			result['list'] = vod
 			result['page'] = pg
 			result['pagecount'] = vodData['pagecount']
 			result['limit'] = 35
@@ -103,8 +111,21 @@ class Spider(Spider):
 		if rsp.text:			
 			root = self.html(rsp.text)
 			vodData = root.xpath('//script[contains(text(), "let data = ") and contains(text(), "let obj = ")]/text()')[0]
-			vodData = json.loads(vodData.split('let data = ')[1].split('let obj = ')[0].strip()[:-1].replace("&amp;", " "))
-			result = {'list': [vodData]}
+			vodData = json.loads(vodData.split('let data = ')[1].split('let obj = ')[0].strip()[:-1].replace("&amp;", " "))									
+			result = {'list': [{
+				"vod_id": vodData['vod_id'],
+				"vod_name": vodData['vod_name'],
+				"vod_pic": vodData['vod_pic'],
+				"vod_remarks": vodData['vod_remarks'],
+				"type_name": vodData['type']['type_name'],
+				"vod_year": vodData['vod_year'],
+				"vod_area": vodData['vod_area'],
+				"vod_actor": vodData['vod_actor'],
+				"vod_director": vodData['vod_director'],
+				"vod_content": vodData['vod_content'],
+				"vod_play_from": vodData['vod_play_from'],
+				"vod_play_url": vodData['vod_play_url']
+			}]}			
 		return result
 	
 	#搜索
@@ -145,19 +166,3 @@ class Spider(Spider):
 			'after':''
 		}
 		return [200, "video/MP2T", action, ""]
-
-'''
-debug = 3
-if debug:
-	from pprint import pprint
-	sp = Spider()
-	match debug:
-		case 1:
-			pprint(sp.detailContent(['200342']))
-		case 2:			
-			pprint(sp.searchContent('三大',''))					
-		case 3:			
-			pprint(sp.categoryContent('1','1','',{}))
-		case _:
-			pass	
-'''
