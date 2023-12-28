@@ -24,7 +24,7 @@ class Spider(Spider):
 		classes = []		
 		cateManual = {
             "熱播電影": "movie",
-			"熱播電視劇": "tv"
+			"熱播劇集": "tv"
 		}		
 		for k in cateManual:
 			classes.append({'type_name': k,'type_id': cateManual[k]})
