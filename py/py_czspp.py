@@ -130,9 +130,16 @@ class Spider(Spider):
         }
         url = f'{self.siteUrl}/xssearch?q={key}'        
         rsp = self.fetch(url,headers=headers)
-        root = self.html(self.cleanText(rsp.text))        
+        root = self.html(rsp.text)        
         vList = root.xpath("//div[contains(@class,'mi_ne_kd')]/ul/li/a")
         vod = []
+        vod.append({
+            "vod_id": '',
+            "vod_name": '沒找到',
+            "vod_pic": '',
+            "vod_remarks": '沒找到'
+        })        
+        
         for v in vList:
             name = v.xpath('./img/@alt')[0]
             pic = v.xpath('./img/@data-original')[0]
@@ -143,14 +150,15 @@ class Spider(Spider):
                 remark = '全1集'
             else:
                 remark = (v.xpath('./div[@class="jidi"]/span/text()') or [''])[0]
+
             vod.append({
                     "vod_id": tid,
                     "vod_name": name,
                     "vod_pic": pic,
                     "vod_remarks": remark
-                })        
+            })
         return {'list': vod}
-
+    
     def parseCBC(self, enc, key, iv):
         keyBytes = key.encode("utf-8")
         ivBytes = iv.encode("utf-8")
