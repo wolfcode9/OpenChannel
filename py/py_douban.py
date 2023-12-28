@@ -29,13 +29,20 @@ class Spider(Spider):
 		#電視劇 https://movie.douban.com/j/search_subjects?type=tv&tag=热门&page_limit=50&page_start=0
 		#電影 https://movie.douban.com/j/search_subjects?type=movie&tag=热门&page_limit=50&page_start=0
 		with concurrent.futures.ThreadPoolExecutor() as executor:					
-			j_movie = executor.submit(self.fetch_vodData,self.douban_url('movie',limit)).result()
-			j_tv = executor.submit(self.fetch_vodData,self.douban_url('tv',limit)).result()			
+			j_movie = executor.submit(self.fetch_vodData,self.douban_url('movie',limit,0)).result()
+			j_tv = executor.submit(self.fetch_vodData,self.douban_url('tv',limit,0)).result()			
 		return  {'list': (j_movie + j_tv)}
 	
-	def categoryContent(self,tid,pg,filter,extend):
-		limit = 150		
-		return {'list':self.fetch_vodData(self.douban_url(tid,limit))}
+	def categoryContent(self,tid,pg,filter,extend):		
+		result = {}
+		limit = 50
+		total = 500
+		result['list'] = self.fetch_vodData(self.douban_url(tid,limit,(int(pg)-1)))
+		result['limit'] = limit
+		result['page'] = pg
+		result['pagecount'] = int(total/limit)
+		result['total'] = 500
+		return result
 	
 	def detailContent(self,array):
 		result = {}
@@ -65,8 +72,8 @@ class Spider(Spider):
 		}
 		return [200, "video/MP2T", action, ""]
 	
-	def douban_url(self,typeid,limit):
-		return f'https://movie.douban.com/j/search_subjects?type={typeid}&tag=热门&page_limit={limit}&page_start=0'
+	def douban_url(self,typeid,limit,pg):
+		return f'https://movie.douban.com/j/search_subjects?type={typeid}&tag=热门&page_limit={limit}&page_start={pg}'
 
 	def fetch_vodData(self,url):
 		vod = []
