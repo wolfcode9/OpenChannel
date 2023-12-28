@@ -14,29 +14,26 @@ class Spider(Spider):
 		pass	
 	
 	def homeContent(self,filter):
-		result = {}				
-		classes = []		
+		cls = []		
 		cateManual = {
             "熱播電影": "movie",
 			"熱播劇集": "tv"
 		}		
 		for k in cateManual:
-			classes.append({'type_name': k,'type_id': cateManual[k]})
-		result['class'] = classes
-		return result	
+			cls.append({'type_name': k,'type_id': cateManual[k]})
+
+		return {'class': cls}
 	
-	def homeVideoContent(self):
-		result = {}
+	def homeVideoContent(self):		
 		limit = 10
 		#電視劇 https://movie.douban.com/j/search_subjects?type=tv&tag=热门&page_limit=50&page_start=0
 		#電影 https://movie.douban.com/j/search_subjects?type=movie&tag=热门&page_limit=50&page_start=0
 		with concurrent.futures.ThreadPoolExecutor() as executor:					
 			j_movie = executor.submit(self.fetch_vodData,self.douban_url('movie',limit)).result()
 			j_tv = executor.submit(self.fetch_vodData,self.douban_url('tv',limit)).result()			
-			result = {'list': (j_movie + j_tv)}
-		return result 
+		return  {'list': (j_movie + j_tv)}
 	
-	def categoryContent(self,tid,pg,filter,extend):		
+	def categoryContent(self,tid,pg,filter,extend):
 		limit = 150		
 		return {'list':self.fetch_vodData(self.douban_url(tid,limit))}
 	
