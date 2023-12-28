@@ -303,15 +303,7 @@
       "api": "csp_Dm84",
       "searchable": 1,
       "changeable": 1
-    },
-	{
-      "key": "本地",
-      "name": "本地",
-      "type": 3,
-      "api": "csp_Local",
-      "searchable": 0,
-      "changeable": 0
-    },
+    },	
     {
       "key": "push_agent",
       "name": "推送",
