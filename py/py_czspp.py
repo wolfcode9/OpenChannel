@@ -128,7 +128,12 @@ class Spider(Spider):
     def searchContent(self, key, quick):
         headers = {
             "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
-            "Cookie": "cf_clearance=km3JnG5xXYksPTK9mj8NOcke_vdrsr7kMosxjCU5u.4-1703661075-0-2-3b2475e4.bc52cd1f.365a419b-150.0.0;"            
+            "Cookie": "myannoun=1; cf_clearance=km3JnG5xXYksPTK9mj8NOcke_vdrsr7kMosxjCU5u.4-1703661075-0-2-3b2475e4.bc52cd1f.365a419b-150.0.0; Hm_lvt_42c5653f32b0693192746ff4569273a9=1703781724,1703782065,1703782495,1703782813; Hm_lvt_a3850b4650b886fb75385d4422e3b3b5=1703781724,1703782065,1703782495,1703782813; Hm_lvt_69e6fc4e315ecad03923d5483d213857=1703781724,1703782065,1703782495,1703782813; Hm_lvt_869bab0ee2ff72889d0045aa7b4f3ee8=1703781724,1703782065,1703782495,1703782813; Hm_lpvt_69e6fc4e315ecad03923d5483d213857=1703782829; Hm_lpvt_a3850b4650b886fb75385d4422e3b3b5=1703782829; Hm_lpvt_42c5653f32b0693192746ff4569273a9=1703782830; Hm_lpvt_869bab0ee2ff72889d0045aa7b4f3ee8=1703782830",
+            "Referer": "https://www.czzy88.com/movie/5359.html",
+            "Sec-Ch-Ua": '"Not_A Brand";v="8", "Chromium";v="120", "Google Chrome";v="120"',
+            "Sec-Ch-Ua-Mobile": "?0",
+            "Sec-Ch-Ua-Platform": "Windows",
+            "authority": "www.czzy88.com"
         }
         url = f'{self.siteUrl}/xssearch?q={key}'        
         rsp = self.fetch(url,headers=headers)
