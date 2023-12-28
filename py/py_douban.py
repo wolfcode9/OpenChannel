@@ -33,7 +33,7 @@ class Spider(Spider):
 	
 	def homeVideoContent(self):
 		result = {}
-		limit = 10
+		limit = 20
 		#電視劇 https://movie.douban.com/j/search_subjects?type=tv&tag=热门&page_limit=50&page_start=0
 		#電影 https://movie.douban.com/j/search_subjects?type=movie&tag=热门&page_limit=50&page_start=0
 
