@@ -7,14 +7,12 @@ import base64
 from Crypto.Cipher import AES
 
 class Spider(Spider):
-
     siteUrl = "https://www.czzy88.com"
 
     def getName(self):
         return "廠長"
 
     def init(self, extend=""):
-        print("============{0}============".format(extend))
         pass
 
     def homeContent(self,filter):
@@ -55,7 +53,6 @@ class Spider(Spider):
                 "vod_pic": pic,
                 "vod_remarks": mark
             })
-
         result = {'list': vod}
         return result
 
@@ -101,8 +98,7 @@ class Spider(Spider):
         typen = (node.xpath('.//li[contains(text(), "类型")]/a/text()') or [''])[0]
         actor = (node.xpath('.//li[contains(text(), "主演")]/span/text()') or [''])[0]
         director = (node.xpath('.//li[contains(text(), "导演")]/span/text()') or [''])[0]
-        detail = (root.xpath(".//div[@class='yp_context']//p/text()") or [''])[0]
-        
+        detail = (root.xpath(".//div[@class='yp_context']//p/text()") or [''])[0]        
         playUrls = []
         vList = root.xpath("//div[@class='paly_list_btn']")
         for v in vList:            
@@ -130,8 +126,12 @@ class Spider(Spider):
         return result
 
     def searchContent(self, key, quick):
+        headers = {
+            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+            "Cookie": "cf_clearance=km3JnG5xXYksPTK9mj8NOcke_vdrsr7kMosxjCU5u.4-1703661075-0-2-3b2475e4.bc52cd1f.365a419b-150.0.0;"            
+        }
         url = f'{self.siteUrl}/xssearch?q={key}'        
-        rsp = self.fetch(url)
+        rsp = self.fetch(url,headers=headers)
         root = self.html(self.cleanText(rsp.text))        
         vList = root.xpath("//div[contains(@class,'mi_ne_kd')]/ul/li/a")
         vod = []
