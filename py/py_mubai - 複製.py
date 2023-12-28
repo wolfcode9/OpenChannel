@@ -6,7 +6,8 @@ from base.spider import Spider
 import requests
 import re
 
-class Spider(Spider):	
+class Spider(Spider):
+	
 	siteUrl = "https://m.mubai.link"
 
 	def getName(self):
@@ -27,27 +28,30 @@ class Spider(Spider):
 		for k in cateManual:
 			classes.append({'type_name': k,'type_id': cateManual[k]})
 		result['class'] = classes		
-		if self.extend:			
-			result['filters'] =  self.fetch(self.extend).json()
+		if self.extend:
+			rsp = self.fetch(self.extend)
+			if rsp.text:
+				result['filters'] = self.str2json(rsp.text)
 		return result
 	
 	def homeVideoContent(self):		
 		result = {}
 		url = f'{self.siteUrl}/api/index'
-		rsp = self.fetch(url)	
-		vod = []
-		jsonData = rsp.json()
-		for content in jsonData['data']['content']:
-			for v in content['movies']:
-				vod.append({
-					"vod_id": v['id'],
-					"vod_name": v['name'],
-					"vod_pic": v['picture'],
-					"vod_remarks": v['remarks']
-				})
-		result['list'] = vod
-		return result
-	
+		rsp = self.fetch(url)
+		if rsp.text:
+			vod = []
+			jsonData = self.str2json(rsp.text)
+			for content in jsonData['data']['content']:
+				for v in content['movies']:
+					vod.append({
+						"vod_id": v['id'],
+						"vod_name": v['name'],
+						"vod_pic": v['picture'],
+						"vod_remarks": v['remarks']
+					})
+			result['list'] = vod
+		return result	
+
 	def categoryContent(self,tid,pg,filter,extend):
 		#https://m.mubai.link/filmClassifySearch?Pid=1&Sort=release_stamp&current=1
 		result = {}	
@@ -66,7 +70,7 @@ class Spider(Spider):
 		rsp = requests.get(url=url,params=params)
 
 		if rsp.text:
-			jsonData = rsp.json()
+			jsonData = self.str2json(rsp.text)
 			for v in jsonData['data']['list']:
 				vod.append({
 					"vod_id": v['id'],
@@ -90,7 +94,7 @@ class Spider(Spider):
 		if rsp.text:
 			playUrls = []			
 			vod = []
-			jsonData = rsp.json()
+			jsonData =  self.str2json(rsp.text)
 			jsonData = jsonData['data']['detail']			
 			for v in jsonData['playList'][0]:				
 				playUrls.append('#'.join([v['episode'] + '$' + v['link']]))
@@ -116,18 +120,19 @@ class Spider(Spider):
 		#https://m.mubai.link/search?search=我知道我爱你
 		result = {}
 		url = f'{self.siteUrl}/api/searchFilm?keyword={key}'
-		rsp = self.fetch(url)		
-		vod = []
-		jsonData = rsp.json()
-		jsonData = jsonData['data']['list']
-		for v in jsonData:
-			vod.append({
-				"vod_id": v['id'],
-				"vod_name": v['name'],
-				"vod_pic": v['picture'],
-				"vod_remarks": v['remarks']
-			})      
-		result['list'] = vod
+		rsp = self.fetch(url)
+		if rsp.text:
+			vod = []
+			jsonData =  self.str2json(rsp.text)
+			jsonData = jsonData['data']['list']
+			for v in jsonData:
+				vod.append({
+					"vod_id": v['id'],
+					"vod_name": v['name'],
+					"vod_pic": v['picture'],
+					"vod_remarks": v['remarks']
+				})      
+			result['list'] = vod
 		return result
 	
 	def playerContent(self,flag,id,vipFlags):
