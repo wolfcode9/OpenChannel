@@ -137,7 +137,7 @@ class Spider(Spider):
             "vod_id": '',
             "vod_name": '沒找到',
             "vod_pic": '',
-            "vod_remarks": '沒找到'
+            "vod_remarks": rsp.text
         })        
         
         for v in vList:
