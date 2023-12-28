@@ -6,6 +6,7 @@ from base.spider import Spider
 import json
 
 class Spider(Spider):
+	header = {"user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"}
 
 	def getName(self):
 		return "豆瓣薦片"
@@ -14,31 +15,27 @@ class Spider(Spider):
 		pass	
 	
 	def homeContent(self,filter):
-		result = {}
-		return result
+		result = {}				
+		classes = []		
+		cateManual = {
+            "熱播電影": "movie",
+			"熱播電視劇": "tv"
+		}		
+		for k in cateManual:
+			classes.append({'type_name': k,'type_id': cateManual[k]})
+		result['class'] = classes
+		return result	
 	
-	#推薦頁面
 	def homeVideoContent(self):
-		result = {}
-		header = {"user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"}
+		result = {}		
 		#電視劇 https://movie.douban.com/j/search_subjects?type=tv&tag=热门&page_limit=50&page_start=0
-		#電影 https://movie.douban.com/j/search_subjects?type=movie&tag=热门&page_limit=50&page_start=0
-		rsp = self.fetch('https://movie.douban.com/j/search_subjects?type=tv&tag=热门&page_limit=50&page_start=0',headers=header)	
-		vData = json.loads(rsp.text)
-		vod = []
+		#電影 https://movie.douban.com/j/search_subjects?type=movie&tag=热门&page_limit=50&page_start=0	
 		
-		for v in vData['subjects']:
-			remarks = v['episodes_info'] or v['rate']
-			vod.append({
-				"vod_name": v['title'],
-				"vod_pic": v['cover'],
-				"vod_remarks": remarks
-			})
-		result = {"list":vod}
+		result = {"list" : self.get_douban_hot("tv",50,0)}
 		return result
 	
-	def categoryContent(self,tid,pg,filter,extend):
-		result = {}
+	def categoryContent(self,tid,pg,filter,extend):		
+		result = {"list" : self.get_douban_hot(tid,50,pg)}
 		return result
 	
 	def detailContent(self,array):
@@ -68,3 +65,20 @@ class Spider(Spider):
 			'after':''
 		}
 		return [200, "video/MP2T", action, ""]
+	
+	def get_douban_hot(self,typeid,limit, pg):
+		rsp = self.fetch(f'https://movie.douban.com/j/search_subjects?type={typeid}&tag=热门&page_limit={limit}&page_start={pg}',headers=self.header)	
+		jsonData = json.loads(rsp.text)
+		vod = []		
+		for v in jsonData['subjects']:
+			remarks = v['episodes_info'] or v['rate']
+			vod.append({
+				"vod_id": None,
+				"vod_name": v['title'],
+				"vod_pic": v['cover'],
+				"vod_remarks": remarks
+			})
+		return vod
+		
+
+	

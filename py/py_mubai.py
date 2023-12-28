@@ -3,27 +3,20 @@
 import sys
 sys.path.append('..') 
 from base.spider import Spider
-import json
 import requests
 import re
 
 class Spider(Spider):
 	
-	siteUrl = "https://m.mubai.link/"
-	header = {
-		"user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
-        "Referer": siteUrl
-	}	
+	siteUrl = "https://m.mubai.link"
 
 	def getName(self):
-		return "孟買"
+		return "慕白"
 	
 	def init(self,extend=""):
 		self.extend = extend
 	
-	#主頁
-	def homeContent(self,filter):
-		
+	def homeContent(self,filter):		
 		result = {}		
 		classes = []		
 		cateManual = {
@@ -33,42 +26,36 @@ class Spider(Spider):
 			"動漫": "4"			
 		}		
 		for k in cateManual:
-			classes.append({'type_name': k,'type_id': cateManual[k]})			
-
-		result['class'] = classes
-		
+			classes.append({'type_name': k,'type_id': cateManual[k]})
+		result['class'] = classes		
 		if self.extend:
 			rsp = self.fetch(self.extend)
 			if rsp.text:
-				result['filters'] = json.loads(rsp.text)
-
+				result['filters'] = self.str2json(rsp.text)
 		return result
 	
-	#推薦頁
 	def homeVideoContent(self):		
 		result = {}
 		url = f'{self.siteUrl}/api/index'
 		rsp = self.fetch(url)
 		if rsp.text:
-			videos = []
-			vodData = json.loads(rsp.text)
-			for content in vodData['data']['content']:
-				for vod in content['movies']:
-					videos.append({
-						"vod_id": vod['id'],
-						"vod_name": vod['name'],
-						"vod_pic": vod['picture'],
-						"vod_remarks": vod['remarks']
+			vod = []
+			jsonData = self.str2json(rsp.text)
+			for content in jsonData['data']['content']:
+				for v in content['movies']:
+					vod.append({
+						"vod_id": v['id'],
+						"vod_name": v['name'],
+						"vod_pic": v['picture'],
+						"vod_remarks": v['remarks']
 					})
-
-			result['list'] = videos
+			result['list'] = vod
 		return result	
 
-	#分類
 	def categoryContent(self,tid,pg,filter,extend):
 		#https://m.mubai.link/filmClassifySearch?Pid=1&Sort=release_stamp&current=1
 		result = {}	
-		videos = []			
+		vod = []			
 		params = {
 			"Pid": tid,
 			"current": pg,
@@ -83,22 +70,21 @@ class Spider(Spider):
 		rsp = requests.get(url=url,params=params)
 
 		if rsp.text:
-			vodData = json.loads(rsp.text)
-			for vod in vodData['data']['list']:
-				videos.append({
-					"vod_id": vod['id'],
-					"vod_name": vod['name'],
-					"vod_pic": vod['picture'],
-					"vod_remarks": vod['remarks']
+			jsonData = self.str2json(rsp.text)
+			for v in jsonData['data']['list']:
+				vod.append({
+					"vod_id": v['id'],
+					"vod_name": v['name'],
+					"vod_pic": v['picture'],
+					"vod_remarks": v['remarks']
             	})
-			result['list'] = videos
+			result['list'] = vod
 			result['page'] = pg
-			result['pagecount'] = vodData['page']['pageCount']
+			result['pagecount'] = jsonData['page']['pageCount']
 			result['limit'] = 35
-			result['total'] = vodData['page']['total']
+			result['total'] = jsonData['page']['total']
 		return result 
 	
-	#詳情
 	def detailContent(self,array):
 		#https://m.mubai.link/api/filmDetail?id=77886
 		result = {}		
@@ -107,52 +93,48 @@ class Spider(Spider):
 		rsp = self.fetch(url)
 		if rsp.text:
 			playUrls = []			
-			vodeos = []
-			vodData = json.loads(rsp.text)
-			vodData = vodData['data']['detail']			
-			for v in vodData['playList'][0]:				
+			vod = []
+			jsonData =  self.str2json(rsp.text)
+			jsonData = jsonData['data']['detail']			
+			for v in jsonData['playList'][0]:				
 				playUrls.append('#'.join([v['episode'] + '$' + v['link']]))
-
-			cleaned_content = re.sub(r'<p>\s*|\s*</p>', '', vodData['descriptor']['content'])			
-			vodeos.append ({
+			cleaned_content = re.sub(r'<p>\s*|\s*</p>', '', jsonData['descriptor']['content'])			
+			vod.append ({
 				"vod_id": id,
-				"vod_name": vodData['name'],
-				"vod_pic":  vodData['picture'],
-				"type_name": vodData['descriptor']['classTag'],
-				"vod_remarks": vodData['descriptor']['remarks'],
-				"vod_year": vodData['descriptor']['year'],
-				"vod_area": vodData['descriptor']['area'],
-				"vod_actor": vodData['descriptor']['actor'],
-				"vod_director": vodData['descriptor']['director'],
+				"vod_name": jsonData['name'],
+				"vod_pic":  jsonData['picture'],
+				"type_name": jsonData['descriptor']['classTag'],
+				"vod_remarks": jsonData['descriptor']['remarks'],
+				"vod_year": jsonData['descriptor']['year'],
+				"vod_area": jsonData['descriptor']['area'],
+				"vod_actor": jsonData['descriptor']['actor'],
+				"vod_director": jsonData['descriptor']['director'],
 				"vod_content": cleaned_content,
 				"vod_play_from" : 'liangzi',
 				"vod_play_url" : '#'.join(playUrls)
-				})
-			
-			result['list'] = vodeos
+				})			
+			result['list'] = vod
 		return result	
 	 
-	#搜索
 	def searchContent(self,key,quick):
 		#https://m.mubai.link/search?search=我知道我爱你
 		result = {}
 		url = f'{self.siteUrl}/api/searchFilm?keyword={key}'
 		rsp = self.fetch(url)
 		if rsp.text:
-			videos = []
-			vodData = json.loads(rsp.text)
-			vodData = vodData['data']['list']
-			for v in vodData:
-				videos.append({
+			vod = []
+			jsonData =  self.str2json(rsp.text)
+			jsonData = jsonData['data']['list']
+			for v in jsonData:
+				vod.append({
 					"vod_id": v['id'],
 					"vod_name": v['name'],
 					"vod_pic": v['picture'],
 					"vod_remarks": v['remarks']
 				})      
-			result['list'] = videos
+			result['list'] = vod
 		return result
 	
-	#播放	
 	def playerContent(self,flag,id,vipFlags):
 		result = {
         	'parse': '0',
@@ -162,15 +144,12 @@ class Spider(Spider):
         }
 		return result
 	
-	#視頻格式
 	def isVideoFormat(self,url):
 		pass
 	
-	#視頻檢測
 	def manualVideoCheck(self):
 		pass
 	
-	#本地代理
 	def localProxy(self,param):
 		action = {
 			'url':'',
