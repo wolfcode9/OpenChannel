@@ -87,7 +87,7 @@ class Spider(Spider):
 				"vod_pic": v['img'],
 				"vod_remarks": v['countStr']
         })
-		limit = 50
+		limit = 16
 		total = jsonData['data']['total']
 		pagecount = int(total/limit)
 		result['list'] = vod
