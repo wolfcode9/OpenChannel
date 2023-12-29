@@ -55,77 +55,65 @@ class Spider(Spider):
 				})			
 		return	{"list":vod}
 	
-	def categoryContent(self,tid,pg,filter,extend):
-		return {}
-		#https://m.mubai.link/filmClassifySearch?Pid=1&Sort=release_stamp&current=1
-		result = {}	
-		vod = []			
+	def categoryContent(self,tid,pg,filter,extend):		
+		result = {}
+		vod = []
 		params = {
-			"Pid": tid,
-			"current": pg,
-			"Sort": extend.get("Sort", "release_stamp"),
-			"Category": extend.get("Category", ""),
-			"Plot": extend.get("Plot", ""),			
-			"Year": extend.get("Year", ""),
-			"Language": extend.get("Language", ""),
-			"Area": extend.get("Area", "")
+			"ChName": "电视直播",
+			"PageSize": 16,
+			"type": extend.get("type", ""),	
+			"year": extend.get("year", ""),
+			"area": extend.get("area", "")
 		}
-		url = f'{self.siteUrl}/api/filmClassifySearch'
-		rsp = requests.get(url=url,params=params)
-
-		if rsp.text:
-			jsonData = rsp.json()
-			for v in jsonData['data']['list']:
-				vod.append({
-					"vod_id": v['id'],
-					"vod_name": v['name'],
-					"vod_pic": v['picture'],
-					"vod_remarks": v['remarks']
-            	})
-			result['list'] = vod
-			result['page'] = pg
-			result['pagecount'] = jsonData['page']['pageCount']
-			result['limit'] = 35
-			result['total'] = jsonData['page']['total']
+		rsp = requests.get(url=self.apiUrl,params=params,hasattr=self.header)
+		print(rsp.text)
+		'''
+		jsonData = rsp.json()		
+		for v in jsonData['data']['list']:
+			vod.append({
+				"vod_id": v['id'],
+				"vod_name": v['name'],
+				"vod_pic": v['picture'],
+				"vod_remarks": v['remarks']
+			})
+		result['list'] = vod
+		result['page'] = pg
+		result['pagecount'] = jsonData['page']['pageCount']
+		result['limit'] = 35
+		result['total'] = jsonData['page']['total']
+		'''
 		return result 
 	
 	def detailContent(self,array):
-		return {}
-		#https://m.mubai.link/api/filmDetail?id=77886
-		result = {}		
-		id = array[0]
-		url = f"{self.siteUrl}/api/filmDetail?id={id}"
-		rsp = self.fetch(url)
-		if rsp.text:
-			playUrls = []			
-			vod = []
-			jsonData = rsp.json()
-			jsonData = jsonData['data']['detail']			
-			for v in jsonData['playList'][0]:				
-				playUrls.append('#'.join([v['episode'] + '$' + v['link']]))
-			cleaned_content = re.sub(r'<p>\s*|\s*</p>', '', jsonData['descriptor']['content'])			
-			vod.append ({
-				"vod_id": id,
-				"vod_name": jsonData['name'],
-				"vod_pic":  jsonData['picture'],
-				"type_name": jsonData['descriptor']['classTag'],
-				"vod_remarks": jsonData['descriptor']['remarks'],
-				"vod_year": jsonData['descriptor']['year'],
-				"vod_area": jsonData['descriptor']['area'],
-				"vod_actor": jsonData['descriptor']['actor'],
-				"vod_director": jsonData['descriptor']['director'],
-				"vod_content": cleaned_content,
-				"vod_play_from" : 'liangzi',
-				"vod_play_url" : '#'.join(playUrls)
-				})			
-			result['list'] = vod
-		return result	
+		id = array[0]		
+		url = self.detail + id
+		rsp = self.fetch(url,headers=self.header)
+		tree = self.html(rsp.text)		
+		script = self.str2json(self.xpText(tree,'//script[@id="__NEXT_DATA__"]/text()'))		
+		jsonData = script["props"]["pageProps"]["pageData"]		
+		play_urls =  [f'{video["epInfo"]}${video["purl"]}' for video in jsonData["videos"]]
+		play_urls = "#".join(play_urls)
+		vod = [{
+			"vod_id": id,
+			"vod_name": jsonData["name"],
+			"vod_pic":  jsonData["picurl"],
+			"type_name": jsonData["label"],
+			"vod_remarks": jsonData["countStr"],
+			"vod_year": jsonData["time"],
+			"vod_area": jsonData["country"],
+			"vod_actor": jsonData["actor"],
+			"vod_director": jsonData["director"],
+			"vod_content":  jsonData["desc"],
+			"vod_play_from" : "wolf",
+			"vod_play_url" : play_urls
+		}]
+		return {"list": vod}
 	 
 	def searchContent(self,key,quick):
-		return {}
+		'''
 		#https://m.mubai.link/search?search=我知道我爱你
 		result = {}
-		url = f'{self.siteUrl}/api/searchFilm?keyword={key}'
+		url = f"{self.siteUrl}/api/searchFilm?keyword={key}'
 		rsp = self.fetch(url)		
 		vod = []
 		jsonData = rsp.json()
@@ -138,7 +126,8 @@ class Spider(Spider):
 				"vod_remarks": v['remarks']
 			})      
 		result['list'] = vod
-		return result
+		'''	
+		return {}
 	
 	def playerContent(self,flag,id,vipFlags):
 		result = {
