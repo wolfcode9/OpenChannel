@@ -37,15 +37,18 @@ class Spider(Spider):
 		result = {}	
 		f = []
 		result['class'] = self.classes
+		'''
 		for cls in self.classes:
 			url = self.siteUrl + cls["type_id"] + "/all/all/all"
 			rsp = self.fetch(url,headers=self.header)
 			tree = self.html(rsp.text)			
 			script = self.str2json(self.xpText(tree,'//script[@id="__NEXT_DATA__"]/text()'))
 			f.append(script["props"]["pageProps"]["filterCondition"]["label"])
+        #if self.extend:
 		result['filters'] =  f #self.fetch(self.extend).json()
+		'''
 		return result
-		#if self.extend:
+		
 	
 	def homeVideoContent(self):		
 		vod = []
