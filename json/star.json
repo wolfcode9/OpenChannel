@@ -1,7 +1,7 @@
 {
   "movie": [
     {
-      "key": "area",
+      "key": "country",
       "name": "地區",
       "value": [
         {
@@ -39,7 +39,7 @@
       ]
     },   
     {
-      "key": "year",
+      "key": "time",
       "name": "時間",
       "value": [
         {
@@ -87,7 +87,7 @@
   ],
   "drama": [
     {
-      "key": "area",
+      "key": "country",
       "name": "地區",
       "value": [
         {
@@ -125,7 +125,7 @@
       ]
     },    
     {
-      "key": "year",
+      "key": "time",
       "name": "時間",
       "value": [
         {

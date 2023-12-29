@@ -66,9 +66,9 @@ class Spider(Spider):
     		"chName":cnName,
     		"pageSize":limit,
     		"page":int(pg),
-			"year": extend.get("year", ""),
+			"year": extend.get("time", ""),
         	"type": extend.get("type", ""),
-			"area": extend.get("area", "")
+			"area": extend.get("country", "")
 		}		
 
 		jsonData = requests.post(url=self.apiUrl,json=query,headers=self.header).json()
