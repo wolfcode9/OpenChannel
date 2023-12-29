@@ -86,12 +86,15 @@ class Spider(Spider):
 				"vod_name": v['name'],
 				"vod_pic": v['img'],
 				"vod_remarks": v['countStr']
-        })		
+        })
+		limit = 50
+		total = jsonData['data']['total']
+		pagecount = int(total/limit)
 		result['list'] = vod
 		result['page'] = pg
-		result['pagecount'] = jsonData['data']['pageSize']
-		result['limit'] = 35
-		result['total'] = jsonData['data']['total']
+		result['pagecount'] = pagecount 
+		result['limit'] = limit
+		result['total'] = total
 		return result 
 	
 	def detailContent(self,array):
