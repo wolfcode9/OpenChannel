@@ -103,7 +103,7 @@ class Spider(Spider):
 				"vod_actor": jsonData['descriptor']['actor'],
 				"vod_director": jsonData['descriptor']['director'],
 				"vod_content": cleaned_content,
-				"vod_play_from" : 'Wolf',
+				"vod_play_from" : '✡️',
 				"vod_play_url" : '#'.join(playUrls)
 				})			
 			result['list'] = vod

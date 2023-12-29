@@ -111,7 +111,7 @@ class Spider(Spider):
 			"vod_actor": jsonData["actor"],
 			"vod_director": jsonData["director"],
 			"vod_content":  jsonData["desc"],
-			"vod_play_from" : "Wolf",
+			"vod_play_from" : "✡️",
 			"vod_play_url" : play_urls
 		}]
 		return {"list": vod}
