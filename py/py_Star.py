@@ -101,8 +101,8 @@ class Spider(Spider):
 		tree = self.html(rsp.text)		
 		script = self.str2json(self.xpText(tree,'//script[@id="__NEXT_DATA__"]/text()'))		
 		jsonData = script["props"]["pageProps"]["pageData"]		
-		play_urls =  [f'{video["epInfo"]}${video["purl"]}' for video in jsonData["videos"]]
-		play_urls = "#".join(play_urls)
+		#play_urls =  [f'{video["epInfo"]}${video["purl"]}' for video in jsonData["videos"]]
+		#play_urls = "#".join(play_urls)
 		vod = [{
 			"vod_id": id,
 			"vod_name": jsonData["name"],
@@ -115,7 +115,7 @@ class Spider(Spider):
 			"vod_director": jsonData["director"],
 			"vod_content":  jsonData["desc"],
 			"vod_play_from" : "wolf",
-			"vod_play_url" : play_urls
+			"vod_play_url" : '' #play_urls
 		}]
 		return {"list": vod}
 	 
