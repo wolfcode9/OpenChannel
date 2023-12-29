@@ -61,15 +61,16 @@ class Spider(Spider):
 	def categoryContent(self,tid,pg,filter,extend):
 		result = {}		
 		cnName = next(cls["type_name"] for cls in self.classes if cls["type_id"] == tid)
-		limit = 16
+		limit = 50
+		year = int(extend.get("year",0))
 		query = {
     		"chName":cnName,
     		"pageSize":limit,
     		"page":int(pg),
         	"label": extend.get("type", ""),
 			"country": extend.get("area", ""),
-			"StartTime" : int(extend.get("year",0)),
-			"EndTime" : int(extend.get("year",0))	
+			"StartTime" : year,
+			"EndTime" : year
 
 		}
 		jsonData = requests.post(url=self.apiUrl,json=query,headers=self.header).json()
@@ -110,7 +111,7 @@ class Spider(Spider):
 			"vod_actor": jsonData["actor"],
 			"vod_director": jsonData["director"],
 			"vod_content":  jsonData["desc"],
-			"vod_play_from" : "wolf",
+			"vod_play_from" : "WolfCode",
 			"vod_play_url" : play_urls
 		}]
 		return {"list": vod}
