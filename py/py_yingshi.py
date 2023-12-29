@@ -101,7 +101,7 @@ class Spider(Spider):
 			"vod_actor": vod['vod_actor'],
 			"vod_director": vod['vod_director'],
 			"vod_content": vod['vod_content'],
-			"vod_play_from": "Wolf", #vod['vod_play_from'],
+			"vod_play_from": "", #vod['vod_play_from'],
 			"vod_play_url": vod['vod_play_url']
 		}]}			
 		return result
