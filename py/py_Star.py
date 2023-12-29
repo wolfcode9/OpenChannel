@@ -5,7 +5,6 @@ sys.path.append('..')
 from base.spider import Spider
 import requests
 import urllib.parse
-import json
 
 class Spider(Spider):
 	apiUrl = "https://aws.ulivetv.net/v3/web/api/filter"
@@ -36,18 +35,11 @@ class Spider(Spider):
 	def homeContent(self,filter):
 		result = {}		
 		result['class'] = self.classes
-		f = []
-		for cls in self.classes:
-			url = self.siteUrl + cls["type_id"] + "/all/all/all"
-			rsp = self.fetch(url,headers=self.header)
-			tree = self.html(rsp.text)			
-			script = self.str2json(self.xpText(tree,'//script[@id="__NEXT_DATA__"]/text()'))
-			f.append(script["props"]["pageProps"]["filterCondition"]["label"])
-        #if self.extend:
-		result['filters'] =  f #self.fetch(self.extend).json()
-		
-		return result
-		
+		if self.extend:
+			jsonFilters = self.fetch(self.extend).json()
+			if jsonFilters:
+				result['filters'] = jsonFilters
+		return result		
 	
 	def homeVideoContent(self):		
 		vod = []
@@ -68,18 +60,19 @@ class Spider(Spider):
 	
 	def categoryContent(self,tid,pg,filter,extend):
 		result = {}		
-		cnName = next(cls["type_name"] for cls in self.classes if cls["type_id"] == tid)				
+		cnName = next(cls["type_name"] for cls in self.classes if cls["type_id"] == tid)
+		limit = 16
 		query = {
     		"chName":cnName,
-    		"pageSize":16,
-    		"page":int(pg)
-		}
-		#"year": extend.get("year", ""),
-        #"type": extend.get("type", ""),
-		#"area": extend.get("area", "")
+    		"pageSize":limit,
+    		"page":int(pg),
+			"year": extend.get("year", ""),
+        	"type": extend.get("type", ""),
+			"area": extend.get("area", "")
+		}		
 
 		jsonData = requests.post(url=self.apiUrl,json=query,headers=self.header).json()
-		vod = []
+		vod = []		
 		for v in jsonData['data']['list']:
 			vod.append({
 				"vod_id": v['id'],
@@ -87,7 +80,6 @@ class Spider(Spider):
 				"vod_pic": v['img'],
 				"vod_remarks": v['countStr']
         })
-		limit = 16
 		total = jsonData['data']['total']
 		pagecount = int(total/limit)
 		result['list'] = vod
