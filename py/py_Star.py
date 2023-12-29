@@ -5,33 +5,60 @@ sys.path.append('..')
 from base.spider import Spider
 import requests
 import re
+from lxml import html
 
-class Spider(Spider):	
-	siteUrl = "https://m.mubai.link"
+class Spider(Spider):
+	apiUrl = "https://aws.ulivetv.net/v3/web/api/filter"
+	siteUrl = "https://www.histar.tv/"
+	detail = siteUrl + "vod/detail/"
+	data = "_next/data/"
+	header = {
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+        "Cookie": "userIP=127.0.0.1; aws-waf-token=",
+        "Referer": siteUrl
+    }
+	classes = [
+		{"type_id": "movie", "type_name": "電影"}, 
+		{"type_id": "drama", "type_name": "電視劇"},
+		{"type_id": "variety", "type_name": "綜藝"}, 
+		{"type_id": "animation", "type_name": "動漫"},
+		{"type_id": "documentary", "type_name": "記錄片" }
+	]
 
 	def getName(self):
-		return "慕白"
+		return "星視界"
 	
-	def init(self,extend=""):
+	def init(self,extend=""):		
 		self.extend = extend
-		
-	def homeContent(self,filter):		
-		result = {}
-		classes = [
-			{"type_id": "1", "type_name": "電影"}, 
-			{"type_id": "2", "type_name": "電視劇"},
-			{"type_id": "3", "type_name": "綜藝"}, 
-			{"type_id": "4", "type_name": "動漫" }
-		]
-		result['class'] = classes
-		if self.extend:			
+	
+	def homeContent(self,filter):
+		result = {}	
+		result['class'] = self.classes
+		if self.extend:
 			result['filters'] =  self.fetch(self.extend).json()
 		return result
 	
 	def homeVideoContent(self):		
 		result = {}
-		url = f'{self.siteUrl}/api/index'
-		rsp = self.fetch(url)	
+		vod = []
+		rsp = self.fetch(self.siteUrl,headers=self.header)		
+		tree = self.html(rsp.text)		
+		script = self.str2json(self.xpText(tree,'//script[@id="__NEXT_DATA__"]/text()'))
+		cards = script["props"]["pageProps"]["cards"]
+		for card in cards:
+			if card["name"] != "电视直播":
+				vod += card["cards"]
+		result['list'] = vod
+		
+		'''
+		for c in self.classes:
+			url = f'{self.siteUrl}{c["type_id"]}/all/all/all'
+			rsp = self.fetch(url,headers=self.header)			
+			tree = self.html(rsp.text)
+			script_data = self.xpText(tree,'//script[@id="__NEXT_DATA__"]')
+			print(script_data)
+		
+		
 		vod = []
 		jsonData = rsp.json()
 		for content in jsonData['data']['content']:
@@ -43,9 +70,11 @@ class Spider(Spider):
 					"vod_remarks": v['remarks']
 				})
 		result['list'] = vod
+		'''
 		return result
 	
 	def categoryContent(self,tid,pg,filter,extend):
+		return {}
 		#https://m.mubai.link/filmClassifySearch?Pid=1&Sort=release_stamp&current=1
 		result = {}	
 		vod = []			
@@ -79,6 +108,7 @@ class Spider(Spider):
 		return result 
 	
 	def detailContent(self,array):
+		return {}
 		#https://m.mubai.link/api/filmDetail?id=77886
 		result = {}		
 		id = array[0]
@@ -110,6 +140,7 @@ class Spider(Spider):
 		return result	
 	 
 	def searchContent(self,key,quick):
+		return {}
 		#https://m.mubai.link/search?search=我知道我爱你
 		result = {}
 		url = f'{self.siteUrl}/api/searchFilm?keyword={key}'

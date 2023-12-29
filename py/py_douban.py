@@ -13,16 +13,12 @@ class Spider(Spider):
 	def init(self,extend=""):
 		pass	
 	
-	def homeContent(self,filter):
-		cls = []		
-		cateManual = {
-            "熱播電影": "movie",
-			"熱播劇集": "tv"
-		}		
-		for k in cateManual:
-			cls.append({'type_name': k,'type_id': cateManual[k]})
-
-		return {'class': cls}
+	def homeContent(self,filter):				
+		classes = [
+			{"type_id": "movie", "type_name": "熱播電影"}, 
+			{"type_id": "tv", "type_name": "熱播劇集"}
+		]
+		return {'class': classes}
 	
 	def homeVideoContent(self):		
 		limit = 20

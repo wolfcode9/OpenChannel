@@ -15,17 +15,14 @@ class Spider(Spider):
 		self.extend = extend
 	
 	def homeContent(self,filter):
-		result = {}		
-		classes = []		
-		cateManual = {
-            "電影": "2",
-			"電視劇": "1",			
-			"綜藝": "3",
-			"動漫": "4",
-			"記錄片": "5"
-		}		
-		for k in cateManual:
-			classes.append({'type_name': k,'type_id': cateManual[k]})
+		result = {}				
+		classes = [
+			{"type_id": "2", "type_name": "電影"}, 
+			{"type_id": "1", "type_name": "電視劇"},
+			{"type_id": "3", "type_name": "綜藝"}, 
+			{"type_id": "4", "type_name": "動漫" },
+			{"type_id": "5", "type_name": "記錄片" }
+		]
 		result['class'] = classes
 		if self.extend:			
 			result['filters'] = self.fetch(self.extend).json()	
