@@ -39,7 +39,6 @@ class Spider(Spider):
 		return result
 	
 	def homeVideoContent(self):		
-		result = {}
 		vod = []
 		rsp = self.fetch(self.siteUrl,headers=self.header)		
 		tree = self.html(rsp.text)		
@@ -47,31 +46,14 @@ class Spider(Spider):
 		cards = script["props"]["pageProps"]["cards"]
 		for card in cards:
 			if card["name"] != "电视直播":
-				vod += card["cards"]
-		result['list'] = vod
-		
-		'''
-		for c in self.classes:
-			url = f'{self.siteUrl}{c["type_id"]}/all/all/all'
-			rsp = self.fetch(url,headers=self.header)			
-			tree = self.html(rsp.text)
-			script_data = self.xpText(tree,'//script[@id="__NEXT_DATA__"]')
-			print(script_data)
-		
-		
-		vod = []
-		jsonData = rsp.json()
-		for content in jsonData['data']['content']:
-			for v in content['movies']:
-				vod.append({
+				for v in card['cards']:
+					vod.append({
 					"vod_id": v['id'],
 					"vod_name": v['name'],
-					"vod_pic": v['picture'],
-					"vod_remarks": v['remarks']
-				})
-		result['list'] = vod
-		'''
-		return result
+					"vod_pic": v['img'],
+					"vod_remarks": v['countStr']
+				})			
+		return	{"list":vod}
 	
 	def categoryContent(self,tid,pg,filter,extend):
 		return {}
