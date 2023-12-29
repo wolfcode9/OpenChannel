@@ -66,11 +66,12 @@ class Spider(Spider):
     		"chName":cnName,
     		"pageSize":limit,
     		"page":int(pg),
-			"year": extend.get("time", ""),
-        	"type": extend.get("type", ""),
-			"area": extend.get("country", "")
-		}		
+        	"label": extend.get("type", ""),
+			"country": extend.get("area", ""),
+			"StartTime" : int(extend.get("year",0)),
+			"EndTime" : int(extend.get("year",0))	
 
+		}
 		jsonData = requests.post(url=self.apiUrl,json=query,headers=self.header).json()
 		vod = []		
 		for v in jsonData['data']['list']:
