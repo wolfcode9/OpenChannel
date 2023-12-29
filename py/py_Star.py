@@ -72,7 +72,7 @@ class Spider(Spider):
 		query = {
     		"chName":cnName,
     		"pageSize":16,
-    		"page":0
+    		"page":pg
 		}
 		#"year": extend.get("year", ""),
         #"type": extend.get("type", ""),
