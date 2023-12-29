@@ -36,7 +36,7 @@ class Spider(Spider):
 	def homeContent(self,filter):
 		result = {}		
 		result['class'] = self.classes
-		'''
+		f = []
 		for cls in self.classes:
 			url = self.siteUrl + cls["type_id"] + "/all/all/all"
 			rsp = self.fetch(url,headers=self.header)
@@ -45,7 +45,7 @@ class Spider(Spider):
 			f.append(script["props"]["pageProps"]["filterCondition"]["label"])
         #if self.extend:
 		result['filters'] =  f #self.fetch(self.extend).json()
-		'''
+		
 		return result
 		
 	
