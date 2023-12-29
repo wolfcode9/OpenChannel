@@ -34,8 +34,7 @@ class Spider(Spider):
 		self.ver = self.getVer()
 	
 	def homeContent(self,filter):
-		result = {}	
-		f = []
+		result = {}		
 		result['class'] = self.classes
 		'''
 		for cls in self.classes:
@@ -69,16 +68,17 @@ class Spider(Spider):
 	
 	def categoryContent(self,tid,pg,filter,extend):
 		result = {}		
-		cnName = next(cls["type_name"] for cls in self.classes if cls["type_id"] == tid)		
+		cnName = next(cls["type_name"] for cls in self.classes if cls["type_id"] == tid)				
 		query = {
     		"chName":cnName,
     		"pageSize":16,
-    		"page":pg,
-            "year": extend.get("year", ""),
-            "type": extend.get("type", ""),
-            "area": extend.get("area", "")
-		}	
-		jsonData = requests.post(url=self.apiUrl,json=query,headers=self.header).json()		 
+    		"page":pg
+		}
+		#"year": extend.get("year", ""),
+        #"type": extend.get("type", ""),
+		#"area": extend.get("area", "")
+
+		jsonData = requests.post(url=self.apiUrl,json=query,headers=self.header).json()
 		vod = []
 		for v in jsonData['data']['list']:
 			vod.append({
@@ -86,17 +86,17 @@ class Spider(Spider):
 				"vod_name": v['name'],
 				"vod_pic": v['img'],
 				"vod_remarks": v['countStr']
-        })
+        })		
 		result['list'] = vod
 		result['page'] = pg
 		result['pagecount'] = jsonData['data']['pageSize']
 		result['limit'] = 35
-		result['total'] = jsonData['data']['total']		
+		result['total'] = jsonData['data']['total']
 		return result 
 	
 	def detailContent(self,array):
 		id = array[0]		
-		url = self.detail + id
+		url = f'{self.detail}{id}'
 		rsp = self.fetch(url,headers=self.header)
 		tree = self.html(rsp.text)		
 		script = self.str2json(self.xpText(tree,'//script[@id="__NEXT_DATA__"]/text()'))		
