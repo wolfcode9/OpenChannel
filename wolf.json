@@ -69,7 +69,8 @@
 	  "url": "https://www.histar.tv/",
       "searchable": 1,
 	  "changeable": 1,      
-	  "filterable": 1	  
+	  "filterable": 1,
+	  "ext": "https://raw.githubusercontent.com/wolfcode9/OpenChannel/main/json/star.json"
     },	
     {
       "key": "csp_Star",
