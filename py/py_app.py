@@ -8,12 +8,11 @@ import re
 class Spider(Spider):    
 
     def getName(self):
-        return "影視Api"
+        return "影視App"
     
     def init(self,extend=""):
         self.siteUrl = extend
-        # "https://kuaikan-api.com/api.php/provide/vod/from/kuaikan"
-        
+        # "https://kuaikan-api.com/api.php/provide/vod/from/kuaikan"         
         
     def homeContent(self,filter):
         # https://bfzyapi.com/api.php/provide/vod?ac=list&h=1
@@ -57,14 +56,14 @@ class Spider(Spider):
             "Referer" : "https://kuaikan-api.com"
         }
         params = {
-            'param1': '?search?text={key}&pg=1',
+            'param1': '?ac=videolist&search?text={key}&pg=1',
             'param2': '/list?wd={key}&page=1',
             'param3': '?wd={key}&page=1',
             'param4': '?ac=list&wd={key}&page=1',
             'param5': '?ac=list&zm={key}&page=1'
         }
         patterns = {
-            'pattern1': re.compile(r'kuaikan'),
+            'pattern1': re.compile(r'api.php/.*?/vod'),
             #'pattern2': re.compile(r''),
             #'pattern3': re.compile(r''),
             #'pattern4': re.compile(r''),
