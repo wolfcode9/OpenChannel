@@ -6,14 +6,14 @@ from base.spider import Spider
 import json
 
 class Spider(Spider):
-    siteUrl = ""
+    siteUrl = "https://kuaikan-api.com/api.php/provide/vod/from/kuaikan"
 
     def getName(self):
         return "影視Api"
     
     def init(self,extend=""):
         print("============{0}============".format(extend))
-        self.siteUrl = extend
+        #self.siteUrl = extend
         
     def homeContent(self,filter):
         result = {}
