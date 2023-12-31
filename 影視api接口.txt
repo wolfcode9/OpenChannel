@@ -27,3 +27,11 @@ https://91md.me/api.php/provide/vod/?ac=detail&wd=xFLICKO.MFK-0064
 乐视资源网(JOSN)	https://leshizyapi.com/api.php/provide/vod/at/json/
 大地资源(XML)	http://ddkbo.com/api.php
 lziapi(API) https://cj.lziapi.com/api.php/provide/vod/?ac=detail
+
+
+          'param1': '?ac=list&search?text={key}&pg=1',
+            'param2': '?ac=list&zm={key}&page=1',        
+            #'param2': '/list?wd={key}&page=1',
+            #'param3': '?wd={key}&page=1',
+            #'param4': '?ac=videolist&wd={key}&page=1',
+            #'param5': '?ac=videolist&zm={key}&page=1'

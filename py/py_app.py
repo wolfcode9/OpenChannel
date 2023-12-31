@@ -64,7 +64,7 @@ class Spider(Spider):
             #'param5': '?ac=videolist&zm={key}&page=1'
         }
         patterns = {
-            'pattern1': re.compile(r'kuaikan|lziapi'),
+            'pattern1': re.compile(r'kuaikan|lziapi|bfzyapi'),
             'pattern2': re.compile(r'bfzyapi'),
             #'pattern3': re.compile(r''),
             #'pattern4': re.compile(r''),
