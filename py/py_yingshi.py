@@ -6,7 +6,7 @@ from base.spider import Spider
 import requests
 
 class Spider(Spider):
-    siteUrl = "https://www.yingshi.tv"
+	siteUrl = "https://www.yingshi.tv"
 
 	def getName(self):
 		return "影視"
