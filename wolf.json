@@ -99,13 +99,12 @@
       "ext": "https://bfzyapi.com/api.php/provide/vod"    
     },
 	{
-      "key": "快看PY",
-      "name": "快看PY",
+      "key": "快看(PY)",
+      "name": "快看(PY)",
       "type": 3,
       "api": "./py/py_api.py",
       "searchable": 1,
       "changeable": 1,
-      "filterable": 1,
       "ext": "https://kuaikan-api.com/api.php/provide/vod/from/kuaikan"    
     },
     {
