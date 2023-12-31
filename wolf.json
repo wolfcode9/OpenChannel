@@ -93,7 +93,7 @@
       "key": "暴風(PY)",
       "name": "暴風(PY)",
       "type": 3,
-      "api": "./py/py_app",
+      "api": "./py/py_app.py",
       "searchable": 1,
       "changeable": 1,
       "ext": "https://bfzyapi.com/api.php/provide/vod"
