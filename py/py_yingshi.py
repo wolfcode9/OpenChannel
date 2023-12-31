@@ -5,14 +5,14 @@ sys.path.append('..')
 from base.spider import Spider
 import requests
 
-class Spider(Spider):	
-	siteUrl = "https://www.yingshi.tv"
+class Spider(Spider):
 
 	def getName(self):
 		return "影視"
 	
 	def init(self,extend=""):		
 		self.extend = extend
+		self.siteUrl = "https://www.yingshi.tv"
 	
 	def homeContent(self,filter):
 		result = {}				
