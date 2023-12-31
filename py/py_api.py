@@ -14,22 +14,24 @@ class Spider(Spider):
         self.siteUrl = extend
         
     def homeContent(self,filter):
+        #https://bfzyapi.com/api.php/provide/vod?ac=list&h=1
         result = {}
         vodList = self.fetch(f'{self.siteUrl}?ac=list&h=1').json()
         result['class'] = vodList['class']        
         #if(filter):
-        #    result['filters'] = self.config['filter']        
+        #    result['filters'] = self.config['filter']s
         return result
 
-    def homeVideoContent(self):        
-        vodList = self.fetch(f'{self.siteUrl}?ac=videolist&h=24').json()
+    def homeVideoContent(self):
+        #https://bfzyapi.com/api.php/provide/vod?ac=detail&h=24
+        vodList = self.fetch(f'{self.siteUrl}?ac=detail&h=24').json()
         return {'list': vodList['list']}
     
     def categoryContent(self,tid,pg,filter,extend):
         result = {}
         #params = '&'.join([f'{key}={extend[key]}' for key in extend])        
         #url = f'{self.siteUrl}??ac=list&t={{tid}}&pg={pg}&{params}'
-        url = f'{self.siteUrl}?ac=list&t={tid}&pg={pg}'
+        url = f'{self.siteUrl}?ac=detail&t={tid}&pg={pg}'
         vodList = self.fetch(url).json()
         result['list'] = vodList['list']
         result['page'] = pg
