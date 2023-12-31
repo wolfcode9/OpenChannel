@@ -93,19 +93,28 @@
       "key": "暴風(PY)",
       "name": "暴風(PY)",
       "type": 3,
-      "api": "./py/py_api.py",
+      "api": "./py/py_app",
       "searchable": 1,
       "changeable": 1,
-      "ext": "https://bfzyapi.com/api.php/provide/vod"    
+      "ext": "https://bfzyapi.com/api.php/provide/vod"
     },
-	{
+    {
+      "key": "量子(PY)",
+      "name": "量子(PY)",
+      "type": 3,
+      "api": "./py/py_app.py",
+      "searchable": 1,
+      "changeable": 1,
+      "ext": "https://cj.lziapi.com/api.php/provide/vod"
+    },
+    {
       "key": "快看(PY)",
       "name": "快看(PY)",
       "type": 3,
-      "api": "./py/py_api.py",
+      "api": "./py/py_app.py",
       "searchable": 1,
       "changeable": 1,
-      "ext": "https://kuaikan-api.com/api.php/provide/vod/from/kuaikan"    
+      "ext": "https://kuaikan-api.com/api.php/provide/vod/from/kuaikan"
     },
     {
       "key": "快看",

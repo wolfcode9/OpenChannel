@@ -3,6 +3,7 @@
 import sys
 sys.path.append('..')
 from base.spider import Spider
+import re
 
 class Spider(Spider):
     siteUrl = ""
@@ -14,7 +15,7 @@ class Spider(Spider):
         self.siteUrl = extend
         
     def homeContent(self,filter):
-        #https://bfzyapi.com/api.php/provide/vod?ac=list&h=1
+        # https://bfzyapi.com/api.php/provide/vod?ac=list&h=1
         result = {}
         vodList = self.fetch(f'{self.siteUrl}?ac=list&h=1').json()
         result['class'] = vodList['class']        
@@ -23,13 +24,13 @@ class Spider(Spider):
         return result
 
     def homeVideoContent(self):
-        #https://bfzyapi.com/api.php/provide/vod?ac=detail&h=24
+        # https://bfzyapi.com/api.php/provide/vod?ac=detail&h=24
         vodList = self.fetch(f'{self.siteUrl}?ac=videolist&h=24').json()
         return {'list': vodList['list']}
     
     def categoryContent(self,tid,pg,filter,extend):
         result = {}
-        #https://kuaikan-api.com/api.php/provide/vod/from/kuaikan?ac=videolist&t=1&pg=1
+        # https://kuaikan-api.com/api.php/provide/vod/from/kuaikan?ac=videolist&t=1&pg=1
         #params = '&'.join([f'{key}={extend[key]}' for key in extend])        
         #url = f'{self.siteUrl}??ac=list&t={{tid}}&pg={pg}&{params}'
         url = f'{self.siteUrl}?ac=videolist&t={tid}&pg={pg}'
@@ -48,8 +49,31 @@ class Spider(Spider):
         return {'list': vodList['list']}
 
     def searchContent(self,key,quick):
-        url = f'{self.siteUrl}?ac=videolist&wd={key}'
-        vodList = self.fetch(url).json()        
+        H = {
+            "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+            "Host": "kuaikan-api.com",
+            "Referer" : "https://kuaikan-api.com"
+        }
+
+        params = {
+            'param1': '?search?text={key}&pg=1',
+            'param2': '/list?wd={key}&page=1',
+            'param3': '?wd={key}&page=1',
+            'param4': '?ac=list&wd={key}&page=1',
+            'param5': '?ac=list&zm={key}&page=1'
+        }
+        patterns = {
+            'pattern1': re.compile(r'api\\.php/.*?/vod|xgapp'),
+            #'pattern2': re.compile(r''),
+            #'pattern3': re.compile(r''),
+            #'pattern4': re.compile(r''),
+            #'pattern5': re.compile(r'')
+        }
+        for param, pattern in params.items():
+            if any(pattern.search(URL) for pattern in patterns.values()):                
+                URL += params[param].format(key=key)
+                break   
+        vodList = self.fetch(URL).json()
         return {'list': vodList['list']}
 
     def playerContent(self,flag,id,vipFlags):
