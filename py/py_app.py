@@ -12,6 +12,7 @@ class Spider(Spider):
     
     def init(self,extend=""):
         self.siteUrl = extend
+        # "http://cj.ffzyapi.com/api.php/provide/vod
         # "https://kuaikan-api.com/api.php/provide/vod/from/kuaikan"         
         
     def homeContent(self,filter):
@@ -64,8 +65,8 @@ class Spider(Spider):
             #'param5': '?ac=videolist&zm={key}&page=1'
         }
         patterns = {
-            'pattern1': re.compile(r'kuaikan|lziapi|bfzyapi'),
-            'pattern2': re.compile(r'bfzyapi'),
+            'pattern1': re.compile(r'kuaikan|lziapi'),
+            'pattern2': re.compile(r'bfzyapi|ffzyapi'),
             #'pattern3': re.compile(r''),
             #'pattern4': re.compile(r''),
             #'pattern5': re.compile(r'')
@@ -77,7 +78,9 @@ class Spider(Spider):
                 print(URL)            
                 break
         if URL:
-            vodList = self.fetch(URL).json()
+            rsp = self.fetch(URL)
+            if rsp:
+                vodList = rsp.json()
             result = {'list': vodList['list']}            
         return result  
 
