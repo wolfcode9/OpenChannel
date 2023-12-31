@@ -21,8 +21,7 @@ class Spider(Spider):
         #    result['filters'] = self.config['filter']        
         return result
 
-    def homeVideoContent(self):
-        print(self.siteUrl)
+    def homeVideoContent(self):        
         vodList = self.fetch(f'{self.siteUrl}?ac=videolist&h=24').json()
         return {'list': vodList['list']}
     
