@@ -57,14 +57,15 @@ class Spider(Spider):
         }
         params = {
             'param1': '?ac=videolist&search?text={key}&pg=1',
-            'param2': '/list?wd={key}&page=1',
-            'param3': '?wd={key}&page=1',
-            'param4': '?ac=list&wd={key}&page=1',
-            'param5': '?ac=list&zm={key}&page=1'
+            'param2': '?ac=videolist&wd={key}&page=1'            
+            #'param2': '/list?wd={key}&page=1',
+            #'param3': '?wd={key}&page=1',
+            #'param4': '?ac=videolist&wd={key}&page=1',
+            #'param5': '?ac=videolist&zm={key}&page=1'
         }
         patterns = {
-            'pattern1': re.compile(r'api.php/.*?/vod'),
-            #'pattern2': re.compile(r''),
+            'pattern1': re.compile(r'kuaikan|lziapi'),
+            'pattern2': re.compile(r'bfzyapi'),
             #'pattern3': re.compile(r''),
             #'pattern4': re.compile(r''),
             #'pattern5': re.compile(r'')
