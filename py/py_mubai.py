@@ -13,7 +13,7 @@ class Spider(Spider):
 	
 	def init(self,extend=""):
 		self.extend = extend
-        self.siteUrl = "https://m.mubai.link"
+		self.siteUrl = "https://m.mubai.link"
 		
 	def homeContent(self,filter):		
 		result = {}
