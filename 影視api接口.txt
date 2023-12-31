@@ -1,0 +1,29 @@
+CMS影視接口參數說明
+ac    list 视频列表 / videolist (detail) 详情列表
+t     分类id
+pg    页数
+wd    搜索关键字
+h     几小时内的数据
+ids   多个id逗号分割木
+
+
+#推薦	?ac=videolist&h=24      24小时内的视频数据
+https://91md.me/api.php/provide/vod/?ac=videolist&h=24
+
+#主頁
+https://91md.me/api.php/provide/vod/?ac=list&h=1
+
+#分類	?ac=list&t=1&pg=5       分类1的数据第5页
+https://91md.me/api.php/provide/vod/?ac=detail&t=1&pg=5
+
+#詳情	?ac=detail&ids=12312
+https://91md.me/api.php/provide/vod/?ac=videolist&ids=12312
+https://91md.me/api.php/provide/vod/?ac=detail&ids=12312
+
+#搜尋	?ac=detail&wd=
+https://91md.me/api.php/provide/vod/?ac=detail&wd=xFLICKO.MFK-0064
+
+
+乐视资源网(JOSN)	https://leshizyapi.com/api.php/provide/vod/at/json/
+大地资源(XML)	http://ddkbo.com/api.php
+lziapi(API) https://cj.lziapi.com/api.php/provide/vod/?ac=detail
