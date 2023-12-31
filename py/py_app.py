@@ -56,8 +56,8 @@ class Spider(Spider):
             "Referer" : "https://kuaikan-api.com"
         }
         params = {
-            'param1': '?ac=videolist&search?text={key}&pg=1',
-            'param2': '?ac=videolist&zm={key}&page=1',        
+            'param1': '?ac=list&search?text={key}&pg=1',
+            'param2': '?ac=list&zm={key}&page=1',        
             #'param2': '/list?wd={key}&page=1',
             #'param3': '?wd={key}&page=1',
             #'param4': '?ac=videolist&wd={key}&page=1',
