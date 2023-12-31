@@ -4,15 +4,15 @@ import sys
 sys.path.append('..')
 from base.spider import Spider
 import re
-#
-class Spider(Spider):
-    siteUrl = ""
+
+class Spider(Spider):    
 
     def getName(self):
         return "影視Api"
     
     def init(self,extend=""):
-        self.siteUrl = extend
+        self.siteUrl =  "https://kuaikan-api.com/api.php/provide/vod/from/kuaikan"
+        #extend
         
     def homeContent(self,filter):
         # https://bfzyapi.com/api.php/provide/vod?ac=list&h=1
@@ -49,12 +49,12 @@ class Spider(Spider):
         return {'list': vodList['list']}
 
     def searchContent(self,key,quick):
+        result = {}
         H = {
             "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
             "Host": "kuaikan-api.com",
             "Referer" : "https://kuaikan-api.com"
         }
-
         params = {
             'param1': '?search?text={key}&pg=1',
             'param2': '/list?wd={key}&page=1',
@@ -63,18 +63,21 @@ class Spider(Spider):
             'param5': '?ac=list&zm={key}&page=1'
         }
         patterns = {
-            'pattern1': re.compile(r'api\\.php/.*?/vod|xgapp'),
+            'pattern1': re.compile(r'kuaikan'),
             #'pattern2': re.compile(r''),
             #'pattern3': re.compile(r''),
             #'pattern4': re.compile(r''),
             #'pattern5': re.compile(r'')
         }
-        for param, pattern in params.items():
-            if any(pattern.search(URL) for pattern in patterns.values()):                
-                URL += params[param].format(key=key)
-                break   
-        vodList = self.fetch(URL).json()
-        return {'list': vodList['list']}
+        URL = ""        
+        for index, pattern in patterns.items():
+            if pattern.search(self.siteUrl):
+                URL = self.siteUrl + params[f'param{index[-1]}'].format(key=key)                
+                break
+        if URL:
+            vodList = self.fetch(URL).json()
+            result = {'list': vodList['list']}            
+        return result  
 
     def playerContent(self,flag,id,vipFlags):
         result = {}        
