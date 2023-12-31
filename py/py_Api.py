@@ -39,8 +39,9 @@ class Spider(Spider):
         return result
     
     def homeVideoContent(self):
+        print(self.siteUrl)
         vodList = self.fetch(f'{self.siteUrl}?do=homeVideoContent').json()        
-        return {'list': vodList}
+        return {'list': vodList['list']}
     
     def categoryContent(self,tid,pg,filter,extend):
         result = {}
@@ -55,15 +56,15 @@ class Spider(Spider):
         return result
 
     def detailContent(self,array):
-        tid = array[0]
-        url = f'{self.siteUrl}?do=detailContent&id={tid}'        
+        id = array[0]
+        url = f'{self.siteUrl}?do=detailContent&id={id}'        
         vodList = self.fetch(url).json()        
-        return {'list': vodList}
+        return {'list': vodList['list']}
 
     def searchContent(self,key,quick):
         url = f'{self.siteUrl}?do=searchContent&wd={key}'
         vodList = self.fetch(url).json()        
-        return {'list': vodList}
+        return {'list': vodList['list']}
 
     def playerContent(self,flag,id,vipFlags):
         result = {}        
