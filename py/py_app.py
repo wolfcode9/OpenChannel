@@ -11,7 +11,7 @@ class Spider(Spider):
         return "影視App"
     
     def init(self,extend=""):
-        self.siteUrl = extend
+        self.siteUrl = "https://bfzyapi.com/api.php/provide/vod" #extend
         # "https://kuaikan-api.com/api.php/provide/vod/from/kuaikan"         
         
     def homeContent(self,filter):
@@ -57,7 +57,7 @@ class Spider(Spider):
         }
         params = {
             'param1': '?ac=videolist&search?text={key}&pg=1',
-            'param2': '?ac=videolist&wd={key}&page=1'            
+            'param2': '?ac=videolist&zm={key}&page=1',        
             #'param2': '/list?wd={key}&page=1',
             #'param3': '?wd={key}&page=1',
             #'param4': '?ac=videolist&wd={key}&page=1',
@@ -73,7 +73,8 @@ class Spider(Spider):
         URL = ""        
         for index, pattern in patterns.items():
             if pattern.search(self.siteUrl):
-                URL = self.siteUrl + params[f'param{index[-1]}'].format(key=key)                
+                URL = self.siteUrl + params[f'param{index[-1]}'].format(key=key)
+                print(URL)            
                 break
         if URL:
             vodList = self.fetch(URL).json()

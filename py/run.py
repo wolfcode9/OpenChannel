@@ -12,5 +12,5 @@ def loadFromDisk(fileName):
 
 sp = loadFromDisk("py_app.py")
 sp.init([])
-vod = sp.searchContent("宇宙门票","")
+vod = sp.searchContent("大指挥家","")
 print(vod)
