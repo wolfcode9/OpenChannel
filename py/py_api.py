@@ -19,19 +19,20 @@ class Spider(Spider):
         vodList = self.fetch(f'{self.siteUrl}?ac=list&h=1').json()
         result['class'] = vodList['class']        
         #if(filter):
-        #    result['filters'] = self.config['filter']s
+        #    result['filters'] = self.config['filter']
         return result
 
     def homeVideoContent(self):
         #https://bfzyapi.com/api.php/provide/vod?ac=detail&h=24
-        vodList = self.fetch(f'{self.siteUrl}?ac=detail&h=24').json()
+        vodList = self.fetch(f'{self.siteUrl}?ac=videolist&h=24').json()
         return {'list': vodList['list']}
     
     def categoryContent(self,tid,pg,filter,extend):
         result = {}
+        #https://kuaikan-api.com/api.php/provide/vod/from/kuaikan?ac=videolist&t=1&pg=1
         #params = '&'.join([f'{key}={extend[key]}' for key in extend])        
         #url = f'{self.siteUrl}??ac=list&t={{tid}}&pg={pg}&{params}'
-        url = f'{self.siteUrl}?ac=detail&t={tid}&pg={pg}'
+        url = f'{self.siteUrl}?ac=videolist&t={tid}&pg={pg}'
         vodList = self.fetch(url).json()
         result['list'] = vodList['list']
         result['page'] = pg
@@ -42,12 +43,12 @@ class Spider(Spider):
 
     def detailContent(self,array):
         id = array[0]
-        url = f'{self.siteUrl}?ac=detail&ids={id}'
+        url = f'{self.siteUrl}?ac=videolist&ids={id}'
         vodList = self.fetch(url).json()        
         return {'list': vodList['list']}
 
     def searchContent(self,key,quick):
-        url = f'{self.siteUrl}?ac=detail&wd={key}'
+        url = f'{self.siteUrl}?ac=videolist&wd={key}'
         vodList = self.fetch(url).json()        
         return {'list': vodList['list']}
 
