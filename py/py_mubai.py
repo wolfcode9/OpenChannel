@@ -7,13 +7,13 @@ import requests
 import re
 
 class Spider(Spider):	
+	siteUrl = "https://m.mubai.link"
 
 	def getName(self):
 		return "慕白"
 	
 	def init(self,extend=""):
-		self.extend = extend
-		self.siteUrl = "https://m.mubai.link"
+		self.extend = extend		
 		
 	def homeContent(self,filter):		
 		result = {}
