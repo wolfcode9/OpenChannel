@@ -11,8 +11,9 @@ class Spider(Spider):
         return "影視Api"
     
     def init(self,extend=""):
-        self.siteUrl =  "https://kuaikan-api.com/api.php/provide/vod/from/kuaikan"
-        #extend
+        self.siteUrl = extend
+        # "https://kuaikan-api.com/api.php/provide/vod/from/kuaikan"
+        
         
     def homeContent(self,filter):
         # https://bfzyapi.com/api.php/provide/vod?ac=list&h=1
