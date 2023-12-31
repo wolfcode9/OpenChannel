@@ -81,6 +81,15 @@
       "changeable": 1,
       "ext": "https://fongmi.cachefly.net/FongMi/CatVodSpider/main/json/duboku.json"
     },
+	{
+      "key": "快看",
+      "name": "快看(PY)",
+      "type": 1,
+      "api": "./py/py_Api.py"",
+      "searchable": 1,
+      "changeable": 1,
+      "ext": "https://kuaikan-api.com/api.php/provide/vod/from/kuaikan"
+	},
     {
       "key": "快看",
       "name": "快看",
