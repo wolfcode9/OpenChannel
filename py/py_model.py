@@ -7,7 +7,7 @@ import json
 
 class Spider(Spider):
 	
-	
+	siteUrl = ''
 	header = {
 		"user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
         "Referer":  siteUrl
@@ -21,7 +21,7 @@ class Spider(Spider):
 		return "影視"
 	
 	def init(self,extend=""):
-		self.siteUrl = ''		
+		pass
 	
 	#主頁
 	def homeContent(self,filter):
