@@ -122,7 +122,7 @@
       ]
     },
     {
-      "key": "kuaikan",
+      "key": "快看",
       "name": "快看",
       "type": 1,
       "api": "https://kuaikan-api.com/api.php/provide/vod/from/kuaikan",
