@@ -205,15 +205,7 @@
         "歐美綜藝",
         "卡通"
       ]
-    },
-    {
-      "key": "drpy_js_低端",
-      "name": "低端",
-      "type": 3,
-      "style": {"type": "rect","ratio": 1.33},
-      "api": "https://raw.githubusercontent.com/hjdhnx/dr_py/main/libs/drpy2.min.js",
-      "ext": "https://raw.githubusercontent.com/hjdhnx/dr_py/main/js/ddys.js"
-    },        
+    },   
     {
       "key": "量子",
       "name": "量子",
@@ -293,6 +285,14 @@
         "港台動漫",
         "海外動漫"   
 	    ]
+    },
+    {
+      "key": "飛速",
+      "name": "飛速",
+      "type": 1,
+      "api": "https://www.feisuzyapi.com/api.php/provide/vod/",
+      "searchable": 1,
+      "changeable": 1      
     },
     {
       "key": "櫻花",
