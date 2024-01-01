@@ -15,19 +15,24 @@ def run(pyname,extend):
     #Q = sp.homeVideoContent() # 主页视频
     #Q = sp.detailContent(["2200"]) # 详情
     #Q = sp.categoryContent('dsj','1',False,{}) # 分类
-    Q = sp.searchContent("dota",False) # 搜索 
+    Q = sp.searchContent("陌上人如",False) # 搜索 
     #Q = sp.playerContent("","bXZfMjIwMC1ubV8x",{}) # 播放
     print(Q['list'][0])
                         
 if __name__ == '__main__':
     pyname = "py_app.py"
-    extend = "https://cj.ffzyapi.com/api.php/provide/vod/"
+    extend = "https://kuaikan-api.com/api.php/provide/vod/from/kuaikan"
     run(pyname,extend=extend)
 
 
-#飛速	https://www.feisuzyapi.com/api.php/provide/vod/
-#速播	https://subocaiji.com/api.php/provide/vod/at/json
-#量子	https://cj.lziapi.com/api.php/provide/vod/
+#飛速V	https://www.feisuzyapi.com/api.php/provide/vod/
+#速播V	https://subocaiji.com/api.php/provide/vod/at/json
+#量子V	https://cj.lziapi.com/api.php/provide/vod/
 #快看	https://kuaikan-api.com/api.php/provide/vod/from/kuaikan
-#非凡	https://cj.ffzyapi.com/api.php/provide/vod/
+#非凡V	https://cj.ffzyapi.com/api.php/provide/vod/
 #暴風	https://bfzyapi.com/api.php/provide/vod
+# ?ac=videolist&search?text=dota&pg=1
+# ?ac=videolist&zm=dota&page=1
+# ?ac=videolist&wd=dota&page=1
+# /list?wd=dota&page=1
+# ?wd=dota&page=1

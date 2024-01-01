@@ -46,13 +46,21 @@ class Spider(Spider):
         return result
 
     def searchContent(self,key,quick):
+        '''
+
+        H = {
+            "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+            "Host": "kuaikan-api.com",
+            "Referer" : "https://kuaikan-api.com"
+        }
+        '''
         result = {}        
-        patterns = [
-            {'keyword': {'kuaikan','lziapi','subocaiji','feisuzyapi'}, 'param': '?ac=videolist&search?text={key}&pg=1'},
-            {'keyword': {'bfzyapi'}, 'param': '?ac=videolist&zm={key}&page=1'},
-            {'keyword': {'ffzyapi'}, 'param': '?ac=videolist&wd={key}&page=1'},
+        patterns = [            
+            {'keyword': {'ffzyapi','feisuzyapi','subocaiji','lziapi'}, 'param': '?ac=videolist&wd={key}&page=1'},
             #{'keyword': {}, 'param': '/list?wd={key}&page=1'},            
             #{'keyword': {}, 'param': '?wd={key}&page=1'},
+            #{'keyword': {'kuaikan',}, 'param': '?ac=videolist&search?text={key}&pg=1'},
+            #{'keyword': {'bfzyapi','kuaikan'}, 'param': '?ac=videolist&zm={key}&page=1'},
         ]
         URL = ""
         for pattern in patterns:
