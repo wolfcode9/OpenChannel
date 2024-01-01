@@ -48,11 +48,10 @@ class Spider(Spider):
     def searchContent(self,key,quick):
         result = {}        
         patterns = [
-            {'keyword': {'kuaikan', 'lziapi'}, 'param': '?ac=videolist&search?text={key}&pg=1'},
-            {'keyword': {'bfzyapi', 'ffzyapi'}, 'param': '?ac=videolist&zm={key}&page=1'},
+            {'keyword': {'kuaikan','lziapi','subocaiji','feisuzyapi'}, 'param': '?ac=videolist&search?text={key}&pg=1'},
+            {'keyword': {'bfzyapi','ffzyapi'}, 'param': '?ac=videolist&zm={key}&page=1'},
             #{'keyword': {}, 'param': '/list?wd={key}&page=1'},
             #{'keyword': {}, 'param': '?ac=videolist&wd={key}&page=1'},
-            #{'keyword': {}, 'param': '?wd={key}&page=1'},
             #{'keyword': {}, 'param': '?wd={key}&page=1'},
         ]
         URL = ""
