@@ -25,7 +25,7 @@ class Spider(Spider):
     def homeVideoContent(self):
         rsp = self.fetch(f'{self.siteUrl}?ac=videolist&h=24')
         if rsp:            
-            result = {'list:': rsp.json()['list']}
+            result = rsp.json()
         return result
     
     def categoryContent(self,tid,pg,filter,extend):   
@@ -42,7 +42,7 @@ class Spider(Spider):
         url = f'{self.siteUrl}?ac=videolist&ids={id}'
         rsp = self.fetch(url)
         if rsp:
-            result = {'list:': rsp.json()['list']}
+            result = rsp.json()
         return result
 
     def searchContent(self,key,quick):
@@ -64,7 +64,7 @@ class Spider(Spider):
         if URL:
             rsp = self.fetch(URL)
             if rsp:
-                result = {'list:': rsp.json()['list']}
+                result = rsp.json()
         return result
     
     def playerContent(self,flag,id,vipFlags):
