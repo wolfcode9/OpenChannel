@@ -17,7 +17,7 @@ class Spider(Spider):
         result = {}
         rsp = self.fetch(f'{self.siteUrl}?ac=list&h=1')
         if rsp:            
-            result = {'class:': rsp.json()['class']}
+            result = {'class': rsp.json()['class']}
         return result    
         #if(filter):
         #    result['filters'] = self.config['filter']
