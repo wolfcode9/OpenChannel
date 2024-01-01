@@ -11,81 +11,64 @@ class Spider(Spider):
         return "影視App"
     
     def init(self,extend=""):
-        self.siteUrl = extend
-        # "http://cj.ffzyapi.com/api.php/provide/vod
-        # "https://kuaikan-api.com/api.php/provide/vod/from/kuaikan"         
+        self.siteUrl = extend              
         
     def homeContent(self,filter):
-        # https://bfzyapi.com/api.php/provide/vod?ac=list&h=1
         result = {}
-        vodList = self.fetch(f'{self.siteUrl}?ac=list&h=1').json()
-        result['class'] = vodList['class']        
+        rsp = self.fetch(f'{self.siteUrl}?ac=list&h=1')
+        if rsp:            
+            result = rsp.json()
+        return result    
         #if(filter):
         #    result['filters'] = self.config['filter']
-        return result
 
     def homeVideoContent(self):
-        # https://bfzyapi.com/api.php/provide/vod?ac=detail&h=24
-        vodList = self.fetch(f'{self.siteUrl}?ac=videolist&h=24').json()
-        return {'list': vodList['list']}
+        rsp = self.fetch(f'{self.siteUrl}?ac=videolist&h=24')
+        if rsp:            
+            result = rsp.json()
+        return result
     
-    def categoryContent(self,tid,pg,filter,extend):
+    def categoryContent(self,tid,pg,filter,extend):   
         result = {}
-        # https://kuaikan-api.com/api.php/provide/vod/from/kuaikan?ac=videolist&t=1&pg=1
-        #params = '&'.join([f'{key}={extend[key]}' for key in extend])        
-        #url = f'{self.siteUrl}??ac=list&t={{tid}}&pg={pg}&{params}'
         url = f'{self.siteUrl}?ac=videolist&t={tid}&pg={pg}'
-        vodList = self.fetch(url).json()
-        result['list'] = vodList['list']
-        result['page'] = pg
-        result['pagecount'] = vodList['pagecount']
-        result['limit'] = vodList['limit']
-        result['total'] = vodList['total']
+        rsp = self.fetch(url)
+        if rsp:
+            result = rsp.json()
         return result
 
     def detailContent(self,array):
+        result = {}
         id = array[0]
         url = f'{self.siteUrl}?ac=videolist&ids={id}'
-        vodList = self.fetch(url).json()        
-        return {'list': vodList['list']}
+        rsp = self.fetch(url)
+        if rsp:
+            result = rsp.json()    
+        return result
 
     def searchContent(self,key,quick):
-        result = {}
-        H = {
-            "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
-            "Host": "kuaikan-api.com",
-            "Referer" : "https://kuaikan-api.com"
-        }
-        params = {
-            'param1': '?ac=videolist&search?text={key}&pg=1',
-            'param2': '?ac=videolist&zm={key}&page=1',        
-            #'param2': '/list?wd={key}&page=1',
-            #'param3': '?wd={key}&page=1',
-            #'param4': '?ac=videolist&wd={key}&page=1',
-            #'param5': '?ac=videolist&zm={key}&page=1'
-        }
-        patterns = {
-            'pattern1': re.compile(r'kuaikan|lziapi'),
-            'pattern2': re.compile(r'bfzyapi|ffzyapi'),
-            #'pattern3': re.compile(r''),
-            #'pattern4': re.compile(r''),
-            #'pattern5': re.compile(r'')
-        }
-        URL = ""        
-        for index, pattern in patterns.items():
-            if pattern.search(self.siteUrl):
-                URL = self.siteUrl + params[f'param{index[-1]}'].format(key=key)
-                print(URL)            
-                break
+        result = {}        
+        patterns = [
+            {'keyword': {'kuaikan', 'lziapi'}, 'param': '?ac=videolist&search?text={key}&pg=1'},
+            {'keyword': {'bfzyapi', 'ffzyapi'}, 'param': '?ac=videolist&zm={key}&page=1'},
+            #{'keyword': {}, 'param': '/list?wd={key}&page=1'},
+            #{'keyword': {}, 'param': '?ac=videolist&wd={key}&page=1'},
+            #{'keyword': {}, 'param': '?wd={key}&page=1'},
+            #{'keyword': {}, 'param': '?wd={key}&page=1'},
+        ]
+        URL = ""
+        for pattern in patterns:
+            for keyword in pattern['keyword']:
+                if re.search(keyword,self.siteUrl):
+                    URL = self.siteUrl + pattern['param'].format(key=key)
+                    break
         if URL:
             rsp = self.fetch(URL)
             if rsp:
-                vodList = rsp.json()
-            result = {'list': vodList['list']}            
-        return result  
-
+                result = rsp.json()           
+        return result
+    
     def playerContent(self,flag,id,vipFlags):
-        result = {}        
+        result = {}
         result["parse"] = 0
         result["playUrl"] = ''
         result["url"] = id
