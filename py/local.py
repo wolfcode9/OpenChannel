@@ -17,10 +17,17 @@ def run(pyname,extend):
     #Q = sp.categoryContent('dsj','1',False,{}) # 分类
     Q = sp.searchContent("dota",False) # 搜索 
     #Q = sp.playerContent("","bXZfMjIwMC1ubV8x",{}) # 播放
-    print(Q)
+    print(Q['list'][0])
                         
 if __name__ == '__main__':
     pyname = "py_app.py"
-    extend = "https://subocaiji.com/api.php/provide/vod/at/json"
+    extend = "https://cj.ffzyapi.com/api.php/provide/vod/"
     run(pyname,extend=extend)
-    
+
+
+#飛速	https://www.feisuzyapi.com/api.php/provide/vod/
+#速播	https://subocaiji.com/api.php/provide/vod/at/json
+#量子	https://cj.lziapi.com/api.php/provide/vod/
+#快看	https://kuaikan-api.com/api.php/provide/vod/from/kuaikan
+#非凡	https://cj.ffzyapi.com/api.php/provide/vod/
+#暴風	https://bfzyapi.com/api.php/provide/vod

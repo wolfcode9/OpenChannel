@@ -49,9 +49,9 @@ class Spider(Spider):
         result = {}        
         patterns = [
             {'keyword': {'kuaikan','lziapi','subocaiji','feisuzyapi'}, 'param': '?ac=videolist&search?text={key}&pg=1'},
-            {'keyword': {'bfzyapi','ffzyapi'}, 'param': '?ac=videolist&zm={key}&page=1'},
-            #{'keyword': {}, 'param': '/list?wd={key}&page=1'},
-            #{'keyword': {}, 'param': '?ac=videolist&wd={key}&page=1'},
+            {'keyword': {'bfzyapi'}, 'param': '?ac=videolist&zm={key}&page=1'},
+            {'keyword': {'ffzyapi'}, 'param': '?ac=videolist&wd={key}&page=1'},
+            #{'keyword': {}, 'param': '/list?wd={key}&page=1'},            
             #{'keyword': {}, 'param': '?wd={key}&page=1'},
         ]
         URL = ""
