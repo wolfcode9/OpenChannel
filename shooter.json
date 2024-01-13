@@ -196,15 +196,6 @@
       "filterable": 0
     },
     {
-      "key": "sewozyapi.com",
-      "name": "色窩",
-      "type": 1,
-      "api": "https://sewozyapi.com/api.php/provide/vod/",
-      "searchable": 1,
-      "quickSearch": 1,
-      "filterable": 0
-    },
-    {
       "key": "api.apilyzy.com",
       "name": "老鴨",
       "type": 1,
