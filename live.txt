@@ -11,7 +11,7 @@
 亞洲新聞,https://www.youtube.com/watch?v=XWq5kBlakcQ
 鳳凰衛視,https://www.youtube.com/watch?v=Zm4i_rvAcxc
 中文國際,https://www.youtube.com/watch?v=9sE12tg3CmA
-美國新聞,https://www.youtube.com/watch?v=gA5fyrEY58M
+美國新聞,https://www.youtube.com/watch?v=gN0PZCe-kwQ
 日本新聞,https://www.youtube.com/watch?v=coYw-eVU0Ks
 韓國新聞,https://www.youtube.com/watch?v=FJfwehhzIhw
 德國之聲,https://www.youtube.com/watch?v=pqabxBKzZ6M
@@ -20,7 +20,7 @@
 歐洲新聞,https://www.youtube.com/watch?v=pykpO5kQJ98
 音樂串流,#genre#
 流行音樂,https://www.youtube.com/watch?v=IfNMuFqKBWs
-輕柔旋律,https://www.youtube.com/watch?v=eTfHSK_W2e8
+輕柔旋律,https://www.youtube.com/watch?v=EH2N3b6MGV4
 放鬆音樂,https://www.youtube.com/watch?v=-orKu_aF7Tk
 Lofi Girl,https://www.youtube.com/watch?v=4xDzrJKXOOY
 The Good Life,https://www.youtube.com/watch?v=IkmLXvBfVv0
