@@ -3,6 +3,7 @@
 東森財經,https://www.youtube.com/watch?v=WHEPzbFA3hw
 寰宇新聞,https://www.youtube.com/watch?v=6IquAgfvYmc
 公共電視,https://www.youtube.com/watch?v=C6gYqSHLRw4
+TVBS新聞,https://www.youtube.com/watch?v=4iVtVO2SHHg
 中天新聞,https://www.youtube.com/watch?v=oIgbl7t0S_w
 台視新聞,https://www.youtube.com/watch?v=xL0ch83RAK8
 中視新聞,https://www.youtube.com/watch?v=TCnaIE_SAtM
@@ -24,7 +25,7 @@
 放鬆音樂,https://www.youtube.com/watch?v=-orKu_aF7Tk
 Lofi Girl,https://www.youtube.com/watch?v=4xDzrJKXOOY
 The Good Life,https://www.youtube.com/watch?v=IkmLXvBfVv0
-Coffee Relaxing Jazz,https://www.youtube.com/watch?v=ixa4J9iFzRg
+Coffee Relaxing Jazz,https://www.youtube.com/watch?v=S1wR0WpKjHI
 Coffee Workspace,https://www.youtube.com/watch?v=P0Hp_dAgYIU
 4K Scenic Relaxation,https://www.youtube.com/watch?v=s5HaC2hk_b8
 即時影像,#genre#
@@ -32,7 +33,7 @@ NASA Live,https://www.youtube.com/watch?v=_HGQZlK08gQ
 Starbase Live,https://www.youtube.com/watch?v=mhJRzQsLZGg
 兒童頻道,#genre#
 寶寶巴士,https://www.youtube.com/watch?v=3BEBof3gQ4I
-粉紅豬小妹,https://www.youtube.com/watch?v=R8SJOb87iAY
+粉紅豬小妹,https://www.youtube.com/watch?v=RGP4Tp7nfPg
 MOMO親子台,https://www.youtube.com/watch?v=R3PZkCUJSbQ
 碰碰狐,https://www.youtube.com/watch?v=RU1V2rRVyEI
 貝樂虎,https://www.youtube.com/watch?v=1Pm7kxc8Bho
