@@ -51,19 +51,6 @@
       "ext": "https://raw.githubusercontent.com/wolfcode9/OpenChannel/main/json/star.json"
     },
     {
-      "key": "csp_Cs1369",
-      "name": "996影院",
-      "type": 3,
-      "api": "csp_Cs1369",
-      "searchable": 1,
-      "changeable": 1,
-      "categories": [
-        "電影",
-        "電視劇",
-        "動漫"
-      ]
-    },
-    {
       "key": "獨播庫",
       "name": "獨播庫",
       "type": 3,

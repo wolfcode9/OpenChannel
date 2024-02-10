@@ -40,15 +40,6 @@
       "changeable": 1,
       "url": "https://www.histar.tv/"
     },
-	{
-      "key": "csp_Cs1369",
-      "name": "996影院",
-      "type": 3,
-      "api": "csp_Cs1369",
-      "searchable": 1,
-      "changeable": 1,
-      "categories": ["電影","電視劇","動漫"]
-    }, 
     {
       "key": "duboku",
       "name": "獨播庫",
