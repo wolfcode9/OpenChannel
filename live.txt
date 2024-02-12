@@ -13,7 +13,7 @@ TVBS新聞,https://www.youtube.com/watch?v=m_dhMSvUCIc
 中文國際,https://www.youtube.com/watch?v=bEZYrBMYNNg
 美國新聞,https://www.youtube.com/watch?v=gN0PZCe-kwQ
 日本新聞,https://www.youtube.com/watch?v=coYw-eVU0Ks
-韓國新聞,https://www.youtube.com/watch?v=TFP_LrJ_gzo
+韓國新聞,https://www.youtube.com/watch?v=FJfwehhzIhw
 德國之聲,https://www.youtube.com/watch?v=pqabxBKzZ6M
 英國新聞,https://www.youtube.com/watch?v=w9uJg68CV4g
 法國新聞,https://www.youtube.com/watch?v=tkDUSYHoKxE
@@ -25,7 +25,7 @@ Lofi Girl,https://www.youtube.com/watch?v=4xDzrJKXOOY
 The Good Life,https://www.youtube.com/watch?v=IkmLXvBfVv0
 Coffee Relaxing Jazz,https://www.youtube.com/watch?v=TDR8vBKK_Oc
 Coffee Workspace,https://www.youtube.com/watch?v=EjexQg_g0BI
-4K Scenic Relaxation,https://www.youtube.com/watch?v=s5HaC2hk_b8
+4K Scenic Relaxation,https://www.youtube.com/watch?v=gkfA00agWfg
 即時影像,#genre#
 NASA Live,https://www.youtube.com/watch?v=Tl6hJd95-kY
 Starbase Live,https://www.youtube.com/watch?v=mhJRzQsLZGg
