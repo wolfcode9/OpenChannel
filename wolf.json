@@ -1,5 +1,5 @@
 {
-  "spider": "https://raw.githubusercontent.com/wolfcode9/OpenChannel/main/jar/custom_spider_230918.jar",
+  "spider": "https://raw.githubusercontent.com/wolfcode9/OpenChannel/main/jar/custom_spider_240113.jar",
   "wallpaper": "https://tuapi.eees.cc/api.php?category=fengjing&type=302",
   "lives": [{
       "name": "YouTube",
@@ -23,7 +23,8 @@
       "searchable": 1,            
       "changeable": 1,
       "quickSearch": 1,
-      "url": "https://www.yingshi.tv/"
+      "url": "https://www.yingshi.tv/",
+      "jar": "https://raw.githubusercontent.com/wolfcode9/OpenChannel/main/jar/custom_spider_230918.jar"
     },
     {
       "key": "py_Mubai",
@@ -36,6 +37,16 @@
       "filterable": 1,
       "ext": "https://raw.githubusercontent.com/wolfcode9/OpenChannel/main/json/mubai.json"
     },
+    {
+      "key":"csp_NiNi",
+      "name":"泥視頻",
+      "type":3,
+      "api":"csp_NiNi",
+      "searchable":1,
+      "quickSearch":1,
+      "changeable":1,
+      "categories": ["電影","電視劇","綜藝","動漫","記錄片"]
+	  },
     {
       "key": "量子",
       "name": "量子",
