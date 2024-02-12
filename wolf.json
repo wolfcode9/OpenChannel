@@ -17,15 +17,15 @@
       "searchable": 0,
       "changeable": 1
     },
-    {
-      "key": "csp_Yingshi",
+   {
+      "key": "csp_YingShi",
       "name": "影視",
       "type": 3,
-      "api": "csp_Yingshi",
-      "url": "https://www.yingshi.tv/",
-      "searchable": 1,
+      "api": "csp_YingShi",
+      "searchable": 1,            
       "changeable": 1,
-      "filterable": 1
+      "quickSearch": 1,
+      "url": "https://www.yingshi.tv/"
     },
     {
       "key": "py_Mubai",
