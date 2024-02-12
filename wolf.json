@@ -55,7 +55,8 @@
       "api":"csp_NiNi",
       "searchable":1,
       "quickSearch":1,
-      "changeable":1
+      "changeable":1,
+      "categories": ["電影","電視劇","綜藝","動漫","記錄片"]	
     },
     {
       "key": "量子",
