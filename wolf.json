@@ -39,16 +39,7 @@
       "filterable": 1,
       "ext": "https://raw.githubusercontent.com/wolfcode9/OpenChannel/main/json/mubai.json"
     },
-    {
-      "key": "獨播庫",
-      "name": "獨播庫",
-      "type": 3,
-      "api": "csp_XPathMacFilter",
-      "searchable": 1,
-      "changeable": 1,
-      "ext": "https://raw.githubusercontent.com/wolfcode9/OpenChannel/main/json/duboku.json"
-    },
-    {
+	  {
       "key":"csp_NiNi",
       "name":"泥視頻",
       "type":3,
@@ -56,8 +47,8 @@
       "searchable":1,
       "quickSearch":1,
       "changeable":1,
-      "categories": ["電影","電視劇","綜藝","動漫","記錄片"]	
-    },
+      "categories": ["電影","電視劇","綜藝","動漫","記錄片"]
+	  },
     {
       "key": "量子",
       "name": "量子",
