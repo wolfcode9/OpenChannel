@@ -32,15 +32,6 @@
       "jar": "https://raw.githubusercontent.com/wolfcode9/OpenChannel/main/jar/custom_spider_230918.jar"
     },
     {
-      "key": "csp_Star",
-      "name": "星視界",
-      "type": 3,
-      "api": "csp_Star",
-      "searchable": 1,
-      "changeable": 1,
-      "url": "https://www.histar.tv/"
-    },
-    {
       "key": "duboku",
       "name": "獨播庫",
       "type": 3,
