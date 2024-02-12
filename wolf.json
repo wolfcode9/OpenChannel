@@ -41,7 +41,7 @@
     },
     {
       "key": "csp_MLYS",
-      "name": "毛驴",
+      "name": "毛驢",
       "type": 3,
       "api": "csp_MLYS",
       "searchable": 1,
@@ -51,7 +51,7 @@
     },
     {
       "key": "csp_Xinsj",
-      "name": "新视觉",
+      "name": "新視覺",
       "type": 3,
       "api": "csp_Xinsj",
       "searchable": 1,
