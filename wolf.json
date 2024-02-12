@@ -40,6 +40,27 @@
       "ext": "https://raw.githubusercontent.com/wolfcode9/OpenChannel/main/json/mubai.json"
     },
     {
+      "key": "csp_MLYS",
+      "name": "毛驴",
+      "type": 3,
+      "api": "csp_MLYS",
+      "searchable": 1,
+      "changeable": 1,
+      "ext": "https://www.maolvys.com/",
+      "jar": " https://agit.ai/Yoursmile7/TVBox/raw/branch/master/Yoursmile.jar"
+    },
+    {
+      "key": "csp_Xinsj",
+      "name": "新视觉",
+      "type": 3,
+      "api": "csp_Xinsj",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "ext": "https://www.hdmyy.com/",
+      "jar": "https://agit.ai/Yoursmile7/TVBox/raw/branch/master/Yoursmile.jar"
+    }
+    {
       "key": "csp_NiNi",
       "name": "泥視頻",
       "type": 3,
