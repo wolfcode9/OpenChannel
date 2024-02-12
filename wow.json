@@ -1,5 +1,5 @@
 {
-  "spider": "https://raw.githubusercontent.com/wolfcode9/OpenChannel/main/jar/custom_spider_240113.jar",
+  "spider": "https://raw.githubusercontent.com/wolfcode9/OpenChannel/main/jar/custom_spider_230918.jar",
   "wallpaper": "https://tuapi.eees.cc/api.php?category=fengjing&type=302",
   "lives": 
   [
@@ -28,8 +28,7 @@
       "searchable": 1,            
       "changeable": 1,
       "quickSearch": 1,
-      "url": "https://www.yingshi.tv/",
-      "jar": "https://raw.githubusercontent.com/wolfcode9/OpenChannel/main/jar/custom_spider_230918.jar"
+      "url": "https://www.yingshi.tv/"
     },
 	  {
       "key":"csp_NiNi",
