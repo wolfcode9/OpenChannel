@@ -90,11 +90,10 @@
     {
       "key": "非凡",
       "name": "非凡",
-      "type": 3,
-      "api": "https://raw.githubusercontent.com/wolfcode9/OpenChannel/main/py/py_app.py",
+      "type": 1,
+      "api": "https://cj.ffzyapi.com/api.php/provide/vod/",
       "searchable": 1,
       "changeable": 1,
-      "ext": "https://cj.ffzyapi.com/api.php/provide/vod/",
       "categories": 
       [
         "電影片",
@@ -131,11 +130,10 @@
     {
       "key": "速播",
       "name": "速播",
-      "type": 3,
-      "api": "https://raw.githubusercontent.com/wolfcode9/OpenChannel/main/py/py_app.py",
+      "type": 1,
+      "api": "https://subocaiji.com/api.php/provide/vod/at/json",
       "searchable": 1,
       "changeable": 1,
-      "ext": "https://subocaiji.com/api.php/provide/vod/at/json",
       "categories": [
         "電影片",
         "動作片",
@@ -172,11 +170,10 @@
     {
       "key": "飛速",
       "name": "飛速",
-      "type": 3,
-      "api": "https://raw.githubusercontent.com/wolfcode9/OpenChannel/main/py/py_app.py",
+      "type": 1,
+      "api": "https://www.feisuzyapi.com/api.php/provide/vod/",
       "searchable": 1,
       "changeable": 1,
-      "ext": "https://www.feisuzyapi.com/api.php/provide/vod/"
     },
     {
       "key": "csp_Ying",
