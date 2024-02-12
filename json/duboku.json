@@ -55,7 +55,7 @@
   "dtUrlIdR": "/vodplay/(\\S+).html",
   "dtUrlName": "/text()",
   "dtUrlNameR": "",
-  "playUrl": "https://my.duboku.vip/vodplay/{playUrl}.html",
+  "playUrl": "https://w.duboku.io/vodplay/{playUrl}.html",
   "playUa": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36",
   "playReferer": "https://www.duboku.tv/",
   "searchUrl": "https://www.duboku.tv/index.php/ajax/suggest?mid=1&wd={wd}&limit=10",
