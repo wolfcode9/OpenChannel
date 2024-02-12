@@ -27,7 +27,6 @@
       "api": "csp_YingShi",
       "searchable": 1,            
       "changeable": 1,
-      "quickSearch": 1,
       "url": "https://www.yingshi.tv/",
       "jar": "https://raw.githubusercontent.com/wolfcode9/OpenChannel/main/jar/custom_spider_230918.jar"
     },
@@ -37,7 +36,6 @@
       "type":3,
       "api":"csp_NiNi",
       "searchable":1,
-      "quickSearch":1,
       "changeable":1,
       "categories": ["電影","電視劇","綜藝","動漫","記錄片"]
 	  },
