@@ -1,43 +1,34 @@
 {
   "spider": "https://raw.githubusercontent.com/wolfcode9/OpenChannel/main/jar/custom_spider_240113.jar",
   "wallpaper": "https://tuapi.eees.cc/api.php?category=fengjing&type=302",
-  "lives": [
+  "lives": 
+  [
     {
       "name": "YouTube",
       "url": "https://raw.githubusercontent.com/wolfcode9/OpenChannel/main/live.txt",
       "logo": "https://raw.githubusercontent.com/wolfcode9/OpenChannel/main/logo/{name}.jpg"
     }
   ],
-  "sites": [
-    {
-      "key": "py_Douban",
+  "sites": 
+  [
+	{
+      "key": "csp_Douban",
       "name": "豆瓣 | 薦片",
       "type": 3,
-      "api": "https://raw.githubusercontent.com/wolfcode9/OpenChannel/main/py/py_douban.py",
+      "api": "csp_Douban",
       "searchable": 0,
-      "changeable": 1
+      "changeable": 1,
+      "ext": "https://raw.githubusercontent.com/wolfcode9/OpenChannel/main/json/douban.json"
     },
     {
       "key": "csp_YingShi",
       "name": "影視",
       "type": 3,
       "api": "csp_YingShi",
-      "searchable": 1,
+      "searchable": 1,            
       "changeable": 1,
-      "quickSearch": 1,
       "url": "https://www.yingshi.tv/",
       "jar": "https://raw.githubusercontent.com/wolfcode9/OpenChannel/main/jar/custom_spider_230918.jar"
-    },
-    {
-      "key": "py_Mubai",
-      "name": "慕白",
-      "type": 3,
-      "api": "https://raw.githubusercontent.com/wolfcode9/OpenChannel/main/py/py_mubai.py",
-      "url": "https://m.mubai.link/",
-      "searchable": 1,
-      "changeable": 1,
-      "filterable": 1,
-      "ext": "https://raw.githubusercontent.com/wolfcode9/OpenChannel/main/json/mubai.json"
     },
     {
       "key": "萌米",
@@ -106,30 +97,161 @@
       "ext": "https://www.hdmyy.com/",
       "jar": "https://raw.githubusercontent.com/wolfcode9/OpenChannel/main/jar/Yoursmile.jar"
     },
+	  {
+      "key":"csp_NiNi",
+      "name":"泥視頻",
+      "type":3,
+      "api":"csp_NiNi",
+      "searchable":1,
+      "changeable":1,
+      "categories": ["電影","電視劇","綜藝","動漫","記錄片"]
+	  },
     {
-      "key": "csp_NiNi",
-      "name": "泥視頻",
-      "type": 3,
-      "api": "csp_NiNi",
-      "searchable": 1,
-      "quickSearch": 1,
-      "changeable": 1,
-      "categories": [
-        "電影",
-        "電視劇",
-        "綜藝",
-        "動漫",
-        "記錄片"
+      "key": "haiwaikan",
+      "name": "海外看",
+      "type": 1,
+      "api": "https://haiwaikan.com/api.php/provide/vod/from/haiwaikan",
+      "searchable": 1,      
+      "changeable": 1,    
+      "categories": 
+      [
+        "紀錄片",
+         "冒險片",
+         "劇情片",
+         "動作片",
+         "動畫電影",
+         "喜劇片",
+         "奇幻片",
+         "恐怖片",
+         "懸疑片",
+         "驚悚片",
+         "歌舞片",
+         "災難片",
+         "愛情片",
+         "犯罪片",
+         "科幻片",
+         "經典片",
+         "網路電影",
+         "戰爭片",
+         "歐美劇",
+         "日劇",
+         "韓劇",
+         "國產劇",
+         "泰劇",
+         "港劇",
+         "台劇",
+         "新馬劇",
+         "其他劇",
+         "歐美綜藝",
+         "日本綜藝",
+         "韓國綜藝",
+         "國產綜藝",
+         "新馬泰綜藝",
+         "港台綜藝",
+         "其他綜藝",
+         "歐美動漫",
+         "日本動漫",
+         "韓國動漫",
+         "國產動漫",
+         "新馬泰動漫",
+         "港台動漫",
+         "其他動漫"
       ]
     },
+    {
+      "key": "快看",
+      "name": "快看",
+      "type": 1,
+      "api": "https://kuaikan-api.com/api.php/provide/vod/from/kuaikan",
+      "searchable": 1,
+      "changeable": 1,
+      "categories": 
+      [
+        "記錄片",
+        "冒險片",
+        "劇情片",
+        "動作片",
+        "動畫電影",
+        "喜劇片",
+        "奇幻片",
+        "恐怖片",
+        "懸疑片",
+        "驚悚片",
+        "戰爭片",
+        "災難片",
+        "愛情片",
+        "犯罪片",
+        "科幻片",
+        "網路電影",
+        "國產劇",
+        "歐美劇",
+        "日本劇",
+        "泰劇",
+        "港台劇",
+        "新馬劇",
+        "其他劇",
+        "歐美綜藝",
+        "日本綜藝",
+        "韓國綜藝",
+        "國產綜藝",
+        "港台綜藝",
+        "歐美動漫",
+        "日本動漫",
+        "國產動漫",
+        "港台動漫",
+        "韓國劇"
+      ]
+    },
+    {
+      "key": "暴風",
+      "name": "暴風",
+      "type": 1,
+      "api": "https://bfzyapi.com/api.php/provide/vod",
+      "searchable": 1,
+      "changeable": 1,
+      "categories": 
+      [
+        "電影片",
+        "動作片",
+        "喜劇片",
+        "恐怖片",
+        "科幻片",
+        "愛情片",
+        "劇情片",
+        "戰爭片",
+        "記錄片",
+        "連續劇",
+        "國產劇",
+        "歐美劇",
+        "香港劇",
+        "韓國劇",
+        "台灣劇",
+        "日本劇",
+        "海外劇",
+        "泰國劇",
+        "動漫片",
+        "國產動漫",
+        "日韓動漫",
+        "歐美動漫",
+        "港台動漫",
+        "海外動漫",
+        "綜藝片",
+        "大陸綜藝",
+        "港台綜藝",
+        "日韓綜藝",
+        "歐美綜藝",
+        "卡通"
+      ]
+    },   
     {
       "key": "量子",
       "name": "量子",
       "type": 1,
-      "api": "https://cj.lziapi.com/api.php/provide/vod/",
+      "api": "https://cj.lziapi.com/api.php/provide/vod",
       "searchable": 1,
-      "changeable": 1,
-      "categories": [
+      "changeable": 1 ,
+      "categories":
+      [
         "動作片",
         "喜劇片",
         "愛情片",
@@ -159,16 +281,17 @@
         "連續劇",
         "綜藝片",
         "動漫片"
-      ]
-    },    
+      ]	  
+    },
     {
       "key": "非凡",
       "name": "非凡",
       "type": 1,
-      "api": "https://cj.ffzyapi.com/api.php/provide/vod/",
+      "api": "http://cj.ffzyapi.com/api.php/provide/vod",
       "searchable": 1,
       "changeable": 1,
-      "categories": [
+	    "categories": 
+      [
         "電影片",
         "連續劇",
         "綜藝片",
@@ -197,8 +320,8 @@
         "日韓動漫",
         "歐美動漫",
         "港台動漫",
-        "海外動漫"
-      ]
+        "海外動漫"   
+	    ]
     },
     {
       "key": "速播",
@@ -246,10 +369,10 @@
       "type": 1,
       "api": "https://www.feisuzyapi.com/api.php/provide/vod/",
       "searchable": 1,
-      "changeable": 1
+      "changeable": 1      
     },
     {
-      "key": "csp_Ying",
+      "key": "櫻花",
       "name": "櫻花 | 動漫",
       "type": 3,
       "api": "csp_Ying",
@@ -257,70 +380,48 @@
       "changeable": 1
     },
     {
-      "key": "csp_Dm84",
+      "key": "巴士",
       "name": "巴士 | 動漫",
       "type": 3,
       "api": "csp_Dm84",
       "searchable": 1,
       "changeable": 1
-    },
-    {
-      "key": "push_agent",
-      "name": "推送",
-      "type": 3,
-      "api": "csp_Push",
-      "searchable": 1,
-      "changeable": 0
     }
   ],
-  "doh": [
+  "doh": 
+  [
     {
       "name": "Google",
       "url": "https://dns.google/dns-query",
-      "ips": [
-        "8.8.4.4",
-        "8.8.8.8"
-      ]
+      "ips": ["8.8.4.4","8.8.8.8"]
     },
     {
       "name": "Cloudflare",
       "url": "https://cloudflare-dns.com/dns-query",
-      "ips": [
-        "1.1.1.1",
-        "1.0.0.1",
-        "2606:4700:4700::1111",
-        "2606:4700:4700::1001"
-      ]
+      "ips": ["1.1.1.1","1.0.0.1","2606:4700:4700::1111","2606:4700:4700::1001"]
     },
     {
       "name": "AdGuard",
       "url": "https://dns.adguard.com/dns-query",
-      "ips": [
-        "94.140.14.140",
-        "94.140.14.141"
-      ]
+      "ips": ["94.140.14.140","94.140.14.141"]
     },
     {
       "name": "DNSWatch",
       "url": "https://resolver2.dns.watch/dns-query",
-      "ips": [
-        "84.200.69.80",
-        "84.200.70.40"
-      ]
+      "ips": ["84.200.69.80","84.200.70.40"]
     },
     {
       "name": "Quad9",
       "url": "https://dns.quad9.net/dns-quer",
-      "ips": [
-        "9.9.9.9",
-        "149.112.112.112"
-      ]
+      "ips": ["9.9.9.9","149.112.112.112"]
     }
   ],
-  "rules": [
+  "rules": 
+  [
     {
       "name": "proxy",
-      "hosts": [
+      "hosts": 
+      [
         "raw.githubusercontent.com",
         "googlevideo.com",
         "cdn.v82u1l.com",
@@ -339,116 +440,29 @@
     },
     {
       "name": "海外看",
-      "hosts": [
-        "haiwaikan"
-      ],
-      "regex": [
-        "10.0099",
-        "10.3333",
-        "16.0599",
-        "8.1748",
-        "12.33",
-        "10.85"
-      ]
-    },
-    {
-      "name": "索尼",
-      "hosts": [
-        "suonizy"
-      ],
-      "regex": [
-        "15.1666",
-        "15.2666"
-      ]
-    },
+      "hosts": ["haiwaikan"],
+      "regex": ["10.0099","10.3333","16.0599","8.1748","12.33","10.85"]
+    },  
     {
       "name": "暴風",
-      "hosts": [
-        "bfzy"
-      ],
-      "regex": [
-        "#EXT-X-DISCONTINUITY\\r*\\n*#EXTINF:3,[\\s\\S]*?#EXT-X-DISCONTINUITY"
-      ]
-    },
-    {
-      "name": "星視界",
-      "hosts": [
-        "aws.ulivetv.net"
-      ],
-      "regex": [
-        "#EXT-X-DISCONTINUITY\\r*\\n*#EXTINF:8,[\\s\\S]*?#EXT-X-DISCONTINUITY"
-      ]
+      "hosts": ["bfzy"],
+      "regex": ["#EXT-X-DISCONTINUITY\\r*\\n*#EXTINF:3,[\\s\\S]*?#EXT-X-DISCONTINUITY"]
     },
     {
       "name": "量子",
-      "hosts": [
-        "vip.lz",
-        "hd.lz",
-        "v.cdnlz"
-      ],
-      "regex": [
-        "#EXT-X-DISCONTINUITY\\r*\\n*#EXTINF:6.433333,[\\s\\S]*?#EXT-X-DISCONTINUITY",
-        "#EXTINF.*?\\s+.*?1o.*?\\.ts\\s+"
-      ]
+      "hosts": ["vip.lz","hd.lz","v.cdnlz"],
+      "regex": ["#EXT-X-DISCONTINUITY\\r*\\n*#EXTINF:6.433333,[\\s\\S]*?#EXT-X-DISCONTINUITY","#EXTINF.*?\\s+.*?1o.*?\\.ts\\s+"]
     },
     {
       "name": "非凡",
-      "hosts": [
-        "vip.ffzy",
-        "hd.ffzy"
-      ],
-      "regex": [
-        "#EXT-X-DISCONTINUITY\\r*\\n*#EXTINF:6.666667,[\\s\\S]*?#EXT-X-DISCONTINUITY",
-        "#EXTINF.*?\\s+.*?1o.*?\\.ts\\s+"
-      ]
-    },
-    {
-      "name": "火山嗅探",
-      "hosts": [
-        "huoshan.com"
-      ],
-      "regex": [
-        "item_id="
-      ]
-    },
-    {
-      "name": "抖音嗅探",
-      "hosts": [
-        "douyin.com"
-      ],
-      "regex": [
-        "is_play_url="
-      ]
-    },
-    {
-      "name": "農民嗅探",
-      "hosts": [
-        "toutiaovod.com"
-      ],
-      "regex": [
-        "video/tos/cn"
-      ]
-    },
-    {
-      "name": "夜市",
-      "hosts": [
-        "yeslivetv.com"
-      ],
-      "script": [
-        "document.getElementsByClassName('vjs-big-play-button')[0].click()"
-      ]
+      "hosts": ["vip.ffzy","hd.ffzy"],
+      "regex": ["#EXT-X-DISCONTINUITY\\r*\\n*#EXTINF:6.666667,[\\s\\S]*?#EXT-X-DISCONTINUITY","#EXTINF.*?\\s+.*?1o.*?\\.ts\\s+"]
     },
     {
       "name": "毛驢",
-      "hosts": [
-        "www.maolvys.com"
-      ],
-      "script": [
-        "document.getElementsByClassName('swal-button swal-button--confirm')[0].click()"
-      ]
+      "hosts": ["www.maolvys.com"],
+      "script": ["document.getElementsByClassName('swal-button swal-button--confirm')[0].click()"]
     }
   ],
-  "ads": [
-    "mozai.4gtv.tv"
-  ]
+  "ads": ["mozai.4gtv.tv"]
 }
