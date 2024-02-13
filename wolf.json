@@ -87,7 +87,7 @@
       "api": "csp_MLYS",
       "searchable": 1,
       "changeable": 1,
-      "ext": "https://www.maolvys.com/",
+      "ext": "https://www.maolvys.com/"
     },
     {
       "key": "csp_Xinsj",
@@ -97,7 +97,7 @@
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1,
-      "ext": "https://www.hdmyy.com/",
+      "ext": "https://www.hdmyy.com/"
     },
     {
       "key": "csp_NiNi",
