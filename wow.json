@@ -31,16 +31,15 @@
       "jar": "https://raw.githubusercontent.com/wolfcode9/OpenChannel/main/jar/custom_spider_230918.jar"
     },
     {
-      "key": "萌米",
-      "name": "萌米",
+      "key": "csp_Xinsj",
+      "name": "新視覺",
       "type": 3,
-      "api": "csp_AppMao",
+      "api": "csp_Xinsj",
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1,
-      "changeable": 0,
-      "jar": "https://raw.githubusercontent.com/wolfcode9/OpenChannel/main/jar/Yoursmile.jar",
-      "ext": "FbjDcUxPqpfNr0QF4QvEpcoxMMdAA5wQTClJt+Hxgw4VXJLfrTSRjQjA6r70U2ONX3iG4lQWk1cgXQMSUZpbUzIYJ6iQs3+gcUVDp1lz6rcrGqDtCW4hfAf9JSR025m0+TGWMsZkVg=="
+      "ext": "https://www.hdmyy.com/",
+      "jar": "https://raw.githubusercontent.com/wolfcode9/OpenChannel/main/jar/Yoursmile.jar"
     },
     {
       "key": "csp_YQKan",
@@ -84,17 +83,6 @@
       "searchable": 1,
       "changeable": 1,
       "ext": "https://www.maolvys.com/",
-      "jar": "https://raw.githubusercontent.com/wolfcode9/OpenChannel/main/jar/Yoursmile.jar"
-    },
-    {
-      "key": "csp_Xinsj",
-      "name": "新視覺",
-      "type": 3,
-      "api": "csp_Xinsj",
-      "searchable": 1,
-      "quickSearch": 1,
-      "filterable": 1,
-      "ext": "https://www.hdmyy.com/",
       "jar": "https://raw.githubusercontent.com/wolfcode9/OpenChannel/main/jar/Yoursmile.jar"
     },
 	  {
