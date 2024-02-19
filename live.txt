@@ -13,7 +13,7 @@ TVBS新聞,https://www.youtube.com/watch?v=m_dhMSvUCIc
 中文國際,https://www.youtube.com/watch?v=bEZYrBMYNNg
 美國新聞,https://www.youtube.com/watch?v=gN0PZCe-kwQ
 日本新聞,https://www.youtube.com/watch?v=coYw-eVU0Ks
-韓國新聞,https://www.youtube.com/watch?v=Aq-mbPttuKM
+韓國新聞,https://www.youtube.com/watch?v=Y3_CDDSqWtk
 德國之聲,https://www.youtube.com/watch?v=pqabxBKzZ6M
 英國新聞,https://www.youtube.com/watch?v=w9uJg68CV4g
 法國新聞,https://www.youtube.com/watch?v=tkDUSYHoKxE
@@ -31,7 +31,7 @@ NASA Live,https://www.youtube.com/watch?v=Tl6hJd95-kY
 Starbase Live,https://www.youtube.com/watch?v=mhJRzQsLZGg
 兒童頻道,#genre#
 寶寶巴士,https://www.youtube.com/watch?v=NU7RR9F0qb0
-粉紅豬小妹,https://www.youtube.com/watch?v=QGBJfae3xi4
+粉紅豬小妹,https://www.youtube.com/watch?v=SdSHFUAYGxM
 YOYO TV,https://www.youtube.com/watch?v=6UHAm9rMZTo
 MOMO親子台,https://www.youtube.com/watch?v=R3PZkCUJSbQ
 碰碰狐,https://www.youtube.com/watch?v=O_yjAstQMRk
