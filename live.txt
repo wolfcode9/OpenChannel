@@ -13,17 +13,17 @@ TVBS新聞,https://www.youtube.com/watch?v=m_dhMSvUCIc
 中文國際,https://www.youtube.com/watch?v=bEZYrBMYNNg
 美國新聞,https://www.youtube.com/watch?v=gN0PZCe-kwQ
 日本新聞,https://www.youtube.com/watch?v=coYw-eVU0Ks
-韓國新聞,https://www.youtube.com/watch?v=21B_MH95_Gc
+韓國新聞,https://www.youtube.com/watch?v=D9WBcKzm68E
 德國之聲,https://www.youtube.com/watch?v=pqabxBKzZ6M
 英國新聞,https://www.youtube.com/watch?v=w9uJg68CV4g
 法國新聞,https://www.youtube.com/watch?v=tkDUSYHoKxE
 歐洲新聞,https://www.youtube.com/watch?v=pykpO5kQJ98
 音樂串流,#genre#
-輕柔旋律,https://www.youtube.com/watch?v=UlvkM9hi9QE
+輕柔旋律,https://www.youtube.com/watch?v=l2xjk0v7qUQ
 放鬆音樂,https://www.youtube.com/watch?v=HY3xy_OIpR8
 Lofi Girl,https://www.youtube.com/watch?v=vMxYL4Cj85Y
 The Good Life,https://www.youtube.com/watch?v=IkmLXvBfVv0
-Coffee Relaxing Jazz,https://www.youtube.com/watch?v=hsG6X2J45XI
+Coffee Relaxing Jazz,https://www.youtube.com/watch?v=rcSdoK_sKH0
 Coffee Workspace,https://www.youtube.com/watch?v=SzhcVm9Mj3s
 4K Scenic Relaxation,https://www.youtube.com/watch?v=s5HaC2hk_b8
 即時影像,#genre#
@@ -31,7 +31,7 @@ NASA Live,https://www.youtube.com/watch?v=Tl6hJd95-kY
 Starbase Live,https://www.youtube.com/watch?v=mhJRzQsLZGg
 兒童頻道,#genre#
 寶寶巴士,https://www.youtube.com/watch?v=k31QeQj7Yaw
-粉紅豬小妹,https://www.youtube.com/watch?v=PTGQxGI6DBY
+粉紅豬小妹,https://www.youtube.com/watch?v=dNYd36RyspE
 YOYO TV,https://www.youtube.com/watch?v=-1sTm3t6x3o
 MOMO親子台,https://www.youtube.com/watch?v=R3PZkCUJSbQ
 碰碰狐,https://www.youtube.com/watch?v=O_yjAstQMRk
