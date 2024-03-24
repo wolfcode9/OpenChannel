@@ -19,19 +19,19 @@ TVBS新聞,https://www.youtube.com/watch?v=m_dhMSvUCIc
 法國新聞,https://www.youtube.com/watch?v=tkDUSYHoKxE
 歐洲新聞,https://www.youtube.com/watch?v=pykpO5kQJ98
 音樂串流,#genre#
-輕柔旋律,https://www.youtube.com/watch?v=UlvkM9hi9QE
+輕柔旋律,https://www.youtube.com/watch?v=HO7jaELfnnY
 放鬆音樂,https://www.youtube.com/watch?v=HY3xy_OIpR8
 Lofi Girl,https://www.youtube.com/watch?v=vMxYL4Cj85Y
 The Good Life,https://www.youtube.com/watch?v=IkmLXvBfVv0
-Coffee Relaxing Jazz,https://www.youtube.com/watch?v=cFnoJ5-ArW4
-Coffee Workspace,https://www.youtube.com/watch?v=ascnKacR12k
+Coffee Relaxing Jazz,https://www.youtube.com/watch?v=g-n9SJb7qgY
+Coffee Workspace,https://www.youtube.com/watch?v=wwhz4L3SIe0
 4K Scenic Relaxation,https://www.youtube.com/watch?v=s5HaC2hk_b8
 即時影像,#genre#
 NASA Live,https://www.youtube.com/watch?v=Tl6hJd95-kY
 Starbase Live,https://www.youtube.com/watch?v=mhJRzQsLZGg
 兒童頻道,#genre#
 寶寶巴士,https://www.youtube.com/watch?v=k31QeQj7Yaw
-粉紅豬小妹,https://www.youtube.com/watch?v=Z4HSXGkvmSg
+粉紅豬小妹,https://www.youtube.com/watch?v=OXETYXdxeXE
 YOYO TV,https://www.youtube.com/watch?v=-1sTm3t6x3o
 MOMO親子台,https://www.youtube.com/watch?v=R3PZkCUJSbQ
 碰碰狐,https://www.youtube.com/watch?v=O_yjAstQMRk
